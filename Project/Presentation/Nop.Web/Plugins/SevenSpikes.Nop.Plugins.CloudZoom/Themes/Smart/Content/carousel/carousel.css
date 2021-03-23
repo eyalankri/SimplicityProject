@@ -1,0 +1,92 @@
+/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.picture-thumbs.in-carousel {
+    max-width: 600px;
+    margin: 10px auto 0;
+}
+.picture-thumbs .picture-thumbs-list {
+    margin: 0 -5px;
+}
+.picture-thumbs .picture-thumbs-item {
+    padding: 0 5px 10px;
+}
+.picture-thumbs .picture-thumbs-item a {
+    width: 100%;
+    margin: 0;
+}
+.picture-thumbs.in-carousel .picture-thumbs-list {
+    margin: 0;
+}
+.picture-thumbs button + .slick-list {
+    padding: 0;
+    margin: 0 25px;
+}
+
+/* arrows nav */
+
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 0;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+}
+.picture-thumbs .slick-prev {
+    left: 0;
+    background: url('images/arrow-left.png') center no-repeat;
+}
+.picture-thumbs .slick-next {
+    right: 0;
+    background: url('images/arrow-right.png') center no-repeat;
+}
+.picture-thumbs .slick-prev.slick-disabled,
+.picture-thumbs .slick-next.slick-disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* dots nav */
+
+.slick-dots {
+    margin-top: 15px;
+}
+.slick-dots button {
+    background: #555;
+    font-size: 0;
+    width: 9px;
+    height: 9px;
+    border: none;
+}
+.slick-dots li {
+    display: inline-block;
+    margin: 0 3px;
+}
+.slick-dots .slick-active button {
+    background-color: #5be;
+}
+
+
+@media all and (max-width: 768px) {
+
+    .picture-thumbs.in-carousel {
+        max-width: 550px;
+    }
+}
+
+@media all and (max-width: 480px) {
+
+    .picture-thumbs.in-carousel {
+        max-width: 330px;
+    }
+}

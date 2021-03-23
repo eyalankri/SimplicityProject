@@ -1,0 +1,77 @@
+﻿
+.clearFilterOptionsAll {
+	float: left;
+}
+.filter-block a.clearFilterOptions,
+.filter-block a.clearPriceRangeFilter {
+	left: 22px;
+	right: auto;
+}
+
+/* SEARCH CRITERIA */
+
+.selected-options-list > li span {
+	margin: 0 0 0 10px;
+	padding: 5px 0 5px 15px;
+	background-position: left center;
+}
+
+/* PRICE RANGE SLIDER */
+
+.priceRangeMinPanel,
+.specification-min-panel {
+	float: right;
+}
+.priceRangeMaxPanel,
+.specification-max-panel {
+	float: left;
+}
+.currentMinPrice, .current-min-value {
+	float: right;
+}
+.currentMaxPrice, .current-max-value {
+	float: left;
+}
+
+/* CHECKBOX MODE */
+
+.filtersGroupPanel li label {
+	padding: 10px 30px 10px 10px;
+}
+.filtersGroupPanel.imageOptions li label {
+	padding-right: 40px;
+	padding-left: 10px;
+}
+.filtersGroupPanel li input[type='checkbox'] {
+	right: 10px;
+	left: auto;
+}
+.filtersGroupPanel li label:before {
+	right: 10px;
+	left: auto;
+}
+
+/* COLOR SQUARE ATTRIBUTES */
+
+.filtersGroupPanel li .color {
+	right: 10px;
+	left: auto;
+}
+
+/* NO RESULTS POPUP */
+
+.ajaxFilters .k-window-titlebar span {
+	float: right;
+}
+.ajaxFilters .k-window-actions {
+	float: left;
+}
+
+
+
+@media all and (min-width: 769px) {
+	
+.filter-block .title {
+	padding: 0 10px 0 25px;
+}
+}

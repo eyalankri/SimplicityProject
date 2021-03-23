@@ -1,0 +1,247 @@
+﻿@model VentureThemeSettingsModel
+
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            @T("SevenSpikes.Themes.Venture.Admin.PanelTitle.InfoBoxOne")
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="EnableInfoBoxOne_OverrideForStore" asp-input="EnableInfoBoxOne" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="EnableInfoBoxOne" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="EnableInfoBoxOne" />
+                </div>
+            </div>
+            @(Html.LocalizedEditor<VentureThemeSettingsModel, VentureThemeSettingsLocalizedModel>("venture-localized-info-box-one",
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxOneTitle_OverrideForStore" asp-input="@Model.Locales[item].InfoBoxOneTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxOneTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].InfoBoxOneTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxOneText_OverrideForStore" asp-input="@Model.Locales[item].InfoBoxOneText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxOneText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].InfoBoxOneText" />
+                    </div>
+                </div>
+                 <input type="hidden" asp-for="@Model.Locales[item].LanguageId" />
+            </div>
+    ,
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxOneTitle_OverrideForStore" asp-input="InfoBoxOneTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxOneTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="InfoBoxOneTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxOneText_OverrideForStore" asp-input="InfoBoxOneText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxOneText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="InfoBoxOneText" />
+                    </div>
+                </div>
+            </div>
+            ))
+           <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="InfoBoxOneUrl_OverrideForStore" asp-input="InfoBoxOneUrl" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="InfoBoxOneUrl" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="InfoBoxOneUrl" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="InfoBoxOneImageId_OverrideForStore" asp-input="InfoBoxOneImageId" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="InfoBoxOneImageId" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="InfoBoxOneImageId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            @T("SevenSpikes.Themes.Venture.Admin.PanelTitle.InfoBoxTwo")
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="EnableInfoBoxTwo_OverrideForStore" asp-input="EnableInfoBoxTwo" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="EnableInfoBoxTwo" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="EnableInfoBoxTwo" />
+                </div>
+            </div>
+
+            @(Html.LocalizedEditor<VentureThemeSettingsModel, VentureThemeSettingsLocalizedModel>("venture-localized-info-box-two",
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxTwoTitle_OverrideForStore" asp-input="@Model.Locales[item].InfoBoxTwoTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxTwoTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].InfoBoxTwoTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxTwoText_OverrideForStore" asp-input="@Model.Locales[item].InfoBoxTwoText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxTwoText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].InfoBoxTwoText" />
+                    </div>
+                </div>
+                 <input type="hidden" asp-for="@Model.Locales[item].LanguageId" />
+            </div>
+            ,
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxTwoTitle_OverrideForStore" asp-input="InfoBoxTwoTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxTwoTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="InfoBoxTwoTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxTwoText_OverrideForStore" asp-input="InfoBoxTwoText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxTwoText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="InfoBoxTwoText" />
+                    </div>
+                </div>
+            </div>
+            ))
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="InfoBoxTwoUrl_OverrideForStore" asp-input="InfoBoxTwoUrl" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="InfoBoxTwoUrl" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="InfoBoxTwoUrl" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="InfoBoxTwoImageId_OverrideForStore" asp-input="InfoBoxTwoImageId" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="InfoBoxTwoImageId" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="InfoBoxTwoImageId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            @T("SevenSpikes.Themes.Venture.Admin.PanelTitle.InfoBoxThree")
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="EnableInfoBoxThree_OverrideForStore" asp-input="EnableInfoBoxThree" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="EnableInfoBoxThree" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="EnableInfoBoxThree" />
+                </div>
+            </div>
+
+            @(Html.LocalizedEditor<VentureThemeSettingsModel, VentureThemeSettingsLocalizedModel>("venture-localized-info-box-three",
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxThreeTitle_OverrideForStore" asp-input="@Model.Locales[item].InfoBoxThreeTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxThreeTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].InfoBoxThreeTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxThreeText_OverrideForStore" asp-input="@Model.Locales[item].InfoBoxThreeText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxThreeText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].InfoBoxThreeText" />
+                    </div>
+                </div>
+                 <input type="hidden" asp-for="@Model.Locales[item].LanguageId" />
+            </div>
+            ,
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxThreeTitle_OverrideForStore" asp-input="InfoBoxThreeTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxThreeTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="InfoBoxThreeTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="InfoBoxThreeText_OverrideForStore" asp-input="InfoBoxThreeText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="InfoBoxThreeText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="InfoBoxThreeText" />
+                    </div>
+                </div>
+            </div>
+            ))
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="InfoBoxThreeUrl_OverrideForStore" asp-input="InfoBoxThreeUrl" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="InfoBoxThreeUrl" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="InfoBoxThreeUrl" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="InfoBoxThreeImageId_OverrideForStore" asp-input="InfoBoxThreeImageId" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="InfoBoxThreeImageId" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="InfoBoxThreeImageId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

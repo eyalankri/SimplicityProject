@@ -1,0 +1,68 @@
+.jCarouselMainWrapper .slick-next {
+	left: 0px;
+	right: auto;
+    background-image: url("images/prev-horizontal.png") !important;
+}
+.jCarouselMainWrapper .slick-prev {
+	left: 60px;
+	right: auto;
+    background-image: url("images/next-horizontal.png") !important;
+}
+.nop-jcarousel .slick-dots .slick-active button {
+	background-position: 0 -22px;
+}
+
+.center-2 .nop-jcarousel .carousel-title.has-navigation {
+    text-align: right;
+}
+
+.nop-jcarousel > .title {
+    text-align: right;
+}
+@media all and (min-width: 1025px) {
+	.center-2 .jCarouselMainWrapper .slick-prev {
+		left: 60px;
+		right: auto;
+	}
+	.center-2 .jCarouselMainWrapper .slick-next {
+		left: 0px;
+		right: auto;
+	}
+	.side-2 .carousel-title {
+		padding: 0 0 25px 50px;
+	}
+	.side-2 .jCarouselMainWrapper .slick-next {
+		left: 0;
+		right: auto;
+	}
+	.side-2 .jCarouselMainWrapper .slick-prev {
+		right: auto;
+		left: 30px;
+	}
+
+    .center-1 .jCarouselMainWrapper .slick-next {
+	    left: -30px;
+	    right: auto;
+    }
+    .center-1 .jCarouselMainWrapper .slick-prev {
+	    left: auto;
+        right: -30px;
+    }
+}
+@media all and (max-width: 1024px) and (min-width: 769px) {
+	.nop-jcarousel div.carousel-title {
+		padding-left: 120px;
+		padding-right: 0;
+	}
+}
+
+
+@media all and (max-width: 480px) {
+    .center-2 .nop-jcarousel .carousel-title.has-navigation {
+        text-align: center;
+    }
+
+    .nop-jcarousel > .title {
+        text-align: center;
+    }
+}

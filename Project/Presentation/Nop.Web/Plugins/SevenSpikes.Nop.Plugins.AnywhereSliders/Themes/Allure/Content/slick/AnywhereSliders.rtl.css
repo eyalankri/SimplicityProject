@@ -1,0 +1,13 @@
+
+.anywhere-slider .slick-prev {
+    right: 25px;
+    left: auto;
+    background-image: url(images/arrow-right.png);
+    background-position: 19px center;
+}
+.anywhere-slider .slick-next {
+    left: 25px;
+    right: auto;
+    background-image: url(images/arrow-left.png);
+    background-position: 13px center;
+}

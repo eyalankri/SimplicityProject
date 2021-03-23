@@ -1,0 +1,309 @@
+﻿/* GLOBAL STYLES */
+
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description {
+    display: block;
+}
+.ui-tabs .product-specs-box .spec-value>a {
+    text-transform:none;
+    text-decoration:underline;
+    color:#888;
+    font-size:15px;
+    transition:all 0.25s ease;
+    -webkit-transition:all 0.25s ease;
+    -moz-transition:all 0.25s ease;
+    -ms-transition:all 0.25s ease;
+}
+.ui-tabs .product-specs-box .spec-value>a:hover {
+    color:#000;
+}
+.ui-tabs textarea,
+.ui-tabs input[type="text"],
+.ui-tabs input[type="email"],
+.ui-tabs input[type="tel"] {
+    font-size: 16px;
+    font-family: 'Trebuchet MS';
+}
+/* THEME STYLES */
+.ui-tabs .product-reviews-page .title strong {
+    font-family: Arvo;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight:normal;
+}
+.product-essential {
+	margin-bottom: 20px;
+}
+.full-description {
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #ddd;
+}
+.product-specs-box {
+	margin-bottom: 40px;
+}
+.product-variant-line:first-child {
+    border: none;
+    padding: 0;
+}
+.ui-tabs .ui-tabs-nav li {
+    display:block;
+    max-width:350px;
+    margin:auto;
+}
+.productTabs .ui-tabs-nav li a {
+	display: block;
+	padding:0;
+    border:none;
+    border-bottom:1px solid #ddd;
+    background:transparent;
+    color: #666666;
+    font-size: 16px;
+    line-height: 40px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.ui-tabs .ui-state-active.ui-tabs-active a {
+    background:transparent;
+    border-bottom:1px solid #ddd;
+    color:#000;
+}
+.ui-tabs .ui-state-active.ui-tabs-active:after {
+    display:block;
+    width:100%;
+    content:'';
+    height:4px;
+    background:#a79c97;
+}
+.ui-tabs .ui-tabs-panel {
+    padding:45px 0 0;
+    border:none;
+}
+.ui-tabs .ui-tabs-panel p {
+    margin:0;
+}
+.ui-tabs .ui-tabs-panel .write-review .message-error {
+    display:none;
+}
+.ui-tabs .ui-tabs-panel .product-specs-box .spec-name {
+    background:#fff;
+    color:#666;
+    width:30%;
+    text-align:right;
+    padding:0 8px 0 0;
+    line-height:40px;
+}
+.ui-tabs .ui-tabs-panel .product-specs-box .spec-value {
+    text-align:left;
+    padding:0 0 0 8px;
+}
+
+.custom-tab{
+    margin: 10px 0;
+    padding: 0 10px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #666;
+    line-height: 20px;
+}
+
+
+/*VERSION 2*/
+
+.quick-tabs-2 .ui-tabs .ui-tabs-nav li {
+    margin:0 auto;
+    vertical-align:bottom;
+}
+
+.quick-tabs-2 .productTabs .ui-tabs-nav li a {
+	background:#a79c97;
+	color:#eee;
+}
+.quick-tabs-2 .ui-tabs .ui-state-active.ui-tabs-active a {
+	background: #a79c97;
+	color: #ffffff;
+	height: 50px;
+	line-height: 50px;
+}
+.quick-tabs-2 .ui-tabs .ui-state-active.ui-tabs-active:after {
+	display:none;
+}
+.quick-tabs-2 .ui-tabs .ui-state-active.ui-tabs-active a {
+	background:#8e807a;
+}
+
+/*VERSION 3*/
+
+.quick-tabs-3 .productTabs .ui-tabs-nav li {
+    vertical-align:bottom;
+}    
+.quick-tabs-3 .productTabs .ui-tabs-nav li a {
+	color:#000;
+}
+.quick-tabs-3 .ui-tabs .ui-state-active.ui-tabs-active a {
+	background: #a79c97;
+	color: #ffffff;
+	height: 50px;
+	line-height:50px;
+}
+.quick-tabs-3 .ui-tabs .ui-state-active.ui-tabs-active:after {
+	display:none;
+}
+
+@media all and (min-width: 768px) {
+.quick-tabs-2 .ui-tabs .productTabs-header .ui-tabs-nav {
+    height:50px;
+}
+.quick-tabs-3 .ui-tabs .productTabs-header .ui-tabs-nav {
+	height:50px;
+}
+.ui-tabs .ui-state-default:after {
+    display:block;
+    content:'';
+    height:0px;
+    width:100%;
+    background:#a79c97;
+    transition:all 0.3s ease 0s;
+}
+.ui-tabs .ui-state-default:hover:after {
+    width:100%;
+    height:4px;
+
+} 
+
+.ui-tabs .productTabs-header .ui-tabs-nav {
+    overflow:visible;
+    margin:0;
+    border-bottom:1px solid #ddd;
+    height:40px;
+}
+.ui-tabs .ui-tabs-nav li {
+    display:inline-block;
+    margin:0 -2px;
+} 
+.ui-tabs .ui-tabs-nav li a {
+    padding:0 25px;
+    border:none;    
+}
+.ui-tabs .ui-state-active.ui-tabs-active a {
+    border:none;
+}
+.ui-tabs-panel .write-review .inputs {
+    border-bottom:1px solid #ddd;
+    margin:0;
+}
+.ui-tabs-panel .write-review .review-rating {
+    margin:0;
+    border:1px solid #ddd;
+    border-top:none;
+}
+.ui-tabs-panel .write-review .inputs label,
+.ui-tabs-panel .write-review .review-rating .name-description {
+    float:left;
+    width:30%;
+    margin:0;
+    text-align:right;
+    padding:0 8px 0 0;
+    border-right:1px solid #ddd;
+    line-height:40px;
+    color:#666;
+    font-size:16px;
+}
+.ui-tabs-panel .write-review .review-rating .name-description .tooltiptext {
+    left: auto;
+    right: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+.ui-tabs-panel .write-review .review-rating .name-description .tooltiptext:after,
+.ui-tabs-panel .write-review .review-rating .name-description .tooltiptext:before {
+    left: auto;
+    right: 0;
+}
+.ui-tabs-panel .write-review .review-rating .name-description .tooltiptext:after {
+    margin-left: 0;
+    margin-right: 1px;
+}
+.ui-tabs-panel .write-review .review-rating .rating-wrapper {
+    text-align:left;
+    margin:0 0 0 8px;
+}
+.ui-tabs-panel .write-review .review-rating .rating-wrapper > div {
+    line-height:40px;
+    height:40px;
+} 
+.productTabs .write-review .form-fields .inputs:last-child label {
+    height:150px;
+}
+.ui-tabs-panel .write-review .inputs input[type="text"],
+.ui-tabs-panel .write-review .inputs input[type="email"],
+.ui-tabs-panel .write-review .inputs input[type="tel"] {
+    margin: 0;
+    padding: 0 0 0 8px;
+    width: 70%;
+    max-width: none;
+    border: none;
+}
+.ui-tabs-panel .write-review .inputs textarea {
+    margin:0;
+    width:70%;
+    max-width:none;
+    border:none;
+}
+.ui-tabs-panel .write-review .inputs:last-child label {
+    height:150px;
+}
+.ui-tabs-panel #contact-us-tab .form-fields {
+    border:1px solid #ddd;
+    border-bottom:none;
+}
+.ui-tabs-panel .write-review .form-fields {
+    margin:0;
+}
+.ui-tabs-panel .write-review .form-fields .field-validation-error {
+    position:absolute;
+    top:0;
+    right:0;
+    line-height:40px;
+    background:#f9f9f9;
+    padding:0 20px;
+    border-left:1px solid #ddd;
+}
+.ui-tabs-panel .product-reviews-page .form-fields .inputs+.inputs label {
+    height:150px;
+}  
+.ui-tabs-panel .product-reviews-page .form-fields .inputs+.inputs .field-validation-error {
+    border-bottom:1px solid #ddd;
+}
+.ui-tabs .ui-tabs-panel .buttons {
+	margin-top: 20px;
+}
+
+/*VERSION 2*/
+
+.quick-tabs-2 .productTabs .ui-tabs .ui-tabs-nav li {
+	margin:0 -1px;
+}
+.quick-tabs-2 .productTabs .ui-tabs-nav li a {
+	transition:all 0.3s ease;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-ms-transition:all 0.3s ease;
+}
+
+/*VERSION 3*/
+
+.quick-tabs-3 .productTabs .ui-tabs-nav li a {
+	transition:all 0.3s linear;
+	-webkit-transition:all 0.3s linear;
+	-moz-transition:all 0.3s linear;
+	-ms-transition:all 0.3s linear;
+	border:none;
+}
+.quick-tabs-3 .ui-tabs .ui-state-default:after {
+	background:none;
+}
+
+}

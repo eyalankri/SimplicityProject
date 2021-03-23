@@ -1,0 +1,233 @@
+﻿/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+span.search-box-text {
+	float: left;
+}
+input.instant-search-busy {
+    background:  no-repeat center !important;
+}
+
+/* MOBILE */
+
+.mobile .instantSearch {
+    display: none !important;
+}
+.mobile .search-box span.search-box-text {
+    width: calc(100% - 67px) !important;
+}
+.mobile .search-box span.search-box-text input.search-box-text {
+    width: 100% !important;
+}
+
+/* with category */
+
+.mobile .search-box-content .select-wrap {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 3;
+}
+.mobile .search-box-content .select-wrap select {
+    bottom: 0;
+    height: auto !important;
+}
+.mobile .search-box-content .select-box {
+    z-index: 1;
+}
+.mobile .search-box-content .select-inner {
+    display: block !important;
+    width: auto !important;
+    line-height: 57px;
+    color: #fff;
+    background: rgba(0,0,0,.06);
+    font-size: 15px;
+    padding: 0 24px 0 12px;
+    text-align: left;
+    border: 0;
+    height: 57px;
+}
+.mobile .search-box-content .select-inner:before {
+    display: none;
+}
+.mobile .search-box-content .select-inner:after {
+    content: "<";
+    font-family: icons;
+    text-transform: none;
+    font-size: 6px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 57px;
+    background: rgba(0,0,0,.06);
+    line-height: 57px;
+    text-align: center;
+    z-index: 2;
+}
+
+@media all and (min-width: 481px) {
+
+    .mobile .search-box-content .select-wrap {
+        width: 180px;
+    }
+    .mobile .search-box-content .select-inner {
+        padding: 0 36px 0 18px;
+    }
+
+}
+
+
+/* DESKTOP */
+
+.desktop input.search-box-text {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+.desktop input.instant-search-busy {
+	/*background: url(ajax-loader-small.gif) no-repeat calc(100% - 15px) center !important;*/
+	/*do not set background postion from the left, if necessary add space to loader gif instead*/
+}
+
+/* with category */
+
+.desktop .search-box-content .select-box {
+    float: right;
+}
+.desktop .search-box-content .select-inner {
+    width: 143px;
+    line-height: 57px;
+    color: #fff;
+    background: rgba(0,0,0,.06);
+    font-size: 15px;
+    padding: 0 35px 0 18px;
+    white-space: nowrap;
+	border: 0;
+    text-align: left;
+}
+.desktop .search-box-content .select-inner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 57px;
+    z-index: 1;
+}
+.desktop .search-box-content .select-inner:after {
+    content: "<";
+    text-transform: none;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 57px;
+    background: rgba(0,0,0,.06);
+    line-height: 57px;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    margin-top: 0;
+}
+.desktop .search-box-content .select-options {
+    top: 57px !important;
+    width: 214px;
+}
+.desktop .search-box-content .select-options a {
+    font-size: 15px;
+    text-align: left;
+    text-transform: none;
+    white-space: normal;
+}
+
+.desktop .header-links-wrapper .search-box.with-select.opened form {
+    width: 471px;
+}
+.desktop .header-links-wrapper .search-box form.overflow-initial {
+    overflow: visible;
+}
+.desktop .header-links-wrapper .search-box.with-select .search-box-content {
+    width: 471px;
+}
+
+
+/* AUTOCOMPLETE */
+
+.instantSearch {
+	width: 399px !important;
+	height: auto !important;
+	margin-top: -1px !important;
+}
+.instantSearch.resize {
+    width: 470px !important;
+}
+.instantSearch .k-list-container {
+	position: static !important;
+	width: 100% !important;
+	box-shadow: 0 0 9px rgba(0,0,0,0.15);
+}
+.instantSearch .k-list-scroller {
+    height: 100% !important;
+    overflow-y: auto;
+}
+.instantSearch .k-item {
+	cursor: pointer;
+}
+.instantSearch .k-item:first-child {
+	border-top: none !important;
+}
+.instant-search-item {
+	padding: 20px;
+    font-size: 0;
+    -webkit-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+.instant-search-item .img-block {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+	width: 80px;
+	text-align: center;
+}
+.instant-search-item .img-block:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    bottom: -3px;
+    left: -3px;
+    opacity: 0;
+    z-index: 3;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+.instant-search-item .img-block img {
+	max-width: 100%;
+}
+.instant-search-item .detail {
+    width: calc(100% - 95px);
+	margin-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.instant-search-item .detail .title {
+	font-size: 16px;
+}
+.instant-search-item .detail .sku {
+    font-size: 14px;
+	margin-top: 8px;
+}
+.instant-search-item .detail .price {
+	font-size: 16px;
+    font-weight: 700;
+	margin-top: 8px;
+}
+
+.k-item.k-state-hover .img-block:before, 
+.k-item.k-state-focused .img-block:before {
+    opacity: 1;
+}

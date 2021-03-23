@@ -1,0 +1,96 @@
+/*
+* Copyright 2019 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/* RTL */
+
+
+.productQuantityTextBox {
+    float: right;
+}
+
+.with-icon .ajax-cart-button-wrapper {
+	margin: 0 0 0 1px; 
+}
+.items-per-row-four .picture .add-to-wishlist-button {
+	right: auto;
+	left: 23.5%;
+}
+.items-per-row-four .with-text .quick-view-button {
+	right: 23.5%;
+	left: auto;
+}
+.items-per-row-four .category-page .picture .add-to-wishlist-button {
+	right: auto;
+	left: 23.4%;
+}
+.items-per-row-four .category-page .with-text .quick-view-button {
+	right: 23.4%;
+	left: auto;
+}
+.productAddedToCartWindowTitle,
+.miniProductDetailsView .product-name {
+	left: 40px;
+	right: 370px;
+}
+.ajaxCart .k-window-titlebar.k-header {
+	right: auto;
+	left: 0;
+}
+.miniProductDetailsView .product-name {
+    left: inherit;
+    right: 13px;
+    text-align: right;
+}
+.ajaxCart .k-window-titlebar.k-header .k-window-actions {
+	right: inherit;
+	left: 10px;
+}
+.miniProductDetailsView .product-essential .overview {
+    margin: 0;
+}
+
+.productAddedToCartWindowImage,
+.productAddedToCartWindowDescription {
+    float: right;
+}
+
+.productAddedToCartWindowDescription {
+    text-align: right;
+}
+.productAddedToCartWindowSummary {
+	text-align: right;
+}
+.miniProductDetailsView .product-essential .gallery {
+	float: right;
+}
+.miniProductDetailsView .product-details-page .overview {
+	float: left;
+	text-align: right;
+}
+.miniProductDetailsView .rental-attributes dt {
+	float: right;
+}
+.miniProductDetailsView .attribute-squares {
+	text-align: right;
+}
+.miniProductDetailsView .add-to-cart > *,
+.miniProductDetailsView .add-button-wrap {
+	float: right;
+	margin: 0;
+}
+.miniProductDetailsView .add-to-cart > *:first-child {
+	margin: 0;
+}
+.miniProductDetailsView .message-error {
+	text-align: right;
+}
+.productAddedToCartWindowSummary div {
+    float: right;
+}
+.miniProductDetailsView .product-essential .overview .prices,
+.miniProductDetailsView .attributes dl,
+.miniProductDetailsView h1 {
+    text-align: right;
+}

@@ -1,0 +1,296 @@
+/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nop-jcarousel {
+	margin: 20px 0 40px;
+    position: relative;
+}
+
+.center-2 .nop-jcarousel {
+    margin: 40px 0 20px;
+}
+
+.nop-jcarousel > .carousel-title strong {
+    display: inline-block;
+    color: #000;
+    max-width: calc(100% - 100px);
+}
+
+.side-2 .nop-jcarousel > .carousel-title strong {
+    max-width: initial;
+}
+
+.side-2 .slick-list {
+    margin-bottom: 15px;
+}
+
+/*.nop-jcarousel .slick-list {
+    padding: 20px 0;
+}*/
+
+.nop-jcarousel.product-grid,
+.nop-jcarousel.product-list {
+    border: none;
+}
+
+.nop-jcarousel .carousel-item {
+    padding: 0 7.5px 1px;
+}
+
+.nop-jcarousel > * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.nop-jcarousel .item-box {
+    margin: 0;
+}
+
+.nop-jcarousel .item-box .picture {
+    max-width: 100%;
+    width: 100%;
+}
+
+.jCarouselMainWrapper .slick-next, 
+.jCarouselMainWrapper .slick-prev {
+	position: absolute;
+	top: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 0;
+    box-sizing: content-box;
+}
+.jCarouselMainWrapper .slick-next {
+    right: -30px;
+	background: url("images/next-horizontal.png") center center no-repeat;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.jCarouselMainWrapper .slick-prev {
+    left: -30px;
+	background: url("images/prev-horizontal.png") center center no-repeat;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.jCarouselMainWrapper .slick-next:hover, 
+.jCarouselMainWrapper .slick-next:focus, 
+.jCarouselMainWrapper .slick-prev:hover, 
+.jCarouselMainWrapper .slick-prev:focus {
+    opacity: 1;
+	filter: alpha(opacity=100);
+}
+.jCarouselMainWrapper .slick-disabled,
+.jCarouselMainWrapper .slick-disabled:hover {
+    opacity: 0.7 !important;
+	filter: alpha(opacity=70) !important;
+    cursor: default;
+}
+
+.nop-jcarousel .slick-dots {
+    text-align: center;
+    padding: 5px 0 10px;
+}
+
+.nop-jcarousel .slick-dots li {
+    display: inline-block;
+}
+.nop-jcarousel .slick-dots li button {
+    width: 22px;
+    height: 22px;
+    background: url('images/bullets.png') no-repeat;
+    text-indent: -9999px;
+    border: 0;
+    cursor: pointer;
+}
+
+.nop-jcarousel .slick-dots .slick-active button {
+    background-position: 0 -22px;
+}
+
+.nop-jcarousel .item-box .buttons {
+    margin-bottom: 0;
+}
+
+.nop-jcarousel > .title {
+    background: url(/Themes/NeoFashion/Content/img/separator.png) bottom repeat-x;
+    margin-bottom: 18px;
+    padding-bottom: 30px;
+    font: 24px "Times New Roman",Times,serif;
+    color: #000;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.center-2 .nop-jcarousel .carousel-title.has-navigation {
+    position: relative;
+}
+
+.center-2 .jCarouselMainWrapper .slick-next,
+.center-2 .jCarouselMainWrapper .slick-prev {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    margin: 0;
+}
+
+.nop-jcarousel .carousel-item .item-box {
+    width: 100%;
+}
+
+@media all and (min-width: 1025px) {
+    
+    .center-1 .jCarouselMainWrapper .slick-next,
+    .center-1 .jCarouselMainWrapper .slick-prev {
+        margin-top: 39px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .center-2 .jCarouselMainWrapper .slick-next,
+    .center-2 .jCarouselMainWrapper .slick-prev {
+        top: 0;
+    }
+
+    .center-2 .jCarouselMainWrapper .slick-prev {
+        right: 50px;
+        left: auto;
+        background: url("images/prev-horizontal.png") center center no-repeat;
+    }
+
+    .center-2 .jCarouselMainWrapper .slick-next {
+        right: 0px;
+        background: url("images/next-horizontal.png") center center no-repeat;
+    }
+
+    .side-2 .carousel-title {
+        padding: 0 50px 25px 0;
+        font-size: 18px;
+    }
+
+     .side-2 .nop-jcarousel .item-box {
+        margin: 0;
+    }
+
+    .side-2 .nop-jcarousel .carousel-item {
+        padding: 0 0 1px;
+        margin: 0 4px;
+    }
+
+    .side-2 .jCarouselMainWrapper .slick-next,
+    .side-2 .jCarouselMainWrapper .slick-prev {
+        top: 0;
+        padding: 0;
+    }
+    .side-2 .jCarouselMainWrapper .slick-next {
+        right: 0;
+    }
+    .side-2 .jCarouselMainWrapper .slick-prev {
+        left: auto;
+        right: 30px;
+    }
+
+    .side-2 .nop-jcarousel {
+        margin: 0 0 20px;
+    }
+
+    .side-2 .nop-jcarousel .slick-list {
+        padding: 0;
+    }
+
+}
+
+/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+
+@media all and (max-width: 1024px) {
+    .jCarouselMainWrapper .slick-prev {
+        right: 50px;
+        left: auto;
+        top: 0;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+
+    }
+    .jCarouselMainWrapper .slick-next {
+        right: 0px;
+        left: auto;
+        top: 0;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+
+/*=====================================================
+    
+    TABLETS PORTRAIT & SMARTPHONES LANDSCAPE
+
+=====================================================*/
+
+@media all and (max-width: 768px) and (min-width: 481px) {
+    
+    .nop-jcarousel {
+        margin: 40px 0 20px 0;
+    }
+
+}
+
+
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (max-width: 480px) {
+    .nop-jcarousel .carousel-item .item-box {
+        margin: 0 auto;
+    }
+    .nop-jcarousel h2,
+    .nop-jcarousel h3 {
+        text-align: center;
+    }
+
+    .jCarouselMainWrapper .slick-next,
+    .jCarouselMainWrapper .slick-prev {
+        display: none !important;
+    }
+
+    .nop-jcarousel > .carousel-title {
+        text-align: center;
+    }
+
+    .nop-jcarousel > .carousel-title strong {
+        max-width: initial;
+    }
+
+    .nop-jcarousel > .title {
+        text-align: center;
+    }
+    
+}
+
+@media all and (min-width: 769px) {
+    .center-1 .nop-jcarousel > .carousel-title strong {
+        max-width: initial;
+    }
+}

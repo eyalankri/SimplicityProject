@@ -1,0 +1,15 @@
+﻿
+.mega-menu .box {
+	float: right;
+}
+.mega-menu .picture {
+	float: right;
+}
+.mega-menu .subcategories {
+	margin-right: 45%;
+	margin-left: 0;
+}
+.mega-menu .subcategories a {
+	background: url('images/rtl-arrow.png') right center no-repeat;
+	padding: 0 12px 0 0;
+}

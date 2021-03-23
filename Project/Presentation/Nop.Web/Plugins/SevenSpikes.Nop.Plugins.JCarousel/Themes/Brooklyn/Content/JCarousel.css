@@ -1,0 +1,292 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*** TITLE & CONTAINERS ***/
+
+.nop-jcarousel {
+	position: relative;
+    margin: 20px 0 80px;
+}
+.nop-jcarousel .carousel-title {
+	padding: 8px 65px 48px;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #444;
+    letter-spacing: 3.3px;
+}
+.carousel-item .item-box {
+    width: 100% !important;
+    margin: 0 !important;
+    max-width: none;
+}
+
+.nop-jcarousel.product-grid .title, 
+.nop-jcarousel.home-page-category-grid > .title {
+    margin: 0;
+}
+
+.nop-jcarousel.manufacturer-grid .picture, 
+.nop-jcarousel.vendor-grid .picture {
+    margin: 0;
+}
+
+
+/*** NAVIGATION ***/
+
+.jCarouselMainWrapper .slick-prev,
+.jCarouselMainWrapper .slick-next {
+    position: absolute;
+    top: -80px;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #eee;
+	background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 0;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.jCarouselMainWrapper .slick-prev {
+    left: 0;
+    background: url('images/prev-product-mobile.png') no-repeat center;
+}
+.jCarouselMainWrapper .slick-next {
+    right: 0;
+    background: url('images/next-product-mobile.png') no-repeat center;
+}
+.jCarouselMainWrapper .slick-prev:hover,
+.jCarouselMainWrapper .slick-next:hover {
+}
+
+.jCarouselMainWrapper .slick-dots {
+    padding: 20px 0 0;
+    font-size: 0;
+    text-align: center;
+}
+.jCarouselMainWrapper .slick-dots li {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 3.5px;
+}
+.jCarouselMainWrapper .slick-dots li button {
+    width: 10px;
+    height: 10px;
+    background: #eee;
+    text-indent: 999px;
+    border: none;
+}
+
+.jCarouselMainWrapper .slick-dots .slick-active button  {
+    background: #cc8a97;
+}
+
+.jCarouselMainWrapper .category-grid .item-box .title{
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed title load on swipe*/
+}
+.carousel-item .ribbon-position {
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed ribbon load on swipe*/
+}
+
+@media all and (max-width: 1024px) {
+    
+    .nop-jcarousel.product-grid .item-box {
+        padding: 5px;
+    }
+
+}
+
+@media all and (min-width: 1025px) {
+
+.carousel-item .item-box:hover {
+    box-shadow: none;
+}
+
+/* product nav*/
+
+.center-1 .jCarouselMainWrapper .slick-prev,
+.center-1 .jCarouselMainWrapper .slick-next {
+    top: 0;
+    width: 240px;
+    height: 100%;
+    border: none;
+    opacity: 1;
+    cursor: pointer;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.center-1 .jCarouselMainWrapper .slick-prev:hover,
+.center-1 .jCarouselMainWrapper .slick-next:hover {
+    opacity: 0.92;
+}
+.center-1 .jCarouselMainWrapper .slick-disabled {
+    opacity: .3;
+    cursor: default;
+}
+.center-1 .jCarouselMainWrapper .slick-prev.slick-disabled:hover,
+.center-1 .jCarouselMainWrapper .slick-next.slick-disabled:hover {
+    opacity: .3;
+}
+ 
+.center-1 .jCarouselMainWrapper .slick-prev {
+    left: 0;
+    margin-left: -36px;
+    background: url('images/gradient-left.png');
+    background-position: left top;
+    background-repeat: repeat-y;
+}
+.center-1 .jCarouselMainWrapper .slick-prev:before {
+    content: "";
+    position: absolute;
+    top: 0;   
+    bottom: 0 !important;
+    left: 20px;
+    height: 53px;
+    width: 26px;
+    margin: auto;
+    background: url('images/prev-horizontal-new.png') no-repeat center;
+}
+.center-1 .jCarouselMainWrapper .slick-next {
+    right: 0;
+    margin-right: -36px;
+    background:  url('images/gradient-right.png');
+    background-position: right top;
+    background-repeat: repeat-y;
+}
+.center-1 .jCarouselMainWrapper .slick-next:before {
+    content: "";
+    position: absolute;
+    top: 0;   
+    bottom: 0 !important;
+    right: 20px;
+    height: 53px;
+    width: 26px;
+    margin: auto;
+    background: url('images/next-horizontal-new.png') no-repeat center;
+}
+
+.center-2 .jCarouselMainWrapper .slick-prev {
+    left: 10px;
+}
+.center-2 .jCarouselMainWrapper .slick-next {
+    right: 10px;
+}
+
+
+/* carousel in left column */
+
+.side-2 .nop-jcarousel {
+    display: block;
+    margin: 0 0 60px;
+    padding: 5px;
+    border: 2px solid #eee;
+}  
+.side-2 .nop-jcarousel .carousel-title {
+    padding: 8px 0 60px;
+}
+.side-2 .nop-jcarousel .item-box:hover {
+    box-shadow: none;
+}
+
+.side-2 .jCarouselMainWrapper .slick-prev, 
+.side-2 .jCarouselMainWrapper .slick-next {
+    position: absolute;
+    top: -54px;
+    width: 48px !important;
+    height: 48px;
+    border: 2px solid #eee;
+}
+.side-2 .jCarouselMainWrapper .slick-prev:before, 
+.side-2 .jCarouselMainWrapper .slick-next:before {
+    display: none;
+}
+.side-2 .jCarouselMainWrapper .slick-prev {
+    background: url("images/prev-product-mobile.png") no-repeat center;
+    left: 68px;
+}
+.side-2 .jCarouselMainWrapper .slick-next {
+    background: url("images/next-product-mobile.png") no-repeat center;
+    right: 68px;
+}
+.side-2 .block .nop-jcarousel {
+    border: none;
+}
+.side-2 .jCarouselMainWrapper .slick-dots {
+    margin: 0 0 -30px;
+}
+
+
+}
+
+@media all and (min-width: 1281px) {
+
+.center-1 .nop-jcarousel .carousel-title {
+    padding: 8px 0 28px;
+}
+.center-1 .jCarouselMainWrapper .slick-prev,
+.center-1 .jCarouselMainWrapper .slick-next {
+     width: 70px !important;
+}
+.center-1 .jCarouselMainWrapper .slick-prev {
+    left: -36px;
+}
+.center-1 .jCarouselMainWrapper .slick-next {
+    right: -36px;
+    background: url('images/gradient-right.png');
+    background-position: right top;
+    background-repeat: repeat-y;
+}
+.center-1 .jCarouselMainWrapper .slick-prev:before {
+    content: "";
+    position: absolute;
+    top: 0;   
+    bottom: 0 !important;
+    left: 20px;
+    height: 53px;
+    width: 26px;
+    margin: auto;
+    background: url('images/prev-horizontal-new.png') no-repeat center;
+}
+.center-1 .jCarouselMainWrapper .slick-next:before {
+    content: "";
+    position: absolute;
+    top: 0;   
+    bottom: 0 !important;
+    right: 20px;
+    height: 53px;
+    width: 26px;
+    margin: auto;
+    background: url('images/next-horizontal-new.png') no-repeat center;
+}
+
+/*carousel with one clickable item in the center and odd number of items*/
+.center-1 .transparent.jCarouselMainWrapper .slick-prev,
+.center-1 .transparent.jCarouselMainWrapper .slick-next {
+     width: 480px !important;
+}
+.center-1 .transparent.jCarouselMainWrapper .slick-prev {
+    left: 0;
+    margin: 0;
+}
+.center-1 .transparent.jCarouselMainWrapper .slick-next {
+    right: 0;
+    margin: 0;
+}
+.center-1 .nop-jcarousel .carousel-item {
+    padding: 10px 0;
+}
+.center-1 .nop-jcarousel.home-page-category-grid .carousel-item {
+}
+.center-1 .transparent .nop-jcarousel .slick-center .item-box {
+    box-shadow: 0 1px 8px 2px rgba(0, 0, 0, 0.12);
+}
+
+
+}

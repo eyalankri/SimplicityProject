@@ -1,0 +1,60 @@
+﻿/*=====================================================
+    
+    DESKTOP
+
+=====================================================*/
+
+@media all and (min-width: 1025px) {
+
+.dropdown .box {
+	float: right;
+}
+.mega-menu .title,
+.mega-menu .box li {
+	text-align: right;
+}
+
+.mega-menu .dropdown:before{
+	right: 0;
+	left: 0;
+}
+.mega-menu .dropdown.fullWidth{
+	right: 50%;
+	left: auto;
+	margin-right: -500px;
+	margin-left: 0;
+}
+.categories.fullWidth .box{
+	border-left: 1px dotted #d3d3d3;
+	border-right: 0;
+	padding: 10px 17px 10px 16px;
+}
+.categories.fullWidth .row .box:last-child{
+	border-left: 0;
+}
+.mega-menu .picture img{
+	left: 0;
+	right: 0;
+}
+.mega-menu .box li a{
+	padding: 5px 14px 5px 5px;
+}
+.mega-menu .box li a:before{
+	right: 0;
+	left: auto;
+}
+.manufacturers.fullWidth .title,
+.vendors.fullWidth .title {
+	right: 10px;
+	left: 10px;
+}
+
+}
+
+
+@media all and (min-width:1200px) {
+    .mega-menu .dropdown.fullWidth {
+        margin-right: -600px;
+        margin-left: 0;
+    }
+}

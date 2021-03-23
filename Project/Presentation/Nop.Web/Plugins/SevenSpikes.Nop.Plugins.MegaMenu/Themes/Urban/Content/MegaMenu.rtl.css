@@ -1,0 +1,189 @@
+﻿.header.normal .mega-menu>li,
+.dropdown .box,
+.mega-menu .picture {
+	float: right;
+}
+/*mmega menu mobile look every second box*/
+.header.mobile .mega-menu .dropdown.fullWidth .box:nth-child(2n) {
+	float: left;
+}
+.mega-menu .title,
+.mega-menu .box li,
+.normal .manufacturers.dropdown.fullWidth .box .title,
+.normal .vendors.dropdown.fullWidth .box .title {
+	text-align: right;
+}
+*{
+	direction: rtl;
+}
+.mega-menu .dropdown {
+	margin-right: -11px;
+	margin-left: 0;
+}
+.mega-menu .dropdown.fullWidth {
+	right: 50%;
+	left: auto;
+	margin-right: -490px;
+	margin-left: 0;
+}
+
+/*menu with images*/
+.header.mobile .mega-menu .dropdown.categories.fullWidth,
+.header.mobile .mega-menu .dropdown.manufacturers.fullWidth,
+.header.mobile .mega-menu .dropdown.vendors.fullWidth {
+	right: -470px;
+	left: auto;
+}
+.header.mobile .mega-menu .dropdown.categories.fullWidth .box:after,
+.header.mobile .mega-menu .dropdown.manufacturers.fullWidth .box:after,
+.header.mobile .mega-menu .dropdown.vendors.fullWidth .box:after {
+	left: -12px;
+	right: auto;
+}
+.header.mobile .mega-menu .dropdown.fullWidth .box .picture,
+.header.mobile .mega-menu .dropdown.manufacturers.fullWidth .box .picture,
+.header.mobile .mega-menu .dropdown.vendors.fullWidth .box .picture {
+	right: 200px;
+	left: auto;
+}
+.dropdown.fullWidth .box .picture a > img,
+.header.mobile .mega-menu .dropdown.manufacturers.fullWidth .box .picture img,
+.header.mobile .mega-menu .dropdown.vendors.fullWidth .box .picture img {
+	right: 0;
+	left: 0;
+}
+.header.mobile .mega-menu .dropdown.fullWidth .box .subcategories a {
+	padding: 0 15px 0 0;
+}
+.header.mobile .mega-menu .dropdown.categories.fullWidth .box:nth-child(2n):after,
+.header.mobile .mega-menu .dropdown.manufacturers.fullWidth .box:nth-child(2n):after,
+.header.mobile .mega-menu .dropdown.vendors.fullWidth .box:nth-child(2n):after {
+	right: -12px;
+	left: auto;
+}
+.header.mobile .mega-menu .dropdown.fullWidth .box:nth-child(2n) .picture,
+.header.mobile .mega-menu .dropdown.manufacturers.fullWidth .box:nth-child(2n) .picture,
+.header.mobile .mega-menu .dropdown.vendors.fullWidth .box:nth-child(2n) .picture {
+	right: -200px;
+	left: auto;
+}
+.header.mobile .mega-menu > li:hover:before {
+    right:0;
+    left:auto;
+    border-color:rgba(0, 0, 0, 0) #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    border-width:11.5px 11.5px 11.5px 0;
+}
+
+/*NORMAL MENU WITH IMAGES*/
+
+.header.normal .mega-menu .dropdown.categories.fullWidth {
+	right: 0;
+	left: auto;
+}
+.header.normal .mega-menu .dropdown.categories.fullWidth .box {
+	margin: 0 0 10px 210px;
+}
+.header.normal .mega-menu .dropdown.categories.fullWidth .box:nth-child(2n) {
+	margin: 0 0 10px 200px;
+}
+.header.normal .mega-menu .dropdown.categories.fullWidth .box:after {
+	left: -24px;
+	right: auto;
+    border-top: 12px solid transparent;
+    border-right: 12px solid #282828;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid transparent;
+}
+.header.normal .mega-menu .dropdown.categories.fullWidth .box .picture {
+	right: 200px;
+	left: auto;
+}
+.header.normal .mega-menu .dropdown.categories.fullWidth .box .subcategories a {
+	padding: 0 15px 0 0;
+}
+.mega-menu .subcategories {
+	margin-right: 100px;
+	margin-left: 0;
+}
+
+/*manufacturers with images*/
+
+.header.normal .manufacturers.dropdown.fullWidth,
+.header.normal .vendors.dropdown.fullWidth {
+	right: 0;
+	left: auto;
+}
+.normal .manufacturers.dropdown.fullWidth .box,
+.normal .vendors.dropdown.fullWidth .box {
+	margin: 0 0 10px 210px;
+}
+.normal .manufacturers.dropdown.fullWidth .box:nth-child(2n),
+.normal .vendors.dropdown.fullWidth .box:nth-child(2n) {
+	margin: 0 0 10px 200px;
+}
+.normal .manufacturers.dropdown.fullWidth .box:after,
+.normal .vendors.dropdown.fullWidth .box:after {
+	left: -24px;
+	right: auto;
+    border-top: 12px solid transparent;
+    border-right: 12px solid #282828;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid transparent;
+}
+.normal .manufacturers.dropdown.fullWidth .box .picture,
+.normal .vendors.dropdown.fullWidth .box .picture {
+	right: 200px;
+	left: auto;
+}
+.normal .manufacturers.dropdown.fullWidth .box img,
+.normal .vendors.dropdown.fullWidth .box img  {
+	right: 0;
+	left: 0;
+}
+.header.normal .mega-menu .dropdown.categories.fullWidth,
+.header.normal .mega-menu .dropdown.manufacturers.fullWidth,
+.header.normal .mega-menu .dropdown.vendors.fullWidth {
+	right: -270px;
+	left: auto;
+}
+.header.normal .mega-menu .dropdown.categories.fullWidth .box:nth-child(2n),
+.header.normal .mega-menu .dropdown.manufacturers.fullWidth .box:nth-child(2n),
+.header.normal .mega-menu .dropdown.vendors.fullWidth .box:nth-child(2n) {
+	margin: 0 0 10px 210px;
+}
+.header.normal .mega-menu .dropdown.categories.fullWidth .box:nth-child(3n),
+.header.normal .mega-menu .dropdown.manufacturers.fullWidth .box:nth-child(3n),
+.header.normal .mega-menu .dropdown.vendors.fullWidth .box:nth-child(3n) {
+	margin: 0 0 10px 200px;
+}
+/*mobile menu view*/
+.header.mobile .mega-menu .dropdown.categories.fullWidth .box::after, 
+.header.mobile .mega-menu .dropdown.manufacturers.fullWidth .box::after,
+.header.mobile .mega-menu .dropdown.vendors.fullWidth .box::after {
+    border-color: rgba(0, 0, 0, 0) #282828 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 11.5px 12px 11.5px 0;
+    content: "";
+    display: block;
+    height: 0;
+    margin: -17px 0 0;
+    position: absolute;
+    right: auto;
+    top: 50%;
+    width: 0;
+}
+.header.mobile .mega-menu .dropdown.categories.fullWidth .box:nth-child(2n)::after,
+.header.mobile .mega-menu .dropdown.manufacturers.fullWidth .box:nth-child(2n)::after,
+.header.mobile .mega-menu .dropdown.vendors.fullWidth .box:nth-child(2n)::after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #282828;
+    border-style: solid;
+    border-width: 11.5px 0 11.5px 12px;
+    content: "";
+    display: block;
+    height: 0;
+    left: -12px;
+    margin: -17px 0 0;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}

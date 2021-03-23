@@ -1,0 +1,28 @@
+.jcarousel-skin-thumbs .jcarousel-item-horizontal {
+    margin: 10px 0 0 10px;
+}
+.jcarousel-skin-thumbs .jcarousel-prev-horizontal {
+    left: inherit;
+    right: 0;
+    background: url('images/next-horizontal.png') top no-repeat;
+}
+.jcarousel-skin-thumbs .jcarousel-next-horizontal {
+    right: inherit;
+    left: 0;
+    background: url('images/prev-horizontal.png') top no-repeat;    
+}
+
+
+
+.picture-thumbs .slick-prev {
+    left: auto;
+    right: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAaJJREFUeNqslj1LA0EQhjdrsDiEVP4DC0FtvIulhaWIhaiNH6BNBImCKNhZWFjZCH40RhE/QMTaQuwsJAc2KRT8C4KCWCiK74Qp1nX3srtm4IHbOXiz885kklwcx31CiBp4FwGRpumvswT3YAN0iiYECX6CNXAGJpohSPECxsA2OADRfwUpnsAImAJ3oRZI7XwDyqAbVEMskIbcLtgBbeAYVHwskJb8Arjm5xkfC2yCX2AUPPLZ2QKZ8e4VDIFnPjtZIBt8IHV+HHwouUwLpIMt1PlFLWe1QDo2bw9sabm6BUmS7IPIV5BiCVwZ8rNkAUTrFuSwbXzmtgBuQZfh3RuYk55fhG/G1o8o7yHWwmPTY3j3QMsFu7Hmc0PamcOG/AkokhgdXG9Is7ei5WjDlyFUUZMugv08Nn9K5J8OrznsABegVS/RJNZIkEbkErQrJVLpkzwixshndPRU6ai1RNcbboJBfj7KKtHlhiVeBlTiPDj0mXxdcICXgHOJWSVTR8/Zu2KImHrDAost+5ZoEqSOroPp0Fvpgr1gNfTPkh4/AgwADGFZYJdf9osAAAAASUVORK5CYII=');
+    background-position: left center;
+}
+.picture-thumbs .slick-next {
+    right: auto;
+    left: 0;
+    background-position: right center;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZ5JREFUeNqslrtKA0EYheNkEREhlW+QQjFWiVgKKQQRbEQsvGBsrFQQBXsLK5sIaqGoxAskhbWFeQHTCCKiPoMiiEVA9PtlBpawu9nZyYGPYbOTQ86Zyex25fP5lIsajcb/WCgUehmGVKoDwmyAYRcevA6YzTFsQpFf23QxlIj7MA0jmH3Ih0kNJWINBmEcs1dzI0mHEvEecrCKWd1/U1lGPIEL6IMDOGyd5FlGzOnrO1gLmqgsI4pe9EL82BpKxGNfRNE7TMJn2Je8mBFFTZiBt6g4KkZEo3Wot+tHtYloVIajOKvnRUQ0uoWNuHtLRUQUPcFs2IqGGfZErLYY/dr8jZTe/aPwHHB/GCqQtjEUPcqJAZcBc6b0WWdlKPqCeViG75Z5W1CyNTQ6DalAts1YEkN/BRXfZ916a2WTGJoKFnVUU0E/3EAmiaHRWUsFsl+vw1Y+7gFrKjjX1xOw52JoKljyVSCHxYqLYVAFZR6jRVdDU4G8clxBFdOsq2FKxy7ph3wN04yroXm3kQoWYAfTdEfebTCVCralhj8BBgDIGV/bSAOOrwAAAABJRU5ErkJggg==');
+}

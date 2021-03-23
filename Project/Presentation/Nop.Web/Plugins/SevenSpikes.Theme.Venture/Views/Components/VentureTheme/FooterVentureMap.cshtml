@@ -1,0 +1,107 @@
+﻿@model VentureThemeSettingsModel
+@inject IWebHelper webHelper
+
+@{
+    var storeLocation = webHelper.GetStoreLocation();
+}
+
+<div class="map-wrapper">
+    <div class="footer-map" style="display: none;"
+         data-pathtoimages="@storeLocation@Plugin.PathToImagesFolder"
+         data-latitude="@Model.Latitude"
+         data-longitude="@Model.Longitude"
+         data-mapstyles="@Model.CustomMapStyles"></div>
+</div>
+
+<script asp-location="Footer">
+    $(window).on('load', function () {
+        var scrollBarrier = 200;
+        var windowObj = $(window);
+
+        if ($('body').outerHeight() < windowObj.outerHeight() + scrollBarrier) {
+            loadFooterMapScript();
+        }
+        else {
+            windowObj.on('scroll.venturefootermap', function () {
+                if ($(this).scrollTop() > scrollBarrier) {
+                    $(this).off('scroll.venturefootermap');
+                    loadFooterMapScript();
+                }
+            });
+        }
+    });
+
+    var footerMap;
+
+    function loadFooterMapScript() {
+        //This check is necessary because if the map script is duplicated (by store locator for example) there are errors in the log and problems with Google maps.
+        if (typeof google === 'object' && typeof google.maps === 'object') {
+            initializeFooterMap();
+        } else {
+            var script = document.createElement("script");
+            script.src = "https://maps.googleapis.com/maps/api/js?callback=initializeFooterMap";
+            var apiKey = "@Model.GoogleApiKey";
+
+            if (apiKey) {
+                script.src += "&key=" + apiKey;
+            }
+
+            document.body.appendChild(script);
+        }
+    }
+
+    function getVentureCustomMapStyles() {
+        var mapStyles = $('.footer-map').attr('data-mapstyles');
+        var mapStylesJson = '';
+
+        if (!mapStyles) {
+            return '';
+        }
+
+        try {
+            mapStylesJson = JSON.parse(mapStyles);
+        }
+        catch (e) {
+            console.log('Invalid custom map styles value!');
+        }
+
+        return mapStylesJson;
+    }
+
+    function initializeFooterMap() {
+        var mapWrapper = $('.footer-map');
+        mapWrapper.show();
+        var markerX = mapWrapper.attr('data-latitude');
+        var markerY = mapWrapper.attr('data-longitude');
+
+        var mapOptions = {
+            center: new google.maps.LatLng(markerX, markerY),
+            zoom: 15,
+            draggable: true,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: getVentureCustomMapStyles()
+        };
+
+        footerMap = new google.maps.Map(mapWrapper[0], mapOptions);
+
+        var image = mapWrapper.attr('data-pathtoimages') + '/footer-map-marker-icon.png';
+
+        google.maps.event.addListenerOnce(footerMap, 'idle', function () {
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(markerX, markerY),
+                map: footerMap,
+                title: '',
+                icon: image,
+                draggable: false
+            });
+
+            marker.setMap(footerMap);
+
+            footerMap.setCenter(new google.maps.LatLng(markerX, markerY));
+
+            $(document).trigger('ventureMapLoaded');
+        });
+    }
+
+</script>

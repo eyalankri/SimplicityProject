@@ -1,0 +1,109 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+input.search-box-text:focus {
+    outline: -webkit-focus-ring-color auto 0;
+}
+span.search-box-text {
+    display: inline-block;
+    margin-right: 3px;
+    width: auto !important;
+    vertical-align: middle;
+}
+.instant-search-busy {
+    background: #fff url('../../../images/ajax-loader-small.gif') no-repeat 100% !important;
+}
+
+/* AUTOCOMPLETE */
+
+.instantSearch {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+    padding: 4px !important;
+    width: 300px !important;
+    height: auto !important;
+    border: 1px solid #bbb;
+    border-top: none;
+}
+.instantSearch.resize {
+    width: 334px !important;
+    max-width: 100% !important;
+}
+.instantSearch .k-list-container {
+	border-radius: 4px;
+    width: auto !important;
+    position: static !important;
+}
+.instantSearch .k-list {
+    height: 100%;
+}
+.instantSearch .k-item {
+    overflow: hidden;
+    display: block;
+    margin-bottom: 1px;
+}
+.instant-search-item {
+    overflow: hidden;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+.instantSearch .k-item.k-state-hover .instant-search-item, 
+.instantSearch .k-item.k-state-focused .instant-search-item{    
+    border-color: #A99F9A;
+    border-radius: 4px;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(227,227,227,1) 100%), #fff;
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(227,227,227,1) 100%), #fff;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(227,227,227,1) 100%), #fff;
+}
+.instant-search-item .img-block {
+    width: 70px;
+    height: 70px;
+    float: left;
+    overflow: hidden;
+	background: #fff;
+    text-align: center;
+}
+.instant-search-item .detail {
+	min-height: 70px;
+	margin-left: 80px;
+}
+.instant-search-item .detail .title {
+    text-align: left;
+    font-size: 1.2em;
+    padding-bottom: .25em;
+    color: black;
+}
+.instant-search-item .detail .price {
+    color: #690;
+    text-align: left;
+}
+
+.search-box-select {
+    margin-right: 3px;
+	width: 120px;
+	padding: 4px;
+}
+
+
+@media all and (max-width: 480px) {
+
+    .instantSearch,
+    .instantSearch.resize {
+        width: 250px !important;
+    }
+
+    .searchbox form > * {
+        margin-bottom: 10px;
+    }
+        .instantSearch .img-block {
+            display: none;
+        }
+        .instantSearch .detail {
+            min-height: 0 !important;
+            margin: 0 !important;
+        }
+
+}

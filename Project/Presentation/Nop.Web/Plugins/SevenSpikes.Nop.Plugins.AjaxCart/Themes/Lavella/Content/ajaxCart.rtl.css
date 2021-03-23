@@ -1,0 +1,111 @@
+﻿/*
+* Copyright 2019 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/* RTL */
+
+.productQuantityTextBox {
+    float: right;
+    margin: 0 0 0 4px;
+}
+.nopAjaxCartProductListAddToCartButton {
+	float: right;
+}
+.productAddedToCartWindowImage {
+    margin: 0 0 15px 2%;
+}
+.ajaxCart {
+	text-align: right;
+}
+
+.ajaxCart .k-window-titlebar.k-header {
+	padding: 10px 10px 10px 32px;
+}
+.ajaxCart .k-window-titlebar.k-header .k-window-actions {
+	left: 4px;
+	right: auto;
+}
+.productAddedToCartWindowTitle {
+    left: inherit;
+    right: 0;
+}
+
+.miniProductDetailsView .product-name {
+    left: inherit;
+    right: 13px;
+    text-align: right;
+}
+
+/* CONTENT */
+
+.miniProductDetailsView .product-essential .overview {
+    margin: 0;
+}
+
+.productAddedToCartWindowImage,
+.productAddedToCartWindowDescription {
+    float: right;
+}
+
+.productAddedToCartWindowDescription {
+    text-align: right;
+}
+
+.miniProductDetailsView .product-essential .gallery {
+    margin: 0 0 0 1%;
+    float: right;
+}
+.miniProductDetailsView .overview .prices {
+	float: right;
+	margin: 0 0 0 10px;
+}
+.miniProductDetailsView .overview .add-info {
+	float: left;
+}
+.miniProductDetailsView .add-to-cart > * {
+    float: right;
+    margin: 0 10px 0 0;
+}
+.miniProductDetailsView .add-to-cart > *:first-child {
+    margin: 0;
+}
+.miniProductDetailsView .product-essential .overview .prices,
+.miniProductDetailsView .attributes dl,
+.miniProductDetailsView h1 {
+    text-align: right;
+}
+
+
+.ajaxCart .attributes dl > * {
+	margin: 0 !important 10px 0;
+}
+.ajaxCart .attributes dt {
+	padding: 0 0 0 25px;
+}
+.ajaxCart .attributes dt label {
+	float: right;
+	margin-right: 5px;
+	margin-left: 0;
+}
+.ajaxCart .attributes dd {
+	float: right;
+}
+.ajaxCart .attributes .option-list li > * {
+	float: right;
+}
+.ajaxCart .attributes .option-list li > *:first-child {
+	margin-left: 5px;
+	margin-right: 0;
+}
+.ajax-cart-button-wrapper .productQuantityDropdown {
+	float: right;
+}
+.ajaxCart .item-box .product-rating-box {
+	right: -100%;
+	left: auto;
+}
+.ajaxCart .item-box:hover .product-rating-box {
+	right: 0;
+	left: auto;
+}

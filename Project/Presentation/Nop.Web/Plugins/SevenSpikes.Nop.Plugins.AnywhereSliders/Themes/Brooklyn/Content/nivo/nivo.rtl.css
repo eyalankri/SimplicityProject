@@ -1,0 +1,22 @@
+.nivo-directionNav a.nivo-prevNav {
+    left: auto;
+    right: 0;
+    background-image: url("slider-arrow-right.png");
+}
+.nivo-directionNav a.nivo-nextNav {
+    left: 0;
+    right: auto;
+    background-image: url("slider-arrow-left.png");
+} 
+
+@media all and (min-width: 769px) {
+    .main-banner-1 {
+        float: right;
+    }
+
+    .main-banner-2 {
+        float: right;
+        border-right: 10px solid #fff;
+        border-left: 0;
+    }
+}

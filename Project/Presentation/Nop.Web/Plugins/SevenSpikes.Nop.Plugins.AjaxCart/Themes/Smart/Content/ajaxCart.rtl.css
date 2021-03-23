@@ -1,0 +1,47 @@
+﻿
+.productQuantityTextBox {
+    float: right;
+}
+.ajaxCart .k-window-titlebar.k-header {
+    border-radius: 12px 12px 0 0;
+}
+.ajaxCart .k-window-titlebar.k-header .k-window-actions {
+    left: 10px;
+    right: auto;
+}
+.productAddedToCartWindow, .miniProductDetailsView {
+    border-radius: 0 0 12px 12px;
+}
+.productAddedToCartWindowTitle {
+    right: 15px;
+    left: auto;
+}
+.ajax-cart-button-wrapper input[type="text"],
+.ajax-cart-button-wrapper select {
+    margin: 0 0 0 -5px;
+}
+.productAddedToCartWindowImage {
+    float: right;
+}
+.productAddedToCartWindowDescription {
+    float: right;
+    padding: 0 24px 0 0;
+}
+.miniProductDetailsView .overview {
+    float: right;
+    text-align: right;
+    padding: 0 24px 0 0;
+}
+.miniProductDetailsView h1.product-name {
+    right: 15px;
+    left: auto;
+}
+.miniProductDetailsView .gallery {
+    float: right;
+}
+.miniProductDetailsView .add-to-cart {
+    margin: 0 35px 0 0 !important;
+}
+.miniProductDetailsView .add-to-cart * {
+    float: right;
+}

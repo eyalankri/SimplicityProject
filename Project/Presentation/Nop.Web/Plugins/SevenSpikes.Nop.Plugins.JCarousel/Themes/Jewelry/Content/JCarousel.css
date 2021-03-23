@@ -1,0 +1,183 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nop-jcarousel {
+    position: relative;
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.nop-jcarousel > .carousel-title {
+    display: block;
+    filter: none;
+	background: url('images/bullet1.png') 5px center no-repeat;
+	margin-bottom: 10px;
+	padding-left: 40px;
+	font: normal normal 32px 'kepler_eid';
+	color: #b68c65;
+    position: relative;
+    border: none;
+}
+
+.nop-jcarousel > .carousel-title strong {
+    font-weight: normal;
+}
+.nop-jcarousel .slick-carousel {
+    padding: 15px 35px;
+    border-radius: 5px;
+}
+.nop-jcarousel .carousel-item {
+    padding: 0 7.5px;
+}
+.nop-jcarousel .carousel-item .item-box {
+    width: 100% !important;
+    margin: 0 auto !important;
+    max-height: none;
+}
+
+.nop-jcarousel .jcarousel-container {
+	background: url('images/boxpad1.png') repeat;
+	padding: 15px 35px;
+	border-radius: 5px;
+}
+.nop-jcarousel .slick-next, 
+.nop-jcarousel .slick-prev {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 29px;
+    margin: -15px 0 0;
+	cursor: pointer;
+    font-size: 0;
+    border: none;
+}
+.nop-jcarousel .slick-prev {
+    left: 10px;
+    background: url('images/prev-horizontal.png') top no-repeat;
+}
+.nop-jcarousel .slick-next {
+    right: 10px;
+    background: url('images/next-horizontal.png') top no-repeat;
+}
+.nop-jcarousel .slick-prev:hover, 
+.nop-jcarousel .slick-next:hover {
+	background-position: bottom;
+}
+.nop-jcarousel .slick-disabled, 
+.nop-jcarousel .slick-disabled:hover{
+	background-position: top !important;
+	cursor: default;
+	opacity: .5;
+}
+
+.nop-jcarousel .slick-dots {
+    text-align: center;
+    padding: 10px 0 0;
+}
+
+.nop-jcarousel .slick-dots li {
+    display: inline-block;
+}
+.nop-jcarousel .slick-dots li button {
+    width: 22px;
+    height: 22px;
+    background: url('images/bullets.png') no-repeat;
+    text-indent: -9999px;
+    border: 0;
+    cursor: pointer;
+}
+
+.nop-jcarousel .slick-dots .slick-active button,
+.nop-jcarousel .slick-dots li button:hover {
+    background-position: 0 -22px !important;
+}
+
+.center-2 .nop-jcarousel {
+    margin-top: 20px;
+}
+
+
+@media all and (min-width: 769px) {
+    .center .nop-jcarousel .slick-list,
+    .center-2 .nop-jcarousel .slick-list {
+        margin: 0 -7.5px;
+    }
+    
+    .center .nop-jcarousel .slick-slider,
+    .center-2 .nop-jcarousel .slick-slider {
+        position: static;
+    }
+
+    .center .nop-jcarousel .slick-carousel,
+    .center-2 .nop-jcarousel .slick-carousel {
+        padding: 15px 0;
+    }
+
+
+    .center .nop-jcarousel > .carousel-title,
+    .center-2 .nop-jcarousel > .carousel-title {
+        display: block;
+        max-width: calc(100% - 80px);
+    }
+
+    .nop-jcarousel .slick-arrow {
+        top: 7px;
+        margin: 0;
+    }
+
+    .nop-jcarousel .slick-prev {
+        right: 50px;
+        left: auto;
+    }
+
+    .nop-jcarousel .slick-next {
+        left: auto;
+        right: 7.5px;
+    }
+    
+
+    .side-2 .nop-jcarousel > .carousel-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+
+    .side-2 .nop-jcarousel .carousel-item {
+        padding: 0;
+    }
+    .side-2 .carousel-title {
+        padding: 0;
+        margin-bottom: 0;
+        background: none;
+        text-align: center;
+    }
+    .side-2 .nop-jcarousel .slick-carousel {
+        padding: 0;
+    }
+    .side-2 .nop-jcarousel .slick-next, 
+    .side-2 .nop-jcarousel .slick-prev {
+        display: none !important;
+    }
+
+}
+
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (max-width: 480px) {
+    
+    .nop-jcarousel {
+        text-align: center;
+    }
+    .nop-jcarousel > .carousel-title {
+        font-size: 28px;
+        display: inline-block;
+    }
+
+}

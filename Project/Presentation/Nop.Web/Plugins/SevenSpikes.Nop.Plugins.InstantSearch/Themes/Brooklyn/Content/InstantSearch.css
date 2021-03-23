@@ -1,0 +1,153 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+input.instant-search-busy {
+	background: transparent url('../../../images/ajax-loader-small.gif') no-repeat right center !important;
+}
+
+/* WITH CATEGORY */
+
+.store-search-box input.search-box-text.narrow {
+	width: 190px !important;
+}
+.store-search-box span.search-box-text {
+	float: left;
+}
+.store-search-box select {
+	float: left;
+	width: 50px;
+	height: 36px;
+	border: none;
+	background-color: transparent;
+	font-size: 13px;
+	color: #888;
+}
+.store-search-box select option {
+	background-color: #fff;
+	color: #888;
+}
+
+/* AUTOCOMPLETE */
+
+.instantSearch {
+	width: 276px !important;
+	height: auto !important;
+}
+.instantSearch .k-list-container {
+	position: static !important;
+	width: 100% !important;
+	box-shadow: 0 2px 12px 4px rgba(0, 0, 0, 0.086);
+	background-color: #fff;
+	padding: 10px 0;
+}
+.instantSearch .k-list-scroller {
+    height: 100% !important;
+    overflow-y: auto;
+}
+.instantSearch .k-item {
+	margin: 10px 0;
+	cursor: pointer;
+}
+.instantSearch .k-item:first-child {
+	border-top: none;
+}
+.instant-search-item {
+	overflow: hidden;
+}
+.instant-search-item .img-block {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+}
+.instant-search-item .img-block img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+}
+.instant-search-item .detail {
+	margin: 0 10px 0 95px;
+	line-height: normal;
+}
+.instant-search-item .detail .title {
+	height: 40px;
+	overflow: hidden;
+	margin: 0 0 5px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.instant-search-item .detail .price {
+	font-size: 14px;
+	font-weight: bold;
+	color: #cc8a97;
+}
+.instant-search-item .detail .sku {
+	font-size: 12px;
+    margin: 0 0 5px;
+}
+.k-item.k-state-hover .instant-search-item,
+.k-item.k-state-focused .instant-search-item  {
+	background: #f8f8f8;
+}
+
+
+
+@media all and (min-width: 481px) {
+
+    .store-search-box input.search-box-text.narrow {
+	    width: 230px !important;
+    }
+    .store-search-box select {
+	    width: 120px;
+    }
+    .instantSearch {
+	    width: 386px !important;
+    }
+}
+
+
+@media all and (min-width: 1025px) {
+
+    .header-1 input.instant-search-busy {
+	    background-image: none !important;
+    }
+    .store-search-box input.search-box-text.narrow {
+	    width: 190px !important;
+    }
+    .header-1 .store-search-box select {
+	    height: 29px;
+	    font-size: 12px;
+	    color: rgba(255, 255, 255, 0.6);
+    }
+	.header-2 .store-search-box select {
+	    height: 33px;
+	    font-size: 12px;
+    }
+    .instantSearch {
+	    width: 270px !important;
+    }
+    .instantSearch.resize {
+	    width: 340px !important;
+    }
+}
+
+
+@media all and (min-width: 1281px) {
+
+    .store-search-box select {
+	    width: 50px;
+    }
+    .instantSearch.resize {
+	    width: 270px !important;
+    }
+}

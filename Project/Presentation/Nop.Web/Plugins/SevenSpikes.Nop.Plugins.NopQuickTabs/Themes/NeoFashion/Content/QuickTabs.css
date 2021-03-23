@@ -1,0 +1,13 @@
+﻿/* GLOBAL STYLES */
+
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description  {
+    display: block;
+}
+
+/* THEME STYLES */
+
+.productTabs {
+    margin: 20px 0;
+}

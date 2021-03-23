@@ -1,0 +1,22 @@
+
+.anywhere-slider .slick-prev {
+    left: auto;
+    right: -27px;
+    background: url('images/arrow-right.png') center no-repeat;
+}
+.anywhere-slider .slick-next {
+    right: auto;
+    left: -27px;
+    background: url('images/arrow-left.png') center no-repeat;
+}
+
+@media all and (min-width: 1025px) {
+    .anywhere-slider .slick-prev {
+        left: auto;
+        right: -45px;
+    }
+    .anywhere-slider .slick-next {
+        right: auto;
+        left: -45px;
+    }
+}

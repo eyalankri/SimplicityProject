@@ -1,0 +1,78 @@
+﻿@** Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+    * http://www.nop-templates.com/t/licensinginfo
+*@
+
+@model CloudZoomModel
+@inject IWorkContext workContext
+@inject IStoreContext storeContext
+@inject ISettingService settingService
+
+@{
+    var supportRtl = workContext.WorkingLanguage.Rtl;
+}
+
+@if (!string.IsNullOrEmpty(Model.DefaultPicture.FullSizeImageUrl))
+{
+
+    Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.CloudZoom/Themes/" + Model.Theme + "/Content/cloud-zoom/CloudZoom.css");
+
+    if (supportRtl)
+    {
+        Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.CloudZoom/Themes/" + Model.Theme + "/Content/cloud-zoom/CloudZoom.rtl.css");
+    }
+
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Plugins/SevenSpikes.Core/Scripts/cloudzoom.core.min.js");
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Plugins/SevenSpikes.Nop.Plugins.CloudZoom/Scripts/CloudZoom.min.js");
+
+    <input type="hidden" class="cloudZoomAdjustPictureOnProductAttributeValueChange"
+           data-productid="@Model.ProductId"
+           data-isintegratedbywidget="@Model.IsIntegratedByWidget.ToString().ToLowerInvariant()" />
+
+    if (Model.EnableClickToZoom)
+    {
+        Html.AddCssFileParts("~/lib/magnific-popup/magnific-popup.css");
+        Html.AddScriptParts(ResourceLocation.Footer, "~/lib/magnific-popup/jquery.magnific-popup.min.js");
+
+        <input type="hidden" class="cloudZoomEnableClickToZoom" />
+    }
+
+    var onePictureOnly = Model.Pictures.Count > 1 ? "" : "one-image";
+
+    <div class="gallery sevenspikes-cloudzoom-gallery">
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsBeforePictures, additionalData = Model.ProductDetailsModel })
+        <div class="picture-wrapper @onePictureOnly">
+            <div class="picture" id="sevenspikes-cloud-zoom" data-zoomwindowelementid="@Model.ElementId"
+                 data-selectoroftheparentelementofthecloudzoomwindow="@Model.SettingsModel.SelectorOfTheParentElementOfTheCloudZoomWindow"
+                 data-defaultimagecontainerselector="@Model.SettingsModel.DefaultImageContainerSelector"
+                 data-zoom-window-width="@Model.SettingsModel.ZoomWidth"
+                 data-zoom-window-height="@Model.SettingsModel.ZoomHeight">
+                <a href="@Model.DefaultPicture.FullSizeImageUrl" data-full-image-url="@Model.DefaultPicture.FullSizeImageUrl" class="picture-link" id="zoom1">
+                    <img src="@Model.DefaultPicture.SmallImageUrl" alt="@Model.DefaultPicture.AlternateText" class="cloudzoom" id="cloudZoomImage"
+                         itemprop="image" data-cloudzoom="@Model.DefaultPicture.DefaultRelation"
+                         @if (Model.SettingsModel.ShowTitle) { <text> title="@Model.DefaultPicture.Title" </text> } />
+                </a>
+            </div>
+            @if (Model.Pictures.Count > 1)
+            {
+                <div class="picture-thumbs-navigation-arrow picture-thumbs-prev-arrow">
+                    <span>@T("SevenSpikes.Themes.Poppy.Product.ImageThumbs.Prev")</span>
+                    <img src="@Model.DefaultPicture.TinyImageUrl" data-fullsizeimageurl="@Model.DefaultPicture.FullSizeImageUrl" alt="Previous" />
+                </div>
+                <div class="picture-thumbs-navigation-arrow picture-thumbs-next-arrow">
+                    <span>@T("SevenSpikes.Themes.Poppy.Product.ImageThumbs.Next")</span>
+                    <img src="@Model.DefaultPicture.TinyImageUrl" data-fullsizeimageurl="@Model.DefaultPicture.FullSizeImageUrl" alt="Next" />
+                </div>
+                <div class="picture-thumbs">
+                    @foreach (var picture in Model.Pictures)
+                    {
+                        <a class="cloudzoom-gallery thumb-item" href="@picture.FullSizeImageUrl" data-full-image-url="@picture.FullSizeImageUrl" data-cloudzoom="@picture.GalleryRelation"
+                           @if (Model.SettingsModel.ShowTitle) { <text> title="@picture.Title" </text> }>
+                            <img class="cloud-zoom-gallery-img" src="@picture.TinyImageUrl" alt="@picture.AlternateText" />
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsAfterPictures, additionalData = Model.ProductDetailsModel })
+    </div>
+}

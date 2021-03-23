@@ -1,0 +1,43 @@
+﻿/* GLOBAL STYLES */
+
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description  {
+    display: block;
+}
+.productTabs-body p {
+    margin: 8px 0;
+}
+.productTabs-body ul {
+	margin: 12px 0;
+	padding-left: 36px;
+	list-style: disc;
+}
+.productTabs-body ol {
+	margin: 12px 0;
+	padding-left: 36px;
+	list-style: decimal;
+}
+
+.ui-tabs .write-review .button-1 {
+    min-width: 100px;
+}
+
+.ui-tabs .product-review-list {
+    margin-bottom: 20px;
+}
+
+
+@media all and (min-width:481px) {
+
+    .ui-tabs .ui-tabs-nav li {
+        float: left;
+        margin-right: 3px;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
+    .ui-tabs .ui-state-active.ui-tabs-active a {
+        border-bottom: none;
+    }
+}

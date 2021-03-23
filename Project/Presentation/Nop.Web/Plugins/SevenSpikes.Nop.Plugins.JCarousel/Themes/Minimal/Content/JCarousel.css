@@ -1,0 +1,246 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nop-jcarousel.category-grid .item-box .title {
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed title load on swipe*/
+}
+.nop-jcarousel .carousel-item .ribbon-position {
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed ribbon load on swipe*/
+}
+
+
+/* ELEMENTS STYLES */
+
+
+.nop-jcarousel .carousel-title {
+    position: relative;
+	margin: 0 0 25px;
+	padding: 10px;
+	text-align: center;
+	font-size: 30px;
+	font-family: "Playfair Display", Times New Roman, serif;
+	font-weight: normal;
+	color: #000;
+}
+.nop-jcarousel .carousel-title:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    margin: auto;
+    background: url('images/title-dots-decoration.png') repeat-x;
+}
+.nop-jcarousel .carousel-title strong {
+	font-weight: normal;
+}
+.nop-jcarousel .carousel-title.has-navigation {
+	margin-bottom: 85px !important;
+}
+.nop-jcarousel .carousel-title.has-navigation:before { /*:after is reserved for title decoration*/
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: -48px;
+	left: 0;
+	z-index: 1;
+	width: 2px;
+	height: 12px;
+	margin: auto;
+	background-color: #c6c6c6;
+}
+
+.nop-jcarousel .carousel-item .item-box {
+	float: none;
+    width: 100%;
+    margin: auto;
+}
+
+.nop-jcarousel .slick-prev,
+.nop-jcarousel .slick-next {
+    position: absolute;
+    bottom: -80px;
+    width: 75px;
+    height: 75px;
+    border: none;
+    background-color: transparent;
+	background-position: center;
+    background-repeat: no-repeat;
+	font-size: 0;
+    cursor: pointer;
+}
+.nop-jcarousel .slick-prev {
+    right: 50%;
+    background-image: url('images/prev-horizontal.png');
+}
+.nop-jcarousel .slick-next {
+    left: 50%;
+    background-image: url('images/next-horizontal.png');
+}
+.nop-jcarousel .slick-prev:hover,
+.nop-jcarousel .slick-next:hover {
+    background-color: #fff;
+}
+.nop-jcarousel .slick-disabled,
+.nop-jcarousel .slick-disabled:hover {
+    background-color: transparent;
+    cursor: default;
+	opacity: 0.3;
+}
+
+.nop-jcarousel .slick-dots {
+	margin: 10px 0 -10px;
+    text-align: center;
+    font-size: 0;
+}
+.nop-jcarousel .slick-dots li {
+    display: inline-block;
+    margin: 20px 5px 0;
+}
+.nop-jcarousel .slick-dots button {
+    width: 20px;
+    height: 10px;
+    border: none;
+    border-top: 2px solid rgba(0,0,0,0.3);
+	background-color: transparent;
+    font-size: 0;
+}
+.nop-jcarousel .slick-dots button:hover,
+.nop-jcarousel .slick-dots .slick-active button {
+    border-color: rgba(0,0,0,1);
+}
+
+
+/* SECTION STYLES */
+
+
+.center-2 .jCarouselMainWrapper {
+	margin-top: 50px;
+}
+.center-2 .jCarouselMainWrapper:first-child {
+	margin-top: 0;
+}
+.side-2 .jCarouselMainWrapper {
+	display: none;
+}
+
+.product-details-page .jCarouselMainWrapper {
+	background-color: #f8f8f8;
+	padding: 50px 0 0;
+}
+.product-details-page form + .jCarouselMainWrapper {
+	margin-top: -50px;
+}
+.product-details-page .jCarouselMainWrapper:first-child {
+	margin: 0 0 -50px;
+	background-color: transparent;
+}
+.product-details-page .jCarouselMainWrapper:first-child .carousel-title strong {
+	background-color: #fff;
+}
+
+
+/* ADDITIONAL STYLES */
+
+
+@media all and (min-width: 769px) {
+
+.nop-jcarousel .carousel-title:after {
+    top: 3px;
+    z-index: 0;
+}
+.nop-jcarousel .carousel-title strong {
+	position: relative;
+	z-index: 1;
+    background-color: #f8f8f8;
+	padding: 0 30px;
+    line-height: 1em;
+}
+.home-page .nop-jcarousel .carousel-title {
+    margin: 0 0 30px;
+    font-size: 36px;
+}
+.nop-jcarousel .carousel-title.has-navigation:before {
+	bottom: -40px;
+}
+.nop-jcarousel .slick-prev,
+.nop-jcarousel .slick-next {
+    bottom: -72px;
+}
+.nop-jcarousel .slick-dots button {
+	width: 50px;
+}
+
+}
+
+@media all and (min-width: 1025px) {
+
+.nop-jcarousel.product-grid .slick-list {
+    background-color: #fff;
+}
+.nop-jcarousel.product-grid .item-box .picture,
+.nop-jcarousel.product-grid .item-box .details,
+.nop-jcarousel.product-grid .item-box .ribbon-wrapper {
+    float: none;
+    width: 100%;
+	margin: 0;
+    text-align: center;
+}
+.nop-jcarousel.product-grid .item-box .description {
+    display: none;
+}
+.nop-jcarousel.product-grid .item-box .buttons {
+	right: 0;
+	bottom: auto;
+}
+
+}
+
+@media all and (min-width: 1281px) {
+
+.jCarouselMainWrapper {
+	min-width: 1024px;
+}
+.side-2 .jCarouselMainWrapper {
+	display: block;
+	min-width: 0;
+}
+.side-2 .nop-jcarousel .carousel-title {
+	padding: 5px;
+}
+.side-2 .nop-jcarousel .carousel-title:after,
+.side-2 .nop-jcarousel .carousel-title strong {
+	display: none;
+}
+.side-2 .nop-jcarousel .slick-dots button {
+    width: 20px;
+}
+
+}
+
+@media all and (min-width: 1347px) {
+
+.nop-jcarousel .carousel-title {
+	font-size: 36px;
+}
+.home-page .nop-jcarousel .carousel-title {
+    margin: 0 0 50px;
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+}
+
+@media all and (min-width: 1901px) {
+
+.nop-jcarousel .carousel-title {
+	font-size: 40px;
+}
+.home-page .nop-jcarousel .carousel-title {
+    font-size: 46px;
+}
+
+}

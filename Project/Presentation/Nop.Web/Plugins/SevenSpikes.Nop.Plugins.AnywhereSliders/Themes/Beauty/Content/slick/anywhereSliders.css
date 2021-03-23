@@ -1,0 +1,67 @@
+
+.anywhere-slider {
+    position: relative;
+    background: #fff url(images/loading.gif) no-repeat 50% 50%;
+    border-radius: 5px !important;
+    overflow: hidden !important;
+}
+.anywhere-slider .picture-slide a {
+    display: block;
+}
+.anywhere-slider .picture-slide img {
+    width: 100%;
+	display: none;
+}
+.anywhere-slider .first-slide img {
+    display: block;
+}
+
+.anywhere-slider .slick-dots {
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    margin-top: -40px;
+    z-index: 99;
+    font-size: 0;
+}
+.anywhere-slider .slick-dots li {
+	display: inline-block;
+	margin: 0;
+}
+.anywhere-slider .slick-dots button {
+	width: 21px;
+	height: 21px;
+	background: url('images/bullets.png') no-repeat;
+	font-size: 0;
+	border: 0;
+}
+.anywhere-slider .slick-active button {
+	background-position: 0 -21px;
+}
+
+.anywhere-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    margin-top: -15px;
+    opacity: 0;
+    font-size: 0;
+    transition: all 0.2s ease;
+}
+.anywhere-slider .slick-prev {
+    left: 15px;
+    background: url('images/arrows.png') left top no-repeat !important;
+}
+.anywhere-slider .slick-next {
+    right: 15px;
+    background: url('images/arrows.png') right top no-repeat !important;
+}
+.anywhere-slider:hover .slick-arrow {
+    opacity: 1;
+}
+.anywhere-slider .slick-arrow img {
+	border-radius: 5px !important;
+}

@@ -1,0 +1,76 @@
+.nop-jcarousel > .carousel-title {
+	padding-left: 100px;
+	padding-right: 0;
+    text-align: right;
+}
+.nop-jcarousel > .carousel-title strong {
+	background: url('images/rtl-bullet1.png') right center no-repeat;
+	padding-right: 45px;
+	padding-left: 0;
+}
+.jCarouselMainWrapper .slick-prev {
+	left: 50px;
+	right: auto;
+    background: url('images/next-horizontal.png') top no-repeat;
+}
+.jCarouselMainWrapper .slick-next {
+	left: 0;
+	right: auto;
+    background: url('images/prev-horizontal.png') top no-repeat;
+}
+
+.nop-jcarousel.home-page-product-grid .product-title,
+.nop-jcarousel.home-page-product-grid  .item-box,
+.nop-jcarousel.home-page-product-grid  .prices {
+    text-align: right;
+}
+
+@media all and (max-width: 480px) {
+	.nop-jcarousel > h2 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+    .nop-jcarousel > .carousel-title {
+        padding: 0 0 45px;
+    }
+
+	.jCarouselMainWrapper .slick-prev {
+		right: 50%;
+		left: auto;
+		margin-right: -44px;
+		margin-left: 0;
+	}
+	.jCarouselMainWrapper .slick-next {
+		left: 50%;
+		right: auto;
+		margin-left: -44px;
+		margin-right: 0;
+	}
+}
+
+@media all and (min-width:769px) {
+
+    .side-2 .nop-jcarousel .carousel-title {
+        padding-left: 60px;
+        padding-right: 0;
+    }
+
+    .side-2 .jCarouselMainWrapper .slick-next {
+        left: 0;
+        right: auto;
+        background: url(images/prev-horizontal-small.png) top no-repeat;
+    }
+    .side-2 .jCarouselMainWrapper .slick-prev {
+        left: 33px;
+        right: auto;
+        background: url(images/next-horizontal-small.png) top no-repeat;
+    }
+}
+
+@media all and (min-width: 981px) {
+	.side-2 .nop-jcarousel > .carousel-title {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+}

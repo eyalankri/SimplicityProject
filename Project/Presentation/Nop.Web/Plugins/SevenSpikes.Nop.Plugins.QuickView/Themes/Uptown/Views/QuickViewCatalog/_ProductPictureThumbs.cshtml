@@ -1,0 +1,52 @@
+﻿@inject QuickViewSettings quickViewSettings
+
+@model ProductDetailsModel
+
+@if (Model.PictureModels.Count > 1)
+{
+    <div class="picture-thumbs-navigation-arrow picture-thumbs-prev-arrow">
+        <span>@T("SevenSpikes.Themes.Uptown.Product.ImageThumbs.Prev")</span>
+        <img src="@Model.DefaultPictureModel.ImageUrl" data-fullSizeImageUrl="@Model.DefaultPictureModel.FullSizeImageUrl" alt="Previous" />
+    </div>
+    <div class="picture-thumbs-navigation-arrow picture-thumbs-next-arrow">
+        <span>@T("SevenSpikes.Themes.Uptown.Product.ImageThumbs.Next")</span>
+        <img src="@Model.DefaultPictureModel.ImageUrl" data-fullSizeImageUrl="@Model.DefaultPictureModel.FullSizeImageUrl" alt="Next" />
+    </div>
+
+    <div class="picture-thumbs">
+        @if (quickViewSettings.EnableCloudZoom && Model.DefaultPictureModel.CustomProperties.ContainsKey("SmallImageUrl"))
+        {
+            const string galleryRelation = "appendSelector: '.quickViewWindow .gallery .picture', zoomPosition: 'inside', zoomOffsetX: 0, easing: 3, zoomFlyOut: false, disableZoom: 'auto', useZoom: '#quick-view-zoom', image: '{0}', zoomImage: '{1}'";
+
+            foreach (var picture in Model.PictureModels)
+            {
+                var smallImageUrl = "";
+
+                if (picture.CustomProperties.ContainsKey("SmallImageUrl"))
+                {
+                    smallImageUrl = picture.CustomProperties["SmallImageUrl"].ToString();
+                }
+
+                var tinyImateUrl = "";
+
+                if (picture.CustomProperties.ContainsKey("TinyImageUrl"))
+                {
+                    tinyImateUrl = picture.CustomProperties["TinyImageUrl"].ToString();
+                }
+
+                <a href="@picture.FullSizeImageUrl" class="cloudzoom-gallery" data-full-image-url="@picture.FullSizeImageUrl" data-cloudzoom="@String.Format(galleryRelation, smallImageUrl, picture.FullSizeImageUrl)">
+                    <img class="cloud-zoom-gallery-img" src="@tinyImateUrl" alt="@picture.AlternateText" />
+                </a>
+            }
+        }
+        else
+        {
+            foreach (var picture in Model.PictureModels)
+            {
+                <a class="thumb-popup-link" href="@picture.FullSizeImageUrl" title="@picture.Title">
+                    <img src="@picture.ImageUrl" alt="@picture.AlternateText" title="@picture.Title" />
+                </a>
+            }
+        }
+    </div>
+}

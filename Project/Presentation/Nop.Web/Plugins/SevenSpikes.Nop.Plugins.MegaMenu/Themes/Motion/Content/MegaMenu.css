@@ -1,0 +1,190 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*=====================================================
+    
+    RESPONSIVE
+
+=====================================================*/
+
+@media all and (min-width: 240px) {
+
+    .mega-menu,
+    .header-menu .menu-title,
+    .dropdown {
+        display: none;
+    }
+    .mega-menu-responsive {
+        display: block !important;
+    }
+
+}
+
+@media all and (max-width: 1024px) {
+
+    .dropdown .topic-wrapper {
+        display: none;
+    }
+    
+}
+
+/*=====================================================
+    
+    DESKTOP
+
+=====================================================*/
+
+@media all and (min-width: 1025px) {
+
+/* MAIN PANEL & DROPDOWN*/
+
+    .mega-menu {
+        display: block;
+	    position: relative;
+	    z-index: 1001;
+    }
+    .mega-menu-responsive {
+        display: none !important;
+    }
+    .mega-menu .dropdown {
+        display: none;
+        position: absolute;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        overflow: hidden;
+        background: #fff;
+        padding: 10px;
+        z-index: 3;
+        margin-top: -1px;
+        margin-left: -11px;
+        text-align: left;
+    }
+        .mega-menu .dropdown.active {
+            display: block;
+        }
+    .mega-menu .dropdown.fullWidth {
+        left: 50%;
+        margin-left: -490px;
+        width: 980px;
+    }
+
+/* ROWS AND BOXES */
+
+    .mega-menu .row {
+        overflow: hidden;
+    }
+    .dropdown .box {
+        float: left;
+        padding: 0 15px 20px;
+    }
+
+    .mega-menu .boxes-1 .box {
+        width: 100%;
+    }
+
+    .mega-menu .boxes-2 .box {
+        width: 50%;
+    }
+
+    .mega-menu .boxes-3 .box {
+        width: 33.333%;
+    }
+
+    .mega-menu .boxes-4 .box {
+        width: 25%;
+    }
+
+    .mega-menu .boxes-5 .box {
+        width: 20%;
+    }
+
+    .mega-menu .boxes-6 .box {
+        width: 16.666%;
+    }
+
+    .mega-menu .boxes-7 .box {
+        width: 14.28%;
+    }
+
+    .mega-menu .boxes-8 .box {
+        width: 12.5%;
+    }
+
+    .mega-menu .title {
+        margin-bottom: 15px;
+        border-bottom: 1px dotted #797979;
+        padding: 6px 0;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    .mega-menu .title a {
+    }
+    .mega-menu .title a:hover {
+	    color: #555;
+    }
+    .mega-menu .picture {
+	    overflow: hidden;
+    }
+    .mega-menu .picture a {
+	    display: block;
+    }
+        .mega-menu img {
+            max-width: 100%;
+        }
+    .mega-menu .subcategories {
+    }
+    .mega-menu .box ul {
+        margin-top: 5px;
+    }
+    .mega-menu .box li {
+	    margin-top: 8px;
+        text-align: left;
+    }
+    .mega-menu .box li a {
+	    background: url('images/arrow.png') left center no-repeat;
+	    padding-left: 12px;
+        font-size: 12px;
+    }
+    .mega-menu .box li a:hover {
+    }
+    .mega-menu .box li:nth-child(odd) a:hover {
+    }
+    .mega-menu .box li:nth-child(even) a:hover {
+    }
+    .mega-menu .dropdown li a.view-all {
+	    font-weight: bold;
+        background: none;
+    }
+
+    .manufacturers.fullWidth .box,
+    .vendors.fullWidth .box {
+        width: 16.66666666666667%;
+    }
+
+    .mega-menu .topic-wrapper {
+	    overflow: hidden;
+    }
+    .mega-menu .dropdown > *,
+    .mega-menu .topic-wrapper p {
+	    font-size: 11px;
+	    line-height: 20px;
+    }
+    .mega-menu .topic-wrapper strong {
+	    display: block;
+	    border-bottom: 1px solid #999;
+	    padding: 8px 0;
+	    font-size: 14px;
+	    text-transform: uppercase;
+	    color: #222;
+    }
+
+}
+
+@media all and (min-width:1281px) {
+    .mega-menu .dropdown.fullWidth {
+        width: 1200px;
+        margin-left: -600px;
+    }
+}

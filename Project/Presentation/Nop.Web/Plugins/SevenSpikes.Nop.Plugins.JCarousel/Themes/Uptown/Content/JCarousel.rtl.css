@@ -1,0 +1,40 @@
+.home-page-body .nop-jcarousel {
+	margin-right: auto;
+	margin-left: auto;
+}
+.nop-jcarousel .slick-prev {
+	right: 50%;
+	left: auto;
+	margin-right: -33.5px;
+	margin-left: 0;
+    background-image: url('images/next-horizontal.png');
+    box-shadow: 6px 0px 0px 10px #fff;
+}
+.nop-jcarousel .slick-next {
+	left: 50%;
+	right: auto;
+	margin-left: -33.5px;
+	margin-right: 0;
+    background-image: url('images/prev-horizontal.png');
+    box-shadow: -6px 0px 0px 10px #fff;
+}
+.nop-jcarousel .slick-prev:hover {
+    background-image: url('images/next-horizontal-hover.png');
+}
+.nop-jcarousel .slick-next:hover {
+    background-image: url('images/prev-horizontal-hover.png');
+}
+.nop-jcarousel .slick-next.slick-disabled:hover {
+    background-image: url('images/prev-horizontal.png');
+}
+.nop-jcarousel .slick-prev.slick-disabled:hover {
+    background-image: url('images/next-horizontal.png');
+}
+.nop-jcarousel .slick-disabled:before {
+	right: -3px;
+	left: -3px;
+}
+.nop-jcarousel .slick-dots button:before {
+	right: 0;
+	left: 0;
+}

@@ -1,0 +1,16 @@
+
+@media all and (min-width: 1025px) {
+	
+.gallery .picture-wrapper {
+	float: right;
+}
+}
+
+.cloudzoom-zoom {
+	right: calc(100% + 35px) !important;
+	left: auto !important;
+}
+.html-product-details-page .one-column .cloudzoom-zoom {
+	left: 100% !important;
+	right: auto !important;
+}

@@ -1,0 +1,146 @@
+﻿@using Nop.Core
+@using Nop.Core.Domain.Tax
+@using Nop.Services.Configuration
+
+@model FooterModel
+
+@inject IWorkContext workContext
+@inject IStoreContext storeContext
+@inject ISettingService settingService
+
+@{
+    var storeId = storeContext.CurrentStore.Id;
+    var userAgent = Url.ActionContext.HttpContext.Request.Headers["User-Agent"];
+    var removeCopyright = settingService.GetSettingByKey("venturethemesettings.removecopyright", false, storeId, true);
+    var removeDesignedBy = settingService.GetSettingByKey("venturethemesettings.removedesignedby", false, storeId, true);
+
+    var controllerName = Url.ActionContext.RouteData.Values["controller"].ToString();
+    var isHomePage = controllerName.Equals("home", StringComparison.InvariantCultureIgnoreCase);
+
+    var isIe9 = false;
+    if (!String.IsNullOrEmpty(userAgent) && userAgent.ToString().ToLower().IndexOf("MSIE 9.0", StringComparison.InvariantCultureIgnoreCase) > 0)
+    {
+        isIe9 = true;
+    }
+
+    var showFooterMap = settingService.GetSettingByKey("venturethemesettings.enablefootermap", true, storeId, true);
+}
+
+@if (isHomePage)
+{
+    <div class="home-page-footer-banners">
+        @await Component.InvokeAsync("Widget", new { widgetZone = "venture_theme_footer_banner_1" })
+        @await Component.InvokeAsync("Widget", new { widgetZone = "venture_theme_footer_banner_2" })
+        @await Component.InvokeAsync("Widget", new { widgetZone = "venture_theme_footer_banner_3" })
+    </div>
+}
+<div class="footer">
+    @if (showFooterMap && !isIe9)//google maps API doesn't work in ie9
+    {
+        <div class="footer-map-holder">
+            <div class="title">
+                <strong>@T("SevenSpikes.Themes.Venture.Common.FooterMap")</strong>
+            </div>
+            <div class="footer-map-wrapper">
+                @await Component.InvokeAsync("Widget", new { widgetZone = "venture_footer_map" })
+            </div>
+        </div>
+    }
+    <div class="footer-upper">
+        <div class="footer-block find-us">
+            <div class="title">
+                <strong>@T("SevenSpikes.Themes.Venture.Common.FindUs")</strong>
+            </div>
+            <ul class="list footer-collapse">
+                <li class="address">
+                    <span>@T("SevenSpikes.Themes.Venture.Common.Address")</span>
+                </li>
+                <li class="e-mail">
+                    <span>@T("SevenSpikes.Themes.Venture.Common.EMail")</span>
+                </li>
+                 
+            </ul>
+        </div>
+        <div class="footer-block information">
+            <div class="title">
+                <strong>@T("SevenSpikes.Themes.Venture.Common.Information")</strong>
+            </div>
+            <ul class="list footer-collapse">
+                @if (Model.DisplayContactUsFooterItem)
+                {
+                    <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+                }
+                @foreach (var topic in Model.Topics.Where(x => x.IncludeInFooterColumn1).ToList())
+                {
+                    <li><a href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })">@topic.Name</a></li>
+                }
+            </ul>
+        </div>
+        <div class="footer-block my-account">
+            <div class="title">
+                <strong>@T("SevenSpikes.Themes.Venture.Common.MyAccount")</strong>
+            </div>
+            <ul class="list footer-collapse">
+                @if (Model.DisplayCustomerOrdersFooterItem)
+                {
+                    <li><a href="@Url.RouteUrl("CustomerOrders")">@T("Account.CustomerOrders")</a></li>
+                }
+                @if (Model.DisplayCustomerAddressesFooterItem)
+                {
+                    <li><a href="@Url.RouteUrl("CustomerAddresses")">@T("Account.CustomerAddresses")</a></li>
+                }
+                @if (Model.RecentlyViewedProductsEnabled && Model.DisplayRecentlyViewedProductsFooterItem)
+                {
+                    <li><a href="@Url.RouteUrl("RecentlyViewedProducts")">@T("Products.RecentlyViewedProducts")</a></li>
+                }
+                @if (Model.SitemapEnabled && Model.DisplaySitemapFooterItem)
+                {
+                    <li><a href="@Url.RouteUrl("Sitemap")">@T("Sitemap")</a></li>
+                }
+                @if (Model.AllowCustomersToApplyForVendorAccount && Model.DisplayApplyVendorAccountFooterItem)
+                {
+                    <li><a href="@Url.RouteUrl("ApplyVendorAccount")">@T("Vendors.ApplyAccount")</a></li>
+                }
+            </ul>
+        </div>
+        <div class="footer-block newsetter">
+            <div class="title">
+                <strong>@T("SevenSpikes.Themes.Venture.Common.Newsletter")</strong>
+            </div>
+            <div class="footer-collapse">
+                <p class="newsletter-subscribe-text">@T("SevenSpikes.Themes.Venture.Common.NewsletterSubscribeText")</p>
+                @await Component.InvokeAsync("NewsletterBox")
+            </div>
+        </div>
+    </div>
+    <div class="footer-middle">
+        @await Component.InvokeAsync("SocialButtons")
+    </div>
+    <div class="footer-lower">
+        <div class="footer-disclaimer">
+            @T("Content.CopyrightNotice", DateTime.Now.Year, Model.StoreName)
+        </div>
+        @if(!removeCopyright)
+        { 
+            <div class="footer-powered-by">
+               נבנה על <a style="color:#909090" href="https://www.nopcommerce.com/">nopCommerce</a>   על ידי: <a  href="http://codeFirst.co.il">CodeFirst</a>
+            </div>
+        }
+        @if (!removeDesignedBy)
+        {
+            <div class="footer-designed-by"> 
+                Designed by <a href="https://www.nop-templates.com/" target="_blank">Nop-Templates.com</a>
+            </div>
+        }
+        @if (Model.DisplayTaxShippingInfoFooter)
+        {
+            var inclTax = workContext.TaxDisplayType == TaxDisplayType.IncludingTax;
+            <div class="footer-tax-shipping">
+                @T(inclTax ? "Footer.TaxShipping.InclTax" : "Footer.TaxShipping.ExclTax", Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("shippinginfo") }))
+            </div>
+        }
+
+        @await Component.InvokeAsync("StoreThemeSelector")
+    </div>
+    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.Footer })
+</div>

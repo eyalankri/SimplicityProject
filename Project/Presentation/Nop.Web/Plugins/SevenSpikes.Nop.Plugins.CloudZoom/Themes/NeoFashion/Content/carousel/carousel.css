@@ -1,0 +1,103 @@
+/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.picture-thumbs.in-carousel {
+    max-width: 600px;
+    margin: 10px auto 0;
+    text-align: center;
+}
+.picture-thumbs .picture-thumbs-list {
+    margin: 0 -5px;
+}
+.picture-thumbs .picture-thumbs-item {
+    padding: 0 5px;
+}
+.picture-thumbs.in-carousel .picture-thumbs-list {
+    margin: 0;
+}
+.picture-thumbs button + .slick-list {
+    margin: 0 30px;
+}
+.slick-slide img {
+    width: 100%;
+    margin: auto;
+}
+
+/* arrows nav */
+
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 20px;
+    height: 30px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-size: 0;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.picture-thumbs .slick-prev {
+    left: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZ5JREFUeNqslrtKA0EYheNkEREhlW+QQjFWiVgKKQQRbEQsvGBsrFQQBXsLK5sIaqGoxAskhbWFeQHTCCKiPoMiiEVA9PtlBpawu9nZyYGPYbOTQ86Zyex25fP5lIsajcb/WCgUehmGVKoDwmyAYRcevA6YzTFsQpFf23QxlIj7MA0jmH3Ih0kNJWINBmEcs1dzI0mHEvEecrCKWd1/U1lGPIEL6IMDOGyd5FlGzOnrO1gLmqgsI4pe9EL82BpKxGNfRNE7TMJn2Je8mBFFTZiBt6g4KkZEo3Wot+tHtYloVIajOKvnRUQ0uoWNuHtLRUQUPcFs2IqGGfZErLYY/dr8jZTe/aPwHHB/GCqQtjEUPcqJAZcBc6b0WWdlKPqCeViG75Z5W1CyNTQ6DalAts1YEkN/BRXfZ916a2WTGJoKFnVUU0E/3EAmiaHRWUsFsl+vw1Y+7gFrKjjX1xOw52JoKljyVSCHxYqLYVAFZR6jRVdDU4G8clxBFdOsq2FKxy7ph3wN04yroXm3kQoWYAfTdEfebTCVCralhj8BBgDIGV/bSAOOrwAAAABJRU5ErkJggg==');
+    background-position: left center;
+}
+.picture-thumbs .slick-next {
+    right: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAaJJREFUeNqslj1LA0EQhjdrsDiEVP4DC0FtvIulhaWIhaiNH6BNBImCKNhZWFjZCH40RhE/QMTaQuwsJAc2KRT8C4KCWCiK74Qp1nX3srtm4IHbOXiz885kklwcx31CiBp4FwGRpumvswT3YAN0iiYECX6CNXAGJpohSPECxsA2OADRfwUpnsAImAJ3oRZI7XwDyqAbVEMskIbcLtgBbeAYVHwskJb8Arjm5xkfC2yCX2AUPPLZ2QKZ8e4VDIFnPjtZIBt8IHV+HHwouUwLpIMt1PlFLWe1QDo2bw9sabm6BUmS7IPIV5BiCVwZ8rNkAUTrFuSwbXzmtgBuQZfh3RuYk55fhG/G1o8o7yHWwmPTY3j3QMsFu7Hmc0PamcOG/AkokhgdXG9Is7ei5WjDlyFUUZMugv08Nn9K5J8OrznsABegVS/RJNZIkEbkErQrJVLpkzwixshndPRU6ai1RNcbboJBfj7KKtHlhiVeBlTiPDj0mXxdcICXgHOJWSVTR8/Zu2KImHrDAost+5ZoEqSOroPp0Fvpgr1gNfTPkh4/AgwADGFZYJdf9osAAAAASUVORK5CYII=');
+    background-position: right center;
+}
+.picture-thumbs .slick-prev.slick-disabled,
+.picture-thumbs .slick-next.slick-disabled {
+    opacity: .6;
+    cursor: default;
+}
+
+
+
+/* dots nav */
+
+.slick-dots {
+    margin-top: 15px;
+}
+.slick-dots button {
+    background: #333;
+    opacity: .4;
+    font-size: 0;
+    width: 6px;
+    height: 6px;
+    border: none;
+}
+.slick-dots li {
+    display: inline-block;
+    margin: 0 3px;
+}
+.slick-dots .slick-active button {
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+}
+
+
+
+/* items */
+
+.picture-thumbs a.cloudzoom-gallery {
+    display: block !important;
+    margin: 0 !important;
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+@media all and (max-width: 840px) {
+    
+    .picture-thumbs.in-carousel {
+        max-width: 435px;
+    }
+    
+}

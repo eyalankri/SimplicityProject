@@ -1,0 +1,100 @@
+
+.slider-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 13px 10px -10px #7b7b7b;
+}
+.slider-wrapper:before,
+.slider-wrapper:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 14px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    background: #777;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-1deg);
+}
+.slider-wrapper:after {
+    transform: rotate(1deg);
+    right: 10px;
+    left: auto;
+}
+.anywhere-slider {
+    position: relative;
+    background: #fff url('images/loading.gif') no-repeat 50% 50%;
+    border-radius: 5px !important;
+    overflow: hidden !important;
+}
+.anywhere-slider .picture-slide a {
+    display: block;
+}
+.anywhere-slider .picture-slide img {
+    width: 100%;
+	border-radius: 5px !important;
+    display: none;
+}
+.anywhere-slider .first-slide img {
+    display: block;
+}
+
+.anywhere-slider .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    z-index: 99;
+}
+.anywhere-slider .slick-dots li {
+	display: inline-block;
+	margin: 0;
+}
+.anywhere-slider .slick-dots button {
+	width: 21px;
+	height: 21px;
+	background: url('images/bullets.png') no-repeat;
+	border: 0;
+    font-size: 0;
+}
+.anywhere-slider .slick-active button {
+	background-position: 0 -20px;
+}
+
+.anywhere-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background: url('images/arrows.png') no-repeat;
+    font-size: 0;
+    border: 0;
+    opacity: 0;
+    transition: all 200ms ease;
+}
+.anywhere-slider .slick-prev {
+    left: 15px;
+    background-position: 0 center !important;
+}
+.anywhere-slider .slick-next {
+    right: 15px;
+    background-position: -33px center !important;
+}
+.anywhere-slider:hover .slick-arrow {
+    opacity: 1;
+}
+
+.theme-navigation-inside .anywhere-slider {
+    margin-bottom: 20px;
+}
+
+@media all and (min-width: 481px) {
+
+    .anywhere-slider {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,36 @@
+﻿.productQuantityTextBox,
+.productQuantityDropdown {
+    float: right;
+}
+
+.productAddedToCartWindowTitle {
+    left: auto;
+    right: 0;
+}
+
+.ajaxCart .k-window-titlebar.k-header .k-window-actions {
+    right: auto;
+    left: 14px;
+}
+
+.productAddedToCartWindowImage {
+    float: right;
+    margin: 0 0 15px 15px;
+}
+
+.ajaxCart .item-grid {
+    text-align: right;
+}
+
+.ajaxCart .product-grid {
+    margin: 10px -10px 0 0;
+}
+
+.miniProductDetailsView .overview .qty-input, .variant-overview .qty-input {
+    margin: 0 10px 0 0;
+}
+
+.ajaxCart .miniProductDetailsView .product-name {
+    left: auto;
+    right: 15px;
+}

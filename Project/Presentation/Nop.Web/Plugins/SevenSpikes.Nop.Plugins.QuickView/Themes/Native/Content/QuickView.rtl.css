@@ -1,0 +1,202 @@
+﻿
+
+
+.product-list .buttonOverlay {
+    right: 0;
+    left: auto;
+}
+
+.item-box .quick-view-button {
+	right: 0;
+    left: auto;
+    margin: -19px -42px 0 0;
+}
+.item-box .picture:hover .quick-view-button{
+    right: 50%;
+}
+
+
+.quickView .popup-header {
+    padding: 0 0 0 60px;
+}
+
+.quickViewWindow .product-name {
+    text-align: right;
+}
+
+/********* START KENDO ********/
+
+.quickView .k-window-titlebar.k-header {
+    left: 0;
+    right: inherit;
+}
+
+    .quickView .k-window-titlebar.k-header .k-window-actions {
+        left: 11px;
+        right: auto;
+    }
+
+.quickView .k-loading-mask {
+    right: 0;
+    left: inherit;
+}
+
+.quickView .k-loading-image {
+    right: 0;
+    left: inherit;
+}
+
+.k-overlay {
+    right: 0;
+    left: inherit;
+}
+
+/********** START GALLERY *********/
+
+.quickViewWindow .gallery {
+    float: right;
+}
+
+    .quickViewWindow .gallery .thumbnails a,
+    .quickViewWindow .gallery .thumbnails > img {
+        float: right;
+    }
+
+    .quickViewWindow .gallery .links-panel a {
+        padding-right: 15px;
+        padding-left: 0;
+        background: url(images/rtl-bullet-right.png) no-repeat right center;
+        text-align: right;
+    }
+/********** START PRODUCT ESSENTIAL *********/
+
+.quickViewWindow .overview {
+    float: left;
+}
+
+    .quickViewWindow .overview #accordion > h3 {
+        text-align: right;
+    }
+
+        .quickViewWindow .overview #accordion > h3 span {
+            left: 8px;
+            right: inherit;
+        }
+
+    .quickViewWindow .overview .left {
+        float: right;
+        text-align: right;
+    }
+
+    .quickViewWindow .overview .right {
+        float: left;
+        text-align: left;
+    }
+
+
+    .quickViewWindow .overview .attributes dl dt {
+        clear: right;
+        margin: 0 0 5px 10px;
+        text-align: right;
+    }
+
+    .quickViewWindow .overview #accordion .bottom .prices {
+        float: right;
+    }
+
+    .quickViewWindow .overview #accordion .bottom .add-to-cart {
+        float: left;
+    }
+.item-box .picture .compare-products{
+    right: auto;
+    left: 0;
+    margin: -19px 0 0 0 !important;
+}
+.item-box .picture:hover .compare-products{
+    margin: -19px 0 0 -42px !important;
+}
+
+
+.quickViewWindow .overview .attributes dl dt, 
+.quickViewWindow .overview .attributes dl dd {
+    float: none;
+    width: auto;
+}
+
+.quickViewWindow .prices-row{
+    float: right;
+}
+.quickViewWindow .prices-row > div{
+    border-right: none;
+}
+.quickViewWindow .prices-row:first-child > div{
+    border-left: 1px solid #ddd !important;
+}
+.quickViewWindow .attributes .option-list.color-squares li > label{
+    margin: 0 0 0 5px;
+}
+
+.quickViewWindow .back-in-stock-subscription {
+	clear: right;
+}
+/********* START VARIANTS IN GRID ********/
+
+.quickViewWindow .overview .variants-in-grid .product-variant-list {
+    text-align: right;
+}
+
+.quickViewWindow .product-variant {
+    float: right;
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+    .quickViewWindow .product-variant:nth-child(2n+1) {
+        margin-right: 2px;
+    }
+
+    .quickViewWindow .product-variant .variant-info {
+        left: 125px;
+        right: inherit;
+    }
+
+    .quickViewWindow .product-variant:hover .variant-info {
+        left: 1px;
+        right: inherit;
+    }
+
+    .quickViewWindow .product-variant .moreInfoHover {
+        left: 1px;
+        right: inherit;
+    }
+
+    .quickViewWindow .product-variant:hover .moreInfoHover {
+        left: -125px;
+        right: inherit;
+    }
+
+.quickViewWindow .variant-grid-info .compare-products {
+    float: left;
+}
+
+.quickViewWindow .variant-grid-info .manufacturers {
+    float: right;
+}
+
+/********* START GIFTCARD *********/
+
+.quickViewWindow .giftcard {
+    margin-right: 0;
+}
+.quickView .giftcard > div > * {
+    float: right;
+}
+
+.quickView .giftcard label {
+    text-align: right;
+}
+
+.quickView .giftcard dt {
+    float: right;
+    clear: right;
+}

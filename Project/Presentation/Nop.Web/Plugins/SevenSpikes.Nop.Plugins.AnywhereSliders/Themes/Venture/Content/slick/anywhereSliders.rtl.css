@@ -1,0 +1,27 @@
+
+.anywhere-slider .slick-prev {
+    right: -50px;
+    left: auto;
+}
+.slider-wrapper:hover .slick-prev {
+    right: 0;
+    left: auto;
+}
+.anywhere-slider .slick-next {
+    left: -50px;
+    right: auto;
+}
+.slider-wrapper:hover .slick-next {
+    left: 0;
+    right: auto;
+}
+.anywhere-slider .slick-dots {
+    left: 0;
+    right: auto;
+}
+.slider-wrapper:hover .slick-prev:before {
+    content: "q";
+}
+.slider-wrapper:hover .slick-next:before {
+    content: "r";
+}

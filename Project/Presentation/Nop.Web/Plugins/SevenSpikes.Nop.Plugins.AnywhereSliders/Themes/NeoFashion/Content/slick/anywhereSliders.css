@@ -1,0 +1,86 @@
+
+.slider-wrapper {
+	margin-bottom: 10px;
+}
+.anywhere-slider {
+    position: relative;
+    overflow: visible;
+    background: #fff url('images/loading.gif') center no-repeat;
+}
+.anywhere-slider .picture-slide a {
+    display: block;
+}
+.anywhere-slider .picture-slide img {
+    width: 100%;
+	display: none;
+}
+.anywhere-slider .first-slide img {
+    display: block;
+}
+
+/* DIRECTIONAL NAVIGATION */
+
+.anywhere-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    width: 20px;
+    height: 30px;
+    margin-top: -15px;
+    border: 0;
+    font-size: 0;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+.anywhere-slider .slick-prev {
+    left: -27px;
+    background: url('images/arrow-left.png') center no-repeat;
+}
+.anywhere-slider .slick-next {
+    right: -27px;
+    background: url('images/arrow-right.png') center no-repeat;
+}
+.anywhere-slider .slick-arrow:hover {
+    opacity: 1;
+}
+
+@media all and (min-width: 1025px) {
+    .anywhere-slider .slick-prev {
+        left: -45px;
+    }
+    .anywhere-slider .slick-next {
+        right: -45px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .anywhere-slider .slick-arrow {
+        display: none;
+    }
+}
+
+/* BULLET NAVIGATION */
+
+.anywhere-slider .slick-dots {
+    position: relative;
+    z-index: 99;
+    margin-top: -41px;
+    background: rgba(0,0,0,0.3);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0;
+}
+.anywhere-slider .slick-dots li {
+    display: inline-block;
+    margin: 0;
+}
+.anywhere-slider .slick-dots button {
+    width: 21px;
+    height: 21px;
+    border: 0;
+    background: url('images/bullets.png') top center no-repeat;
+    font-size: 0;
+}
+.anywhere-slider .slick-active button {
+    background-position: bottom center;
+}

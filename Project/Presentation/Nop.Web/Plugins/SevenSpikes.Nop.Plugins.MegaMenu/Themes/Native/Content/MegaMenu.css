@@ -1,0 +1,251 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.menu-title {
+	text-align: center;
+}
+.mega-menu,
+.header-menu .menu-title,
+.mega-menu .dropdown {
+	display: none;
+}	
+.mega-menu .topic-wrapper {
+	display: none;
+} 
+
+
+@media all and (min-width: 1025px) {
+
+.menu-title,
+.close-menu {
+	display: none;
+}
+
+.header-menu > ul {
+    position: relative;
+}
+.header-menu > ul > li{
+    position: static;
+}
+.header-menu > ul > li > a, 
+.header-menu > ul > li > span {
+    position: relative;
+}
+
+/* MAIN PANEL & DROPDOWN*/
+
+.mega-menu {
+	display: block;
+	position: relative;
+}
+.mega-menu-responsive {
+	display: none !important;
+}
+.mega-menu .dropdown {
+	display: none;
+	position: absolute;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    border-bottom: 4px solid #75bfa1;
+	overflow: hidden;
+	background: #fff;
+	padding: 15px;
+	z-index: 3; /*necessary if there is a :before or :after with another z-index*/
+	margin-top: 4px;
+}
+.mega-menu .dropdown.active {
+	display: block;
+}
+.mega-menu .dropdown.fullWidth {
+    left: 50%;
+	margin-left: -415px;
+	width: 830px;
+}
+
+/* ROWS AND BOXES */
+
+.mega-menu .row {
+	overflow: hidden;
+}
+.dropdown .box {
+	float: left;
+	padding: 15px;
+}
+
+.mega-menu .boxes-1 .box {
+    width: 100%;
+}
+
+.mega-menu .boxes-2 .box {
+    width: 50%;
+}
+
+.mega-menu .boxes-3 .box {
+    width: 33.333%;
+}
+
+.mega-menu .boxes-4 .box {
+    width: 25%;
+}
+
+.mega-menu .boxes-5 .box {
+    width: 20%;
+}
+
+.mega-menu .boxes-6 .box {
+    width: 16.666%;
+}
+
+.mega-menu .boxes-7 .box {
+    width: 14.28%;
+}
+
+.mega-menu .boxes-8 .box {
+    width: 12.5%;
+}
+/*.categories .box,
+.manufacturers .box,
+.vendors .box {
+	width: 250px;
+}*/
+.mega-menu .title {
+	margin-bottom: 10px;
+	padding: 6px 0;
+	text-transform: uppercase;
+	text-align: left;
+}
+.mega-menu .title a {
+	font-size: 14px;
+	font-weight: bold;
+    letter-spacing: 1.5px;
+}
+.mega-menu .title a:hover {
+	color: #555;
+}
+.mega-menu .picture {
+	width: 100%;
+    overflow: hidden;
+    margin: 0 0 20px;
+}
+.mega-menu .picture a {
+	display: block;
+    position: relative;
+}
+.mega-menu .picture a:before {
+    content: " ";
+    display: block;
+    padding-top: 120%;
+}
+.mega-menu .picture a img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    margin: auto;
+}
+.mega-menu .subcategories {
+}
+.mega-menu .box ul {
+	margin-top: 5px;
+}
+.mega-menu .box li {
+	margin: 0 0 15px;
+	text-align: left;
+}
+.mega-menu .box li a {
+    position: relative;
+	padding-left: 13px;
+	font-size: 13px;
+    letter-spacing: 1.5px;
+    display: block;
+    -webkit-transition: all .10s ease-in-out;
+    -moz-transition: all .10s ease-in-out;
+    transition: all .10s ease-in-out;
+}
+.mega-menu .box li a:before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #d1d1d1;
+}
+.mega-menu .box li a:hover {
+    color: #75bfa1;
+}
+.mega-menu .box li a:hover:before {
+    background: #75bfa1;
+}
+.mega-menu .box li:nth-child(odd) a:hover {
+}
+.mega-menu .box li:nth-child(even) a:hover {
+}
+.mega-menu li a.view-all {
+	font-weight: bold;
+	background: none;
+}
+.mega-menu li a.view-all:before {
+    display: none;
+}
+
+.manufacturers.fullWidth .box,
+.vendors.fullWidth .box {
+	/*width: 16.66666%;*/
+    padding: 0 10px;
+}
+.manufacturers.fullWidth .title,
+.vendors.fullWidth .title {
+    display: none;
+}
+.manufacturers.fullWidth .picture,
+.vendors.fullWidth .picture {
+    margin: 0;
+}
+.manufacturers.fullWidth .picture span,
+.vendors.fullWidth .picture span {
+    display: block;
+}
+.manufacturers.fullWidth .box .picture a,
+.verndors.fullWidth .box .picture a {
+    padding: 0;
+}
+.manufacturers.fullWidth .box .picture a:hover,
+.vendors.fullWidth .box .picture a:hover {
+    background: none !important;
+    opacity: .9;
+}
+.manufacturers.fullWidth img,
+.venors.fullWidth img {
+    max-width: 100%;
+}
+.mega-menu .box li a.manufacturer:before,
+.mega-menu .box li a.vendor:before {
+    display: none;
+}
+
+.mega-menu .topic-wrapper {
+	display: block;
+	overflow: hidden;
+}
+.mega-menu .topic-wrapper p {
+	font-size: 11px;
+	line-height: 20px;
+}
+.mega-menu .topic-wrapper strong {
+	display: block;
+	border-bottom: 1px solid #999;
+	padding: 8px 0;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #222;
+}
+
+}

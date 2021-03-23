@@ -1,0 +1,11 @@
+
+.picture-thumbs .slick-prev {
+    left: auto;
+    right: 0;
+    background-image: url('images/arrow-right.png');
+}
+.picture-thumbs .slick-next {
+    right: auto;
+    left: 0;
+    background-image: url('images/arrow-left.png');
+}

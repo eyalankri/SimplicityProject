@@ -1,0 +1,120 @@
+﻿@model VentureThemeSettingsModel
+
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group theme-color">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="Preset_OverrideForStore" asp-input="Preset" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="Preset" />
+                </div>
+                <div class="col-md-9 adminData">
+                    @Html.NopRadioButtonsForPresets(Model.Presets, Model.Preset)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="ThemeColor_OverrideForStore" asp-input="ThemeColor" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="ThemeColor" />
+                </div>
+                <div class="col-md-9">
+                    <nop-select asp-for="ThemeColor" asp-items="Model.SupportedThemeColors" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="HomePageItemBoxLayout_OverrideForStore" asp-input="HomePageItemBoxLayout" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="HomePageItemBoxLayout" />
+                </div>
+                <div class="col-md-9">
+                    <nop-select asp-for="HomePageItemBoxLayout" asp-items="Model.HomePageItemboxLayouts" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="HomePageSliderVideoLink_OverrideForStore" asp-input="HomePageSliderVideoLink" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="HomePageSliderVideoLink" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="HomePageSliderVideoLink" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="HomePageSliderVideoCoverPictureId_OverrideForStore" asp-input="HomePageSliderVideoCoverPictureId" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="HomePageSliderVideoCoverPictureId" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="HomePageSliderVideoCoverPictureId" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="HomePageFeaturedVideoLink_OverrideForStore" asp-input="HomePageFeaturedVideoLink" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="HomePageFeaturedVideoLink" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="HomePageFeaturedVideoLink" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="CategoryGridItemsNumber_OverrideForStore" asp-input="CategoryGridItemsNumber" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="CategoryGridItemsNumber" />
+                </div>
+                <div class="col-md-9">
+                    <nop-select asp-for="CategoryGridItemsNumber" asp-items="Model.CategoryGridItemNumbers" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="AllowCustomersToSwitchCategoryGridItemsNumber_OverrideForStore" asp-input="AllowCustomersToSwitchCategoryGridItemsNumber" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="AllowCustomersToSwitchCategoryGridItemsNumber" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="AllowCustomersToSwitchCategoryGridItemsNumber" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="MenuDropdownColor_OverrideForStore" asp-input="MenuDropdownColor" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="MenuDropdownColor" />
+                </div>
+                <div class="col-md-9">
+                    <nop-select asp-for="MenuDropdownColor" asp-items="Model.SupportedMenuDropdownColors" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="SaleOfTheDayBackgroundImageId_OverrideForStore" asp-input="SaleOfTheDayBackgroundImageId" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="SaleOfTheDayBackgroundImageId" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="SaleOfTheDayBackgroundImageId" />
+                    <span asp-validation-for="SaleOfTheDayBackgroundImageId"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="ProductImageProportion_OverrideForStore" asp-input="ProductImageProportion" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="ProductImageProportion" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="ProductImageProportion" />
+                    <span asp-validation-for="ProductImageProportion"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="CategoryImageProportion_OverrideForStore" asp-input="CategoryImageProportion" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="CategoryImageProportion" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="CategoryImageProportion" />
+                    <span asp-validation-for="CategoryImageProportion"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

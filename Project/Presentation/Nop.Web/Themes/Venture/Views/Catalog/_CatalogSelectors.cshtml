@@ -1,0 +1,97 @@
+﻿@model CatalogPagingFilteringModel
+@using Nop.Core
+@using Nop.Services.Configuration
+
+@inject IStoreContext storeContext
+@inject ISettingService settingService
+
+@{
+    int storeId = storeContext.CurrentStore.Id;
+    bool enableGridNumberSwitch = settingService.GetSettingByKey("venturethemesettings.allowcustomerstoswitchcategorygriditemsnumber", true, storeId, true);
+    string gridNuberOfItems = settingService.GetSettingByKey("venturethemesettings.categorygriditemsnumber", "items-3", storeId, true);
+
+    if (enableGridNumberSwitch)
+    {
+        string gridNumberOfItemsCookie = Context.Request.Cookies["venture_catalog_grid_viewmode_items"];
+
+        if (!string.IsNullOrEmpty(gridNumberOfItemsCookie))
+        {
+            int.TryParse(gridNumberOfItemsCookie, out int value);
+
+            if (value == 3 || value == 4)
+            {
+                gridNuberOfItems = "items-" + value;
+            }
+        }
+    }
+
+    bool compareProductsEnabled = settingService.GetSettingByKey("catalogsettings.compareproductsenabled", true, storeId, true);
+}
+
+<div class="product-selectors">
+
+    <div class="filters-button-wrapper">
+        <button class="filters-button">@T("SevenSpikes.Themes.Venture.Common.Filter")</button>
+    </div>
+
+    @*view mode*@
+    @if (Model.AllowProductViewModeChanging)
+    {
+        <div class="product-viewmode">
+            @if (Model.AvailableViewModes.Count > 1)
+            {
+                SelectListItem gridMode = Model.AvailableViewModes[0];
+                SelectListItem listMode = Model.AvailableViewModes[1];
+
+                if (enableGridNumberSwitch)
+                {
+                    <a href="@gridMode.Value" title="@gridMode.Text" class="viewmode-icon grid hidden" style="display: none;"></a>
+                    
+                    <span data-items="3" title="3 @T("SevenSpikes.Themes.Venture.Common.ItemsInGrid") @gridMode.Text" class="grid items-3 @if(gridMode.Selected && gridNuberOfItems == "items-3"){<text>selected</text>}">3 @T("SevenSpikes.Themes.Venture.Common.ItemsInGrid") @gridMode.Text</span>
+                    <span data-items="4" title="4 @T("SevenSpikes.Themes.Venture.Common.ItemsInGrid") @gridMode.Text" class="grid items-4 @if(gridMode.Selected && gridNuberOfItems == "items-4"){<text>selected</text>}">4 @T("SevenSpikes.Themes.Venture.Common.ItemsInGrid") @gridMode.Text</span>
+                }
+                else
+                {
+                    if (gridNuberOfItems == "items-3")
+                    {
+                        <a href="@gridMode.Value" title="@gridMode.Text" class="viewmode-icon grid items-3 @if(gridMode.Selected && gridNuberOfItems == "items-3"){<text>selected</text>}">3 @T("SevenSpikes.Themes.Venture.Common.ItemsInGrid") @gridMode.Text</a>
+                    }
+                    else
+                    {
+                        <a href="@gridMode.Value" title="@gridMode.Text" class="viewmode-icon grid items-4 @if(gridMode.Selected && gridNuberOfItems == "items-4"){<text>selected</text>}">4 @T("SevenSpikes.Themes.Venture.Common.ItemsInGrid") @gridMode.Text</a>
+                    }
+                }
+
+                <a href="@listMode.Value" title="@listMode.Text" class="viewmode-icon list @if(listMode.Selected){<text>selected</text>}">@listMode.Text</a>
+            }
+        </div>
+    }
+    @if(compareProductsEnabled)
+    { 
+        <div class="compare-products-link">
+            <a href="@Url.RouteUrl("CompareProducts")">@T("Products.Compare.List")</a>
+        </div>
+    }
+    @*page size*@
+    @if (Model.AllowCustomersToSelectPageSize)
+    {
+        <div class="product-page-size">
+            <select id="products-pagesize" name="products-pagesize" onchange="setLocation(this.value);" aria_label = "@T("Catalog.OrderBy.Label")">
+                @for (int i = 0; i < Model.PageSizeOptions.Count; i++)
+                {
+                    SelectListItem currentOption = Model.PageSizeOptions[i];
+                    string isSelected = currentOption.Selected ? "selected='selected'" : string.Empty;
+
+                    <!option value="@currentOption.Value" @Html.Raw(isSelected)>@currentOption.Text @T("Catalog.PageSize.PerPage")</!option>
+                }
+            </select>
+        </div>
+    }
+    @*sorting*@
+    @if (Model.AllowProductSorting)
+    {
+        <div class="product-sorting">
+            @Html.DropDownList("products-orderby", Model.AvailableSortOptions, new { onchange = "setLocation(this.value);", aria_label = T("Catalog.OrderBy.Label") })
+        </div>
+    }
+</div>

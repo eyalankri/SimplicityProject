@@ -1,0 +1,506 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.quickViewData {
+    display: none;
+}
+
+/* START BUTTON */
+
+.quick-view-button {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+    border: 1px solid #000;
+	background: #333 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAMAAAAVBLyFAAAAQlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////8IX9KGAAAAFXRSTlMAp2s8+obl1JVlBPHo19Oxm04nDocRAa+LAAAAaklEQVQY03WPVw7AIAxDw6aDXd//qmWVD6T6I6CnOHGoSzAtNRO0dFp4xZWHPT8U5dHfQ8ZJBPj8cUwvM62iFcMGup+FlB6o+dBUnXJ2qa1rm/W7kezKhVBWelPTG9h0uUzbjdldiTaVgBfhpgPuR38P1wAAAABJRU5ErkJggg==') center no-repeat;
+	box-shadow: inset 0 0 1px #ccc;
+	text-align: center;
+	vertical-align: middle;
+}
+.quick-view-button:hover {
+	border-color: #111;
+	background-color: #555;
+}
+.quick-view-button a {
+	display: block;
+	height: 100%;
+}
+
+/* DATA LOADER */
+
+.k-overlay {
+  position: fixed;
+  z-index: 1060;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+}
+.quickView .k-loading-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto !important;
+    height: auto !important;
+}
+.quickView .k-loading-image {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+    right: 0;
+    bottom: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+	background: url('images/loader.gif') center no-repeat;
+}
+
+/* MAIN WINDOW & HEADERS */
+
+.quickView {
+    position: absolute;
+	left: 50% !important;
+    z-index: 1070;
+	width: 700px;
+	margin: 0 0 0 -350px;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+	background-color: #fff;
+	padding-top: 0 !important;
+}
+
+.quickView .k-window-titlebar {
+	position: relative;
+	height: 0;
+	margin-top: 0 !important;
+	font-size: 0;
+}
+.quickView .k-window-title {
+	display: none;
+}
+.quickView .k-window-actions {
+	position: absolute;
+	top: 11px;
+	right: 11px;
+	z-index: 1;
+}
+.quickView .k-window-actions a {
+	display: block;
+	width: 24px;
+    height: 24px;
+	border: 1px solid #bbb;
+    background: #fff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAPFBMVEUAAACAgID///93d3dCQkJCQkL///9zc3N8fHxISEhISEhycnJjY2NnZ2f///9OTk5KSkpISEhHR0dBQUFOPcn8AAAAD3RSTlMArje5hnUwua+HdbmhjzGPu2/zAAAAOklEQVQI1yXKSQIAEAxD0aDmocX976r4m5dFsAma30iL1FUx0iQ/owWCEVG1ztyuhZ3h/LThLnH/dwBAxQG/0lRzXwAAAABJRU5ErkJggg==') center no-repeat;
+	font-size: 0;
+}
+.quickView .k-window-titlebar .k-window-actions a:hover {
+	opacity: 0.9;
+}
+
+.quickView .product-essential {
+	float: none;
+	width: auto;
+    margin: 0;
+	border: none;
+	padding: 0;
+}
+.quickView .popup-header {
+	border: 1px solid #fcfcfc;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	background: #ddd url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAwCAMAAADuBkDJAAAATlBMVEXDw8PAwMC9vb3v7+/u7u7s7Ozr6+vn5+fk5OTi4uLf39/d3d3Z2dnV1dXPz8/Ly8vJycnHx8e+vr7p6eno6Oja2trW1tbS0tLR0dHNzc0ysEfNAAAAGnRSTlMUDQN/fHh0amReWFJIPjEnIRsIcG5NQzk2LMVKTKgAAABISURBVBjTZcS3DYQAEADB+8d77/pvFK20AYgJJhJ4Cs/gOXxBrIgCXsIreA1v4Buihe+IDn4gTkQPvxADfIRP8K8fXs/wP57fakgJwN9qSwUAAAAASUVORK5CYII=') top repeat-x;
+	padding: 10px;
+	text-align: left;
+}
+.quickView .popup-header h1 {
+	max-width: calc(100% - 45px);
+	height: 24px;
+	margin: 0;
+	overflow: hidden;
+	font-size: 13px;
+	line-height: 26px;
+	font-weight: bold;
+	text-shadow: 1px 1px #e6e6e6;
+	text-transform: uppercase;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* PRODUCT GALLERY */
+
+/*
+ Cloud Zoom CSS. (c)2012-2015 Star Plugins.
+*/
+
+.quickView .cloudzoom-blank {
+	top: 0;
+    right: 0;
+	left: 0;
+    margin: auto;
+    background-image: url('images/blank.png');
+}
+
+.quickView .cloudzoom-zoom-inside {
+	z-index: 9;
+    border: none;
+    box-shadow: none;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto; 
+}
+.quickView .cloudzoom-zoom-inside img {
+    right: auto !important;
+    bottom: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+}
+
+.quickView .cloudzoom-ajax-loader {
+    background-image: url('images/loader.gif');
+    width: 32px;
+    height: 32px;
+}
+
+.quickView .picture a + img {
+	top: 0;
+    right: 0;
+	left: 0;
+    margin: auto;
+} /* transitional image (on thumbnail click) */
+
+.quickView .gallery {
+	display: block; /*Cloud Zoom css override*/
+	float: left;
+    width: 40%;
+	margin: 0;
+	padding: 20px 10px 20px 20px;
+}
+.quickView .gallery .picture {
+	text-align: center;
+	font-size: 0;
+}
+.quickView .gallery .picture a {
+	display: inline-block;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.quickView .thumbnails {
+    margin: 10px 0 0;
+	text-align: center;
+	font-size: 0;
+}
+.quickView .thumbnails a {
+	display: inline-block;
+	position: relative;
+	width: 32%;
+	margin: 0 0 2% 2%;
+	border: 1px solid #ddd;
+	overflow: hidden;
+	background-color: #fff;
+}
+.quickView .thumbnails a:nth-child(3n+1) {
+	margin-left: 0;
+}
+.quickView .thumbnails a:before {
+	content: "";
+	display: block;
+	padding-top: 100%; /*square thumb, change if necessary*/
+}
+.quickView .thumbnails a img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+}
+
+.quickView .cloudzoom-zoom-inside {
+	margin-top: 1px !important; /*work around for "top:1px"*/
+}
+.quickView .picture a + img {
+	margin-top: 1px !important;
+	right: 0;
+	left: 0;
+    margin: auto;
+} /* transitional image (on thumbnail click) */
+
+.quickView .links-panel {
+    margin: 20px 0 0;
+}
+.quickView .links-panel a {
+    font-size: 14px;
+	text-transform: uppercase;
+}
+.quickView .links-panel a:hover {
+	text-decoration: underline;
+}
+
+/* PRODUCT OVERVIEW */
+
+.quickView .overview {
+    float: right;
+    width: 60%;
+	margin: 0;
+	border: none;
+	padding: 20px 20px 20px 10px;
+}
+
+.quickView .ui-accordion {
+	margin: 1px 0;
+	border: 1px solid #ccc;
+	text-align: left;
+}
+.quickView .ui-accordion-header {
+	position: relative;
+	margin: 0 0 -1px;	
+	border: 1px solid #fcfcfc;
+	border-bottom: 1px solid #ccc;	
+	background-color: #eee;
+    padding: 8px 12px;
+	font-weight: normal;
+    text-align: left;
+	text-shadow: 1px 1px #f6f6f6;
+	cursor: pointer;  
+}
+.quickView .ui-accordion-header span {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+	margin: -8px 0 0;
+    cursor: pointer;  
+}
+.quickView .ui-icon-circle-arrow-s {
+    background: url('images/minus.png') center no-repeat;
+}
+.quickView .ui-icon-circle-arrow-e {
+    background: url('images/plus.png') center no-repeat;
+}
+.quickView .ui-accordion-content {
+	position: relative;
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+	padding: 12px;
+    box-sizing: content-box; /* no scrolls fix*/     
+}
+.quickView .ui-accordion-content:last-child {
+	border: none;
+}
+
+.quickView .overview .left {
+    float: left;
+	width: 70%;
+	margin: 0 0 10px;
+    text-align: left;
+}
+.quickView .overview .left > div {
+    margin: 5px 0;
+}
+.quickView .overview .back-in-stock-subscription {
+    margin: 10px 0;
+}
+.quickView .overview .right {
+    float: right;
+	width: 30%;
+	margin: 0 0 10px;
+    text-align: right;
+}
+.quickView .overview .right > div {
+	display: inline-block;
+}
+.quickView .overview .add-to-wishlist-button,
+.quickView .overview .add-to-compare-list-button {
+	width: 32px;
+	height: 32px;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 0 !important;
+	font-size: 0;
+}
+.quickView .overview .add-to-wishlist-button {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAMAAABlXnzoAAAAaVBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8G612AAAAI3RSTlMA5t/MeOzUDQjDuEEiEQTHopROODQGxryysKucjH1xalQwFo07bt0AAABsSURBVAjXRcxHDsQgEAXRokkGDM6T8/0POUJC9lv0V20akrbyYJvE6hk+yvjkgj6tP6Nm3BvowrkAL43tqO3r9Rb1ZdcrxnhkHMliaIxkSOrZSi11VrnXmWRpH1zstovraXzQw5DZldu1UP0BfzsD1WAHPhcAAAAASUVORK5CYII=');
+}
+.quickView .overview .add-to-compare-list-button {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKBAMAAAByAqLJAAAAIVBMVEUAAAD////////////////////////////////////////PIev5AAAAC3RSTlMA79vKx2GGfUU6Bv2/APYAAAAmSURBVAjXYwABcwYwaFZlYBQEASgPJseVAmYFeYIpsAoBCA8mBwCZSQSMI19svwAAAABJRU5ErkJggg==');
+}
+
+.quickView .overview .right ~ div { /*use ~ instead of + because of inbetween <script> tag*/
+	clear: both;
+}
+
+.quickView  .attributes dt {
+	max-width: 100px;
+}
+.quickView  .attributes dd {
+	min-width: 0;
+	max-width: 247px;
+}
+.quickView .overview .attributes select,
+.quickView .overview .attributes .datepicker,
+.quickView .overview .attributes input[type="textbox"] {
+    max-width: 100%;
+	height: 32px;
+	border: 1px solid #bbb !important;
+	box-shadow: none;
+}
+.quickView .overview .attributes select:focus,
+.quickView .overview .attributes input[type="textbox"]:focus {
+	border-color: #999 !important;
+}
+.quickView .giftcard label {
+	display: block;
+	float: none;
+	width: auto;
+	min-width: 0;
+	padding: 0;
+	text-align: left;
+}
+.quickView .giftcard input[type="text"],
+.quickView .giftcard textarea {
+	width: 100%;
+	max-width: 100%;
+	height: 32px;
+	border: 1px solid #bbb !important;
+	box-shadow: none;
+	resize: none;
+}
+.quickView .giftcard input[type="text"]:focus,
+.quickView .giftcard textarea:focus {
+	border-color: #999 !important;
+}
+
+.quickView .overview .purchase-area {
+	margin: 20px 0 10px;
+	border-top: 1px dashed #bbb;
+	overflow: hidden;
+    padding: 20px 0 0;
+}
+.quickView .overview .add-to-cart {
+	margin: 20px 0 0;
+}
+.quickView .overview .title {
+    display: none;
+}
+
+/* PRODUCT GRIDS */
+
+.quickView .product-content {
+	overflow: hidden;
+}
+.quickView .product-grid {
+	margin: 0;
+	border-top: 1px solid #ddd;
+	padding: 15px;
+}
+.quickView .product-grid + .product-grid {
+	border-top: none;
+}
+.quickView .product-grid .title {
+	margin: -5px 0 0;
+	padding: 10px 0;
+	text-align: center;
+}
+.quickView .product-grid .title strong {
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	text-shadow: 1px 1px #f6f6f6;
+	text-transform: uppercase;
+}
+.quickView .item-box {
+	display: none;
+    width: 32%;
+    margin: 5px 0 5px 2%;
+    overflow: hidden;
+}
+.quickView .item-box:nth-child(1),
+.quickView .item-box:nth-child(2),
+.quickView .item-box:nth-child(3) {/*only the first 3 items are shown*/
+	display: block;
+}
+.quickView .item-box:nth-child(2n+1),
+.quickView .item-box:nth-child(4n+1) {/*override theme css*/
+	clear: none;
+	margin-left: 2%;
+}
+.quickView .item-box:nth-child(3n+1) {
+	clear: both;
+	margin-left: 0;
+}
+.quickView .item-box .description {
+	display: none;
+}
+.quickView .productQuantityTextBox,
+.quickView .productQuantityDropdown {
+	display: none !important;
+}
+
+/* PRODUCT VARIANTS */
+
+.quickView .product-variant-list {
+    margin: 0 0 15px;
+	border-bottom: 1px dashed #bbb;
+	padding: 0 0 10px;
+}
+.quickView .product-variant {
+    position: relative;
+    float: left;
+    width: 32%; /*3 items per row*/
+	margin: 0 0 0 2%;
+	overflow: hidden;
+    text-align: center;
+}
+.quickView .product-variant:first-child {
+	margin-left: 0; /*change to nth-child if the "item-row" model is removed*/
+}
+.quickView .variant-picture {
+	float: none;
+	width: 100%;
+	height: 100%;
+	margin: 0 0 5px;
+	border: 1px solid #ccc;
+}
+.quickView .variant-picture a {
+	display: block;
+	overflow: hidden;
+}
+.quickView .variant-picture img {
+	box-shadow: none;
+}
+.quickView .moreInfoHover {
+	display: none;
+}
+.quickView .variant-info .variant-name {
+	max-height: 30px;
+	margin: 0 0 5px;
+    overflow: hidden;
+	font-size: 12px;
+}
+.quickView .variant-info .variant-name a {
+	display: block;
+}
+.quickView .variant-info .prices {
+    float: none;
+    height: auto;
+	margin: 0;
+}
+.quickView .variant-info .prices > * {
+	display: none;
+}
+.quickView .variant-info .product-price {
+	display: block;
+	font-size: 13px;
+}
+.quickView .variant-grid-info .compare-products {
+	display: none;
+}

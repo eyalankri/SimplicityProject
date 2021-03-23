@@ -1,0 +1,45 @@
+.nivo-controlNav {
+        right: 0;
+}
+@media all and (min-width: 1025px) {
+    .anywhere-slider .slick-prev {
+        background-image: url('images/nav-button-right.png');
+        right: 20px;
+        left: auto;
+    }
+    .anywhere-slider .slick-next {
+        background-image: url('images/nav-button-left.png');
+        left: 20px;
+        right: auto;
+    }
+    .home-page-category-grid.categories-2 .item-box {
+        float:left;
+    }
+}
+
+@media all and (min-width: 768px) {
+        .home-page-bottom-banners .left {
+            float: right;
+            margin:0 0 0 0.2%;
+        }
+        .home-page-bottom-banners .right {
+            float: right;
+        }
+
+}
+@media all and (min-width: 768px) {
+    .home-page-category-grid.categories-1 .anywhere-slider img {
+        right: 0;
+        top: 0;
+    }
+    .home-page-category-grid.banner-included.categories-2 .item-grid .item-box {
+        float: left;
+    }
+}
+@media all and (min-width: 768px) and (max-width:1024px) {
+    .home-page-category-grid.categories-2.banner-included .item-box .title, 
+    .sub-category-grid.categories-2.banner-included .item-box .title {
+        left: 0;
+    }
+
+}

@@ -1,0 +1,60 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+/*=====================================================
+    
+    MAIN CSS / SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (min-width: 240px) {
+
+    input.instant-search-busy {
+        background: #fff url('../../../images/ajax-loader-small.gif') no-repeat 47px center !important;
+    }
+
+    span.search-box-text,
+    .search-box select,
+    .instant-search-item .img-block {
+	    float: right;
+    }
+
+    .search-box select{
+	    border-left: 0;
+    }
+    .search-box select ~ .search-box-button{
+	    margin-right: 0;
+    }
+	.instantSearch {
+		right: 0;
+	}
+    .instant-search-item .img-block img{
+	    left: 0;
+	    right: 0;
+    }
+    .instant-search-item .detail{
+	    margin-right: 90px;
+	    margin-left: 0;
+    }
+
+}
+
+@media all and (min-width: 481px) {
+
+    input.instant-search-busy {
+        background: #fff url('../../../images/ajax-loader-small.gif') no-repeat 47px center !important;
+    }
+
+}
+
+@media all and (min-width: 1025px) {
+
+    input.instant-search-busy,
+    input.narrow.instant-search-busy {
+        background-position: 47px center !important;
+    }
+
+}

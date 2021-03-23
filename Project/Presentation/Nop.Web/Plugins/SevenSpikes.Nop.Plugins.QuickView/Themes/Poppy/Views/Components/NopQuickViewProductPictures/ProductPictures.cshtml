@@ -1,0 +1,83 @@
+﻿@inject QuickViewSettings quickViewSettings
+
+@model ProductDetailsModel
+@{
+    var isCloudZoomAvailable = quickViewSettings.EnableCloudZoom && Model.DefaultPictureModel.CustomProperties.ContainsKey("SmallImageUrl");
+}
+
+<div class="picture @if (Model.PictureModels.Count == 1){<text>no-thumbs</text>}">
+    @if (isCloudZoomAvailable)
+    {
+        const string defaultRelation = "appendSelector: '.quickViewWindow .gallery .picture', zoomPosition: 'inside', zoomOffsetX: 0, easing: 3, zoomFlyOut: false, disableZoom: 'auto'";
+
+        <a href="@Model.DefaultPictureModel.FullSizeImageUrl">
+            <img class="cloudzoom" id="quick-view-zoom" data-cloudzoom="@defaultRelation"
+                 src="@Model.DefaultPictureModel.FullSizeImageUrl" alt="@Model.DefaultPictureModel.AlternateText"/>
+        </a>
+
+        <script>
+            $(document).on('nopQuickViewDataShownEvent',
+                function () {
+                    CloudZoom.quickStart();
+                });
+        </script>
+    }
+    else
+    {
+        <span class="picture-img-wrap">
+            <img src="@Model.DefaultPictureModel.FullSizeImageUrl" alt="@Model.DefaultPictureModel.AlternateText" />
+        </span>
+    }
+
+    @if (Model.PictureModels.Count > 1)
+    {
+        <div class="picture-thumbs-navigation-arrow picture-thumbs-prev-arrow">
+            <span>@T("SevenSpikes.Themes.Poppy.Product.ImageThumbs.Prev")</span>
+            <img src="@Model.DefaultPictureModel.ImageUrl" data-fullsizeimageurl="@Model.DefaultPictureModel.FullSizeImageUrl" alt="Previous" />
+        </div>
+        <div class="picture-thumbs-navigation-arrow picture-thumbs-next-arrow">
+            <span>@T("SevenSpikes.Themes.Poppy.Product.ImageThumbs.Next")</span>
+            <img src="@Model.DefaultPictureModel.ImageUrl" data-fullsizeimageurl="@Model.DefaultPictureModel.FullSizeImageUrl" alt="Next" />
+        </div>
+
+        <div class="picture-thumbs">
+            @if (isCloudZoomAvailable)
+            {
+                const string galleryRelation = "appendSelector: '.quickViewWindow .gallery .picture', zoomPosition: 'inside', zoomOffsetX: 0, easing: 3, zoomFlyOut: false, disableZoom: 'auto', titleOpacity: 0,  useZoom: '#quick-view-zoom', image: '{0}', zoomImage: '{1}'";
+
+                foreach (var picture in Model.PictureModels)
+                {
+                    var smallImageUrl = "";
+                    if (picture.CustomProperties.ContainsKey("SmallImageUrl"))
+                    {
+                        smallImageUrl = picture.CustomProperties["SmallImageUrl"].ToString();
+                    }
+
+                    var tinyImageUrl = "";
+
+                    if (picture.CustomProperties.ContainsKey("TinyImageUrl"))
+                    {
+                        tinyImageUrl = picture.CustomProperties["TinyImageUrl"].ToString();
+                    }
+
+                    <a href="@picture.FullSizeImageUrl" class="thumb-popup-link cloudzoom-gallery" data-cloudzoom="@String.Format(galleryRelation, smallImageUrl, picture.FullSizeImageUrl)">
+                        <img class="cloud-zoom-gallery-img" src="@tinyImageUrl" alt="@picture.AlternateText" title="@picture.Title" />
+                    </a>
+                }
+            }
+            else
+            {
+                foreach (var picture in Model.PictureModels)
+                {
+                    <a class="thumb-popup-link" href="@picture.FullSizeImageUrl" title="@picture.Title">
+                        <img src="@picture.ImageUrl" alt="@picture.AlternateText" title="@picture.Title" />
+                    </a>
+                }
+            }
+        </div>
+    }
+</div>
+
+<input type="hidden" class="quickViewAdjustPictureOnProductAttributeValueChange"
+       data-productid="@Model.Id"
+       data-iscloudzoomavailable="@isCloudZoomAvailable.ToString().ToLowerInvariant()" />

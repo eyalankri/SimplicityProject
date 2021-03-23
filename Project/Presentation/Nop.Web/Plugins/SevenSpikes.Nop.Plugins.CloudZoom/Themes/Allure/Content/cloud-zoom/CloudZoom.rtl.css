@@ -1,0 +1,11 @@
+.cloudzoom-zoom {
+	right: auto !important;
+	left: calc(100% + 20px) !important;
+}
+.product-page-alternative-layout .cloudzoom-zoom {
+	right: calc(100% + 20px) !important;
+	left: auto !important;
+}
+.cloudzoom-caption {
+	text-align: right;
+}

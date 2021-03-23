@@ -1,0 +1,15 @@
+
+.anywhere-slider .slick-arrows {
+    right: auto;
+    left: 0;
+}
+.anywhere-slider .slick-prev {
+    right: 0;
+    left: auto;
+    background-image: url('slider-arrow-right.png');
+}
+.anywhere-slider .slick-next {
+    right: auto;
+    left: 0;
+    background-image: url('slider-arrow-left.png');
+}

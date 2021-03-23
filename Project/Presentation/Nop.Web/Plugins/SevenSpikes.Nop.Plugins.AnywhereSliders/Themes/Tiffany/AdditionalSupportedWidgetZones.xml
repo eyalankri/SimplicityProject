@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SupportedWidgetZones>
+  <WidgetZone>categories-banner</WidgetZone>
+  <WidgetZone>home_page_categories_banner</WidgetZone>
+  <WidgetZone>home_page_bottom_left_slider</WidgetZone>
+  <WidgetZone>home_page_bottom_right_slider</WidgetZone>
+</SupportedWidgetZones>

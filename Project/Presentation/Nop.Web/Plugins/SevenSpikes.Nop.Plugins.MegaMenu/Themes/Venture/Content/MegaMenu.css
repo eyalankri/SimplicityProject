@@ -1,0 +1,212 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.mega-menu, .menu-title,
+.mega-menu .dropdown {
+	display: none;
+}	 
+
+@media all and (min-width: 1201px) {
+
+.menu-title,
+.close-menu {
+	display: none;
+}
+.mega-menu {
+	display: block;
+	position: relative;
+}
+.mega-menu-responsive {
+	display: none !important;
+}
+.mega-menu .with-dropdown-in-grid {
+    position: static !important;
+}
+.mega-menu .dropdown {
+	display: none;
+	position: absolute;
+	left: 50%;
+	width: 1200px;
+	margin-left: -600px;	
+    padding: 19px 0 0;
+}
+.mega-menu .row-wrapper {
+    background: #2c2c2c;
+    padding: 20px 15px 25px;
+    box-shadow: 0 0 14px rgba(0,0,0,0.06);
+}
+.light-layout .mega-menu .row-wrapper {
+    background: #fff;
+}
+.mega-menu .dropdown.active {
+	display: block;
+}
+
+.mega-menu[data-enableclickfordropdown='true']
+.has-sublist:hover > .sublist-wrap {
+	display: none;
+}
+.mega-menu[data-enableclickfordropdown='true']
+.has-sublist > .sublist-wrap.active {
+	display: block !important;
+}
+
+.mega-menu .row {
+	overflow: hidden;
+}
+.mega-menu .row + .row {
+    padding: 30px 0 0;
+}
+.mega-menu .box {
+	float: left;
+	padding: 0 15px;
+}
+.mega-menu .dropdown .box {
+    width: 25%;
+}
+.mega-menu .dropdown.boxes-2 .box {
+    width: 50%;
+}
+.mega-menu .dropdown.boxes-3 .box {
+    width: 33.333%;
+}
+.mega-menu .dropdown.boxes-4 .box {
+    width: 25%;
+}
+.mega-menu .dropdown.boxes-5 .box {
+    width: 20%;
+}
+.mega-menu .dropdown.boxes-6 .box {
+    width: 16.666%;
+}
+.mega-menu .dropdown.boxes-7 .box {
+    width: 14.25%;
+}
+.mega-menu .dropdown.boxes-8 .box {
+    width: 12.5%;
+}
+.mega-menu .dropdown.boxes-9 .box {
+    width: 11.111%;
+}
+.mega-menu .categories .picture-title-wrap {
+    position: relative;
+    padding-bottom: 40px;
+}
+.mega-menu .dropdown.manufacturers.fullWidth .box,
+.mega-menu .dropdown.vendors.fullWidth .box {
+    position: relative;
+    padding-bottom: 45px;
+}
+.mega-menu .categories .picture {
+	overflow: hidden;
+	text-align: center;
+    margin: 0 0 15px;
+}
+.mega-menu .picture a {
+	display: block;
+    position: relative;
+}
+.mega-menu .picture a:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+.mega-menu .categories .picture a:before {
+    padding-top: 66%;
+}
+.mega-menu .picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+	max-width: 100%;
+}
+.mega-menu .categories .picture img {
+    bottom: auto;
+}
+.mega-menu .title {
+	margin-bottom: 15px;
+	font-size: 16px;
+    border-bottom: 1px solid #868686;
+    padding: 0 5px 8px;
+    color: #fff;
+	text-transform: uppercase;
+	text-align: left;
+    position: relative;
+}
+.light-layout .mega-menu .title {
+    color: #2c2c2c;
+    border-color: #d4d4d4;
+}
+.mega-menu .title:before {
+    content: '';
+    width: 75px;
+    height: 3px;
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: auto;
+    bottom: -2px;
+    margin: auto;
+    background: #f3cc2e;
+    -o-transform: skewX(-30deg);
+    -webkit-transform: skewX(-30deg);
+    -moz-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+}
+.mega-menu .categories .picture-title-wrap .title {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+.mega-menu .dropdown.manufacturers.fullWidth .title,
+.mega-menu .dropdown.vendors.fullWidth .title {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    right: 15px;
+    margin: 0;
+}
+.mega-menu .categories .picture-title-wrap .title a,
+.mega-menu .dropdown.manufacturers.fullWidth .title a,
+.mega-menu .dropdown.vendors.fullWidth .title a {
+    display: block;
+}
+.mega-menu .categories .picture-title-wrap .title a span,
+.mega-menu .dropdown.manufacturers.fullWidth .title a span,
+.mega-menu .dropdown.vendors.fullWidth .title a span {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.mega-menu .subcategories {
+    text-align: left;
+}
+.mega-menu .box li a {
+    display: inline-block;
+    text-align: left;
+    padding: 8.5px ;
+    font-size: 14px;
+    text-transform: none;
+	color: #909090;
+    font-family: 'Lato', sans-serif;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.mega-menu .box li a:hover {
+    color: #f3cc2e;
+}
+.mega-menu li a.view-all {
+	font-weight: bold;
+	background: none;
+}
+
+}

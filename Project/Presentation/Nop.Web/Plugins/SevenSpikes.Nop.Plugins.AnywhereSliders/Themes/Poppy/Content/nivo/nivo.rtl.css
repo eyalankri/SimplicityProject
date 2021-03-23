@@ -1,0 +1,25 @@
+.nivo-directionNav a {
+    text-indent: 0;    
+}
+.nivo-controlNav a {
+    text-indent: 0;
+}
+a.nivo-prevNav {
+    left: unset;
+    right: 10px;    
+}
+a.nivo-nextNav {
+    right: unset;
+    left: 10px;
+}
+@media all and (min-width: 1001px) {
+    body.desktop > .slider-wrapper {
+        margin: 57px 250px 0 0;
+    }
+}
+@media all and (min-width: 1281px) {
+
+    body.desktop > .slider-wrapper {
+        margin: 57px 300px 0 0;
+    }
+}

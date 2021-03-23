@@ -1,0 +1,53 @@
+
+.slider-wrapper {
+	margin: 0 0 20px;
+}
+.anywhere-slider {
+    position: relative;
+    background: #fff url('images/loading.gif') center no-repeat;
+}
+.anywhere-slider .slick-track {
+    background-color: #fff;
+}
+.anywhere-slider .picture-slide a {
+    display: block;
+}
+.anywhere-slider .picture-slide img {
+    width: 100%;
+	display: none;
+}
+.anywhere-slider .first-slide img {
+    display: block;
+}
+
+/* DIRECTIONAL NAVIGATION */
+
+.anywhere-slider .slick-arrow {
+    position: absolute;
+	top: 50%;
+    z-index: 99;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	border: none;
+	box-shadow: 0 0 0 1px rgba(255,255,255,0.25);
+	font-size: 0;
+}
+.anywhere-slider .slick-prev {
+	left: 15px;
+	background: rgba(0,0,0,0.5) url('images/arrow-left.png') center no-repeat;
+}
+.anywhere-slider .slick-next {
+	right: 15px;
+	background: rgba(0,0,0,0.5) url('images/arrow-right.png') center no-repeat;
+}
+.anywhere-slider .slick-arrow:hover {
+	 box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
+	 background-color: rgba(255,255,255,0.2);
+}
+
+/* BULLET NAVIGATION, removed, place is reserved for header menu*/
+
+.anywhere-slider .slick-dots {
+    display: none !important;
+}

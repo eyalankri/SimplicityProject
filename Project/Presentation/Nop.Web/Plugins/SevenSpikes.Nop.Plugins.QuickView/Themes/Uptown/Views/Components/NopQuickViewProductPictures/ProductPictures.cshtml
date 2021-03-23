@@ -1,0 +1,40 @@
+﻿@inject QuickViewSettings quickViewSettings
+
+@model ProductDetailsModel
+@{
+    var isCloudZoomAvailable = quickViewSettings.EnableCloudZoom && Model.DefaultPictureModel.CustomProperties.ContainsKey("SmallImageUrl");
+}
+
+@if (isCloudZoomAvailable)
+{
+    const string defaultRelation = "appendSelector: '.quickViewWindow .gallery .picture', zoomPosition: 'inside', zoomOffsetX: 0, easing: 3, zoomFlyOut: false, disableZoom: 'auto'";
+
+    var defaultSmallImageUrl = Model.DefaultPictureModel.CustomProperties["SmallImageUrl"].ToString();
+
+    <script>
+        $(document).ready(function () {
+            CloudZoom.quickStart();
+        });
+    </script>
+
+    <div class="picture">
+        <a href="@Model.DefaultPictureModel.FullSizeImageUrl">
+            <img class="cloudzoom" id="quick-view-zoom" src="@defaultSmallImageUrl" alt="@Model.DefaultPictureModel.AlternateText"
+                 data-cloudzoom="@defaultRelation" />
+        </a>
+        @Html.Partial("_ProductPictureThumbs", Model)
+    </div>
+}
+else
+{
+    <div class="picture">
+        <a class="no-pointer">
+            <img alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" />
+        </a>
+        @Html.Partial("_ProductPictureThumbs", Model)
+    </div>
+}
+
+<input type="hidden" class="quickViewAdjustPictureOnProductAttributeValueChange"
+       data-productId="@Model.Id"
+       data-isCloudZoomAvailable="@isCloudZoomAvailable.ToString().ToLowerInvariant()" />

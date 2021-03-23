@@ -1,0 +1,141 @@
+﻿.quickView .overview .add-to-cart,
+.quickView .product-variant {
+	float: right;
+}
+.quickView .overview .left {
+	text-align: right;
+}
+
+/* TRIGGER BUTTON */
+
+
+.quick-view-button{
+	margin: 10px 0 10px 5px;
+}
+.product-list .quick-view-button{
+	float: left;
+	margin: 5px 0 5px 3px;
+}
+/* DATA LOADER */
+
+
+.k-overlay{
+	right: 0;
+	left: auto;
+}
+.quickView .k-loading-mask{
+	right: 0;
+	left: auto;
+}
+.quickView .k-loading-image{
+	right: 0;
+	left: auto;
+}
+/* MAIN WINDOW & HEADERS */
+
+
+.quickView{
+	right: 50% !important;
+	left: auto !important;
+	margin: 0 -395px 0 0;
+}
+.quickView .k-window-titlebar .k-window-actions{
+	left: 10px;
+	right: auto;
+}
+.quickView .k-window-titlebar .k-window-actions a{
+	left: -53px;
+	right: auto;
+}
+.quickView .popup-header h1{
+	right: 0;
+	left: 0;
+}
+/* PRODUCT GALLERY */
+
+
+.quickView .gallery{
+	float: right;
+	padding: 30px 30px 30px 12.5px;
+}
+.quickView .gallery .picture-thumbs-navigation-arrow.picture-thumbs-prev-arrow{
+	background-position: right 13px center;
+}
+.quickView .gallery .picture-thumbs-navigation-arrow.picture-thumbs-next-arrow{
+	background-position: left 13px center;
+}
+.quickView .links-panel a:before{
+	margin: 0 0 0 12px;
+}
+/* PRODUCT OVERVIEW */
+
+
+.quickView .overview{
+	float: left;
+	padding: 30px 12.5px 30px 30px;
+}
+.quickView .ui-accordion-header{
+	padding: 9px 20px 9px 40px;
+	text-align: right;
+}
+.quickView .ui-accordion-header span{
+	left: 19px;
+	right: auto;
+}
+.quickView .ui-accordion-content{
+	padding: 20px 20px 40px 0;
+}
+.quickView .overview .right{
+	float: left;
+	text-align: left;
+}
+.quickView .overview .add-to-wishlist:before,
+.quickView .overview .compare-products:before,
+.quickView .overview .email-a-friend:before{
+	right: 0;
+	left: 0;
+}
+.quick-view-button-tooltip{
+	right: 50%;
+	left: auto;
+	margin: 0 -75px 0 0;
+}
+.quick-view-button-tooltip:before{
+	right: 0;
+	left: 0;
+}
+.quickView .overview .attributes .color-squares li{
+	margin: 0 0 0 4px;
+}
+.quickView .overview .product-specs-box .table-wrapper{
+	margin: -20px -20px 0 0;
+}
+.quickView .product-grid .item-box:nth-child(3n+1){
+	margin-right: 2%;
+	margin-left: 0;
+}
+.quickView .product-grid .item-box:nth-child(4n+1){
+	margin-right: 0;
+}
+.quickView .product-variant {
+    margin: 0 2% 2% 0;
+}
+.quickView .product-variant:nth-of-type(3n+1) {
+	margin-right: 0;
+}
+.quickView .moreInfoHover{
+	right: 0;
+	left: auto;
+}
+.quickView .variant-info{
+	right: -101%;
+	left: auto;
+}
+.quickView .product-variant:hover .moreInfoHover{
+	right: 101%;
+	left: auto;
+}
+.quickView .product-variant:hover .variant-info{
+	right: 0;
+	left: auto;
+}

@@ -1,0 +1,26 @@
+﻿/* GLOBAL STYLES */
+
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description {
+    display: block;
+}
+
+/* THEME STYLES */
+
+.product-essential {
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+.full-description {
+	margin: 0;
+}
+.full-description p {
+	margin: 0 0 5px 0;
+}
+.product-specs-box {
+	margin: 0;
+}
+.product-specs-box .data-table {
+	margin: 0 0 5px;
+}

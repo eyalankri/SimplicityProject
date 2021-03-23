@@ -1,0 +1,133 @@
+
+.slider-wrapper {
+    position: relative;
+}
+.anywhere-slider {
+    position: relative;
+}
+.picture-slide a {
+    display: block;
+}
+.picture-slide img {
+    width: 100%;
+	display: none;
+}
+.first-slide img {
+    display: block;
+}
+
+.anywhere-slider .slick-arrow {
+	position: absolute;
+    top: 50%;
+    z-index: 99;
+	width: 50px;
+	height: 50px;
+    margin: -25px 0 0;
+    border: none;
+    background-color: #1f1f1f;
+    opacity: .6;
+    font-size: 0;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.anywhere-slider .slick-arrow:before {
+    font-family: "venture-font";
+    text-transform: none;
+    font-size: 8px;
+    width: 9px;
+    height: 8px;
+    color: #f3cc2e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.anywhere-slider .slick-prev {
+	left: -50px;
+}
+.slider-wrapper:hover .slick-prev {
+    left: 0;
+}
+.anywhere-slider .slick-prev:before {
+    content: "r";
+}
+.anywhere-slider .slick-next {
+    right: -50px;
+}
+.slider-wrapper:hover .slick-next {
+    right: 0;
+}
+.anywhere-slider .slick-next:before {
+    content: "q";
+}
+.anywhere-slider .slick-arrow:hover {
+    opacity: 1;
+}
+
+.anywhere-slider .slick-dots {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 9px;
+    text-align: center;
+    font-size: 0;
+    z-index: 99;
+}
+.anywhere-slider .slick-dots:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -7px;
+    right: -7px;
+    bottom: 0;
+    background: #f5f5f5;
+    z-index: 1;
+    -o-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+.anywhere-slider .slick-dots li {
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+    z-index: 2;
+}
+.anywhere-slider .slick-dots button {
+    width: 9px;
+    height: 9px;
+    font-size: 0;
+    border-width: 0;
+    background: #939393;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.anywhere-slider .slick-active button {
+    background-color: #f3cc2e;
+}
+
+/* HOME PAGE BANNERS */
+
+.home-page-footer-banners {
+    display: none;
+}
+
+@media all and (min-width: 1201px) {
+
+    .home-page-footer-banners {
+        display: table;
+        width: 100%;
+        background: #2c2c2c;
+    }
+    .light-theme .home-page-footer-banners {
+        background: #fff;
+    }
+    .home-page-footer-banners .slider-wrapper {
+        display: table-cell;
+    }
+
+}

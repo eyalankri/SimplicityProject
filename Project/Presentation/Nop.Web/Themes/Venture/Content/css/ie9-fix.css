@@ -1,0 +1,44 @@
+.page-loader .loader,
+.nopAjaxCartPanelAjaxBusy,
+.miniProductDetailsPanelAjaxBusy,
+.productPanelAjaxBusy,
+.infinite-scroll-loader,
+.cloudzoom-ajax-loader,
+.quickView .k-loading-image,
+.loading-overlay span,
+.panel-loader-effect .spinner {
+    display: none !important;
+}
+select {
+    background-image: none !important;
+    padding-right: inherit !important;
+}
+.instant-search-item .img-block {
+    font-size: 0;
+}
+.instant-search-item .img-block img {
+    position: static !important;
+}
+.overview-buttons > div {
+    display: inline-block !important;
+}
+.overview .add-to-cart-button, 
+.variant-overview .add-to-cart-button,
+.product-details-page .ajax-cart-button-wrapper {
+    width: 200px !important;
+    max-width: 100%;
+}
+.customer-pages-body .block .list a.inactive {
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    padding: 0;
+}
+.customer-pages-body .block .list a.inactive:after {
+    display: none;
+}
+
+.theme-roller button {
+    top: 0 !important;
+    right: -46px !important;
+}

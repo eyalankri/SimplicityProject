@@ -1,0 +1,9 @@
+.slick-track {
+    float: right;
+}
+
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+    left: auto;
+    right: 0;
+}

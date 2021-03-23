@@ -1,0 +1,69 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.ribbon-wrapper:after {
+     content: "";
+     display: block;
+     clear: both;
+} 
+
+@media all and (max-width: 768px) {
+
+    .product-list .item-box .ribbon-wrapper {
+        float: none;
+    }
+
+}
+
+@media all and (min-width: 769px) {
+
+    .product-list .item-box .ribbon-wrapper {
+        width: 32%; /*set width according to theme design and layout*/
+    }
+    .product-list .item-box .ribbon-wrapper .picture {
+        float: none;
+        width: auto;
+    }
+
+}
+
+@media all and (min-width: 600px) {
+
+    .product-box-layout-2 .venture-product-grid .item-box .product-item .ribbon-wrapper {
+        width: 59.333%;
+        float: right;
+    }
+    .product-box-layout-2 .venture-product-grid .item-box .product-item .ribbon-wrapper .picture {
+        width: 100%;
+        float: none;
+    }
+
+}
+
+@media all and (min-width: 1201px) {
+
+     .item-box .ribbon-wrapper {
+         z-index: 1;
+     }
+     .item-box .details {
+         z-index: 2;
+     }
+
+     .gallery > .ribbon-wrapper {
+        width: 80%;
+        float: right;
+     }
+     .gallery > .ribbon-wrapper .picture {
+         width: 100%;
+     }
+     .gallery > .ribbon-wrapper:only-child {
+        width: 100%;
+        float: none;
+     }
+
+}
+
+
+/*IMPORTANT: breakpoints range depends on where "view products in list" is available and where is not */

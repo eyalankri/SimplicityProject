@@ -1,0 +1,138 @@
+﻿
+
+input.search-box-text {
+    margin: 0;
+}
+.search-box .instant-search-busy {
+    background: #fff url('../../../images/ajax-loader-small.gif') 5px center no-repeat !important;
+}
+.instantSearch,
+.instantSearch.resize {
+	right: -1px !important;
+    max-width: 308px !important;
+}
+.instant-search-item .img-block {
+    float: right !important;
+}
+.instant-search-item .detail {
+    margin-left: 0;
+    margin-right: 70px;
+}
+.instant-search-item .detail .title,
+.instant-search-item .detail .price {
+    text-align: right !important;
+}
+
+
+
+/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+@media all and (max-width: 1025px) and (min-width: 769px) {
+    
+    .search-box .instant-search-busy {
+        background-position: 35px center !important;
+    }
+    .instantSearch,
+    .instantSearch.resize {
+        margin: -1px 32px 0 0 !important;
+    }
+    .instantSearch .k-list-container {
+        max-width: 100% !important;
+    }
+    .instantSearch .k-item {
+        border-bottom: 1px dotted #ccc;
+    }
+    input.search-box-text {
+        margin: 0 32px 0 0;
+        width: calc(100% - 64px) !important;
+    }
+    .instant-search-item .detail {
+        width: 175px;
+    }
+}
+
+
+/*=====================================================
+    
+    TABLETS PORTRAIT & SMARTPHONES LANDSCAPE
+
+=====================================================*/
+
+@media all and (max-width: 768px) and (min-width: 481px) {
+    
+    .search-box .instant-search-busy {
+        background-position: 35px center !important;
+    }
+    .instantSearch,
+    .instantSearch.resize {
+        margin: -1px 32px 0 0 !important;
+    }
+
+    .instantSearch .k-list-container {
+        max-width: 100% !important;
+    }
+    .instant-search-busy {
+        background-position: 87% center !important;
+    }
+    input.search-box-text {
+        margin: 0 32px 0 0;
+        width: calc(100% - 64px) !important;
+    }
+
+    input.search-box-text.narrow {
+        margin: 0 32px 0 0;
+    }
+
+}
+
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (max-width: 480px) {
+    
+    .search-box .instant-search-busy {
+        background-position: 5px center !important;
+    }
+    .instantSearch {
+        margin: -1px 32px 0 0 !important;
+    }
+
+    .instantSearch.resize {
+        margin: -1px 0 0 0 !important;
+    }
+    .instantSearch .k-list-container {
+        width: 100% !important;
+    }
+    .instantSearch .k-item {
+        border-bottom: 1px dotted #ccc;
+    }
+    .instant-search-item .img-block {
+        display: none;
+    }
+    .instant-search-busy {
+        background-position: 87% center !important;
+    }
+    input.search-box-text {
+        margin: 0 32px 0 0;
+        width: calc(100% - 64px) !important;
+    }
+
+
+    input.search-box-text.narrow {
+        margin: 0;
+    }
+
+    .instant-search-item .detail {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+}

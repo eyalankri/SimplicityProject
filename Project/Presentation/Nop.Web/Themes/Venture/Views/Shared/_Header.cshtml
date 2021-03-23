@@ -1,0 +1,162 @@
+﻿@using Nop.Core
+@using Nop.Services.Configuration
+@using Nop.Services.Media
+@using Microsoft.AspNetCore.WebUtilities
+@using Microsoft.Extensions.Primitives
+@using Microsoft.AspNetCore.Html
+
+@inject ISettingService settingService
+@inject IPictureService pictureService
+@inject IStoreContext storeContext
+
+@{
+    var storeId = storeContext.CurrentStore.Id;
+    var controllerName = Url.ActionContext.RouteData.Values["controller"].ToString();
+    var isHomePage = controllerName.Equals("home", StringComparison.InvariantCultureIgnoreCase);
+
+    IHtmlContent homePageSlider = null;
+    var isHomePageSliderEnabled = string.Empty;
+
+    var menuDropdownLayout = settingService.GetSettingByKey("venturethemesettings.menudropdowncolor", "dark-layout", storeId, true);
+
+    var homePageSliderVideoLink = settingService.GetSettingByKey("venturethemesettings.homepageslidervideolink", string.Empty, storeId, true);
+    var homePageSliderVideoCoverPictureId = settingService.GetSettingByKey("venturethemesettings.homepageslidervideocoverpictureid", 0, storeId, true);
+
+
+    var homePageSliderVideoCover = Url.Content("~/Themes/Venture/Content/img/default-video-cover.jpg");
+    var homePageSliderVideoId = string.Empty;
+    var homePageSliderVideoStartTime = string.Empty;
+    var homePageSliderVideoPlatformUrl = string.Empty;
+    var homePageSliderVideoPlatformApiUrl = string.Empty;
+
+    if (isHomePage && !string.IsNullOrEmpty(homePageSliderVideoLink))
+    {
+        var uri = new Uri(homePageSliderVideoLink);
+
+        if (uri.Host.Contains("youtube"))
+        {
+            var query = QueryHelpers.ParseQuery(uri.Query);
+
+            StringValues videoStartTime;
+
+            if(query.TryGetValue("t", out videoStartTime))
+            {
+                homePageSliderVideoStartTime = videoStartTime;
+            }
+
+            homePageSliderVideoId = query["v"];
+            homePageSliderVideoPlatformUrl = "https://www.youtube.com/embed/";
+            homePageSliderVideoPlatformApiUrl = "https://www.youtube.com/iframe_api";
+        }
+        else if (uri.Host.Contains("vimeo"))
+        {
+            homePageSliderVideoId = uri.Segments[1];
+            homePageSliderVideoPlatformUrl = "https://player.vimeo.com/video/";
+            homePageSliderVideoPlatformApiUrl = "https://player.vimeo.com/api/player.js";
+
+            if (!string.IsNullOrEmpty(uri.Fragment))
+            {
+                homePageSliderVideoStartTime = uri.Fragment.Replace("#t=", "").Replace("s", "");
+            }
+        }
+
+        if (homePageSliderVideoCoverPictureId > 0)
+        {
+            var coverPictureUrl = pictureService.GetPictureUrl(homePageSliderVideoCoverPictureId);
+
+            if (!string.IsNullOrEmpty(coverPictureUrl))
+            {
+                homePageSliderVideoCover = coverPictureUrl;
+            }
+        }
+    }
+
+    if (isHomePage)
+    {
+        homePageSlider = await Component.InvokeAsync("Widget", new { widgetZone = "home_page_main_slider" });
+
+        if (!String.IsNullOrEmpty(homePageSlider.ToHtmlString()) || !string.IsNullOrEmpty(homePageSliderVideoLink))
+        {
+            isHomePageSliderEnabled = "slider-enabled";
+        }
+    }
+
+}
+<div class="header">
+    @await Component.InvokeAsync("Widget", new { widgetZone = "header" })
+    <div class="header-upper">
+        <div class="header-selectors-wrapper">
+            @await Component.InvokeAsync("TaxTypeSelector")
+            @await Component.InvokeAsync("CurrencySelector")
+            @await Component.InvokeAsync("LanguageSelector")
+            @await Component.InvokeAsync("Widget", new { widgetZone = "header_selectors" })
+        </div>
+    </div>
+    <div class="header-lower @isHomePageSliderEnabled">
+        <div class="header-left">
+            <div class="header-logo">
+                @await Component.InvokeAsync("Logo")
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="header-menu @menuDropdownLayout">
+                <div class="close-menu">
+                    <div class="mobile-logo">
+                        @await Component.InvokeAsync("Logo")
+                    </div>
+                    <span>@T("SevenSpikes.Themes.Common.CloseMenu")</span>
+                </div>
+                @{
+                    var menuHtml = await Component.InvokeAsync("Widget", new { widgetZone = "theme_header_menu" });
+                }
+                @if (!String.IsNullOrEmpty(menuHtml.ToHtmlString()))
+                {
+                    @menuHtml
+                }
+                else
+                {
+                    @await Component.InvokeAsync("TopMenu")
+                }
+                <div class="mobile-menu-items">
+                    @await Component.InvokeAsync("HeaderLinks")
+                </div>
+            </div>
+        </div>
+        @{
+            var flyoutShoppingCart = await Component.InvokeAsync("FlyoutShoppingCart");
+            var headerRightAdditinalClass = string.IsNullOrEmpty(flyoutShoppingCart.ToHtmlString()) ? "shopping-cart-disabled" : "";
+        }
+        <div class="header-right @headerRightAdditinalClass">
+            <div class="search-box store-search-box">
+                @await Component.InvokeAsync("SearchBox")
+                <div class="search-opener">@T("search")</div>
+            </div>
+            @await Component.InvokeAsync("HeaderLinks")
+            @flyoutShoppingCart
+        </div>
+    </div>
+</div>
+@if (isHomePage && string.IsNullOrEmpty(homePageSliderVideoLink) && homePageSlider != null && !String.IsNullOrEmpty(homePageSlider.ToHtmlString()))
+{
+    @homePageSlider;
+}
+else if (isHomePage && !string.IsNullOrEmpty(homePageSliderVideoLink))
+{
+    <div class="video-slider-wrapper">
+        <div id="video-player" class="video-player" data-id="@homePageSliderVideoId" data-platform-url="@homePageSliderVideoPlatformUrl" data-start-time="@homePageSliderVideoStartTime">
+            <img src="@homePageSliderVideoCover" alt="Cover photo" />
+            <div class="video-overlay"></div>
+            <div class="play-button-wrapper">
+                <h3 class="video-button-title">@T("SevenSpikes.Themes.Venture.Common.VideoBannerTitle")</h3>
+                <h4 class="video-button-subtitle">@T("SevenSpikes.Themes.Venture.Common.VideoBannerSubtitle")</h4>
+                <div class="play">@T("SevenSpikes.Themes.Venture.Common.VideoBannerButton")</div>
+            </div>
+        </div>
+
+        <script src="@homePageSliderVideoPlatformApiUrl"></script>
+    </div>
+}
+@if (isHomePage)
+{
+    @await Component.InvokeAsync("Widget", new { widgetZone = "venture_theme_ajax_filters_pro" })
+}

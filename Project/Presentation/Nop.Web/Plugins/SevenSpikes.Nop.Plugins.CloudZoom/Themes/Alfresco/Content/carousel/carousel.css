@@ -1,0 +1,76 @@
+/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.picture-thumbs.in-carousel {
+    margin: 10px auto 0;
+}
+.picture-thumbs.in-carousel button + .slick-list {
+    margin: 0 20px;
+}
+.picture-thumbs.in-carousel .picture-thumbs-item {
+    padding: 0 5px;
+}
+.picture-thumbs a.cloudzoom-gallery {
+    display: block !important;
+	width: auto !important;
+    margin: 0 !important;
+}
+
+/* arrows nav */
+
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 25px;
+	border: none;
+	/*box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	background-color: #fff;*/
+    background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-size: 0;
+    cursor: pointer;
+}
+.picture-thumbs .slick-prev {
+    left: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWBAMAAAAGFmApAAAALVBMVEUAAAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMFCKs1AAAAD3RSTlMA/fn0U2lkXVhNfHZvYUcmnIVcAAAAQklEQVQI12NAAnwQajKYZLEEU80OIJJdBcxJagCRrOpgzsELIJJbDMxZGACjoIIwJVANMO1Qw6BGQy2CWgtzBBQAAFHACvuh1rFJAAAAAElFTkSuQmCC');
+	background-position: left center;
+}
+.picture-thumbs .slick-next {
+    right: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWBAMAAAAGFmApAAAALVBMVEUAAAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMFCKs1AAAAD3RSTlMA/fn0Y1NdWE18dm9qaUfoJotqAAAAQElEQVQI12OAgQcQygJCNQeAKVZzCDcoAUyxq0C4SRfAFIs0hOu4AEzxSEIpqCBECUwDQntQAsxohEUWMEcgAAA3Fgq39JXAcQAAAABJRU5ErkJggg==');
+	background-position: right center;
+}
+.picture-thumbs .slick-prev.slick-disabled,
+.picture-thumbs .slick-next.slick-disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* dots nav */
+
+.slick-dots {
+    margin: 15px 0 0;
+}
+.slick-dots li {
+    display: inline-block;
+    margin: 0 4px;
+}
+.slick-dots button {
+	width: 12px;
+    height: 12px;
+	border: none;
+	/*border-radius: 50%;*/
+	box-shadow: 0 0 0 1px #fff;
+    background-color: #333;
+    font-size: 0;
+	opacity: 0.4;
+}
+.slick-active button {
+    opacity: 1;
+}

@@ -1,0 +1,79 @@
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Description: The default skin for the Nivo Slider.
+Version: 1.3
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+.slider-wrapper {
+	position: relative;
+	margin: 0 0 20px;
+}
+.nivoSlider {
+	position: relative;
+	background: #fff url('loading.gif') center no-repeat;
+}
+.nivoSlider a {
+	display: block;
+	border: none;
+}
+.nivoSlider img {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* NAVIGATION */
+
+.nivo-directionNav a {
+	top: 50%;
+	width: 28px;
+	height: 77px;
+	margin-top: -38px;
+	border: none;
+	font-size: 0;
+}
+a.nivo-prevNav {
+	left: 0;
+	background: url('arrow-left.png') top no-repeat;
+}
+a.nivo-nextNav {
+	right: 0;
+	background: url('arrow-right.png') top no-repeat;
+}
+.nivo-directionNav a:hover {
+	background-position: bottom;
+}
+.nivo-controlNav {
+    position: absolute;
+	z-index: 99;
+    bottom: 0;
+	left: 0;
+	width: 100%;
+    padding: 10px 0;
+	font-size: 0;
+}
+.nivo-controlNav a {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: 0;
+	border: none;
+    background: url('bullets.png') top no-repeat;
+}
+.nivo-controlNav a.active {
+    background-position: bottom;
+}
+
+/* BULLET NAVIGATION removed*/
+/* THUMBNAIL NAVIGATION removed*/
+/* CAPTION TITLE removed*/
+
+.nivo-controlNav,
+.nivo-thumbs-enabled,
+.nivo-caption {
+	display: none !important;
+}

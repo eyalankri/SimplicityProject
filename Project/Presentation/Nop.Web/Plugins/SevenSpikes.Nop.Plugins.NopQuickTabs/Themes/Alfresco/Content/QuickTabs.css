@@ -1,0 +1,26 @@
+﻿/* GLOBAL STYLES */
+
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description {
+    display: block;
+}
+
+/* THEME STYLES */
+
+.product-essential {
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+.full-description,
+.product-specs-box {
+	margin: 0;
+}
+.product-specs-box .data-table {
+	margin: 0;
+	background: none;
+	padding: 0;
+}
+.write-review:last-child {
+	margin-bottom: 5px; /*because the contact form is using this class name*/
+}

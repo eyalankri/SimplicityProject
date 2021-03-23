@@ -1,0 +1,40 @@
+﻿@model List<SevenSpikes.Theme.Venture.Models.InfoBoxModel>
+
+@if (Model.Count > 0)
+{
+    <div class="information-boxes-wrapper">
+        <div class="information-boxes-block">
+            @foreach (var infoBox in Model)
+            {
+                @if (!String.IsNullOrEmpty(infoBox.Url))
+                {
+                    <a href="@infoBox.Url" class="information-box">
+                        <div class="image-wrapper">
+                            <div class="image-holder">
+                                <img title="" alt="" src="@infoBox.PictureUrl">
+                            </div>
+                        </div>
+                        <div class="information-wrapper">
+                            <div class="title">@infoBox.Title</div>
+                            <div class="description">@infoBox.Text</div>
+                        </div>
+                    </a>
+                }
+                else
+                {
+                    <div class="information-box">
+                        <div class="image-wrapper">
+                            <div class="image-holder">
+                                <img title="" alt="" src="@infoBox.PictureUrl">
+                            </div>
+                        </div>
+                        <div class="information-wrapper">
+                            <div class="title">@infoBox.Title</div>
+                            <div class="description">@infoBox.Text</div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+}

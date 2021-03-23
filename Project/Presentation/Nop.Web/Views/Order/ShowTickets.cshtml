@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowTickets</title>
+    <style>
+        body{font-family:Arial; direction:rtl}
+    </style>
+</head>
+<body>
+    <br />
+    <div style="text-align:center">Tickets</div><br />
+    <div style="margin:auto; width:300px; border:dashed">
+        <img style="text-align:center" src="~/images/QrCodes/@(ViewBag.OrderId).jpg" /> <br />
+    </div>
+    <div style="border:dashed; border-top:0; width:300px; margin:auto; background:#dadada;">
+        <div style="padding:5px;">
+            @Html.Raw(ViewBag.Details)
+        </div>
+    </div><br />
+    <div style="text-align:center">SimplicityProject.co.il</div>
+
+</body>
+</html>

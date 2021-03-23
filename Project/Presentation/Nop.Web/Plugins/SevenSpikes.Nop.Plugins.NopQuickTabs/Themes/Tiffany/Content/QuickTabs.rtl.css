@@ -1,0 +1,80 @@
+﻿.ui-tabs .ui-state-active.ui-tabs-active:after{
+    display:block;
+    width:100%;
+    content:'';
+    height:4px;
+    background:#a79c97;
+}
+.ui-tabs .ui-tabs-panel .product-specs-box .spec-name{
+    text-align:left;
+    padding:0 0 0 8px;
+ }
+.ui-tabs .ui-tabs-panel .product-specs-box .spec-value{
+    text-align:right;
+    padding:0 8px 0 0;
+}
+
+/*VERSION 2*/
+
+.quick-tabs-2 .ui-tabs .ui-tabs-nav li{
+    margin:0 -1px;
+}
+@media all and (min-width: 768px) {
+
+.ui-tabs .ui-state-default:after{
+    display:block;
+    content:'';
+    height:0px;
+    width:100%;
+    background:#a79c97;
+    transition:all 0.3s ease 0s;
+}
+.ui-tabs .ui-state-default:hover:after{
+    width:100%;
+    height:4px;
+
+} 
+.ui-tabs .ui-tabs-nav li{
+    margin:0 -2px;
+} 
+.ui-tabs-panel .write-review .inputs label,
+.ui-tabs-panel .write-review .review-rating .name-description {
+    float:right;
+    text-align:left;
+    padding:0 0 0 8px;
+    border-left:1px solid #ddd;
+}  
+.ui-tabs-panel .write-review .review-rating .name-description .tooltiptext {
+    left: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+.ui-tabs-panel .write-review .review-rating .name-description .tooltiptext:after,
+.ui-tabs-panel .write-review .review-rating .name-description .tooltiptext:before {
+    left: 0;
+}
+.ui-tabs-panel .write-review .review-rating .name-description .tooltiptext:after {
+    margin-left: 1px;
+}
+.ui-tabs-panel .write-review .review-rating .rating-wrapper {
+    text-align:right;
+    margin:0 8px 0 0;
+}
+.ui-tabs-panel .write-review .inputs input[type="text"],
+.ui-tabs-panel .write-review .inputs input[type="email"],
+.ui-tabs-panel .write-review .inputs input[type="tel"] {
+    padding: 0 8px 0 0;
+}
+.ui-tabs-panel .write-review .form-fields .field-validation-error{
+    position:absolute;
+    top:0;
+    left:0;
+    line-height:40px;
+    background:#f9f9f9;
+    padding:0 20px;
+    border-right:1px solid #ddd;
+}
+
+
+}

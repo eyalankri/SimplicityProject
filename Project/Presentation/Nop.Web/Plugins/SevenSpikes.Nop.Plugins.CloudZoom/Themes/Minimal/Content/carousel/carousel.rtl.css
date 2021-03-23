@@ -1,0 +1,24 @@
+
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+    right: 0;
+	left: auto;
+}
+
+@media all and (min-width: 1347px) {
+	
+.picture-thumbs .slick-slide {
+	padding: 0 0 0 10px;
+}
+.picture-thumbs .cloudzoom-gallery-active:before {
+	border-right-color: #eaeaea;
+	border-left-color: transparent;
+}
+}
+
+@media all and (min-width: 1601px) {
+
+.picture-thumbs .slick-slide {
+	padding: 7px 0 7px 10px;
+}
+}

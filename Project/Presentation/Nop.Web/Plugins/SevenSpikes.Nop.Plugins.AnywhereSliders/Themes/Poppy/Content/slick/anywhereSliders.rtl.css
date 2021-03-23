@@ -1,0 +1,27 @@
+
+.anywhere-slider .slick-prev {
+    left: unset;
+    right: 10px;
+}
+.anywhere-slider .slick-next {
+    right: unset;
+    left: 10px;
+}
+.anywhere-slider .slick-prev:before {
+    content: 'p';
+}
+.anywhere-slider .slick-next:before {
+    content: 's';
+}
+
+@media all and (min-width: 1001px) {
+    body.desktop > .slider-wrapper {
+        margin: 57px 250px 0 0;
+    }
+}
+@media all and (min-width: 1281px) {
+
+    body.desktop > .slider-wrapper {
+        margin: 57px 300px 0 0;
+    }
+}

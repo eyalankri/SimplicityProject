@@ -1,0 +1,158 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.mega-menu {
+	position: relative;
+	z-index: 1001;
+}
+.mega-menu > li {
+    position: static !important;
+	/*because of fullWidth dropdowns*/
+}
+.mega-menu .dropdown {
+	display: none;
+	position: absolute;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+	overflow: hidden;
+	background-color: #fff;
+	padding: 10px;
+}
+.mega-menu .dropdown.fullWidth {
+	left: 0;
+	width: 100%;
+}
+.mega-menu .dropdown.active {
+	display: block;
+}
+
+/* ROWS AND BOXES */
+
+.mega-menu .row {
+	width: 100%;
+	overflow: hidden;
+}
+.mega-menu .box {
+	float: left;
+	padding: 8px 10px;
+}
+
+.mega-menu .boxes-1 .box {
+    width: 100%;
+}
+
+.mega-menu .boxes-2 .box {
+    width: 50%;
+}
+
+.mega-menu .boxes-3 .box {
+    width: 33.333%;
+}
+
+.mega-menu .boxes-4 .box {
+    width: 25%;
+}
+
+.mega-menu .boxes-5 .box {
+    width: 20%;
+}
+
+.mega-menu .boxes-6 .box {
+    width: 16.666%;
+}
+
+.mega-menu .boxes-7 .box {
+    width: 14.28%;
+}
+
+.mega-menu .boxes-8 .box {
+    width: 12.5%;
+}
+
+.mega-menu .row:first-child .box {
+	padding-top: 0;
+}
+.mega-menu .title {
+	display: block;
+	margin: 0 0 12px;
+	border-bottom: 1px solid #999;
+	background: url('images/bullet.png') left center no-repeat;
+	padding: 8px 0 8px 25px;
+	font-weight: bold;
+	color: #222;
+	text-transform: uppercase;
+}
+.mega-menu .picture {
+	float: left;
+	width: 90px;
+	overflow: hidden;
+	text-align: center;
+	font-size: 0;
+}
+.mega-menu .picture a {
+	display: block;
+}
+.mega-menu .subcategories {
+	margin-left: 100px;
+}
+.mega-menu .subcategories li {
+	margin: 10px 0 0;
+}
+.mega-menu .subcategories li:first-child {
+	margin-top: -2px;
+}
+.mega-menu .subcategories a {
+	display: inline-block;
+	background: url('images/arrow.png') left center no-repeat;
+	padding: 0 0 0 12px;
+	color: #333;
+}
+.mega-menu .subcategories a:hover {
+	text-decoration: underline;
+}
+.mega-menu a.view-all {
+    background: none;
+	font-weight: bold;
+	color: #222;
+}
+
+.mega-menu .manufacturers .picture,
+.mega-menu .vendors .picture {
+	width: 100%;
+}
+
+
+
+@media all and (max-width: 1024px) {
+
+.mega-menu {
+	display: none !important;
+}
+.mega-menu-responsive {
+	display: none; /*menu is closed by default*/
+}
+.back-button {
+    display: none; /*back button is not used*/
+}
+}
+
+@media all and (min-width: 1025px) {
+
+.mega-menu-responsive {
+	display: none !important;
+}
+.back-button {
+    display: none;
+}
+}
+
+@media all and (min-width: 1281px) {
+
+.mega-menu .picture {
+	width: 120px;
+}
+.mega-menu .subcategories {
+	margin-left: 130px;
+}
+}

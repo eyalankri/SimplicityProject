@@ -1,0 +1,166 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+input.search-box-text {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+span.search-box-text {
+	float: left;
+}
+input.search-box-text.narrow {
+	padding-right: 75px;
+}
+input.instant-search-busy {
+	background: #eee url('../../../images/ajax-loader-small.gif') no-repeat 98% center !important;
+}
+input.narrow.instant-search-busy {
+	background-position: 68% center !important;
+}
+.search-box-select {
+	position: absolute;
+    right: 34px;
+    top: 3px;
+	width: 70px;
+	max-width: none;
+	height: 30px;
+	border-color: transparent;
+	background: url('images/border.png') left center no-repeat;
+	padding: 5px;
+	color: #666;
+}
+.search-box-select:focus {
+	border-color: transparent;
+}
+
+/* AUTOCOMPLETE */
+
+.instantSearch {
+    width: 286px !important;
+    height: auto !important;
+}
+@media all and (max-width: 1024px) {
+	.instantSearch {
+		left: 50% !important;
+		margin-left: -143px !important;
+	}
+}
+
+.instantSearch .k-list-container {
+	position: static !important;
+	width: 100% !important;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	overflow: hidden;
+}
+.instantSearch .k-list-scroller {
+    height: 100% !important;
+    overflow-y: auto;
+}
+.instantSearch .k-item {
+	border-top: 1px solid #ddd;
+	overflow: hidden;
+	cursor: pointer;
+}
+.instantSearch .k-item:first-child {
+	border-top: none;
+}
+.instant-search-item {
+	border: 1px solid #fff;
+	overflow: hidden;
+	padding: 10px;
+}
+.instant-search-item .img-block {
+	display: none;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 60px;
+	height: 60px;
+	margin: 0 10px 0 0;
+	background-color: #fff;
+	text-align: center;
+}
+.instant-search-item .img-block img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+}
+.instant-search-item .detail {
+	min-height: 42px;
+	line-height: normal;
+}
+.instant-search-item .detail .title {
+	margin-bottom: 5px;
+	color: #333;
+	font-size: 13px;
+}
+.instant-search-item .detail .price {
+	font-weight: bold;
+	font-size: 12px;
+	color: #c00;
+}
+.instant-search-item .detail .sku {
+    font-size: 12px;
+    margin: 5px 0;
+}
+.k-item.k-state-hover .instant-search-item,
+.k-item.k-state-focused .instant-search-item  {
+	background: #f6f6f6;
+}
+.k-item.k-state-hover .instant-search-item .img-block, 
+.k-item.k-state-focused .instant-search-item .img-block {
+	border-color: #ddd;
+}
+
+@media all and (min-width: 481px) {
+
+input.search-box-text.narrow {
+	padding-right: 100px;
+}
+.search-box-select {
+	width: 90px;
+}
+.instantSearch {
+	width: 336px !important;
+}
+.instant-search-item .img-block {
+	display: block;
+}
+
+}
+
+@media all and (min-width: 481px) and (max-width: 1024px) {
+
+input.narrow.instant-search-busy {
+	background-position: 67% center !important;
+}
+.instantSearch {
+	margin-left: -168px !important;
+}
+
+}
+
+@media all and (min-width: 1025px) {
+
+input.narrow.instant-search-busy {
+	background-position: 60% center !important;
+}
+.search-box-select {
+	top: 1px;
+	right: 35px;
+}
+.instantSearch {
+	width: 286px !important;
+}
+
+}

@@ -1,0 +1,171 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.jCarouselMainWrapper:first-of-type .nop-jcarousel {
+	margin-top: 0 !important;
+}
+
+/* TITLE & CONTAINERS */
+
+.nop-jcarousel {
+    margin: 30px -7px;
+}
+.nop-jcarousel .carousel-title {
+	position: relative;
+	margin: 0 0 15px;
+	text-align: center;
+	font-size: 25px;
+	color: #333;
+}
+.nop-jcarousel .carousel-title strong {
+    font-weight: normal;
+}
+.nop-jcarousel .item-grid {
+	max-width: 360px;
+	margin: auto;
+}
+.nop-jcarousel .carousel-item {
+    padding: 0 7px;
+}
+.nop-jcarousel .item-box {
+    width: 100% !important;
+    margin: 0 !important;
+}
+.center-2 .nop-jcarousel {
+    margin-top: 20px;
+}
+.side-2 .nop-jcarousel {
+    margin: 20px -7px;
+}
+
+/* NAVIGATION */
+
+.nop-jcarousel .slick-prev,
+.nop-jcarousel .slick-next {
+	display: none !important;
+    position: absolute;
+    bottom: 5px;
+	width: 33px;
+	height: 32px;
+	margin: -16px 0 0;
+	border: none;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+    font-size: 0;
+}
+.nop-jcarousel .slick-prev {
+    left: 50%;
+	margin: 0 0 0 -36px;
+    background-image: url('images/prev-horizontal.png');
+}
+.nop-jcarousel .slick-next {
+    right: 50%;
+	margin: 0 -36px 0 0;
+    background-image: url('images/next-horizontal.png');
+}
+.nop-jcarousel .slick-prev:hover,
+.nop-jcarousel .slick-next:hover {
+	opacity: 0.8;
+}
+.nop-jcarousel .slick-disabled {
+    opacity: 0.2 !important;
+    cursor: default;
+}
+
+.nop-jcarousel .slick-dots {
+	margin: 10px 0 -10px;
+    text-align: center;
+}
+.nop-jcarousel .slick-dots li {
+    display: inline-block;
+}
+.nop-jcarousel .slick-dots button {
+    width: 22px;
+    height: 22px;
+	border: none;
+    background: url('images/dots.png') top no-repeat;
+    font-size: 0;
+    cursor: pointer;
+}
+.nop-jcarousel .slick-dots button:hover,
+.nop-jcarousel .slick-dots .slick-active button {
+    background-position: bottom !important;
+}
+
+.side-2 .nop-jcarousel .slick-dots {
+	margin: 0;
+}
+
+
+
+@media all and (min-width: 481px) {
+
+.home-page .nop-jcarousel {
+    margin-top: 0;
+}
+.nop-jcarousel .item-grid {
+	max-width: none;
+}
+.nop-jcarousel .carousel-title strong {
+	display: inline-block;
+	padding: 0 75px;
+}
+.nop-jcarousel .slick-prev,
+.nop-jcarousel .slick-next {
+	display: block !important;
+	top: 50%;
+	bottom: auto;
+	margin: -16px 0 0 !important; /*important to override rtl*/
+}
+.nop-jcarousel .slick-prev {
+	left: 5px;
+}
+.nop-jcarousel .slick-next {
+    right: 5px;
+}
+.nop-jcarousel .slick-dots {
+    display: none !important;
+}
+
+}
+
+@media all and (min-width: 769px) {
+
+.nop-jcarousel .carousel-title {
+	text-align: left;
+}
+.nop-jcarousel .carousel-title strong {
+	padding: 0 0 0 7px;
+}
+.nop-jcarousel .slick-prev {
+    right: 42px;
+	left: auto;
+}
+.nop-jcarousel .slick-next {
+    right: 5px;
+}
+	
+.side-2 .nop-jcarousel .add-to-compare-list-button,
+.side-2 .nop-jcarousel .add-to-wishlist-button {
+	display: none;
+}
+
+}
+
+@media all and (min-width: 1025px) {
+
+.side-2 .nop-jcarousel .item-box .description a {
+	height: 75px;
+}
+}
+
+@media all and (min-width: 1281px) {
+
+.side-2 .nop-jcarousel .item-box .description a {
+	height: 90px;
+}
+}

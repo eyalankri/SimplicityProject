@@ -1,0 +1,268 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*** TITLE & CONTAINERS ***/
+
+.nop-jcarousel {
+	position: relative;
+    margin: 0 0 20px;
+}
+.home-page-body .nop-jcarousel{
+    width: 90%;
+    margin: 20px auto;
+}
+.nop-jcarousel .carousel-title {
+	padding: 10px 0 48px;
+    font-size: 24px;
+    text-transform: uppercase;
+    position: relative;
+}
+.nop-jcarousel .carousel-title:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    top: 32px;
+    z-index: -1;
+}
+.nop-jcarousel .carousel-title strong {
+    display: inline-block;
+    box-shadow: 0 0 0 10px #fff;
+    background: #fff;
+    height: 1.2em;
+    overflow: hidden;
+}
+.nop-jcarousel .jcarousel-container {
+	position: static !important;
+    padding-top: 48px;
+}
+.nop-jcarousel .carousel-title + .jcarousel-container {
+	padding-top: 0;
+}
+.nop-jcarousel .slick-list {
+    padding: 30px 0 !important;
+}
+.nop-jcarousel .carousel-item {
+    padding: 0 15px;
+}
+.nop-jcarousel .carousel-item .item-box {
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+.jCarouselMainWrapper .category-grid .item-box .title{
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed title load on swipe*/
+}
+.carousel-item .ribbon-position {
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed ribbon load on swipe*/
+}
+
+/*** NAVIGATION ***/
+
+.jCarouselMainWrapper .slick-prev,
+.jCarouselMainWrapper .slick-next {
+    position: absolute;
+    top: 47px;
+    width: 32px;
+    height: 32px;
+    background-color: #f1f1f1;
+	background-position: top center;
+    background-repeat: no-repeat;
+    border: none;
+    font-size: 0;
+    cursor: pointer;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.jCarouselMainWrapper .slick-prev {
+    left: 50%;
+    margin-left: -36px;
+    background-image: url('images/prev-horizontal.png');
+}
+.jCarouselMainWrapper .slick-next {
+    right: 50%;
+    margin-right: -36px;
+    background-image: url('images/next-horizontal.png');
+}
+.jCarouselMainWrapper .slick-prev:hover,
+.jCarouselMainWrapper .slick-next:hover {
+	background-position: top -32px center;
+	background-color: #75bfa1;
+}
+
+.jCarouselMainWrapper .slick-disabled:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    opacity: .5;
+}
+.jCarouselMainWrapper .slick-disabled:hover {
+    background-position: top center !important;
+    background-color: #f1f1f1 !important;
+    cursor: default;
+}
+
+.jCarouselMainWrapper .slick-dots {
+    text-align: center;
+    font-size: 0;
+}
+.jCarouselMainWrapper .slick-dots li {
+    display: inline-block;
+    margin: 0 4px;
+}
+.jCarouselMainWrapper .slick-dots li button {
+    background: url('images/bullets.png') no-repeat left bottom;
+    display: block;
+    border: none;
+    font-size: 0;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+}
+.jCarouselMainWrapper .slick-dots .slick-active button{
+    background-position: left top;
+    border-radius: 50%;
+    background-color: #75bfa1;
+}
+
+/* manufacturers */
+
+.html-home-page .nop-jcarousel.manufacturer-grid {
+    padding: 0 40px;
+}
+.html-home-page .nop-jcarousel.manufacturer-grid {
+    width: 100%;
+}
+.html-home-page .nop-jcarousel.manufacturer-grid {
+    background: url('images/manufacturer-background.jpg') no-repeat center;
+    background-size: cover;
+}
+.html-home-page .manufacturer-grid .carousel-title strong {
+    display: none;
+}
+.html-home-page .manufacturer-grid .carousel-title:after {
+    display: none;
+}
+.html-home-page .nop-jcarousel.manufacturer-grid .carousel-title {
+    padding: 0;
+    position: static;
+}
+.html-home-page .item-box .manufacturer-item .item-box {
+    padding: 0 6.5px;
+}
+.html-home-page .item-box .manufacturer-item .title {
+    display: none;
+}
+.html-home-page .nop-jcarousel.manufacturer-grid .slick-prev, 
+.html-home-page .nop-jcarousel.manufacturer-grid .slick-next {
+    box-shadow: none;
+    top: 50%;
+    margin-top: -16px;
+    display: none !important;
+}
+.html-home-page .nop-jcarousel.manufacturer-grid .slick-dots {
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+}
+
+
+@media all and (min-width: 769px) {
+    
+.nop-jcarousel .carousel-title {
+    padding: 10px 0;
+    text-align: left;
+}
+
+/* products and categories nav */
+
+.jCarouselMainWrapper .slick-prev,
+.jCarouselMainWrapper .slick-next {
+	top: 1px;
+    box-shadow: 0 0 0 5px #fff;
+}
+.jCarouselMainWrapper .slick-prev {
+	left: auto;
+	right: 37px;
+	margin-left: 0 !important;
+}
+.jCarouselMainWrapper .slick-next{
+	right: 0;
+	margin-right: 0 !important;
+}
+
+}
+
+
+@media all and (min-width: 1025px) {
+
+.home-page-body .nop-jcarousel{
+    width: 960px;
+}
+.nop-jcarousel .slick-list {
+    margin: 0 -15px;
+}
+
+.html-home-page .nop-jcarousel.manufacturer-grid .slick-list {
+    width: 880px;
+    margin: 0 auto;
+}
+
+.side-2 .nop-jcarousel .carousel-title {
+    padding: 15px 0 40px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.html-home-page .nop-jcarousel.manufacturer-grid .slick-prev {
+    display: block !important;
+    left: 27px !important;
+}
+.html-home-page .nop-jcarousel.manufacturer-grid .slick-next {
+    display: block !important;
+    right: 27px !important;
+}
+
+.side-2 .jCarouselMainWrapper .slick-prev, 
+.side-2 .jCarouselMainWrapper .slick-next {
+    top: 45px;
+}
+.side-2 .jCarouselMainWrapper .slick-prev {
+    left: 50%;
+    margin-left: -34.5px !important;
+}
+.side-2 .jCarouselMainWrapper .slick-next {
+    left: 50%;
+    margin-left: 2.5px !important;
+}
+.side-2 .jCarouselMainWrapper .slick-dots li {
+    margin: 0 1px;
+}
+
+}
+
+@media all and (min-width: 1281px) {
+
+    .html-home-page .nop-jcarousel{
+        width: 1200px;
+    }
+    .html-home-page .nop-jcarousel.manufacturer-grid .slick-list {
+        width: 100%;
+        max-width: 1213px;
+    }
+    .html-home-page .nop-jcarousel.manufacturer-grid {
+        padding: 0 60px;
+    }
+
+}

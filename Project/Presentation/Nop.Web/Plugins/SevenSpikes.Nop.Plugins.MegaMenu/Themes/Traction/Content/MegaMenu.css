@@ -1,0 +1,258 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*=====================================================
+    
+    RESPONSIVE
+
+=====================================================*/
+
+.menu-title {
+	text-align: center;
+}
+.mega-menu, .header-menu .menu-title {
+	display: none;
+}
+.mega-menu-responsive {
+	display: block !important;
+}
+
+@media all and (max-width: 1024px) {
+.dropdown .topic-wrapper {
+	display: none;
+}
+}
+
+/*=====================================================
+    
+    DESKTOP
+
+=====================================================*/
+
+@media all and (min-width: 1025px) {
+
+.menu-title,
+.close-menu {
+	display: none;
+}
+
+/* MAIN PANEL & DROPDOWN*/
+
+.mega-menu {
+	position: relative;
+	z-index: 1001;
+	display: block;
+}
+.mega-menu-responsive {
+	display: none !important;
+}
+.mega-menu .dropdown {
+	display: none;
+	position: absolute;
+	margin: 5px 0 0;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+	background-color: #fff;
+	overflow: hidden;
+	z-index: 3; /*necessary of there is a :before or :after with another z-index*/
+	color: #333;
+}
+.mega-menu .dropdown.fullWidth {
+	right: 0;
+	width: 980px;
+}
+.mega-menu .dropdown.active {
+	display: block;
+}
+
+/* ROWS AND BOXES */
+
+.mega-menu .row {
+	position: relative;
+	overflow: hidden;
+}
+.categories.fullWidth .row:before,
+.manufacturers.fullWidth .row:before,
+.vendors.fullWidth .row:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 40px;
+	background: #c03;
+}
+.mega-menu .box,
+.mega-menu .empty-box {
+	float: left;
+	background-color: #fff;
+}
+
+.mega-menu .boxes-1 .box {
+    width: 100%;
+}
+
+.mega-menu .boxes-2 .box {
+    width: 50%;
+}
+
+.mega-menu .boxes-3 .box {
+    width: 33.333%;
+}
+
+.mega-menu .boxes-4 .box {
+    width: 25%;
+}
+
+.mega-menu .boxes-5 .box {
+    width: 20%;
+}
+
+.mega-menu .boxes-6 .box {
+    width: 16.666%;
+}
+
+.mega-menu .boxes-7 .box {
+    width: 14.28%;
+}
+
+.mega-menu .boxes-8 .box {
+    width: 12.5%;
+}
+
+/*.categories .box,
+.manufacturers .box,
+.vendors .box {
+	width: 250px;
+}
+.categories.fullWidth .box,
+.categories.fullWidth .empty-box {
+	position: relative;
+	width: 25%;
+}*/
+.categories.fullWidth .box:before,
+.categories.fullWidth .empty-box:before {
+	content: "";
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 0;
+	height: 1200px;
+	border-right: 1px dotted #ccc;
+}
+
+/* BOX TITLE */
+
+.mega-menu .title {
+	height: 40px;
+	border-left: 1px solid rgba(0,0,0,0.25);
+	background-color: #c03;
+	padding: 12px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #fff;
+}
+.mega-menu .box:first-child .title {
+	border-left: none;
+}
+.mega-menu .empty-box:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 40px;
+	border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* INNER LIST (both layouts) */
+
+.mega-menu .manufacturers .box .picture,
+.mega-menu .vendors .box .picture {
+	height: 100%;
+	border-left: 1px dotted #ccc;
+}
+.mega-menu .manufacturers .box:first-child .picture,
+.mega-menu .vendors .box:first-child .picture {
+	border-left: none;
+}
+.categories.fullWidth .box ul {
+	margin: 0 0 0 110px;
+	border: none;
+	padding: 10px 0;
+}
+.categories.fullWidth .box li {
+	border: none;
+}
+.mega-menu .box li a {
+	display: block;
+	padding: 10px 12px;
+	font: normal 12px 'eurostile';
+	color: #333;
+}
+.categories.fullWidth .box li a {
+	padding: 6px 12px;
+	font: normal 11px Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+.mega-menu .box li a:hover {
+	color: #c03;
+}
+.mega-menu li a.view-all {
+	font-weight: bold;
+	background: none;
+}
+
+/* BOX PICTURE */
+
+.mega-menu .picture {
+	overflow: hidden;
+	text-align: center;
+}
+.mega-menu .picture a {
+	display: block;
+}
+.mega-menu .categories .picture {
+	float: left;
+	width: 80px;
+	height: 80px;
+	margin: 15px;
+}
+
+/* MANUFACTURERS */
+
+/*.manufacturers.fullWidth .box,
+.vendors.fullWidth .box {
+	width: 16.66666%;
+}*/
+
+/* TOPIC */
+
+.mega-menu .topic-wrapper {
+	overflow: hidden;
+}
+.mega-menu .topic-wrapper p {
+	padding: 15px;
+	font-size: 11px;
+	line-height: 20px;
+}
+.mega-menu .topic-wrapper strong {
+	display: block;
+	border-bottom: 1px solid #999;
+	padding-bottom: 5px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #222;
+}
+
+}
+
+@media all and (min-width: 1281px) {
+
+.mega-menu .dropdown.fullWidth {
+	width: 1200px;
+}
+
+}

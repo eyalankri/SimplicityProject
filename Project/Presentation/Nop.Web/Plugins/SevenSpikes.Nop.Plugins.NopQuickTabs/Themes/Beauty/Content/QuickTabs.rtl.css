@@ -1,0 +1,73 @@
+﻿.productTabs-header ul,
+ .productTabs-header ul li{
+    float: right !important;
+}
+.productTabs-header li:first-child a {
+    border-radius: 0 5px 0 0 !important;
+}
+.productTabs-header li:last-child a {
+    border-radius: 5px 0 0 0 !important;
+}
+.productTabs-body p {
+    text-align: right !important;
+}
+
+/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+
+@media (min-width: 1024px) {
+    .ui-tabs .write-review .form-fields .inputs > label,
+    .ui-tabs .write-review .form-fields .review-rating > label,
+    .ui-tabs .write-review .review-rating .name-description {
+        text-align: left;
+        margin-right: calc(-15% - 3px);
+        margin-left: 8px;
+    }
+}
+
+
+@media all and (max-width: 980px) and (min-width: 481px) {
+
+    .ui-tabs .ui-tabs-nav li:first-child {
+        border-radius: 0 5px 0 0;
+        padding-right: 0;
+    }
+    .ui-tabs .ui-tabs-nav li:last-child {
+        border-radius: 5px 0 0 0;
+    }
+
+}
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (max-width: 480px) {
+    
+    .ui-tabs .ui-tabs-nav {
+        float: none !important;
+        overflow: hidden;
+        border-radius: 5px !important;
+    }
+    .ui-tabs .ui-tabs-nav li {
+        padding: 0 !important;
+        background: none !important;
+        border-radius: 0 !important;
+    }
+    .ui-tabs .ui-tabs-nav li a {
+        border-radius: 0 !important;
+    }
+    .ui-tabs .ui-tabs-nav li:hover a {
+        background-position: left bottom !important;
+    }
+    .productTabs-body ul {
+        padding-left: 0 !important;
+    }
+
+}

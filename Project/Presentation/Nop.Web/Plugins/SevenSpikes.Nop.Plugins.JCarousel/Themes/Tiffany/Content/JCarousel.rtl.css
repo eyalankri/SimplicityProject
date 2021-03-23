@@ -1,0 +1,14 @@
+.jCarouselMainWrapper .slick-prev {
+	right: 0;
+	left: auto;
+	background: url("images/arrow-right.png") no-repeat center;
+}
+.jCarouselMainWrapper .slick-next {
+	left: 0;
+	right: auto;
+	background: url("images/arrow-left.png") no-repeat center;
+}
+.nop-jcarousel .slick-dots button:after {
+	right: 0;
+	left: 0;
+}

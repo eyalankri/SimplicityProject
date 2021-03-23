@@ -1,0 +1,8 @@
+﻿/*don't delete this file even if empty, otherwise "file not found" error will be triggered on RTL websites*/
+
+@media all and (min-width: 1025px) {
+
+    .ui-tabs .avatar + .text-body {
+        margin: 0 90px 0 0;
+    }
+}

@@ -1,0 +1,131 @@
+/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.picture-thumbs.in-carousel {
+    max-width: 600px;
+    margin: auto;
+}
+.picture-thumbs .slick-slider {
+    margin: 0 -5px;
+}
+.picture-thumbs .slick-list {
+    padding: 5px 0; 
+}
+
+/* arrows nav */
+
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+    position: absolute;
+	left: 0;
+    z-index: 1;
+	width: 120px;
+    height: 25px;
+    border: 2px solid #eaeaea;
+	background-color: #fff;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-size: 0;
+    cursor: pointer;
+}
+.picture-thumbs .slick-prev {
+	top: 0;
+    background-image: url('images/prev-vertical.png');
+}
+.picture-thumbs .slick-next {
+    bottom: 0;
+    background-image: url('images/next-vertical.png');
+}
+.picture-thumbs .slick-prev.slick-disabled,
+.picture-thumbs .slick-next.slick-disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+/* dots nav */
+
+.picture-thumbs .slick-dots {
+    margin: 25px 0 0;
+}
+.picture-thumbs .slick-dots li {
+    display: inline-block;
+    margin: 0 3px;
+}
+.picture-thumbs .slick-dots button {
+    width: 40px;
+    height: 10px;
+    border-width: 2px 0 0;
+	border-style: solid;
+    border-color: #333;
+	background-color: transparent;
+	font-size: 0;
+    opacity: 0.4;
+}
+.picture-thumbs .slick-active button {
+    border-color: #c49169;
+	opacity: 1;
+}
+
+
+@media all and (max-width: 1346px) {
+	
+	.picture-thumbs .slick-slider {
+		height: auto !important; /*override inline css*/
+	}
+}
+
+@media all and (min-width: 1347px) {
+
+.gallery #sevenspikes-cloud-zoom {
+    max-width: 526px;
+}
+.picture-thumbs.in-carousel {
+	width: 130px;
+}
+.picture-thumbs .slick-slider {
+	position: relative;
+	height: 526px;
+    margin: 0;
+}
+.picture-thumbs .slick-list {
+    padding: 0;
+}
+.picture-thumbs button + .slick-list {
+	padding: 23px 0; /*buttons reserved space*/
+}
+.picture-thumbs .slick-slide {
+	height: auto;
+	border: none;
+	padding: 0 10px 0 0;
+}
+.picture-thumbs .slick-slide a {
+	margin: 0;
+}
+.picture-thumbs .cloudzoom-gallery-active {
+	border-color: #eaeaea;
+}
+.picture-thumbs .cloudzoom-gallery-active:before {
+	border-bottom-color: transparent;
+	border-left-color: #eaeaea;
+}
+
+}
+
+@media all and (min-width: 1601px) {
+
+.gallery #sevenspikes-cloud-zoom {
+    max-width: 600px;
+}
+.picture-thumbs .slick-slider {
+	height: 600px;
+}
+.picture-thumbs button + .slick-list {
+	padding: 32px 0; /*buttons reserved space*/
+}
+.picture-thumbs .slick-slide {
+	padding: 7px 10px 7px 0;
+}
+
+}

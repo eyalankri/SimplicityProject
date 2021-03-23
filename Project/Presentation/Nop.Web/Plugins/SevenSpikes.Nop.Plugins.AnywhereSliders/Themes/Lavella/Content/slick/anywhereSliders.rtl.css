@@ -1,0 +1,41 @@
+
+.home-page-bottom-banner-wrapper .left-banner {
+	float: right;
+}
+.banners-right,
+.home-page-bottom-banner-wrapper .right-banner {
+	float: left;
+}
+
+/* DIRECTIONAL NAVIGATION */
+
+.anywhere-slider .slick-prev {
+    right: 0;
+    left: auto;
+    background-image: url(images/slider-right-arrow.png);
+}
+.anywhere-slider .slick-next {
+    right: auto;
+    left: 0;
+    background-image: url(images/slider-left-arrow.png);
+}
+.home-page-top-banner-wrapper .slider-left {
+	float: right;
+	padding-left: 4px;
+	padding-right: 0;
+}
+
+@media all and (max-width: 769px) {
+    .banners-right > div {
+        float: right;
+    }
+    /*change banner position*/
+    .home-page-top-banner-wrapper .slider-left {
+        padding-left: 0;
+    }
+
+    .banners-right > div:first-child {
+        margin-left: 1%;
+        margin-right: 0;
+    }
+}

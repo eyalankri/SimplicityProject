@@ -1,0 +1,35 @@
+
+.nop-jcarousel > .carousel-title {
+    background: url(images/bullet1.png) right center no-repeat;
+    padding: 0 40px 0 0;
+}
+
+.side-2 .nop-jcarousel > .carousel-title {
+    background: none;
+    padding: 0;
+}
+
+.nop-jcarousel .slick-prev {
+	right: 10px;
+	left: auto;
+    background-image: url('images/next-horizontal.png');
+}
+.nop-jcarousel .slick-next {
+	left: 10px;
+	right: auto;
+    background-image: url('images/prev-horizontal.png');
+}
+.nop-jcarousel .slick-dots .slick-active button,
+.nop-jcarousel .slick-dots li button:hover {
+	background-position: 0 -22px !important;
+}
+@media all and (min-width: 769px) {
+	.nop-jcarousel .slick-prev {
+		right: auto;
+		left: 50px;
+	}
+	.nop-jcarousel .slick-next {
+		left: 7.5px;
+		right: auto;
+	}
+}

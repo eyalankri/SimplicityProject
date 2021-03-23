@@ -1,0 +1,77 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+/*=====================================================
+    
+    MAIN CSS / SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (min-width: 240px) {
+
+	span.search-box-text {
+		float: right;
+	}
+    input.search-box-text.narrow {
+        padding-right: 18px;
+        padding-left: 155px;
+    }
+	span.search-box-text input.instant-search-busy {
+        background-position: 50px center !important;
+    }
+    .search-box-select {
+        right: auto;
+        left: 40px;
+        border: 0;
+        border-right: 1px solid #ccc;
+    }
+    .instant-search-item .img-block {
+	    float: right;
+    }
+
+}
+
+/*=====================================================
+    
+    TABLETS PORTRAIT & SMARTPHONES LANDSCAPE
+
+=====================================================*/
+
+@media all and (min-width: 481px) {
+
+    .instant-search-item .detail {
+	    margin-left: 0;
+        margin-right: 70px;
+    }
+    span.search-box-text input.instant-search-busy {
+        background-position: 50px center !important;
+    }
+
+}
+
+/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+@media all and (min-width: 769px) {
+
+
+
+}
+
+/*=====================================================
+    
+    DESKTOP
+
+=====================================================*/
+
+@media all and (min-width: 1025px) {
+
+
+	
+}

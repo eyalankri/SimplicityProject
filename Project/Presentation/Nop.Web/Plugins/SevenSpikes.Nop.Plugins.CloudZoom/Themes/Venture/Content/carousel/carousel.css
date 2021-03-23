@@ -1,0 +1,136 @@
+/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/* Theme template doesn't have its own theme plugin,
+   so this template is styled according to Deafault Clean's slick carousel settings,
+   create new settings for your theme if necessary*/
+
+.picture-thumbs.in-carousel {
+    margin: 0 auto;
+    text-align: center;
+}
+.picture-thumbs .picture-thumbs-list {
+    margin: -5px 0;
+}
+.picture-thumbs .picture-thumbs-item {
+    padding: 5px 0;
+    height: 110px !important;
+}
+.picture-thumbs button + .slick-list {
+    margin: 40px 0;
+}
+
+/* arrows nav */
+
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 40px;
+    height: 37px;
+    margin: auto;
+	border: none;
+	background-color: #ededed;
+	background-position: center;
+	background-repeat: no-repeat;
+    font-size: 0;
+	cursor: pointer;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+}
+.picture-thumbs .slick-prev:before,
+.picture-thumbs .slick-next:before {
+    font-family: "venture-font";
+    text-transform: none;
+    content: "Q";
+    font-size: 7px;
+    width: 8px;
+    height: 9px;
+    color: #767676;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+}
+.picture-thumbs .slick-prev:hover,
+.picture-thumbs .slick-next:hover {
+    background: #e6e6e6;
+}
+.picture-thumbs .slick-prev:hover:before,
+.picture-thumbs .slick-next:hover:before {
+    color: #2c2c2c;
+}
+.picture-thumbs .slick-prev {
+    top: -36px;
+}
+.picture-thumbs .slick-next {
+    bottom: -36px;
+}
+.picture-thumbs .slick-next:before {
+     content: "c";
+}
+.sevenspikes-cloudzoom-gallery:hover .slick-prev,
+.sevenspikes-cloudzoom-gallery:hover .slick-next {
+    opacity: 1;
+}
+.picture-thumbs .slick-prev.slick-disabled,
+.picture-thumbs .slick-next.slick-disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* dots nav */
+
+.sevenspikes-cloudzoom-gallery .slick-dots {
+    margin: 20px 0;
+}
+.sevenspikes-cloudzoom-gallery .slick-dots button {
+    background-color: #ababab;
+    width: 9px;
+    height: 9px;
+	border: none;
+    border-radius: 50%;
+	font-size: 0;
+}
+.sevenspikes-cloudzoom-gallery .slick-dots li {
+    display: inline-block;
+    padding: 5px;
+}
+.sevenspikes-cloudzoom-gallery .slick-dots .slick-active button {
+    background: #f3cc2e;
+}
+
+/* items */
+
+.picture-thumbs a.cloudzoom-gallery {
+    display: block !important;
+    margin: 0 !important;
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+}
+.picture-thumbs a.cloudzoom-gallery:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+
+@media all and (max-width: 1201px) {
+
+    .picture-thumbs .picture-thumbs-list {
+        margin: 0 -5px;
+    }
+    .picture-thumbs .picture-thumbs-item {
+        padding: 0 5px;
+    }
+
+}

@@ -1,0 +1,12 @@
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+	right: 0;
+	left: 0;
+}
+.picture-thumbs .slick-prev:before,
+.picture-thumbs .slick-next:before {
+	right: 0;
+	left: 0;
+}
+@media all and (max-width: 1201px) {
+}

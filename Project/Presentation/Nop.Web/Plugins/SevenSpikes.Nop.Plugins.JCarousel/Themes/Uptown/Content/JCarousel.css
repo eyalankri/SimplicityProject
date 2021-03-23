@@ -1,0 +1,183 @@
+/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*** TITLE & CONTAINERS ***/
+
+.nop-jcarousel {
+	position: relative;
+    margin: 0 0 80px;
+}
+.home-page-body .nop-jcarousel {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nop-jcarousel .carousel-title {
+	padding: 10px 0;
+    text-align: center;
+    margin: 0 0 55px;
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+}
+.nop-jcarousel .carousel-title strong {
+    font-size: 22px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: inline-block;
+}
+.secondary-font .nop-jcarousel .carousel-title strong {
+    font-family: 'Droid Serif', serif;
+    font-style: italic;
+    text-transform: none;
+}
+.nop-jcarousel .carousel-title button ~ strong {
+    padding-bottom: 15px;
+}
+
+.nop-jcarousel .slick-slider {
+    overflow: hidden;
+    margin: 0 -12.5px;
+}
+.nop-jcarousel .carousel-item {
+    padding: 0 12.5px;
+}
+.nop-jcarousel .carousel-item .item-box {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.jCarouselMainWrapper .item-box .title{
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed title load on swipe*/
+}
+.carousel-item .ribbon-position {
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed ribbon load on swipe*/
+}
+
+
+/*** NAVIGATION ***/
+
+.nop-jcarousel .slick-prev,
+.nop-jcarousel .slick-next {
+    position: absolute;
+    bottom: -15.5px;
+    width: 31px;
+    height: 31px;
+    font-size: 0;
+    outline: 1px solid #f1f1f1;
+    border: 2px solid transparent;
+    background-color: #fff; 
+	background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.nop-jcarousel .slick-prev {
+    left: 50%;
+    margin-left: -33.5px;
+    background-image: url('images/prev-horizontal.png');
+    box-shadow: -6px 0px 0px 10px #fff;
+}
+.nop-jcarousel .slick-next {
+    right: 50%;
+    margin-right: -33.5px;
+    background-image: url('images/next-horizontal.png');
+    box-shadow: 6px 0px 0px 10px #fff;
+}
+.nop-jcarousel .slick-prev:hover {
+    background-color: #e56363;
+    background-image: url('images/prev-horizontal-hover.png');
+    border-color: #fff;
+}
+.nop-jcarousel .slick-next:hover {
+    background-color: #e56363;
+    background-image: url('images/next-horizontal-hover.png');
+    border-color: #fff;
+}
+
+.nop-jcarousel .slick-disabled {
+    background-color: #fff !important;
+    z-index: 1;
+    cursor: default;
+}
+.nop-jcarousel .slick-next.slick-disabled:hover {
+    background-image: url('images/next-horizontal.png');
+}
+.nop-jcarousel .slick-prev.slick-disabled:hover {
+    background-image: url('images/prev-horizontal.png');
+}
+
+.nop-jcarousel .slick-disabled:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: #fff;
+    z-index: 2;
+    opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+.nop-jcarousel .slick-dots {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0;
+}
+.nop-jcarousel .slick-dots li{
+	display: inline-block;
+    margin: 0 7px;
+}
+.nop-jcarousel .slick-dots button {
+    position: relative;
+    width: 15px;
+	height: 15px;
+    font-size: 0;
+    border: 1px solid #aeafb5;
+    background: none;
+}
+.nop-jcarousel .slick-dots button:before {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.nop-jcarousel .slick-dots button:hover:before,
+.nop-jcarousel .slick-dots .slick-active button:before {
+	background: #e56363;
+}
+
+@media (min-width: 481px) {
+
+    .home-page-body .nop-jcarousel {
+        width: 90%;
+    }
+
+}
+
+@media all and (min-width: 1025px) {
+
+    .home-page-body .nop-jcarousel {
+        width: 1000px;
+    }
+
+}
+
+@media (min-width: 1281px) {
+
+    .home-page-body .nop-jcarousel {
+        width: 1200px;
+    }
+
+}

@@ -1,0 +1,31 @@
+﻿
+.productTabs-body p {
+    text-align: right !important;
+}
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (max-width: 480px) {
+    
+    .ui-tabs-nav li,
+    .productTabs-header ul li {
+        float: none !important;
+        margin: 0;
+    }
+    .ui-tabs-nav li:first-child a {
+        border-radius: 5px 5px 0 0;
+    }
+    .ui-tabs-nav li a {
+        margin-bottom: 0;
+        width: 100%;
+        border-radius: 0;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box; /* Firefox, other Gecko */
+        box-sizing: border-box;
+    }
+
+}

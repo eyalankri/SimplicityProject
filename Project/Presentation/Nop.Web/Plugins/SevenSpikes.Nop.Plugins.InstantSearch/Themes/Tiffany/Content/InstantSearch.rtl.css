@@ -1,0 +1,24 @@
+﻿span.search-box-text {
+    float: right;
+}
+input.search-box-text.instant-search-busy {
+    background: #f6f6f6 url('../../../images/ajax-loader-small.gif') no-repeat 3% center;
+}
+.search-box-select {
+	float: right;
+}
+.instant-search-item .img-block {
+    float: right;
+}
+.instant-search-item .detail {
+	text-align:right;
+}
+.instant-search-item .detail .title {
+    margin:0 0 5px 0;
+}
+
+@media all and (min-width: 481px) {	
+.instant-search-item .detail {
+	margin-right: 75px;
+}
+}

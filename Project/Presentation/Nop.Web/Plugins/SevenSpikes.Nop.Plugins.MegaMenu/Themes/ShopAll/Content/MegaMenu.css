@@ -1,0 +1,330 @@
+﻿/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+@media all and (min-width: 240px) {
+
+    .mega-menu, .header-menu .menu-title {
+        display: none;
+    }
+    .mega-menu-responsive {
+        display: block;
+    }
+
+}
+
+@media all and (min-width: 1025px) {
+
+    .menu-title,
+    .close-menu {
+        display: none;
+    }
+
+    /* MAIN PANEL & DROPDOWN*/
+
+    .mega-menu {
+        display: block;
+    }
+
+    .mega-menu-responsive {
+        display: none;
+    }
+}
+
+.back-button {
+    display: block;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+
+    MEGA MENU
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    .mega-menu {
+        position: relative;
+        z-index: 1001;
+    }
+
+    .menu-title,
+    .mega-menu-responsive {
+    }
+
+    .mega-menu .dropdown {
+        display: none;
+        position: absolute;
+        background: #fff;
+        overflow: hidden;
+        padding: 10px;
+        text-align: left;
+        border-top: 1px solid #333;
+        box-shadow: 0 2px 3px #333;
+    }
+
+    .mega-menu .dropdown.manufacturers,
+    .mega-menu .dropdown.vendors,
+    .mega-menu .dropdown.categories {
+        padding-top: 10px;
+    }
+
+    .mega-menu .dropdown.categories .box .title {
+        margin-bottom: 5px;
+        padding: 10px 0;
+    }
+
+    .mega-menu .dropdown.categories .box li a {
+        padding: 5px;
+    }
+
+    .mega-menu .dropdown.fullWidth {
+        left: 0;
+        width: 980px;
+    }
+
+    .mega-menu .dropdown.active {
+        display: block;
+    }
+
+    .mega-menu .box,
+    .mega-menu .empty-box {
+        float: left;
+        margin: 0 5px;
+        padding: 0 5px 0;
+        border-radius: 3px;
+    }
+
+    .mega-menu .boxes-1 .box {
+        width: 100%;
+    }
+
+    .mega-menu .boxes-2 .box {
+        width: 50%;
+    }
+
+    .mega-menu .boxes-3 .box {
+        width: 33.333%;
+    }
+
+    .mega-menu .boxes-4 .box {
+        width: 25%;
+    }
+
+    .mega-menu .boxes-5 .box {
+        width: 20%;
+    }
+
+    .mega-menu .boxes-6 .box {
+        width: 16.666%;
+    }
+
+    .mega-menu .boxes-7 .box {
+        width: 14.28%;
+    }
+
+    .mega-menu .boxes-8 .box {
+        width: 12.5%;
+    }
+
+    .mega-menu .manufacturers.fullWidth .box .picture,
+    .mega-menu .vendors.fullWidth .box .picture {
+        height: 110px;
+        overflow: hidden;
+    }
+
+    .mega-menu .box ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .mega-menu .box li {
+        transition: all .3s ease 0s;
+    }
+
+    .mega-menu .title {
+        display: block;
+        font: normal bold 12px Arial, Helvetica, sans-serif;
+        color: #333;
+        text-shadow: 1px 1px 0 #fff;
+        text-transform: uppercase;
+        border-bottom: 4px solid #aaa;
+    }
+
+    .mega-menu .title a {
+        display: block;
+        padding: 5px;
+        color: #333;
+        font-size: 14px;
+        line-height: normal;
+    }
+
+    .mega-menu .title a:hover {
+        text-shadow: none;
+        color: #333;
+    }
+
+    .mega-menu .box li a {
+        display: block;
+        padding: 5px 12px;
+        font: normal normal 11px Arial, Helvetica, sans-serif;
+        color: #333 !important;
+    }
+
+    .mega-menu .box li:last-child a {
+        border-bottom: none;
+    }
+
+    .mega-menu .box li a:hover {
+        color: #fff !important;
+        background: #d21d25;
+    }
+
+    .mega-menu .box li:last-child:hover a {
+        border-bottom: none;
+    }
+
+    .mega-menu a.view-all {
+        font-weight: bold !important;
+        background: none;
+    }
+
+
+    .mega-menu .row {
+        display: table;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+
+        .mega-menu .row:first-child {
+            margin-top: 0;
+        }
+
+    .mega-menu .box {
+        display: table-cell;
+        float: none;
+        vertical-align: top;
+        border-radius: 2px;
+    }
+
+        .mega-menu .box:hover .picture {
+            opacity: 0.8;
+        }
+
+        .mega-menu .box .title {
+            margin-bottom: 15px;
+        }
+
+    .dropdown.manufacturers .title,
+    .dropdown.vendors .title {
+        padding: 10px 0;
+        margin-bottom: 5px;
+        max-height: 51px;
+    }
+
+        .dropdown.manufacturers .title:hover,
+        .dropdown.vendors .title:hover {
+            background: #fff;
+        }
+
+            .dropdown.manufacturers .title:hover a,
+            .dropdown.vendors .title:hover a {
+                color: #333;
+            }
+
+    .dropdown.manufacturers .row .box li a,
+    .dropdown.vendors .row .box li a {
+        padding: 5px;
+        width: 100%;
+        height: 100%;
+        display: table;
+    }
+
+    .mega-menu .picture img {
+        border-width: 0px;
+        vertical-align: middle;
+        max-width: 100%;
+    }
+
+    .mega-menu .categories .picture {
+        float: left;
+    }
+
+        .mega-menu .categories .picture a {
+            display: block;
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            display: table-cell;
+            text-align: center;
+        }
+
+    .mega-menu .picture a:hover {
+        background: none;
+    }
+
+    .mega-menu .box .subcategories {
+        margin: 0 0 0 100px;
+    }
+
+    .mega-menu .row .box li a {
+        padding: 2px 5px;
+        font-size: 12px;
+    }
+
+    .mega-menu .manufacturer span,
+    .mega-menu .vendor span {
+        display: table-cell;
+        margin-bottom: 5px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .mega-menu li a.manufacturer,
+    .mega-menu li a.vendor {
+        text-align: center;
+    }
+
+        .mega-menu li a.manufacturer:hover,
+        .mega-menu li a.vendor:hover {
+            background: none;
+        }
+
+    .mega-menu .topic-wrapper {
+        overflow: hidden;
+    }
+
+    .mega-menu .row.topic-wrapper {
+        margin-top: 10px;
+    }
+
+    .mega-menu .topic-wrapper p {
+        margin: 0 0 10px;
+        padding: 0;
+        font: normal normal 11px/18px Arial, Helvetica, sans-serif;
+        color: #333;
+    }
+
+    .mega-menu .topic-wrapper strong {
+        display: block;
+        padding: 5px 0 10px;
+        font: normal bold 12px Arial, Helvetica, sans-serif;
+        color: #333;
+        text-shadow: 1px 1px 0 #fff;
+        text-transform: uppercase;
+        border-bottom: 4px solid #777;
+    }
+
+    .header-menu.open .mega-menu-responsive {
+        display: block !important;
+    }
+
+
+
+@media all and (min-width: 1281px) {
+    .mega-menu,
+    .mega-menu .dropdown.fullWidth {
+        width: 1100px;
+    }
+}

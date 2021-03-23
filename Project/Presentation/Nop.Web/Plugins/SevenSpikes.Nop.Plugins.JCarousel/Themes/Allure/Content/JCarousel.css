@@ -1,0 +1,242 @@
+/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+/*** TITLE & CONTAINERS ***/
+
+
+.nop-jcarousel {
+	position: relative;
+    margin: 20px 0;
+}
+.nop-jcarousel .carousel-title {
+    text-align: center;
+    margin: 0 0 15px;
+    padding: 0 0 55px
+}
+.nop-jcarousel .carousel-title strong {
+    display: block;
+	font-weight: normal;
+    font-size: 26px;
+    color: #555;
+}
+.carousel-item {
+    padding: 0 5px;
+}
+.slick-carousel .item-box {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.slick-carousel .item-box .add-info {
+    font-size: 0;
+}
+
+.nop-jcarousel.home-page-category-grid .carousel-title {
+    background: none;
+    position: static;
+}
+.nop-jcarousel.home-page-product-grid .carousel-title {
+    position: static;
+}
+
+.jCarouselMainWrapper .category-grid .item-box .title{
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed title load on swipe*/
+}
+.carousel-item .ribbon-position {
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed ribbon load on swipe*/
+}
+
+/*** NAVIGATION ***/
+
+
+
+.jCarouselMainWrapper .slick-prev, 
+.jCarouselMainWrapper .slick-next {
+    position: absolute;
+    top: 40px;
+    width: 48px;
+    height: 48px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    cursor: pointer;
+    border: 2px dotted #fff;
+    font-size: 0;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.jCarouselMainWrapper .slick-prev {
+    left: 50%;
+    margin-left: -52px;
+    background-image: url('images/prev-horizontal.png');
+    background-position: 15px center;
+}
+.jCarouselMainWrapper .slick-next {
+    right: 50%;
+    margin-right: -52px;
+    background-image: url('images/next-horizontal.png');
+    background-position: 19px center;
+}
+.jCarouselMainWrapper .slick-prev:hover,
+.jCarouselMainWrapper .slick-next:hover {
+	border-color: #444;
+}
+
+.jCarouselMainWrapper .slick-disabled {
+    opacity: 0.3;
+    cursor: default;
+    border: 2px solid #fff !important;
+}
+
+
+.jCarouselMainWrapper .slick-dots {
+    padding: 20px 0 0;
+    font-size: 0;
+    text-align: center;
+}
+.jCarouselMainWrapper .slick-dots li {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 5px;
+}
+.jCarouselMainWrapper .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background: #ccc;
+    border: 1px solid rgba(0,0,0,.2);
+    text-indent: 999px;
+}
+
+.jCarouselMainWrapper .slick-dots .slick-active button  {
+    background: #999;
+}
+
+@media all and (max-width: 1024px) {
+
+}
+
+@media all and (min-width: 769px) {
+
+/* carousel title */
+
+    .nop-jcarousel .carousel-title {
+        display: table;
+        width: 100%;
+    }
+    .nop-jcarousel .carousel-title:before,  
+    .nop-jcarousel .carousel-title:after {
+        content: " ";
+        display: table-cell;
+        width: 30%;
+        background: url(images/title-lines.png) repeat-x left center;
+    }
+    .nop-jcarousel .carousel-title strong {
+        display: table-cell;
+        width: 40%;
+        padding: 0 25px;
+    }
+
+    .nop-jcarousel.home-page-category-grid .carousel-title,
+    .nop-jcarousel.home-page-product-grid .carousel-title,
+    .home-page .nop-jcarousel.manufacturer-grid .carousel-title {
+        position: relative;
+    }
+    .jCarouselMainWrapper .slick-prev, .jCarouselMainWrapper .slick-next {
+        top: auto;
+        bottom: 0;
+    }
+
+}
+
+
+
+@media all and (min-width: 1025px) {
+
+    .nop-jcarousel .carousel-title {
+        padding: 0;
+    }
+
+    .side-2 .nop-jcarousel .carousel-title {
+        display: block;
+        position: relative;
+    }
+    .side-2 .nop-jcarousel .carousel-title button + strong {
+        padding: 0 25px 45px;
+    }
+    .side-2 .nop-jcarousel .carousel-title:before, 
+    .side-2 .nop-jcarousel .carousel-title:after {
+        display: none;
+    }
+
+    .nop-jcarousel.home-page-category-grid .carousel-title,
+    .nop-jcarousel.home-page-product-grid .carousel-title,
+    .home-page .nop-jcarousel.manufacturer-grid .carousel-title {
+        position: static;
+    }
+
+    .jCarouselMainWrapper .slick-prev, 
+    .jCarouselMainWrapper .slick-next {
+        margin: 0;
+        top: 50%;
+        bottom: auto;
+        width: 38px;
+        height: 38px;
+    }
+    .jCarouselMainWrapper .slick-prev {
+        left: -46px;
+        right: auto;
+        background-position: 11px center;
+    }
+    .jCarouselMainWrapper .slick-next {
+        right: -46px;
+        left: auto;
+        background-position: 14px center;
+    }
+
+    .side-2 .jCarouselMainWrapper .slick-dots {
+        padding: 25px 0;
+    }
+
+    .center-2 .nop-jcarousel .carousel-title {
+        position: relative;
+        background: #fff;
+        padding: 9px;
+    }
+    .center-2 .nop-jcarousel .carousel-title:before,
+    .center-2 .nop-jcarousel .carousel-title:after {
+        display: none;
+    }
+    .center-2 .jCarouselMainWrapper .slick-prev, 
+    .center-2 .jCarouselMainWrapper .slick-next {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .center-2 .jCarouselMainWrapper .slick-prev {
+        left: 9px;
+    }
+    .center-2 .jCarouselMainWrapper .slick-next {
+        right: 9px;
+    }
+
+    .side-2 .jCarouselMainWrapper .slick-prev, 
+    .side-2 .jCarouselMainWrapper .slick-next {
+        top: auto;
+        bottom: 0;
+        left: 50%;
+        right: auto;
+    }
+    .side-2 .jCarouselMainWrapper .slick-prev {
+        margin-left: -42px;
+    }
+    .side-2 .jCarouselMainWrapper .slick-next {
+        margin-left: 4px;
+    }
+
+}

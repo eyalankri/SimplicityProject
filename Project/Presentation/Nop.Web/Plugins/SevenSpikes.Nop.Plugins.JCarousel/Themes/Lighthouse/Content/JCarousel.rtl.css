@@ -1,0 +1,47 @@
+
+.nop-jcarousel .slick-prev {
+	right: 50%;
+	left: auto;
+	margin: 0 -36px 0 0;
+	background-image: url('images/next-horizontal.png');
+	
+}
+.nop-jcarousel .slick-next {
+	left: 50%;
+	right: auto;
+	margin: 0 0 0 -36px;
+	background-image: url('images/prev-horizontal.png');
+}
+
+
+@media all and (min-width: 481px) {
+	
+.nop-jcarousel .slick-prev {
+	right: 5px;
+	left: auto;
+}
+.nop-jcarousel .slick-next {
+	left: 5px;
+	right: auto;
+}
+	
+}
+
+@media all and (min-width: 769px) {
+	
+.nop-jcarousel .carousel-title {
+	text-align: right;
+}
+.nop-jcarousel .carousel-title strong {
+	padding: 0 7px 0 0;
+}
+.nop-jcarousel .slick-prev {
+	left: 42px;
+	right: auto;
+}
+.nop-jcarousel .slick-next {
+	left: 5px;
+	right: auto;
+}
+	
+}

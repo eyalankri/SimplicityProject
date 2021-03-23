@@ -1,0 +1,142 @@
+
+.blog-search-box span.search-box-text {
+    float: right;
+}
+.blog-search-box input.search-box-text {
+    float: right;
+    padding: 0 20px 0 0;
+}
+.blog-search-box .search-box-button {
+    float: right;
+}
+
+.post-relations li.separator {
+    margin: 0 3px 0 5px;
+}
+
+.post-navigation .prev {
+    padding: 0 15px 0 75px;
+    text-align: left;
+}
+.post-navigation .next {
+    padding: 0 75px 0 15px;
+    text-align: right;
+}
+.post-navigation .prev:before {
+	right: auto;
+    left: 0;
+}
+.post-navigation .next:before {
+    right: 0;
+	left: auto;
+}
+.post-navigation .prev:after {
+	right: auto;
+    left: 0;
+}
+.post-navigation .next:after {
+    right: 0;
+	left: auto;
+}
+.post-navigation .next:only-child {
+    margin-right: 49%;
+	margin-left: 0;
+}
+.post-navigation .prev:only-child {
+	margin-right: 0;
+    margin-left: 49%;
+}
+
+
+@media all and (min-width: 769px) {
+
+.rich-blog-homepage .blog-post {
+	text-align: right;
+}
+.rich-blog-homepage .post-title:after {
+	right: 20px;
+	left: auto;
+}
+
+.blog-page .post {
+	text-align: right;
+}
+.blog-page .post-title {
+	float: right;
+}
+.blog-page .post-title:after {
+	right: 0;
+	left: auto;
+}
+.blog-page .post-date {
+	float: left;
+}
+.blog-page .buttons .read-more {
+	float: right;
+}
+.blog-page .buttons .read-comments {
+	float: left;
+}
+.blog-page .post-relations,
+.blogpost-page .post-relations {
+	float: right;
+}
+.blog-page .post-actions,
+.blogpost-page .post-relations + .post-actions {
+	float: left;
+	margin-right: 0;
+	margin-left: -3px;
+}
+
+.post-relations > div {
+	text-align: right;
+}
+.post-relations label {
+	padding: 0 0 0 10px;
+}
+
+}
+
+@media all and (min-width: 1025px) {
+	
+.rich-blog-homepage .blog-post {
+	float: right;
+}
+.rich-blog-homepage .blog-post:nth-child(2n+1) {
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.blogpost-page .post-date {
+	text-align: right;
+}
+
+}
+
+@media all and (min-width: 1347px) {
+	
+.rich-blog-homepage .post-title {
+	left: 0;
+	right: 50%;
+}
+.rich-blog-homepage .post-title:before {
+	right: 0;
+}
+.rich-blog-homepage .post-details {
+	left: 0;
+	right: 50%;
+}
+
+.blog-page .post {
+	margin: 0 0.8% 0.8% 0;
+}
+
+}
+
+@media all and (min-width: 1601px) {
+
+.blog-page .post {
+	margin: 0 0.6% 0.6% 0;
+}
+
+}

@@ -1,0 +1,190 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+/*=====================================================
+    
+    MAIN CSS / SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+.k-ff {
+    overflow: inherit !important;
+}
+
+/* chrome fix with the vertical scroll disappearing*/
+.k-webkit {
+    overflow-y: scroll !important;
+}
+
+
+input.instant-search-busy {
+	background: #fff url('../../../images/ajax-loader-small.gif') no-repeat right 5px center !important;
+	/*do not set background postion from the left, if necessary add space to loader gif instead*/
+}
+
+/* WITH CATEGORY */
+
+.store-search-box .search-box-select {
+	height: 40px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    max-width: 50%;
+}
+.store-search-box form.open .search-box-select {
+    width: 200px;
+    opacity: 1;
+}
+.store-search-box input.search-box-text {
+    background: #fff;
+}
+/*.store-search-box input.search-box-text:focus {
+	border-color: #ccc;
+}*/ /*use this to "eliminate" global focus if necessary*/
+
+/* AUTOCOMPLETE */
+
+.instantSearch {
+	width: 548px !important;
+    max-width: 100%;
+	height: auto !important;
+    top: 100% !important;
+    left: 0 !important;
+}
+.instantSearch .k-list-container {
+	position: static !important;
+	width: 100% !important;
+	background: #fff;
+	box-shadow: 0 0 16px rgba(0,0,0,0.45);
+}
+.instantSearch .k-list-scroller {
+    height: 100% !important;
+    overflow-y: auto;
+}
+.instantSearch .k-item {
+	border-top: 1px solid #f1f1f1;
+	cursor: pointer;
+}
+.instantSearch .k-item:first-child {
+	border-top: none;
+}
+.instant-search-item a {
+	overflow: hidden;
+	padding: 10px 30px;
+    display: table;
+    width: 100%;
+}
+.instant-search-item .img-block {
+	position: relative;
+	display: table-cell;
+	overflow: hidden;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+    box-shadow: 0px 0px 20px rgba(44,44,44,.1);
+}
+.instant-search-item .img-block img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+}
+.instant-search-item .detail {
+    display: table-cell;
+    vertical-align: middle;
+}
+.instant-search-item .detail .title {
+	margin-bottom: 10px;
+	font-size: 15px;
+    color: #2c2c2c;
+}
+.instant-search-item .detail .sku {
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+.instant-search-item .detail .price {
+	font-size: 15px;
+	color: #f3cc2e;
+}
+
+.k-item.k-state-hover .instant-search-item,
+.k-item.k-state-focused .instant-search-item  {
+	background: #f5f5f5;
+}
+
+@media all and (max-width: 480px) {
+
+.instant-search-item .img-block {
+    display: none;
+}
+.store-search-box input.search-box-text.narrow {
+    width: 50%;
+}
+
+}
+
+@media all and (min-width: 481px) {
+
+.instant-search-item .detail {
+    text-align: left;
+    padding: 0 0 0 12px;
+}
+
+.store-search-box input.search-box-text.narrow {
+    width: calc(100% - 205px) !important;
+}
+
+}
+
+@media all and (min-width: 768px) {
+
+    .instantSearch {
+        max-width: none;
+    }
+
+}
+
+@media all and (min-width: 1201px) {
+
+.store-search-box form.open {
+    overflow: visible;
+    padding: 0 0 0 51px;
+}
+.store-search-box form.open .search-box-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.store-search-box form.open input.search-box-text {
+    position: absolute;
+    top: 0;
+    left: 51px;
+    bottom: 0;
+}
+.store-search-box .search-box-select {
+    height: 50px;
+}
+.store-search-box input.search-box-text.narrow {
+    width: 241px;
+}
+
+.cart-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+}

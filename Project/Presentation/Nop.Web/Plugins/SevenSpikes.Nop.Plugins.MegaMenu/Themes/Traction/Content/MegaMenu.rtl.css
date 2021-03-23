@@ -1,0 +1,42 @@
+﻿
+@media all and (min-width: 1025px) {
+	
+.mega-menu .dropdown.fullWidth {
+	right: auto;
+	left: 0;
+}
+.mega-menu .box,
+.mega-menu .empty-box {
+	float: right;
+}
+.categories.fullWidth .box:before,
+.categories.fullWidth .empty-box:before {
+	right: 0;
+	left: auto;
+}
+.mega-menu .empty-box:after {
+	right: 0;
+	left: auto;
+}
+.mega-menu .title {
+	border-right: 1px solid rgba(0,0,0,0.25);
+	border-left: none;
+}
+.mega-menu .box:first-child .title {
+	border-right: none;
+}
+.mega-menu .box ul {
+	border-right: 1px dotted #ccc;
+	border-left: none;
+}
+.mega-menu .box:first-child ul {
+	border-right: none;
+}
+.categories.fullWidth .box ul {
+	margin: 0 110px 0 0;
+}
+.mega-menu .categories .picture {
+	float: right;
+}
+	
+}

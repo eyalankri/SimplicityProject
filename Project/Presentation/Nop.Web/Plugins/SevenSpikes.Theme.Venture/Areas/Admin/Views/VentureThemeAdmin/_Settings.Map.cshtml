@@ -1,0 +1,105 @@
+﻿@model VentureThemeSettingsModel
+
+@inject IWorkContext workContext
+@inject ICustomerService customerService
+@inject ICountryService countryService
+
+@{
+    var customerCity = string.Empty;
+    var customerCountry = string.Empty;
+
+    var customer = workContext.CurrentCustomer;
+    var defaultAddress = customerService.GetAddressesByCustomerId(customer.Id).FirstOrDefault();
+    if (defaultAddress != null)
+    {
+        customerCity = defaultAddress.City ?? string.Empty;
+
+        if (defaultAddress.CountryId != null)
+        {
+            var country = countryService.GetCountryById((int)defaultAddress.CountryId);
+
+            if (country != null)
+            {
+                customerCountry = country.Name;
+            }
+        }
+    }
+}
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="EnableFooterMap_OverrideForStore" asp-input="EnableFooterMap" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="EnableFooterMap" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="EnableFooterMap" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="GoogleApiKey_OverrideForStore" asp-input="GoogleApiKey" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="GoogleApiKey" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="GoogleApiKey" />
+                </div>
+            </div>
+            <div class="footer-map">
+                <input id="shop-address-input" type="text" placeholder="Search Address" />
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="Latitude_OverrideForStore" asp-input="Latitude" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="Latitude" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="Latitude" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="Longitude_OverrideForStore" asp-input="Longitude" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="Longitude" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="Longitude" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="chooseLocationMap" data-pathtoimages="@Url.RouteUrl("HomePage")@Plugin.PathToImagesFolder"></div>
+
+            <input type="hidden" value="@(customerCity), @(customerCountry)" id="customer-nop-address"
+                   data-googleapikey="@Model.GoogleApiKey"
+                   data-mapstyles="@Model.CustomMapStyles" />
+
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="CustomMapStyles_OverrideForStore" asp-input="CustomMapStyles" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="CustomMapStyles" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="CustomMapStyles" style="height: 450px;" />
+                </div>
+            </div>
+            <div class="adminHint">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-9">
+                    <div class="summary">
+                        To generate the <strong>Custom Map Styles</strong> do the following:
+                    </div>
+                    <ul>
+                        <li>Go to Google Maps Styling Wizard: <a href="https://mapstyle.withgoogle.com/" target="_blank">https://mapstyle.withgoogle.com/</a>.</li>
+                        <li>Customize colors, roads, labels of the map.</li>
+                        <li>Click on <strong>Finish</strong> and copy the <strong>JSON</strong> from the pop-up.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

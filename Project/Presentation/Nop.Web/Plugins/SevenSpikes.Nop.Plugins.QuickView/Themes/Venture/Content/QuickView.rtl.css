@@ -1,0 +1,110 @@
+﻿.product-list .quick-view-button {
+	float: left;
+	margin: 0 0 0 5px;
+}
+.k-overlay {
+	right: 0;
+	left: auto;
+}
+.quickView .k-loading-mask {
+	left: 0;
+	right: 0;
+}
+.quickView .k-loading-image {
+	right: 50%;
+	left: auto;
+	margin: -50px -50px 0 0;
+}
+.quickView .k-loading-image:before {
+	right: 5px;
+	left: 5px;
+}
+.quickView .k-loading-image:after {
+	right: 15px;
+	left: 15px;
+}
+.quickView {
+	right: 50% !important;
+	left: auto;
+	margin: 0 -435px 0 0;
+}
+.quickView .k-window-titlebar .k-window-actions {
+	left: 15px;
+	right: auto;
+}
+.quickView .k-window-titlebar .k-window-actions a:before {
+	right: 0;
+	left: 0;
+}
+.quickView .popup-header h1 {
+	text-align: right;
+}
+.quickView .gallery {
+	float: right;
+	padding: 50px 30px 30px 15px;
+}
+.quickView .thumbnails a {
+	float: right;
+	margin: 0 2% 2% 0;
+}
+.quickView .thumbnails a:nth-child(3n+1) {
+	margin-right: 0;
+	margin-left: 0;
+}
+.quickView .thumbnails a img {
+	left: 0;
+	right: 0;
+}
+.quickView .links-panel {
+	text-align: left;
+}
+.quickView .links-panel a {
+	padding: 0 0 0 25px;
+}
+.quickView .links-panel a:before {
+	left: 0;
+	right: auto;
+}
+.quickView .overview {
+	float: left;
+	padding: 20px 15px 30px 30px;
+}
+.quickView .ui-accordion-header {
+	text-align: right;
+}
+.quickView .ui-accordion-header span {
+	left: 0;
+	right: auto;
+}
+.quickView .ui-accordion-header span:before {
+	right: 0;
+	left: 0;
+}
+.quickView .overview .left {
+	float: right;
+	text-align: right;
+}
+.quickView .overview .right {
+	float: left;
+	text-align: left;
+}
+.quickView .overview .add-to-cart {
+	float: right;
+}
+.quickView .variant-grid-info .manufacturers {
+	float: right;
+}
+.quickView .variant-grid-info .overview-buttons {
+	float: left;
+}
+@media all and (min-width: 600px) and (max-width: 1200px) {
+	.product-box-layout-2 .venture-product-grid .item-box .items-4 .quick-view-button ~ input[type="button"],
+    .product-box-layout-2 .venture-product-grid .item-box .items-5 .quick-view-button ~ input[type="button"] {
+		margin: 0 5px 5px 0;
+	}
+}
+@media all and (min-width: 1201px) {
+	.product-box-layout-2 .venture-product-grid .item-box .quick-view-button {
+		float: right;
+	}
+}

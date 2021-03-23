@@ -1,0 +1,134 @@
+
+.filter-block .title .toggleControl {
+    background-position: 8% 54%;
+    text-align: right;
+}
+.filter-block .title .clearFilterOptions,
+.filter-block .title .clearPriceRangeFilter {
+	right: auto;
+    left: 13px;
+    background-position: left 9px;
+	padding-right: 0;
+    padding-left: 22px;
+}
+.filtersGroupPanel {
+    text-align: right;
+}
+
+.selected-options-list > li span {
+    float: right;
+    padding: 10px 0 10px 20px ;
+    margin: 0 0 0 12px ;
+    background-position: top 13px left 1px;
+}
+
+.priceRangeMinPanel,
+.specification-min-panel {
+    float: right;
+}
+.priceRangeMaxPanel,
+.specification-max-panel {
+    float: left;
+}
+.priceRangeMinPanel span,
+.specification-min-panel span,
+.priceRangeMaxPanel span,
+.specification-max-panel span {
+    display: inline-block;
+}
+.currentMinPrice, .current-min-value {
+	float: right;
+}
+.currentMaxPrice, .current-max-value {
+	float: left;
+}
+
+.checkbox-list .checkbox-item input,
+.checkbox-list .checkbox-item label:before {
+    right: 0;
+	left: auto;
+}
+.checkbox-list .checkbox-item label {
+    padding: 10px 30px 10px 10px;
+}
+.colorOptions .checkbox-item {
+    margin: 0 0 -5px 5px;
+}
+.filtersDropDownPanel .select-inner {
+    padding-right: 10px;
+	padding-left: 0;
+}
+
+.ajaxFilters .k-window-actions {
+	right: auto;
+    left: 0;
+}
+
+
+@media all and (max-width: 1024px) {
+
+.nopAjaxFilters7Spikes {
+	right: 0;
+	left: auto;
+	-webkit-transform: translate(320px);
+	-ms-transform: translate(320px);
+	transform: translate(320px);
+}
+.nopAjaxFilters7Spikes .close-filters {
+	text-align: left;
+}
+
+}
+
+@media all and (min-width: 1025px) {
+
+.onecolumn .filter-block {
+	float: right;
+	margin: 0 0.5% 0.5% 0;
+}
+.onecolumn .filter-block:nth-child(3n+1) {
+	margin-right: 0;
+}
+.onecolumn .filter-block .toggleControl {
+	background-position: 2% 54%;
+}
+
+}
+
+@media all and (min-width: 1025px) and (max-width: 1280px) {
+
+.twocolumns .filter-block {
+	float: right;
+	margin: 0 0.5% 0.5% 0;
+}
+.twocolumns .filter-block:nth-child(3n+1) {
+	margin-right: 0;
+}
+.twocolumns .filter-block .toggleControl {
+	background-position: 2% 54%;
+}
+
+}
+
+@media all and (min-width: 1281px) {
+
+.twocolumns .filter-block .title .toggleControl {
+	background-position: 2% 54%;
+}
+.number-of-returned-products {
+	float: left;
+}
+
+}
+
+@media all and (min-width: 1347px) {
+
+.onecolumn .filter-block:nth-child(3n+1) {
+	margin-right: 0.5%;
+	margin-left: 0;
+}
+.onecolumn .filter-block:nth-child(4n+1) {
+	margin-right: 0;
+}
+
+}

@@ -1,0 +1,23 @@
+
+.nop-jcarousel > .carousel-title {
+	border-right: none;
+	border-left: none;
+}
+.nop-jcarousel .slick-next {
+	left: 0px;
+	right: auto;
+	background: url("images/arrows_2_left.png") no-repeat center center;
+}
+.nop-jcarousel .slick-next:hover,
+.nop-jcarousel .slick-next:focus {
+	background-position: left center;
+}
+.nop-jcarousel .slick-prev {
+	right: 0px;
+	left: auto;
+	background: url("images/arrows_2_right.png") no-repeat center center;
+}
+.nop-jcarousel .slick-prev:hover,
+.nop-jcarousel .slick-prev:focus {
+	background-position: right center;
+}

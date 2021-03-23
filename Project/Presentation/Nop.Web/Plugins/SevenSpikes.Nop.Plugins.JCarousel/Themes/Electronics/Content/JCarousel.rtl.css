@@ -1,0 +1,16 @@
+.nop-jcarousel .slick-next {
+	left: 10px;
+	right: auto;
+    background: url('images/prev-horizontal.png') center no-repeat;
+}
+.nop-jcarousel .slick-prev {
+	right: auto;
+	left: 35px;
+    background: url('images/next-horizontal.png') center no-repeat;
+}
+.nop-jcarousel .slick-dots .slick-active button {
+	background-position: 0 -22px;
+}
+.product-grid .title {
+    text-align: right;
+}

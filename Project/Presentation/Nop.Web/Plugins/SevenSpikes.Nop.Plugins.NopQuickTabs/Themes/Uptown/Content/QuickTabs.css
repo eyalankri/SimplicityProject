@@ -1,0 +1,109 @@
+﻿/* GLOBAL STYLES */
+
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description  {
+    display: block;
+}
+
+/* THEME STYLES */
+
+.product-essential {
+	margin-bottom: 20px;
+}
+#quickTabs {
+    margin: 0 0 80px;
+}
+#quickTab-description {
+    padding: 0;
+}
+.full-description {
+	margin: 0;
+}
+#quickTab-description .full-description:before {
+    display: none;
+}
+#quickTab-specifications .table-wrapper {
+    margin: 0;
+}
+#quickTabs .product-review-list .title {
+    border: none;
+}
+#quickTabs .product-review-item:nth-child(2) {
+    border: none;
+}
+#quickTab-reviews .write-review {
+    margin: 0;
+}
+#quickTab-reviews .product-review-list {
+    margin: 80px 0 0;
+}
+#quickTab-reviews .write-review .title {
+    display: none;
+}
+#quickTab-reviews .product-review-item:nth-child(2) {
+    padding-top: 2.5%;
+}
+
+#quickTabs .custom-tab{
+    color: #909090;
+    font: 15px/25px 'Droid Serif', serif;
+    font-style: italic;
+}
+.product-specs-box,
+.product-specs-box .data-table {
+	margin-bottom: 0;
+}
+
+#quickTab-specifications .table-wrapper .spec-value {
+    position: relative;
+}
+#quickTab-specifications .table-wrapper .spec-value a:only-child {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: absolute;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 17px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+@media all and (max-width: 480px) {
+
+    #quickTabs .productTabs-body {
+        margin: 0 -13% !important;
+    }
+
+}
+@media all and (max-width: 769px) {
+
+    #quickTab-specifications .table-wrapper {
+        padding: 0;
+    }
+    #quickTabs .ui-tabs-nav li {
+        width: 100%;
+        max-width: none;
+        display: block;
+        border-bottom: 1px solid #f1f1f1;
+        margin: 0 0 2px;
+    }
+    #quickTabs .ui-tabs-nav li:last-child {
+        border-bottom: none;
+        margin: 0;
+    }
+    #quickTabs .ui-tabs-nav li a {
+        display: block;
+    }
+
+    #quickTabs .productTabs-body {
+        margin: 0 -6%;
+    }
+    #quickTabs .full-description {
+        margin: 0;
+    }
+
+}

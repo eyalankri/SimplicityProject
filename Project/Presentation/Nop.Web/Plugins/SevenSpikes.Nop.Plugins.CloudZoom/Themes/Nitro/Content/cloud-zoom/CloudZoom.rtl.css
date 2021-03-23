@@ -1,0 +1,4 @@
+.cloudzoom-zoom {
+	right: calc(100% + 15px) !important;
+	left: auto !important;
+}

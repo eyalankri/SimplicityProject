@@ -1,0 +1,158 @@
+﻿
+.filtersTitlePanel p {
+    float: right !important;
+}
+
+.filter-block a.clearFilterOptions,
+.filter-block a.clearPriceRangeFilter {
+    left: 10px;
+    right: auto;
+}
+.toggleControl {
+    float: right !important;
+}
+.block .title {
+    overflow: hidden;
+}
+
+/* SEARCH CRITERIA */
+
+.selected-options-list > li {
+	text-align: right;
+}
+.selected-options-list > li span {
+    float: right;
+	padding: 2px 2px 2px 12px;
+    margin: 0 0 0 6px;
+    background-position: top 6px left 2px;
+}
+.filtersGroupPanel.imageOptions input[type="checkbox"] + label {
+    padding-left: 2px;
+    padding-right: 35px;
+}
+
+/* RANGE SLIDER */
+ 
+.priceRangeMinPanel,
+.specification-min-panel {
+	float: right;
+}
+.priceRangeMaxPanel,
+.specification-max-panel {
+	float: left;
+}
+.priceRangeMinMaxPanel span,
+.specification-min-max-panel span {
+    display: inline-block;
+}
+.currentMinPrice, .current-min-value {
+	float: right;
+}
+.currentMaxPrice, .current-max-value {
+	float: left;
+}
+
+/* CHECKBOX MODE */
+
+.filtersGroupPanel input[type="checkbox"] + label {
+	padding: 7px 20px 7px 0;
+}
+.filtersGroupPanel input[type="checkbox"] + label:before {
+	left: auto;
+	right: 4px;
+}
+
+/* COLOR SQUARE ATTRIBUTES */
+
+.filtersGroupPanel .color {
+	left: auto;
+	right: 8px;
+}
+
+/* POP UP */
+
+.ajaxFilters .k-window-actions {
+    right: inherit !important;
+    left: 10px;
+}
+
+
+
+/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+@media all and (max-width: 980px) and (min-width: 769px) {
+
+    .selected-options-list > li span {
+	    padding: 6px 2px 6px 12px;
+        margin: 0 0 0 10px;
+        background-position: top 12px left 2px;
+    }
+
+    .filtersGroupPanel input[type="checkbox"] + label {
+        padding: 9px 25px 9px 0;
+    }
+
+}
+
+
+
+
+/*=====================================================
+    
+    TABLETS PORTRAIT & SMARTPHONES LANDSCAPE
+
+=====================================================*/
+
+@media all and (max-width: 768px) and (min-width: 481px) {
+    
+    .selected-options-list > li span {
+	    padding: 6px 2px 6px 12px;
+        margin: 0 0 0 10px;
+        background-position: top 12px left 2px;
+    }
+
+    .nopAjaxFilters7Spikes .block .title a.toggleControl {
+        background: url(images/filter_icon.png) no-repeat left center;
+    }
+
+    .filtersGroupPanel input[type="checkbox"] + label {
+        padding: 9px 25px 9px 0;
+    }
+
+}
+
+
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (max-width: 480px) {
+
+    .selected-options-list > li span {
+	    padding: 6px 2px 6px 12px;
+        margin: 0 0 0 10px;
+        background-position: top 12px left 2px;
+    }
+    .nopAjaxFilters7Spikes .block .title a.toggleControl {
+        background: url(images/filter_icon.png) no-repeat left center;
+    }
+    .filtersGroupPanel input[type="checkbox"] + label {
+        padding: 9px 25px 9px 0;
+    }
+
+
+}
+
+@media all and (max-width:768px) {
+    .filter-block a.clearFilterOptions, .filter-block a.clearPriceRangeFilter {
+        left: 16%;
+        right: auto;
+    }
+}

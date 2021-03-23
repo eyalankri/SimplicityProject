@@ -1,0 +1,90 @@
+﻿.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description  {
+    display: block;
+}
+.ui-tabs-nav:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;    
+}
+
+/* CONTENT */
+
+.productTabs  {
+    margin-bottom: 30px;
+}
+
+.ui-tabs .product-specs-box {
+    margin: 0;
+    border: 0;
+}
+.ui-tabs .product-specs-box .data-table {
+    margin: 0;
+}
+.productTabs-body p {
+    margin: 8px 0;
+}
+.productTabs-body ul {
+	margin: 12px 0;
+	padding-left: 25px;
+	list-style: none;
+}
+
+.productTabs-body .review-rating ul {
+    padding-left: 0;
+}
+
+
+.productTabs-body ol {
+	margin: 12px 0;
+	padding-left: 36px;
+	list-style: decimal;
+}
+
+
+/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+@media all and (max-width: 1024px) and (min-width: 769px) {
+    
+    .productTabs-body .write-review .review-rating ul {
+        width: 100%;
+        margin: 0;
+        padding: 30px 0 0 0;
+    }
+
+}
+
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (max-width: 480px) {
+    
+    .ui-tabs-nav li {
+        float: none;
+        margin: 0;
+    }
+    .ui-tabs-nav li:first-child a {
+        border-radius: 5px 5px 0 0;
+    }
+    .ui-tabs-nav li a {
+        margin-bottom: 0;
+        width: 100%;
+        border-radius: 0;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box; /* Firefox, other Gecko */
+        box-sizing: border-box;
+    }
+
+}

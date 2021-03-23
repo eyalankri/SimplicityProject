@@ -1,0 +1,36 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.mega-menu .box {
+    float: right;
+}
+
+.mega-menu a,
+.mega-menu .title {
+    text-align: right !important;
+}
+
+.mega-menu > .has-sublist > .sublist-wrap {
+    right: auto;
+}
+
+.mega-menu .box .subcategories {
+    margin: 0 100px 0 0 !important;
+}
+.mega-menu .box .subcategories li a,
+.mega-menu .categories .box li a,
+.mega-menu .manufacturers .box li a,
+.mega-menu .vendorss .box li a {
+    background: url('images/rtl-arrow.png') right center no-repeat !important;
+    padding: 7px 12px 7px 0;
+}
+
+.mega-menu .categories .picture {
+    float: right;
+}
+
+.mega-menu .box .subcategories {
+    margin: 0 130px 0 0 !important;
+}

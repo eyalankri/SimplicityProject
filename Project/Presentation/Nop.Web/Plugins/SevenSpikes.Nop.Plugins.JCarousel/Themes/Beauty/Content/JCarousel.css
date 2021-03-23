@@ -1,0 +1,261 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nop-jcarousel {
+	clear: both;
+	margin-bottom: 30px;
+    position: relative;
+}
+
+
+.nop-jcarousel .slick-slider {
+    margin: 0 -7.5px;
+}
+
+.nop-jcarousel .carousel-item {
+    padding: 0 7.5px;
+}
+.nop-jcarousel .item-box {
+    width: 100% !important;
+    max-width: none;
+    height: auto !important;
+    max-height: none;
+    box-sizing: border-box;
+    margin: 0 !important;
+}
+
+.nop-jcarousel.home-page-product-grid  .item-box,
+.nop-jcarousel.home-page-product-grid  .prices {
+    text-align: left;
+}
+
+
+.nop-jcarousel.home-page-product-grid .product-title {
+    height: 40px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    font: normal 18px 'avantgarde';
+    line-height: 1.2;
+    text-align: left;
+    padding: 0;
+}
+
+.nop-jcarousel.home-page-category-grid .item-box .title {
+    height: 19px;
+}
+
+.nop-jcarousel.home-page-category-grid .item-box .picture {
+    margin: 10px auto 0;
+}
+.nop-jcarousel.home-page-product-grid .item-box{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px #ddd;
+}
+.nop-jcarousel.home-page-product-grid .picture {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+}
+
+.nop-jcarousel .home-page-product-grid .product-title {
+
+}
+
+.nop-jcarousel.home-page-product-grid .picture img {
+    border-radius: 0
+}
+.nop-jcarousel.home-page-product-grid .item-box:before {
+    display: none;
+}
+.nop-jcarousel.home-page-product-grid .item-box > a:before {
+    content: " ";
+    display: block;
+    padding-top: 100%;
+}
+.sub-category-grid.nop-jcarousel .item-box, 
+.home-page-category-grid.nop-jcarousel .item-box {
+    position: relative;
+}
+
+/*home page carousel*/
+
+.home-page .nop-jcarousel{
+    margin-bottom: 50px;
+} 
+
+/*end*/
+
+
+.jCarouselMainWrapper .slick-prev,
+.jCarouselMainWrapper .slick-next {
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    border: none;
+    font-size: 0;
+}
+.jCarouselMainWrapper .slick-prev {
+    right: 50px;
+    background: url('images/prev-horizontal.png') top no-repeat;
+}
+.jCarouselMainWrapper .slick-next {
+    right: 0;
+    background: url('images/next-horizontal.png') top no-repeat;
+}
+.jCarouselMainWrapper .slick-prev:hover, 
+.jCarouselMainWrapper .slick-prev:focus, 
+.jCarouselMainWrapper .slick-next:hover, 
+.jCarouselMainWrapper .slick-next:focus {
+	background-position: bottom;
+}
+.jCarouselMainWrapper .slick-disabled {
+	background-position: top;
+	cursor: default;
+	opacity: 0.6;
+}
+.jCarouselMainWrapper .slick-disabled:hover {
+	background-position: top;
+}
+
+.jCarouselMainWrapper .slick-dots {
+    text-align: center;
+    margin: 20px 0 0;
+}
+.jCarouselMainWrapper .slick-dots li {
+    display: inline-block;
+    font-size: 0;
+}
+.jCarouselMainWrapper .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    margin: 0px 2px;
+    background: #ddd;
+    border-radius: 50%;
+    font-size: 0;
+    border: 1px solid #fff;
+}
+.jCarouselMainWrapper .slick-dots .slick-active button  {
+    border-color: #c8c !important;
+    background: #c8c !important;
+}
+
+.nop-jcarousel .carousel-title {
+    position: relative;
+    text-align: left;
+    margin-bottom: 45px;
+    padding-right: 100px;
+}
+
+.nop-jcarousel .carousel-title strong {
+    display: inline-block;
+    font: normal 26px 'avantgarde_light';
+    color: #c8c;
+    background: url('images/bullet1.png') left center no-repeat;
+    padding: 0 0 0 45px;
+}
+
+.nop-jcarousel .carousel-title:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: auto;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    border-bottom: 1px dotted #c8c;
+}
+
+.center-2 .nop-jcarousel.product-grid {
+    margin-top: 30px;
+}
+
+.nop-jcarousel .manufacturer-item .title,
+.nop-jcarousel .vendor-item .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font: normal 18px/20px 'avantgarde';
+    color: #444;
+}
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (max-width: 480px) {
+
+    .nop-jcarousel > .carousel-title {
+        padding: 0 0 45px;
+    }
+
+    .jCarouselMainWrapper .slick-prev, 
+    .jCarouselMainWrapper .slick-next {
+        bottom: -5px;
+        top: auto;
+    }
+    .jCarouselMainWrapper .slick-prev {
+        left: 50%;
+        margin-left: -44px;
+    }
+    .jCarouselMainWrapper .slick-next {
+        right: 50%;
+        margin-right: -44px;
+    } 
+    .nop-jcarousel .carousel-title strong {
+        max-width: none;
+    }
+}
+
+@media all and (max-width: 980px) {
+
+    .sub-category-grid.nop-jcarousel .picture,
+    .home-page-category-grid.nop-jcarousel .picture {
+        max-height: 85%;
+    }
+
+}
+
+@media all and (min-width: 769px) {
+
+
+    .nop-jcarousel .carousel-title strong {
+        font-size: 36px;
+    }
+
+    .side-2 .nop-jcarousel .carousel-title {
+        padding-right: 60px;
+    }
+
+    .side-2 .nop-jcarousel .carousel-title strong {
+        display: block;
+        font-size: 22px;
+        max-width: none;
+        background: transparent;
+        padding: 0;
+    }
+
+    .side-2 .jCarouselMainWrapper .slick-prev,
+    .side-2 .jCarouselMainWrapper .slick-next {
+        width: 30px;
+        height: 30px;
+    }
+
+    .side-2 .jCarouselMainWrapper .slick-prev {
+        right: 33px;
+        background: url('images/prev-horizontal-small.png') top no-repeat;
+    }
+    .side-2 .jCarouselMainWrapper .slick-next {
+        right: 0;
+        background: url('images/next-horizontal-small.png') top no-repeat;
+    }
+
+
+}

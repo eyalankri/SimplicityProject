@@ -1,0 +1,49 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.product-details-page .picture-wrapper:only-child {
+	float: none;
+	width: auto;
+}
+
+.product-details-page .product-essential .ribbon-wrapper {
+    display: inline-block;
+    max-width: 100%;
+}
+
+
+.product-ribbon img {
+    opacity: 1;
+}
+
+@media (min-width: 769px) {
+    .product-list .ribbon-wrapper {
+        float: none;
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .product-list .ribbon-wrapper .picture {
+        margin-right: 0;
+    }
+}
+
+@media all and (max-width: 1024px) {
+
+    .product-details-page .ribbon-wrapper {
+        float: none;
+    }
+
+}
+
+/* in carousel */
+
+.item-holder .ribbon-wrapper {
+    float: left;
+    width: 41%;
+}
+.nop-jcarousel .ribbon-wrapper .item-picture {
+    width: auto;
+}

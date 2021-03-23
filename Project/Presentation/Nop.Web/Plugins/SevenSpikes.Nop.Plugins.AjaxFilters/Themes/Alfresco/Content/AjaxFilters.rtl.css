@@ -1,0 +1,94 @@
+/*
+* Copyright 2015 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.clearFilterOptionsAll {
+	float: left;
+}
+.filter-block a.toggleControl {
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAkBAMAAAB2w3fUAAAAJFBMVEUAAAD///////////////////////////////////////////+0CY3pAAAAC3RSTlMA6i3wySol5dA3MWZvMrEAAABOSURBVBjTYyAFFMBZG/CwWBk2MEFYjAs2TISwOAw2mEBYTNK7RaEKFTcqQFlsbgz0A0yNATAHWMHsl4ZJsuwGggKYGEydJYzF6qhAnqUAq0UN8UWK3O8AAAAASUVORK5CYII=') right top no-repeat;
+	padding-right: 22px;
+	padding-left: 0;
+}
+.filter-block a.toggleControl.closed {
+	background-position: right -18px;
+}
+.filter-block a.clearFilterOptions,
+.filter-block a.clearPriceRangeFilter {
+	left: 5px;
+	right: auto;
+}
+
+/* SEARCH CRITERIA */
+
+.selected-options-list > li span {
+	margin: 0 0 0 10px;
+	padding: 5px 0 5px 15px;
+	background-position: left center;
+}
+
+/* RANGE SLIDER */
+
+.priceRangeMinPanel,
+.specification-min-panel {
+	float: right;
+}
+.priceRangeMaxPanel,
+.specification-max-panel {
+	float: left;
+}
+.currentMinPrice, .current-min-value {
+	float: right;
+}
+.currentMaxPrice, .current-max-value {
+	float: left;
+}
+
+/* CHECKBOX MODE */
+
+.filtersGroupPanel li label {
+	padding: 10px 30px 10px 10px;
+}
+.filtersGroupPanel.imageOptions li label {
+	padding-right: 40px;
+	padding-left: 10px; 
+}
+.filtersGroupPanel li input[type='checkbox'] {
+	right: 10px;
+	left: auto;
+}
+.filtersGroupPanel li label:before {
+	right: 10px;
+	left: auto;
+}
+
+/* COLOR SQUARE ATTRIBUTES */
+
+.filtersGroupPanel li .color {
+	right: 10px;
+	left: auto;
+}
+
+/* NO RESULTS POPUP */
+
+.ajaxFilters .k-window-titlebar span {
+	float: right;
+}
+.ajaxFilters .k-window-actions {
+	float: left;
+}
+
+
+
+@media all and (max-width: 768px) {
+
+.filter-block a.toggleControl {
+	padding: 5px 28px 5px 0;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASBAMAAACk4JNkAAAAJFBMVEUAAAD///////////////////////////////////////////+0CY3pAAAAC3RSTlMA6i3wySol5dA3MWZvMrEAAAAoSURBVAjXY6AQhAhBGUzCE6CsxA0wSe/du3dvh4nB1S2AMTVEybMTAHVQB1PzHzgRAAAAAElFTkSuQmCC') right 3px center no-repeat;
+}
+.filter-block a.toggleControl.closed {
+	background-position: right 3px center;
+}
+
+}

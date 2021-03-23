@@ -1,0 +1,48 @@
+﻿@using SevenSpikes.Nop.Framework.MVCExtensions
+@using SevenSpikes.Nop.Plugins.MegaMenu.Models
+
+@model MenuItemCategoryModel
+
+@{
+    var areCategoriesInASingleItem = Model.Item.EntityId == 0;
+    var hasSubCategories = Model.Categories.Count > 0;
+    var hasSublistClass = hasSubCategories ? "has-sublist" : string.Empty;
+    var withSubcategoriesClass = hasSubCategories ? "with-subcategories" : string.Empty;
+    var withOrWithoutSublistClass = hasSubCategories ? "with-sublist-wrap" : "without-sublist-wrap";
+}
+
+<li class="@hasSublistClass @Model.Item.CssClass @withOrWithoutSublistClass">
+    @if (areCategoriesInASingleItem)
+    {
+        <span class="@withSubcategoriesClass single-item-categories labelfornextplusbutton">@Model.Item.Title</span>
+    }
+    else
+    {
+        <a class="@withSubcategoriesClass" href="@Model.Item.Url"><span>@Model.Item.Title</span></a>
+    }
+
+    @if (hasSubCategories)
+    {
+        <div class="dropdown categories fullWidth boxes-@Model.Item.NumberOfBoxesPerRow">
+            <div class="row-wrapper">
+                <div class="row">
+                    @foreach (var item in Model.Categories)
+                    {
+                        <div class="box">
+                            <div class="picture">
+                                <a href="@Url.RouteUrl("Category", new {item.CategoryModel.SeName})" title="@item.CategoryModel.PictureModel.Title">
+                                    <img class="lazy" alt="@item.CategoryModel.PictureModel.AlternateText" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-original="@item.CategoryModel.PictureModel.ImageUrl" />
+                                </a>
+                            </div>
+                            <div class="title">
+                                <a href="@Url.RouteUrl("Category", new {item.CategoryModel.SeName})" title="@item.CategoryModel.Name">
+                                    <span>@item.CategoryModel.Name</span>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</li>

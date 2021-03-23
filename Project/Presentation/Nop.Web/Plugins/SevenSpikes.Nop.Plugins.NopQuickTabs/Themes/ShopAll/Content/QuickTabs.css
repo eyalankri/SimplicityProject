@@ -1,0 +1,71 @@
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description  {
+    display: block;
+}
+
+.productTabs-body p {
+    margin: 8px 0;
+}
+.ui-widget {
+    font-family: Arial,Verdana,Helvetica,sans-serif;
+    font-size: 12px;
+}
+    .ui-widget .ui-widget {
+        font-size: 11px;
+    }
+.ui-widget-content {
+    border: 1px solid #aaaaaa;
+    background: #ffffff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;
+    color: #333;
+}
+    .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+        border: 1px solid #999999;
+        background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+        font-weight: normal;
+        color: #212121;
+    }
+    .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+        border: 1px solid #aaaaaa;
+        background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+        font-weight: normal;
+        color: #660000;
+    }
+        .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+            color: #660000;
+            text-decoration: none;
+        }
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    -moz-border-radius-topleft: 0px;
+    -webkit-border-top-left-radius: 0px;
+    -khtml-border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    -moz-border-radius-topright: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -khtml-border-top-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -khtml-border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    -moz-border-radius-bottomright: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -khtml-border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+    cursor: pointer;
+}
+.ui-tabs .productspec-box .title {
+    display: none;
+}
+.productTabs ul.ui-tabs-nav{
+    text-align:left;
+    background:#ddd;
+}

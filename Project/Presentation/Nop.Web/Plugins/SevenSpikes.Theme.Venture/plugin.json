@@ -1,0 +1,12 @@
+﻿{
+  "Group": "7Spikes",
+  "FriendlyName": "Nop Venture Theme",
+  "SystemName": "SevenSpikes.Theme.Venture",
+  "Version": "4.2",
+  "SupportedVersions": [ "4.30" ],
+  "DependsOnSystemNames": [ "SevenSpikes.Core" ],
+  "Author": "Seven Spikes Ltd",
+  "DisplayOrder": 2,
+  "FileName": "SevenSpikes.Theme.Venture.dll",
+  "Description": "This plugin allows you to configure the Venture theme settings"
+}

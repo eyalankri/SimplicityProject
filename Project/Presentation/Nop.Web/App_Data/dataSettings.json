@@ -1,0 +1,5 @@
+﻿{
+  "DataConnectionString": "Data Source=DESKTOP-LQEQV0S;Initial Catalog=SimplicityProject;Integrated Security=True;Persist Security Info=False",
+  "DataProvider": "sqlserver",
+  "RawDataSettings": {}
+}

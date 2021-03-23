@@ -1,0 +1,128 @@
+﻿/* 55 of 468 CSS properties converted by rtl.daskhat.ir 
+ These properties should be override originals. 
+ just load rtl css file after original css file.*/ 
+
+.clearFilterOptionsAll {
+	float: left;
+}
+.filter-block a.toggleControl {
+	text-align: right;
+}
+.filter-block a.toggleControl.closed:before {
+	left: 5px;
+	right: auto;
+}
+.filter-block a.clearFilterOptions,
+.filter-block a.clearPriceRangeFilter {
+	left: 0;
+	right: auto;
+}
+.selected-options-list > li {
+	text-align: right;
+}
+.selected-options-list > li span {
+	float: right;
+	padding: 10px 10px 10px 25px;
+	margin: 0 0 0 10px;
+}
+.selected-options-list > li span:before {
+	left: 8px;
+	right: 0;
+}
+.number-of-returned-products {
+	float: right;
+}
+.priceRangeMinPanel, .specification-min-panel {
+	float: right;
+}
+.priceRangeMaxPanel, .specification-max-panel {
+	float: left;
+}
+/*.ui-slider-handle {
+	margin-right: -8px;
+}*/
+.ui-slider-handle span {
+	right: 50%;
+	margin-right: -19px;
+	margin-left: 0;
+}
+.ui-slider-handle span:before {
+	right: 50%;
+	left: auto;
+	margin-right: -2px;
+	margin-left: 0;
+	border-width: 4px 3px 0 3px;
+	border-color: #2c2c2c transparent transparent transparent;
+}
+.filtersGroupPanel .checkbox-list label {
+	padding: 9px 25px 9px 9px;
+	text-align: right;
+}
+.filtersGroupPanel .checkbox-list label:before {
+	right: 0;
+	left: auto;
+}
+.filtersGroupPanel .checkbox-list li.checked label:after {
+	right: 3px;
+	left: auto;
+}
+.colorOptions .color {
+	right: 0;
+	left: auto;;
+}
+.colorOptions .checked .color {
+	right: 3px;
+	left: auto;
+}
+.ajaxFilters .k-window-actions {
+	left: 8px;
+	right: auto;
+}
+.ajaxFilters .k-window-actions .k-icon {
+	left: 0;
+	right: auto;
+}
+
+@media all and (max-width: 1200px) {
+
+.filters-button:before {
+	right: 20px;
+	left: auto;
+}
+.filtersTitlePanel:before {
+	right: 21px;
+	left: auto;
+}
+.nopAjaxFilters7Spikes .close-btn {
+	left: 5px;
+	right: auto;
+}
+.nopAjaxFilters7Spikes {
+	right: 0;
+	left: auto;
+    -webkit-transform: translate(360px);
+    -ms-transform: translate(360px);
+    transform: translate(360px);
+}
+.priceRangeMinMaxPanel {
+	right: 30px;
+	left: auto;
+    width: 100%;
+}
+.filter-block a.clearFilterOptions,
+.filter-block a.clearPriceRangeFilter {
+	left: 5px;
+	right: auto;
+}
+.filter-block a.toggleControl.closed:before {
+	left: -10px;
+	right: auto;
+}
+}
+
+@media all and (min-width: 1201px) {
+
+.filter-block a.toggleControl {
+	padding: 0 0 0 42px;
+}
+}

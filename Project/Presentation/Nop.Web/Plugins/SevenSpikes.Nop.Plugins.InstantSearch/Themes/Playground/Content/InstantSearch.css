@@ -1,0 +1,219 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+/*=====================================================
+    
+    MAIN CSS / SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (min-width: 240px) {
+
+    input.search-box-text.narrow {
+		padding-right: 132px;
+	}
+	input.instant-search-busy {
+        background: #fff url('../../../images/ajax-loader-small.gif') no-repeat 84% center !important;
+    }
+	input.narrow.instant-search-busy {
+        background-position: 52% center !important;
+    }
+	
+    .search-box-select {
+    width: 80px;
+	position: absolute;
+	top: 4px;
+	right: 40px;
+	border: none;
+	border-left: 1px solid #ccc;
+	border-radius: 0;
+}
+
+
+	span.search-box-text {
+		float: left; /*theme specific fix*/
+	}
+
+    /* AUTOCOMPLETE */
+
+    .instantSearch {
+        width: 280px !important;
+        height: auto !important;
+    }
+    .instantSearch .k-list-container {
+	    position: static !important;
+        width: 100% !important;
+        margin-top: -1px;
+        background: #fff;
+        border-radius: 16px;
+		box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		overflow: hidden;
+    }
+    .instantSearch .k-list {
+        height: 100%;
+    }
+    .instantSearch .k-item {
+        border-top: 1px dashed #ccc;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .instantSearch .k-item:first-child {
+        border-top: 1px dashed #ccc;
+        border-radius: 16px 16px 0 0;
+    }
+    .instantSearch .k-item:last-child {
+        border-radius: 0 0 16px 16px;
+    }
+    .instant-search-item {
+	    border: 1px solid #fff;
+	    overflow: hidden;
+	    padding: 5px 8px;
+    }
+    li:first-child .instant-search-item {
+        border-radius: 16px 16px 0 0;
+    }
+    li:last-child .instant-search-item {
+        border-radius: 0 0 16px 16px;
+    }
+    .instant-search-item .img-block {
+        display: none;
+	    position: relative;
+	    float: left;
+	    border: 1px solid transparent;
+	    overflow: hidden;
+	    width: 60px;
+	    height: 60px;
+	    background-color: #fff;
+	    text-align: center;
+    }
+    .instant-search-item .img-block img {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    max-width: 100%;
+	    max-height: 100%;
+	    margin: auto;
+    }
+    .instant-search-item .detail {
+	    min-height: 42px;
+    }
+    .instant-search-item .detail .title {
+	    margin-bottom: 5px;
+	    color: #333;
+	    font-size: 14px;
+    }
+    .instant-search-item .detail .price {
+	    font-weight: bold;
+	    font-size: 12px;
+	    color: #c00;
+    }
+    .instant-search-item .detail .sku {
+        margin-bottom: 5px;
+    }
+	.k-item.k-state-hover .instant-search-item,
+	.k-item.k-state-focused .instant-search-item  {
+        background: #f9f9f9;
+    }
+    .k-item.k-state-hover .instant-search-item .img-block, 
+    .k-item.k-state-focused .instant-search-item .img-block {
+	    border-color: #ddd;
+    }
+
+}
+
+
+/*=====================================================
+    
+    TABLETS PORTRAIT & SMARTPHONES LANDSCAPE
+
+=====================================================*/
+
+@media all and (min-width: 481px) {
+
+    input.search-box-text.narrow {
+		padding-right: 155px;
+	}
+	input.instant-search-busy {
+        background-position: 87% center !important;
+    }
+	input.narrow.instant-search-busy {
+        background-position: 60% center !important;
+    }
+	.search-box-select {
+		width: 100px;
+	}
+    .instantSearch,
+    .k-list-container {
+        width: 380px !important;
+    }
+    .instant-search-item .detail {
+	    margin-left: 70px;
+    }
+    .instant-search-item .detail .title {
+        font-size: 13px;
+    }
+    .instant-search-item .detail .price {
+        font-size: 14px;
+    }
+    .instant-search-item .img-block {
+        display: block;
+    }
+
+}
+
+/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+@media all and (min-width: 769px) {
+
+	input.search-box-text.narrow {
+		padding-right: 145px;
+	}
+	input.instant-search-busy {
+        background-position: 84% center !important;
+    }
+	input.narrow.instant-search-busy {
+        background-position: 52% center !important;
+    }
+	.search-box-select {
+		width: 90px;
+	}
+    .instantSearch, .k-list-container {
+        width: 300px !important;
+    }
+
+}
+
+/*=====================================================
+    
+    DESKTOP
+
+=====================================================*/
+
+@media all and (min-width: 1025px) {
+
+    input.search-box-text.narrow {
+		padding-right: 155px;
+	}
+	input.instant-search-busy {
+        background-position: 87% center !important;
+    }
+	input.narrow.instant-search-busy {
+        background-position: 60% center !important;
+    }
+	.search-box-select {
+		width: 100px;
+	}
+	.instantSearch, .k-list-container {
+        width: 380px !important;
+    }
+	
+}

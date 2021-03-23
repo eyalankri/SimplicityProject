@@ -1,0 +1,87 @@
+/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.picture-thumbs.in-carousel {
+    margin: -40px auto 0;
+}
+.picture-thumbs .picture-thumbs-list {
+    margin: 0 -5px;
+}
+.picture-thumbs .picture-thumbs-item {
+    padding: 0 5px;
+}
+.picture-thumbs.in-carousel .picture-thumbs-list {
+    margin: 0;
+}
+.picture-thumbs button + .slick-list {
+    padding: 0 70px;
+}
+.slick-slide img {
+    display: inline-block;
+}
+
+/* arrows nav */
+
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 0;
+    z-index: 1;
+    width: 65px;
+    border: none;
+    cursor: pointer;
+}
+.picture-thumbs .slick-prev {
+    left: 0;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA5CAMAAABKzSg6AAAAP1BMVEUAAAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM12c1RAAAAFHRSTlMA3aID79S+rokVDfbNmjLkSCIBWzBvEWkAAACjSURBVEjH7dfLDsIgEIVhbgVKoRc87/+slqZJXUj0sFAT+fffhsxMgrgyeL8HBo7xddZZZ19hq9INbJ6gNM1mA+yOZNuCvRg4NsqihlFQLAynoliwp6KYdigp71NSzjlrbYyDlIsxE6osK9SrM49PspxwJJ/28kk8O8raHu5GMhFiYdPKsGu4zCaaRlmGpsVJuX1N+aPw+5ers87+nYGo8R9wB1dEJAKAJb1vAAAAAElFTkSuQmCC')
+                    center no-repeat, #fff;
+}
+.picture-thumbs .slick-next {
+    right: 0;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA5CAMAAABKzSg6AAAAP1BMVEUAAAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM12c1RAAAAFHRSTlMA3Z8EEfTprdS+zTKFRwEkGo6MW82jRI8AAACmSURBVEjH7dTLDgIhDEBRKFCGxzzU/v+3at2giRLa1WTC3Z+EUKih8YJpkaAvZoabbLLJzs4crArmIoUiZg6I2AmZz/QKdxFjt7CzvjGJW7yQmePtkuswCoho7ZJzSinGCAC3CsRF12GdYFMxuutY/cvszzqH7FTblQjYgz4HMNoaWGXhuHfUPC5vWeFhZGwDVkX+TYFC0S2F82+uySa7JBtPx0JTT4k6I5YlHTgmAAAAAElFTkSuQmCC')
+                    center no-repeat, #fff;
+}
+.picture-thumbs .slick-prev.slick-disabled,
+.picture-thumbs .slick-next.slick-disabled {
+    opacity: .6;
+    cursor: default;
+}
+
+
+
+/* dots nav */
+
+.slick-dots {
+    margin-top: 25px;
+}
+.slick-dots button {
+    background: #333;
+    opacity: 1;
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    border: none;
+}
+.slick-dots li {
+    display: inline-block;
+    margin: 0 4px;
+}
+.slick-dots .slick-active button {
+    opacity: .4;
+}
+
+
+
+/* items */
+
+.picture-thumbs a.cloudzoom-gallery {
+    display: block !important;
+    margin: 0 !important;
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+}

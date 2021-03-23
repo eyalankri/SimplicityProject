@@ -1,0 +1,65 @@
+﻿@model CategoryModel.SubCategoryModel
+@inject IViewComponentSelector viewComponentSelector
+
+@{
+    string controllerName = Url.ActionContext.RouteData.Values["controller"].ToString();
+    string actionName = Url.ActionContext.RouteData.Values["action"].ToString();
+    var isHomePage = controllerName.Equals("home", StringComparison.InvariantCultureIgnoreCase) &&
+                     actionName.Equals("index", StringComparison.InvariantCultureIgnoreCase);
+}
+
+@if (isHomePage)
+{
+    <div class="category-item">
+        <div class="picture">
+            <a href="@Url.RouteUrl("Category", new { SeName = Model.SeName })" title="@Model.PictureModel.Title">
+                @if (viewComponentSelector.SelectComponent("LazyLoadImage") != null)
+                {
+                    @await Component.InvokeAsync("LazyLoadImage", new (string Key, string Value)[]
+                    {
+                        ("src", Model.PictureModel.ImageUrl),
+                        ("alt", Model.PictureModel.AlternateText),
+                        ("title", Model.PictureModel.Title)
+                    })
+                }
+                else
+                {
+                    <img alt="@Model.PictureModel.AlternateText" src="@Model.PictureModel.ImageUrl" title="@Model.PictureModel.Title" />
+                }
+            </a>
+        </div>
+        <h2 class="title">
+            <a href="@Url.RouteUrl("Category", new { SeName = Model.SeName })" title="@Model.PictureModel.Title">
+                <span>@Model.Name</span>
+                <span class="view-all">@T("SevenSpikes.Themes.Minimal.HomePageCategories.text")</span>
+            </a>
+        </h2>
+    </div>
+}
+else
+{
+    <div class="sub-category-item">
+        <div class="picture">
+            <a href="@Url.RouteUrl("Category", new { SeName = Model.SeName })" title="@Model.PictureModel.Title">
+                @if (viewComponentSelector.SelectComponent("LazyLoadImage") != null)
+                {
+                    @await Component.InvokeAsync("LazyLoadImage", new (string Key, string Value)[]
+                    {
+                        ("src", Model.PictureModel.ImageUrl),
+                        ("alt", Model.PictureModel.AlternateText),
+                        ("title", Model.PictureModel.Title)
+                    })
+                }
+                else
+                {
+                    <img alt="@Model.PictureModel.AlternateText" src="@Model.PictureModel.ImageUrl" title="@Model.PictureModel.Title" />
+                }
+            </a>
+        </div>
+        <h2 class="title">
+            <a href="@Url.RouteUrl("Category", new { SeName = Model.SeName })" title="@Model.PictureModel.Title">
+                @Model.Name
+            </a>
+        </h2>
+    </div>
+}

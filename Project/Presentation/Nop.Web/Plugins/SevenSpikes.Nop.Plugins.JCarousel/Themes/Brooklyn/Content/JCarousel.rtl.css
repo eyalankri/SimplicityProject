@@ -1,0 +1,89 @@
+
+.jCarouselMainWrapper .slick-prev {
+	right: 0;
+	left: auto;
+    background: url('images/next-product-mobile.png') no-repeat center;
+}
+.jCarouselMainWrapper .slick-next {
+	left: 0;
+	right: auto;
+    background: url('images/prev-product-mobile.png') no-repeat center;
+}
+
+@media all and (min-width: 1025px) {
+	.center-1 .jCarouselMainWrapper .slick-prev {
+		right: 0;
+		left: auto;
+		margin-right: -36px;
+		margin-left: 0;
+		background: url('images/gradient-right.png');
+		background-position: right top;
+	}
+	.center-1 .jCarouselMainWrapper .slick-prev:before {
+		right: 20px;
+		left: auto;
+        background: url('images/next-horizontal-new.png') no-repeat center;
+	}
+	.center-1 .jCarouselMainWrapper .slick-next {
+		left: 0;
+		right: auto;
+		margin-left: -36px;
+		margin-right: 0;
+		background: url('images/gradient-right.png');
+		background-position: left top;
+	}
+	.center-1 .jCarouselMainWrapper .slick-next:before {
+		left: 20px;
+		right: auto;
+        background: url('images/prev-horizontal-new.png') no-repeat center;
+	}
+	.center-2 .jCarouselMainWrapper .slick-prev {
+		right: 10px;
+		left: auto;
+	}
+	.center-2 .jCarouselMainWrapper .slick-next {
+		left: 10px;
+		right: auto;
+	}
+	.side-2 .jCarouselMainWrapper .slick-prev {
+		right: 68px;
+		left: auto;
+        background: url("images/next-product-mobile.png") no-repeat center;
+	}
+	.side-2 .jCarouselMainWrapper .slick-next {
+		left: 68px;
+		right: auto;
+        background: url("images/prev-product-mobile.png") no-repeat center;
+	}
+}
+
+@media all and (min-width: 1281px) {
+	.center-1 .jCarouselMainWrapper .slick-prev {
+		right: -36px;
+		left: auto;
+	}
+	.center-1 .jCarouselMainWrapper .slick-next {
+		left: -36px;
+		right: auto;
+		background: url('images/gradient-left.png');
+		background-position: left top;
+	}
+	.center-1 .jCarouselMainWrapper .slick-prev:before {
+		right: 20px;
+		left: auto;
+	}
+	.center-1 .jCarouselMainWrapper .slick-next:before {
+		left: 20px;
+		right: auto;
+	}
+	.center-1 .transparent.jCarouselMainWrapper .slick-prev {
+		right: 0;
+		left: auto;
+        background-repeat: repeat-y;
+	}
+	.center-1 .transparent.jCarouselMainWrapper .slick-next {
+		left: 0;
+		right: auto;
+        background-repeat: repeat-y;
+	}
+}

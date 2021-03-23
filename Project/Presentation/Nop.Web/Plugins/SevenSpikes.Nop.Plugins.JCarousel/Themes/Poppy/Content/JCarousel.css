@@ -1,0 +1,206 @@
+/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.home-page .jCarouselMainWrapper {
+    margin: 50px 0 0;
+}
+
+.category-page-body .jCarouselMainWrapper {
+    margin: 20px 0;
+}
+.category-page-body .pager + .jCarouselMainWrapper {
+    margin: 40px 0 0;
+}
+.category-page-body .pager + .slider-wrapper + .jCarouselMainWrapper {
+    margin: 125px 0 0;
+}
+.nop-jcarousel .carousel-item .item-box {
+    width: 100% !important;
+    margin: 0 !important;
+}
+.mobile .nop-jcarousel.sub-category-grid .item-grid {
+    display: block !important;
+}
+
+.jCarouselMainWrapper .category-grid .item-box .title{
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed title load on swipe*/
+}
+.carousel-item .ribbon-position {
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed ribbon load on swipe*/
+}
+
+
+/*** TITLE & CONTAINERS ***/
+
+.nop-jcarousel {
+	position: relative;
+}
+.nop-jcarousel .carousel-title {
+    margin: 0 0 40px;
+    font-size: 28px;
+    color: #6f6f6f;
+    text-align: center;
+    font-weight: 400;
+}
+.nop-jcarousel .carousel-title strong {
+    font-weight: normal;
+}
+.nop-jcarousel .slick-carousel {
+	position: relative;
+    padding: 50px 20px;
+    border: 1px solid #ececec;
+}
+    .nop-jcarousel .slick-carousel:before {
+        content: '';
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        margin-left: -48px;
+        width: 96px;
+        height: 50px;
+        background: #fff;
+        z-index: 1;
+    }
+
+.nop-jcarousel.sub-category-grid {
+    background: none !important;
+}
+.nop-jcarousel.sub-category-grid .item-box .title {
+    margin: auto;
+}
+
+/*** NAVIGATION ***/
+
+.jCarouselMainWrapper .slick-prev,
+.jCarouselMainWrapper .slick-next {
+    position: absolute;
+    top: 52px;
+    width: 43px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0;
+    z-index: 2;
+    text-align: center;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+    .jCarouselMainWrapper .slick-prev:before,
+    .jCarouselMainWrapper .slick-next:before {
+        font-family: icons;
+        font-size: 12px;
+        color: #b2b2b2;
+        line-height: 49px;
+    }
+.jCarouselMainWrapper .slick-prev {
+    left: 50%;
+    margin-left: -48px;
+}
+    .jCarouselMainWrapper .slick-prev:before {
+        content: 's';
+    }
+.jCarouselMainWrapper .slick-next {
+    right: 50%;
+    margin-right: -48px;
+}
+    .jCarouselMainWrapper .slick-next:before {
+        content: 'p';
+    }
+
+.jCarouselMainWrapper .slick-disabled,
+.jCarouselMainWrapper .slick-disabled:hover {
+    background: #fff !important;
+    border-color: #ececec !important;
+    opacity: 0.3;
+	filter: alpha(opacity=30);
+    cursor: default;
+}
+
+    .jCarouselMainWrapper .slick-disabled:before,
+    .jCarouselMainWrapper .slick-disabled:hover:before {
+        color: #b2b2b2 !important;
+    }
+
+    .jCarouselMainWrapper .slick-dots {
+        text-align: center;
+        font-size: 0;
+        padding: 20px 0 0;
+    }
+    .jCarouselMainWrapper .slick-dots li {
+        display: inline-block;
+        padding: 4px;
+        position: relative;
+    }
+    .jCarouselMainWrapper .slick-dots li button {
+        width: 7px;
+        height: 7px;
+        background: rgba(0,0,0,0.25);
+        font-size: 0;
+        border: none;
+        vertical-align: middle;
+        border-radius: 50%;
+    }
+    .jCarouselMainWrapper .slick-dots li button:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .jCarouselMainWrapper .slick-dots .slick-active button {
+        background: rgba(0,0,0,0.6);
+    }
+
+@media all and (min-width: 769px) {
+}
+
+@media all and (min-width: 769px) and (max-width: 1000px) {
+}
+
+@media all and (min-width: 1001px) {
+
+    .desktop .nop-jcarousel .slick-carousel:before {
+        top: -20px;
+        margin-left: -38px;
+        width: 76px;
+        height: 40px;
+    }
+
+    .desktop .jCarouselMainWrapper .slick-prev,
+    .desktop .jCarouselMainWrapper .slick-next {
+        top: 52px;
+        width: 33px;
+        height: 40px;
+    }
+        .desktop .jCarouselMainWrapper .slick-prev:before,
+        .desktop .jCarouselMainWrapper .slick-next:before {
+            font-size: 8px;
+            line-height: 39px;
+        }
+    .desktop .jCarouselMainWrapper .slick-prev {
+        margin-left: -38px;
+    }
+    .desktop .jCarouselMainWrapper .slick-next {
+        margin-right: -38px;
+    }
+
+    .desktop .jCarouselMainWrapper .slick-prev:hover:before,
+    .desktop .jCarouselMainWrapper .slick-next:hover:before {
+        color: #fff;
+    }
+
+}
+
+@media all and (min-width: 1281px) {
+
+    .home-page .jCarouselMainWrapper {
+        margin: 75px 0 0;
+    }
+
+}

@@ -1,0 +1,456 @@
+﻿/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+/* COMMON STYLES */
+
+
+.spc {
+    position: relative;
+}
+
+    .spc .navigation {
+        display: none;
+    }
+
+    .spc .mobile-navigation {
+        margin: 20px auto 30px;
+        max-width: 200px;
+    }
+
+        .spc .mobile-navigation select {
+            width: 100%;
+        }
+
+.spc-header .title {
+    font: bold 20px/35px "Times New Roman", Times, serif;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.spc-header ul {
+    font-size: 0;
+}
+
+.spc-header li {
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 0 #fff inset;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.65) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.65) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.65) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6ffffff', endColorstr='#a6ffffff',GradientType=0 );
+    background-color: #ccc;
+    background-size: 100% 200%;
+    padding: 12px;
+    color: #333;
+    font-size: 12px;
+    text-shadow: 1px 1px #eee;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+    cursor: pointer;
+}
+
+    .spc-header li.active,
+    .spc-header li:hover {
+        background-position: bottom;
+    }
+
+.spc-body {
+    min-height: 312px; /*pre-loading height, should not be taller than any of the grids in any resolution, currently matched to desktop category grid, could be fine tuned per variant*/
+}
+
+    .spc-body .product-grid {
+        display: none;
+        margin: 0;
+    }
+
+        .spc-body .product-grid.active {
+            display: block;
+            border: none;
+        }
+
+    .spc-body .no-data {
+        display: block;
+        padding: 20px 25px;
+    }
+
+
+    /* LOADING OVERLAY */
+
+
+    .spc-body .loading-overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        background: rgba(255,255,255,0.9) url('images/loader.gif') center no-repeat;
+    }
+
+.spc-products .spc-body .loading-overlay {
+    display: block;
+}
+
+.spc-body .loading-overlay span {
+    display: none;
+}
+
+
+/* PRODUCTS */
+
+
+.spc-products {
+    margin: 0 0 50px;
+    min-height: 599px;
+}
+
+    .spc-products .spc-header {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .spc-products .spc-body .loading-overlay {
+        bottom: 50px; /*loader-overlay fix, depending on item-box bottom margin*/
+    }
+
+
+/* CATEGORIES */
+
+
+.spc-categories {
+    margin: 0 0 50px;
+    min-height: 428px;
+    position: relative;
+}
+    /*.spc-categories + .spc-categories {
+	margin-top: -50px;
+}*/
+    .spc-categories > .loading-overlay {
+        background-color: #fff;
+        line-height: 340px;
+        text-align: center;
+    }
+
+    .spc-categories .category-info {
+        text-align: center;
+    }
+
+    .spc-products .title,
+    .spc-categories .category-title {
+        background: url(images/separator.png) bottom repeat-x;
+        padding-bottom: 18px;
+        font: bold 20px/35px "Times New Roman", Times, serif;
+    }
+
+        .spc-categories .category-title a {
+            color: #000;
+            text-transform: uppercase;
+        }
+
+    .spc-categories .category-sublist {
+        display: none;
+        padding: 0 0 10px;
+    }
+
+        .spc-categories .category-sublist li {
+            padding: 5px 0;
+        }
+
+            .spc-categories .category-sublist li a {
+                padding: 5px 0;
+            }
+
+                .spc-categories .category-sublist li a:hover {
+                    color: #4ab2f1;
+                }
+
+    .spc-categories .category-picture {
+        display: none;
+        font-size: 0;
+    }
+
+    .spc-categories .category-products {
+        position: relative;
+    }
+
+    .spc-categories .product-grid {
+        display: none;
+    }
+
+        .spc-categories .product-grid.active {
+            display: block;
+        }
+
+    .spc-categories .product-item {
+        padding: 0 !important;
+    }
+
+    .spc-categories .product-title {
+        height: auto;
+        margin: 0 0 10px;
+    }
+
+
+
+@media all and (min-width: 481px) {
+
+    .spc-categories .category-sublist li {
+        display: inline-block;
+        padding: 5px 10px;
+    }
+}
+
+
+@media all and (min-width: 769px) {
+
+
+    .spc .navigation {
+        display: block;
+    }
+
+    .spc .mobile-navigation {
+        display: none;
+    }
+
+    .spc-header .title,
+    .spc-categories .category-title {
+        font: bold 24px/48px "Times New Roman", Times, serif;
+    }
+
+    .spc-categories .category-title {
+        background: none;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .spc-header ul {
+        border: none;
+    }
+
+    .spc-header li {
+        display: inline-block;
+        margin: 0 1.75px -1px;
+    }
+}
+
+@media all and (min-width: 769px) and (max-width:1024px) {
+
+    .spc-categories .item-box {
+        display: none;
+    }
+
+        .spc-categories .item-box:first-of-type,
+        .spc-categories .item-box:nth-of-type(2),
+        .spc-categories .item-box:nth-of-type(3) {
+            display: inline-block;
+        }
+}
+
+
+@media all and (min-width: 769px) {
+
+    .spc-header {
+        text-align: left;
+    }
+
+        .spc-header li {
+            margin: 0 0 0 2.5px;
+        }
+
+    .spc-products .spc-header .title {
+        min-height: 42px; /*fix for product header without title*/
+        text-align: left;
+    }
+
+    .spc-products .spc-header ul {
+        position: absolute;
+        right: 0;
+        top: 9px;
+        margin: 0;
+    }
+
+    .spc-categories + .spc-categories {
+        margin-top: 0;
+    }
+
+    .spc-categories .spc-header {
+        overflow: hidden;
+        position: relative;
+        background: url(images/separator.png) bottom repeat-x;
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+        text-align: center;
+    }
+
+        .spc-categories .spc-header ul {
+            float: right;
+            margin: 0 0 -1px;
+        }
+
+    .spc-categories .spc-body:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .spc-categories .product-grid {
+        min-height: 350px; /*places loader in the middle when the grid contains less than 3 items, depending on item-box height + margins*/
+    }
+
+    .spc-categories .category-info {
+        position: relative;
+        z-index: 1;
+        float: left;
+        width: 30%;
+        min-height: 312px; /*match category picture height with grid height*/
+        margin: 0 0 38px;
+        border: none;
+    }
+
+        .spc-categories .category-info:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    .spc-categories .category-details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        padding: 0 0 5px;
+        transition: all 0.3s ease;
+        background: url(images/category-collection-background.png) top repeat-x;
+    }
+
+    .spc-categories .category-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        text-align: left;
+        transition: all 0.3s ease;
+    }
+
+        .spc-categories .category-title a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 20px;
+            color: #fff;
+            padding: 10px 30px;
+        }
+
+        .spc-categories .category-title:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .spc-categories .category-title a {
+            display: inline-block;
+        }
+
+    .spc-categories .category-sublist {
+    }
+
+    .spc-categories .category-info:hover .category-title:after,
+    .spc-categories .category-info:hover .category-sublist {
+        opacity: 1;
+    }
+
+    .spc-categories .category-sublist li {
+        display: block;
+        padding: 10px 20px;
+    }
+
+    .spc-categories .category-sublist a {
+        display: inline-block;
+        position: relative;
+        padding: 0 !important;
+    }
+
+        .spc-categories .category-sublist a:before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: -15px;
+            width: 5px;
+            height: 5px;
+            background-color: #ddd;
+        }
+
+    .spc-categories .category-picture {
+        display: block;
+        max-width: none;
+        margin: 0;
+        overflow: hidden;
+    }
+
+        .spc-categories .category-picture a {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+            .spc-categories .category-picture a:before {
+                content: "";
+                display: block;
+                padding-top: 145%;
+            }
+
+        .spc-categories .category-picture img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            -ms-transform: translate(-50%); /* IE 9 */
+            -webkit-transform: translate(-50%); /* Safari */
+            transform: translate(-50%);
+            height: 100%;
+            width: auto;
+            max-width: none;
+        }
+
+        .spc-categories .category-picture a:hover img {
+            opacity: 0.9;
+        }
+
+    .spc-categories .category-products {
+        float: right;
+        width: 68%;
+        padding: 0 0 0 10px;
+    }
+
+    .spc-categories .product-title {
+        height: 42px;
+    }
+
+    .spc-categories .rating {
+        display: none;
+    }
+
+    .spc-categories .prices {
+        height: 48px;
+    }
+}

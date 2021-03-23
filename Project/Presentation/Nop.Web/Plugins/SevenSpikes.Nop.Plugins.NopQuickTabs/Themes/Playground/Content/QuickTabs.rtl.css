@@ -1,0 +1,56 @@
+﻿.productTabs-header ul li {
+    float: right !important;
+    margin: 0 3px 0 0 !important;
+}
+    .productTabs-header ul li:first-child {
+        margin: 0 !important;
+    }
+.productTabs-body p {
+    text-align: right !important;
+}
+.productTabs-body .write-review {
+    margin: 0 0 15px 0 !important;
+}
+
+
+/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+@media all and (max-width: 980px) and (min-width: 769px) {
+
+
+
+}
+
+
+/*=====================================================
+    
+    TABLETS PORTRAIT & SMARTPHONES LANDSCAPE
+
+=====================================================*/
+
+@media all and (max-width: 768px) and (min-width: 481px) {
+
+    .ui-tabs .ui-tabs-nav li {
+        width: auto !important;
+    }
+}
+
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (max-width: 480px) {
+
+    .ui-tabs .ui-tabs-nav li {
+        margin: 0 !important;
+        width: 100%;
+    }
+
+}

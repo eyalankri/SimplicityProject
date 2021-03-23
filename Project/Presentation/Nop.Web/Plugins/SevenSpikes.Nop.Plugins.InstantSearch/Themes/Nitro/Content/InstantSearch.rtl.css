@@ -1,0 +1,36 @@
+﻿
+span.search-box-text {
+    float: right;
+}
+input.search-box-text.narrow {
+    padding-left: 90px;
+    padding-right: 8px !important; /*reset*/
+}
+.search-box-select {
+    left: 40px; right: auto;
+    background-position: right center;
+}
+.instantSearch .k-item {
+    text-align: right;
+}
+.instant-search-item .img-block {
+    float: right;
+}
+
+@media all and (min-width: 481px) {
+
+    input.search-box-text.narrow {
+        padding-left: 120px;
+    }
+    .instant-search-item .detail {
+        margin: 0 80px 0 0;
+    }
+
+}
+
+@media all and (min-width: 1025px) {
+
+    .search-box-select {
+        left: 44px; right: auto;
+    }
+}

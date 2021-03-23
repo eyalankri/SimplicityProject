@@ -1,0 +1,37 @@
+﻿@media all and (min-width: 1025px) {
+	
+.mega-menu .dropdown {
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+.mega-menu .dropdown.fullWidth {
+	right: 0;
+}
+.mega-menu .manufacturers.fullWidth .row .box {
+	float: right;
+}
+.mega-menu .manufacturers.fullWidth .row .box .picture .manufacturer,
+.mega-menu .manufacturers.fullWidth .row .box .picture .vendor {
+	margin: 0 5px 5px;
+}
+.mega-menu .dropdown.categories.fullWidth .row-wrapper {
+	float: right;
+}
+.mega-menu .dropdown.categories.fullWidth .box {
+	float: right;
+}
+.mega-menu .categories .picture {
+	float: right;
+}
+
+.mega-menu .topic-wrapper {
+	padding: 0 10px 10px;
+}
+.mega-menu .slider-wrapper {
+	float: left;
+}
+.mega-menu .boxes-3 .row-wrapper,
+.mega-menu .boxes-3 .row{
+    float:right;
+}
+
+}

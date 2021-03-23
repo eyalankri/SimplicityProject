@@ -1,0 +1,126 @@
+/*
+Skin Name: Nivo Slider Default Theme - modified for navigation inside
+Skin URI: http://nivo.dev7studios.com
+Description: The default skin for the Nivo Slider.
+Version: 1.3
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+Supports Thumbs: true
+*/
+
+.nivoSlider {
+	position: relative;
+	background: url('loader.gif') 50% 50% no-repeat;
+}
+.nivoSlider a {
+	display: block;
+}
+.nivo-directionNav a {
+	display: block;
+    top: 50%;
+	width: 40px;
+	height: 40px;
+    margin-top: -30px;
+	border-radius: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+    font-size: 0;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+.air-theme .nivo-directionNav a {
+	background-color: #eda187;
+}
+.earth-theme .nivo-directionNav a {
+	background-color: #007c5a;
+}
+.nivoSlider:hover .nivo-directionNav a {
+	opacity: 0.85;
+}
+.nivo-directionNav a.nivo-prevNav {
+	left: 10px;
+    background-image: url('arrow-left.png');
+}
+.nivo-directionNav a.nivo-nextNav {
+	right: 10px;
+    background-image: url('arrow-right.png');
+}
+
+.nivo-controlNav {
+    position: relative;
+    z-index: 10;
+	height: 0;
+	padding: 0;
+}
+.nivo-controlNav a {
+	display: inline-block;
+	box-sizing: content-box;
+	position: relative;
+	top: -50px;
+	width: 10px;
+	height: 10px;
+	margin: 0 3px;
+	border: 2px solid transparent;
+	border-radius: 50%;
+    background-color: #fff;
+	font-size: 0;
+	opacity: 0.9;
+	transition: all 0.2s ease;
+}
+.nivo-controlNav a:hover,
+.nivo-controlNav a.active {
+	border-color: #fff;
+	opacity: 1;
+}
+.air-theme .nivo-controlNav a:hover,
+.air-theme .nivo-controlNav a.active {
+	background-color: #eda187;
+}
+.earth-theme .nivo-controlNav a:hover,
+.earth-theme .nivo-controlNav a.active {
+	background-color: #007c5a;
+}
+.nivo-controlNav.nivo-thumbs-enabled {
+	display: none !important;
+}
+
+.nivo-caption {
+    top: 0;
+    bottom: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding: 15px 20px;
+	text-align: center;
+	text-transform: uppercase;
+	opacity: 1;
+}
+.nivo-caption p {
+	margin: 0;
+	padding: 0;
+}
+.nivo-caption:empty {
+	display: none !important;
+}
+
+/* home page banners */
+
+.home-page-banners {
+	max-width: 1920px;
+	margin: 60px auto;
+	overflow: hidden;
+}
+
+
+@media all and (min-width: 721px) {
+	
+.home-page-banners .slider-wrapper {
+	float: left;
+	width: 50%;
+}
+}
+
+@media all and (min-width: 1025px) {
+	
+.air-theme.variant-2.home-page-body .nivo-controlNav a {
+	top: -80px;
+}
+}

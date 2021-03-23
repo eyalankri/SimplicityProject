@@ -1,0 +1,152 @@
+/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (min-width: 240px) {
+
+/*** TITLE & CONTAINERS ***/
+
+
+    .nop-jcarousel {
+	    position: relative;
+        margin: 20px 0;
+    }
+    .nop-jcarousel .carousel-title {
+        margin: 0 0 15px;
+        padding: 0 15px;
+        font: normal 38px/42px "Segoe Print", "segoe-print", sans-serif;
+        text-transform: capitalize;
+        position: relative;
+        text-align: center;
+    }
+    .nop-jcarousel .carousel-title strong {
+        display: block;
+        font-weight: normal;
+    }
+    .nop-jcarousel .carousel-title button ~ strong {
+        padding-bottom: 53px;
+    }
+
+    .nop-jcarousel .slick-carousel {
+        margin: 0 -10px;
+    }
+
+    .nop-jcarousel .carousel-item {
+        padding: 0 10px;
+    }
+    .nop-jcarousel .carousel-item .item-box {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .nop-jcarousel .category-item .picture, 
+    .nop-jcarousel .sub-category-item .picture,
+    .nop-jcarousel .manufacturer-item .picture, 
+    .nop-jcarousel .vendor-item .picture {
+        display: block;
+    }
+    .nop-jcarousel .category-item .title, 
+    .nop-jcarousel .sub-category-item .title,
+    .nop-jcarousel .manufacturer-item .title, 
+    .nop-jcarousel .vendor-item .title {
+        margin: 0 0 15px;
+    }
+
+
+
+/*** NAVIGATION ***/
+
+
+    .jCarouselMainWrapper .slick-prev,
+    .jCarouselMainWrapper .slick-next {
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 0;
+        border-width: 0;
+        border-radius: 24px;
+        cursor: pointer;
+    }
+    .jCarouselMainWrapper .slick-prev {
+        background: #ccc url('images/prev-horizontal.png') no-repeat center;
+        margin-left: -52px;
+    }
+    .jCarouselMainWrapper .slick-next {
+        background: #ccc url('images/next-horizontal.png') no-repeat center;
+    }
+
+    .jCarouselMainWrapper .slick-disabled, 
+    .jCarouselMainWrapper .slick-disabled:hover {
+        opacity: 0.6;
+        cursor: default;
+    }
+
+    .nop-jcarousel .slick-dots {
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nop-jcarousel .slick-dots li {
+        display: inline-block;
+        margin: 0 1px;
+    }
+    .nop-jcarousel .slick-dots button {
+	    width: 16px;
+	    height: 16px;
+	    overflow: hidden;
+        border: none;
+	    background: url('images/bullets.png') no-repeat left top;
+	    text-indent: 999px;
+    }
+    .nop-jcarousel .slick-active button {
+	    background-position: left bottom;
+    }
+
+
+}
+
+
+
+/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+@media all and (min-width: 769px) {
+
+    .nop-jcarousel .carousel-title {
+        padding: 0;
+        text-align: left;
+    }
+    .nop-jcarousel .carousel-title strong {
+        padding: 0 !important;
+    }
+    .nop-jcarousel .category-item .title, 
+    .nop-jcarousel .sub-category-item .title,
+    .nop-jcarousel .manufacturer-item .title, 
+    .nop-jcarousel .vendor-item .title {
+        margin: 0;
+    }
+
+    .jCarouselMainWrapper .slick-prev,
+	.jCarouselMainWrapper .slick-next {
+        top: 1px;
+        bottom: auto;
+        left: inherit;
+        right: 0;
+    }
+    .jCarouselMainWrapper .slick-prev {
+        margin: 0;
+        right: 45px;
+    }
+
+}
+

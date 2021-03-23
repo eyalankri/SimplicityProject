@@ -1,0 +1,86 @@
+
+.slider-wrapper {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 30px;
+}
+.picture-slide a {
+    display: block;
+}
+.picture-slide img {
+    display: none;
+    width: 100%;
+}
+.first-slide img {
+    display: block;
+}
+
+@media all and (min-width: 1025px) {
+
+    .master-wrapper-page.home .header-menu {
+	    background: rgba(255,255,255,0.7);
+    }
+    .master-wrapper-page.home > .slider-wrapper {
+        /*margin: -92px 0 -46px;*/ /*originally the slider was under the header menu*/
+        /*margin: -30px 0 -46px;*/ /*and the main content was over the slider*/
+        margin: -30px 0 30px;
+    }
+}
+
+/* DIRECTIONAL NAVIGATION */
+
+.anywhere-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    width: 45px;
+    height: 45px;
+    margin-top: -22px;
+    border: 1px solid #333;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    font-size: 0;
+}
+.anywhere-slider .slick-prev {
+    background-image: url(images/nav-button-left.png);
+    left: 20px;
+}
+.anywhere-slider .slick-next {
+    background-image: url(images/nav-button-right.png);
+    right: 20px;
+}
+.anywhere-slider .slick-arrow:hover {
+    opacity: 0.7;
+}
+
+/* BULLET NAVIGATION */ /*removed*/
+
+.anywhere-slider .slick-dots {
+    display: none !important;
+    position: absolute;
+    z-index: 99;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    font-size: 0;
+}
+.anywhere-slider .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.anywhere-slider .slick-dots button {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 0;
+}
+.anywhere-slider .slick-active button {
+    background: #a12;
+    border-color: #fff;
+}

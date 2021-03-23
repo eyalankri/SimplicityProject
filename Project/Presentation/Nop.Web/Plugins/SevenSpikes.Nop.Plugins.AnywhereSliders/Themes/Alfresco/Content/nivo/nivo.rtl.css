@@ -1,0 +1,19 @@
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Description: The default skin for the Nivo Slider.
+Version: 1.3
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+a.nivo-prevNav {
+	right: 15px;
+	left: auto;
+	background-image: url('arrow-right.png');
+}
+a.nivo-nextNav {
+	left: 15px;
+	right: auto;
+	background-image: url('arrow-left.png');
+}

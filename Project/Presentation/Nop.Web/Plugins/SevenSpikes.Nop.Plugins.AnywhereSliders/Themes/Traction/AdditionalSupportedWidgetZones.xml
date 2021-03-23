@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SupportedWidgetZones>
+  <WidgetZone>content_after_home_page_banner</WidgetZone>
+  <WidgetZone>home_page_top_after_topic</WidgetZone>
+  <WidgetZone>home_page_bottom_banner</WidgetZone>
+</SupportedWidgetZones>

@@ -1,0 +1,214 @@
+
+@-webkit-keyframes loader {
+	0% {
+		border-width: 3px;
+	}
+	15% {
+		opacity: 1;
+	}
+	100% {
+		border-width: 3px;
+		opacity: 0;
+		width: 50px;
+		height: 50px;
+	}
+}
+@-moz-keyframes loader {
+	0% {
+		border-width: 3px;
+	}
+	15% {
+		opacity: 1;
+	}
+	100% {
+		border-width: 3px;
+		opacity: 0;
+		width: 50px;
+		height: 50px;
+	}
+}
+@keyframes loader {
+	0% {
+		border-width: 3px;
+	}
+	15% {
+		opacity: 1;
+	}
+	100% {
+		border-width: 3px;
+		opacity: 0;
+		width: 50px;
+		height: 50px;
+	}
+}
+
+.slider-wrapper {
+    position: relative;
+}
+.picture-slide a {
+    display: block;
+}
+.picture-slide img {
+    width: 100%;
+	display: none;
+}
+.first-slide img {
+    display: block;
+}
+.anywhere-slider:before,
+.anywhere-slider:after {
+	content:"";
+	position: absolute;
+	top: 50%; left: 50%;
+    z-index: -1;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 0; height: 0;
+	border: 0px solid #97c300;
+	border-radius: 50%;
+	-webkit-animation: loader 1.6s cubic-bezier(0, 0, 0.09, 0.99) infinite;
+	-moz-animation: loader 1.6s cubic-bezier(0, 0, 0.09, 0.99) infinite;
+	animation: loader 1.6s cubic-bezier(0, 0, 0.09, 0.99) infinite;
+}
+.anywhere-slider .slick-track {
+    background-color: #fff;
+}
+.anywhere-slider > .picture-slide {
+    position: relative;
+}
+
+.anywhere-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,.4);
+    border: none;
+    border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: all .2s ease;
+}
+.anywhere-slider .slick-prev {
+    left: 15px;
+}
+.anywhere-slider .slick-next {
+    right: 15px;
+}
+.anywhere-slider .slick-arrow:hover {
+    background-color: #97c300;
+}
+.anywhere-slider .slick-arrow:before {
+    display: block;
+    font-family: "emporium-icons";
+    color: #fff;
+    font-size: 12px;
+}
+.anywhere-slider .slick-prev:before {
+    content: "\6b";
+}
+.anywhere-slider .slick-next:before {
+    content: "\6a";
+}
+
+.anywhere-slider .slick-dots {
+    text-align: center;
+    position: absolute;
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 99;
+    padding: 0;
+}
+.anywhere-slider .slick-dots li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    margin: 0 4px;
+}
+.anywhere-slider .slick-dots button {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: none;
+    font-size: 0;
+}
+.anywhere-slider .slick-dots button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color:  #000;
+    width: 6px;
+    height: 6px;
+    opacity: .4;
+    transition: all .2s ease;
+}
+.anywhere-slider .slick-dots button:hover:before {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 1;
+}
+.anywhere-slider .slick-active button:before {
+	opacity: 1;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0,0,0,.4);
+}
+
+
+/***** HOME BANNERS *****/
+
+
+.theme-home-banners {
+    margin-bottom: 50px;
+}
+.theme-home-banners + .theme-home-banners {
+    margin-top: -40px;
+}
+
+@media all and (min-width: 768px) {
+
+    .theme-home-banners + .theme-home-banners {
+        margin-top: -30px;
+    }
+}
+
+@media all and (min-width: 1025px) {
+
+    .theme-home-banners {
+        float: left;
+        width: calc(50% - 10px);
+        margin: 0 0 70px !important;
+    }
+    .theme-home-banners a img {
+        backface-visibility: hidden;
+        transition: opacity .2s ease;
+    }
+    .theme-home-banners a:hover img {
+        opacity: .8;
+    }
+    .theme-home-banners + .theme-home-banners {
+        margin-top: 0;
+        margin-left: 20px !important;
+    }
+    .theme-home-banners + .theme-home-banners + div {
+        clear: both;
+    }
+}

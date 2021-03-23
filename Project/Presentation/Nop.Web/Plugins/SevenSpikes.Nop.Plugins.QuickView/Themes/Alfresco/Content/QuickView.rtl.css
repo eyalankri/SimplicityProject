@@ -1,0 +1,82 @@
+/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/* MAIN WINDOW & HEADERS */
+
+.quickView .k-window-actions {
+	left: 11px;
+	right: auto;
+}
+.quickView .popup-header {
+	text-align: right;
+}
+
+/* PRODUCT GALLERY */
+
+.quickView .gallery {
+	float: right;
+	padding: 20px 20px 20px 10px;
+}
+.quickView .thumbnails a {
+	margin: 0 2% 2% 0;
+}
+.quickView .thumbnails a:nth-child(3n+1) {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+/* PRODUCT OVERVIEW */
+
+.quickView .overview {
+	float: left;
+	padding: 20px 10px 20px 20px;
+}
+.quickView .ui-accordion {
+	text-align: right;
+}
+.quickView .ui-accordion-header {
+	text-align: right;
+}
+.quickView .ui-accordion-header span {
+	left: 10px;
+	right: auto;
+}
+.quickView .overview .left {
+	float: right;
+	text-align: right;
+}
+.quickView .overview .right {
+	float: left;
+	text-align: left;
+}
+.quickView .giftcard label {
+	text-align: right;
+}
+
+/* PRODUCT GRIDS */
+
+.quickView .item-box {
+	margin: 5px 2% 5px 0;
+}
+.quickView .item-box:nth-child(2n+1),
+.quickView .item-box:nth-child(4n+1) {
+	margin-right: 2%;
+	margin-left: 0;
+}
+.quickView .item-box:nth-child(3n+1) {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+/* PRODUCT VARIANTS */
+
+.quickView .product-variant {
+	float: right;
+	margin: 0 2% 0 0;
+}
+.quickView .product-variant:first-child {
+	margin-right: 0;
+	margin-left: 0;
+}

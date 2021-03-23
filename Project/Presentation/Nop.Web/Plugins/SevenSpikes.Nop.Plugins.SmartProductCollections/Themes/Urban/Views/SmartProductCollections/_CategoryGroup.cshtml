@@ -1,0 +1,31 @@
+﻿@model CategoryGroupModel
+
+<div class="spc-header">
+    <h2 class="title">
+        <a href="@Url.RouteUrl("Category", new {SeName = Model.SeName})" title="@Model.Name">@Model.Name</a>
+    </h2>
+    <ul class="navigation">
+        @foreach (var tab in Model.Tabs)
+        {
+            <li class="tab" data-tabid="@tab.Id" notloaded>
+                <span>@tab.Title</span>
+            </li>
+        }
+    </ul>
+</div>
+
+<div class="spc-body">
+    <div class="category-products">
+        @foreach (var tab in Model.Tabs)
+        {
+            <div class="product-grid" data-tabid="@tab.Id">
+                <div class="item-grid">
+                    @await Html.PartialAsync("_Grid", tab.Products)
+                </div>
+            </div>
+        }
+        <div class="loading-overlay">
+            <span>@T("SevenSpikes.SmartProductCollections.Public.Loading")</span>
+        </div>
+    </div>
+</div>

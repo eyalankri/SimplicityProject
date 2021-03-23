@@ -1,0 +1,129 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nop-jcarousel {
+    margin: 0 0 15px;
+}
+.nop-jcarousel > .carousel-title {
+    padding: 10px 10px 9px;
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.nop-jcarousel > .carousel-title strong {
+    font-size: 17px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.nop-jcarousel .slick-carousel {
+    background: #f6f6f6;
+    padding: 1px 40px;
+    margin: 15px 0;
+}
+
+.jCarouselMainWrapper  {
+    margin-bottom: 30px;
+}
+
+.nop-jcarousel .carousel-item {
+    padding: 10px;
+    background: #fff;
+    outline: 1px solid #eee;
+}
+.nop-jcarousel .carousel-item .item-box {
+    width: 100% !important;
+    margin: 0;
+}
+
+
+.nop-jcarousel .slick-next, 
+.nop-jcarousel .slick-prev {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: -15px 0 0;
+    border: none;
+    font-size: 0;
+}
+.nop-jcarousel .slick-next {
+    right: 6px;
+    background: transparent url('images/next-horizontal.png') top no-repeat;
+}
+.nop-jcarousel .slick-prev {
+    left: 6px;
+    background: transparent url('images/prev-horizontal.png') top no-repeat;
+}
+.nop-jcarousel .slick-next:hover, 
+.nop-jcarousel .slick-next:focus, 
+.nop-jcarousel .slick-prev:hover, 
+.nop-jcarousel .slick-prev:focus {
+    background-position: bottom;
+}
+
+.nop-jcarousel .slick-disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+.nop-jcarousel .slick-disabled:hover {
+    background-position: top !important;
+}
+
+
+.nop-jcarousel .slick-dots {
+    text-align: center;
+    padding: 5px 0 0;
+}
+
+.nop-jcarousel .slick-dots li {
+    display: inline-block;
+}
+.nop-jcarousel .slick-dots li button {
+    width: 22px;
+    height: 22px;
+    background: url('images/bullets.png') no-repeat;
+    text-indent: -9999px;
+    border: 0;
+    cursor: pointer;
+}
+
+.nop-jcarousel .slick-dots .slick-active button {
+    background-position: 0 -22px;
+}
+
+.side-2 .nop-jcarousel .slick-carousel {
+    border: 1px solid #f6f6f6;
+}
+
+.side-2 .nop-jcarousel .carousel-item {
+    outline: none;
+}
+
+.side-2 .nop-jcarousel .carousel-title strong {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+@media all and (min-width: 769px) {
+    .nop-jcarousel .carousel-title {
+        text-align: left;
+    }    
+    .side-2 .nop-jcarousel .slick-carousel {
+        padding: 40px 0 0;
+    }
+    .side-2 .nop-jcarousel .carousel-item {
+        border: none;
+    }
+    .side-2 .nop-jcarousel .slick-next, 
+    .side-2 .nop-jcarousel .slick-prev {
+        top: 0;
+        margin: 5px 0 0;
+    }
+
+}

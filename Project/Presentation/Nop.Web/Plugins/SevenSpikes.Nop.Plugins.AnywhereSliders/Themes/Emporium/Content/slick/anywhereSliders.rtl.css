@@ -1,0 +1,26 @@
+
+.anywhere-slider .slick-prev {
+    right: 15px;
+    left: auto;
+}
+.anywhere-slider .slick-next {
+    left: 15px;
+    right: auto;
+}
+.anywhere-slider .slick-prev:before {
+    content: "\6a";
+}
+.anywhere-slider .slick-next:before {
+    content: "\6b";
+}
+
+@media all and (min-width: 1025px) {
+    .theme-home-banners {
+        float: right;
+    }
+
+    .theme-home-banners + .theme-home-banners {
+        margin-left: auto !important;
+        margin-right: 20px !important;
+    }
+}

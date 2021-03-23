@@ -1,0 +1,12 @@
+
+.anywhere-slider .slick-prev {
+    right: 15px;
+    left: auto;
+    background-position: -30px 0;
+}
+
+.anywhere-slider .slick-next {
+    left: 15px;
+    right: auto;
+    background-position: 0 0;
+}

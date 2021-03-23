@@ -1,0 +1,71 @@
+﻿
+.quick-view-button {
+    right: 50%;
+    margin: -20px -25px 0 0;
+}
+
+.quickView .k-window-titlebar.k-header {
+    border-radius: 12px 12px 0 0;
+}
+
+.quickView .k-window-titlebar.k-header .k-window-actions {
+    left: 10px;
+    right: auto;
+}
+
+.quickViewWindow .product-name {
+    right: 15px;
+    left: auto;
+}
+
+.quickViewWindow .gallery {
+    float: right;
+}
+.quickViewWindow .gallery .thumbnails a {
+    float: right;
+    margin: 0 5% 5% 0;
+}
+.quickViewWindow .gallery .thumbnails a:nth-child(3n+1) {
+    margin-right: 0;
+}
+
+.quickViewWindow .links-panel a {
+    background: url('images/arrow.png') right center no-repeat;
+    padding-right: 20px;
+    padding-left: 0;
+    text-align: right;
+}
+
+.quickViewWindow .overview {
+    float: left;
+    padding: 0 20px 0 0;
+}
+.quickViewWindow #accordion > h3 {
+    text-align: right;
+}
+.quickViewWindow #accordion > h3 span {
+    left: 11px;
+    right: auto;
+}
+.quickViewWindow .overview .left {
+    float: right;
+    text-align: right;
+}
+.quickViewWindow .overview .right {
+    float: left;
+    text-align: left;
+}
+.quickViewWindow .overview .add-to-cart-panel {
+    margin-right: 0;
+}
+
+.quickViewWindow .product-variant-list {
+    text-align: right;
+}
+.quickViewWindow .variant-info {
+    margin-right: 90px;
+    margin-left: 0;
+}
+.quickViewWindow .variant-info .prices {
+    text-align: right;
+}

@@ -1,0 +1,558 @@
+
+.slider-wrapper {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 2%;
+}
+.picture-slide a {
+    display: block;
+}
+.picture-slide img {
+    width: 100%;
+	display: none;
+}
+.first-slide img {
+    display: block;
+}
+
+/* DIRECTIONAL NAVIGATION */
+
+.anywhere-slider .slick-arrow {
+    position: absolute;
+    z-index: 99;
+    width: 153px;
+    height: 106px;
+    top: 50%;
+    margin-top: -53px;
+    border: none;
+    background: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    font-size: 0;
+}
+.anywhere-slider .slick-prev {
+    background-image: url('images/slider-arrow-left.png');
+    left: 1%;
+}
+.anywhere-slider .slick-next {
+    background-image: url('images/slider-arrow-right.png');
+    right: 1%;
+}
+.anywhere-slider .slick-arrow:hover {
+    opacity: 0.7;
+}
+
+/* BULLET NAVIGATION */
+
+.anywhere-slider .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    font-size: 0;
+    z-index: 99;
+    text-align: center;
+}
+.anywhere-slider .slick-dots li {
+    display: inline-block;
+    margin: 0 8px;
+}
+.anywhere-slider .slick-dots button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #aaa;
+    font-size: 0;
+    line-height: 62px;
+    color: #333;
+    font-family: proxima-nova;
+}
+.anywhere-slider .slick-active button {
+    background: #333;
+}
+
+@media all and (max-width: 480px) {
+    /*one banner only*/
+    .home-page-category-grid .oneBannerIncluded .item-box .title:after {
+        top: auto;
+        bottom: -15px;
+        border-style: solid none none;  
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #282828;
+    }
+    .home-page-category-grid .oneBannerIncluded .item-box:nth-child(2n+1) .picture {
+        margin: 0 0 25px;
+    }
+    .home-page-category-grid .oneBannerIncluded .item-box:nth-child(2n+1) .title {
+        position: relative;
+    }
+    /*two banners only*/
+
+    .home-page-category-grid.banner-included .item-box .picture {
+        margin: 0;
+    }
+    .home-page-category-grid.banner-included .item-box .title {
+        position: relative;
+    }
+    .home-page-category-grid.banner-included .item-box .title:after {
+        top: auto;
+        bottom: -30px;
+        border-top: 15px solid #282828;
+        border-bottom: 15px solid transparent;
+    }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+
+/* categories with 2 banners */
+    .banner-included .item-box.box-number-2,
+    .banner-included .item-box.box-number-4,
+    .banner-included .item-box.box-number-6,
+    .banner-included .item-box.box-number-8,
+    .banner-included .item-box.box-number-10,
+    .banner-included .item-box.box-number-12,
+    .banner-included .item-box.box-number-14,
+    .banner-included .item-box.box-number-16,
+    .banner-included .item-box.box-number-18 {
+        margin: 0 0 2% 2%;
+    }
+
+/* categories with 1 banner */
+
+    .oneBannerIncluded .clearingWrapper {
+        overflow: hidden;
+        clear: both;
+        display: block;
+    }
+    .oneBannerIncluded .clearingWrapper .item-box {
+        float: right;
+    } 
+
+    .oneBannerIncluded .item-box.box-number-2 {
+        margin: 0 0 2% 2% !important;
+    } 
+    .banner-included .oneBannerIncluded .item-box.box-number-2,
+    .banner-included .oneBannerIncluded .item-box.box-number-4,
+    .banner-included .oneBannerIncluded .item-box.box-number-6,
+    .banner-included .oneBannerIncluded .item-box.box-number-8,
+    .banner-included .oneBannerIncluded .item-box.box-number-10,
+    .banner-included .oneBannerIncluded .item-box.box-number-12,
+    .banner-included .oneBannerIncluded .item-box.box-number-14,
+    .banner-included .oneBannerIncluded .item-box.box-number-16,
+    .banner-included .oneBannerIncluded .item-box.box-number-18 {
+        margin: 0 2% 2% 0;
+    }
+}
+
+@media all and (max-width: 1024px) {
+   
+    .home-slider .logo-wrapper {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 0;
+        box-shadow: 0 1px 0 rgba(255,255,255,0.25);
+    }
+
+    .anywhere-slider .slick-arrow {
+        display: none;
+    }
+    .item-grid .slider-wrapper {
+        clear:both;
+        display:block;
+        width:100%;
+        overflow:hidden;
+    }
+
+    .anywhere-slider .slick-dots {
+        display: none !important;
+    }
+
+}
+
+@media all and (min-width: 1025px) {
+
+    .anywhere-slider .slick-dots {
+        display: block;
+    }
+
+    .home-slider .slider-wrapper {
+        min-height: 114px;
+    }
+
+    .home-slider .subheader-wrapper {
+        position: absolute;
+        top: 56px;
+        z-index: 2;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        box-shadow: 0 1px 0 rgba(255,255,255,0.25);
+    }
+
+    .admin-header-links ~ .subheader-wrapper {
+        top: 91px;
+    }
+    .home-page-category-grid.banner-included .item-box {
+        margin:0 0 1% !important;
+    }
+    .home-page-category-grid.banner-included .slider-wrapper {
+        float:right;
+        width:49.5%;
+    }
+    .home-page-category-grid.banner-included .item-box:last-child {
+        float:right !important;
+        margin:0 !important;
+    }
+    .banner-included .slider-wrapper {
+        margin: 0 0 1%;
+    }
+
+}
+
+/*HP banners*/
+
+@media all and (min-width: 769px) {
+
+    .item-grid .slider-wrapper {
+        width:49.5%;
+        float:left !important;
+        clear:both;
+        margin:0 0 1%;
+    }
+    .item-grid .slider-wrapper:first-child {
+        float: right !important;
+    }
+    .home-page-category-grid.banner-included .item-box {
+        float: left;
+        width:24.25%;
+        margin:0 1% 1% 0;
+        clear: none;
+    }
+    .home-page-category-grid.banner-included .item-box.box-number-3,
+    .home-page-category-grid.banner-included .item-box.box-number-4 {
+        margin: 0 0 1% 1%;
+    }
+    .home-page-category-grid.banner-included .item-box.box-number-8,
+    .home-page-category-grid.banner-included .item-box.box-number-12,
+    .home-page-category-grid.banner-included .item-box.box-number-16 {
+        margin: 0 0 1% 0;
+    }
+    .home-page-category-grid.banner-included .item-box.box-number-5,
+    .home-page-category-grid.banner-included .item-box.box-number-9,
+    .home-page-category-grid.banner-included .item-box.box-number-15 {
+        clear: both;
+    }
+
+/*categories titles*/
+
+    .home-page-category-grid.banner-included .item-box .title.big-title a{
+        padding:18% 7% 0;
+    }
+    .home-page-category-grid.banner-included .item-box .title.big-title a span{
+        top:12px;
+    }
+    .home-page-category-grid.banner-included .item-box .title.big-title a span:before{
+        margin:0 0 5px -15px;
+    }
+
+/* categories one banner only */
+    
+    .home-page-category-grid .oneBannerIncluded .item-box.box-number-1 {
+        float: right;
+    } 
+    .oneBannerIncluded .item-box.box-number-6.oneBannerOnly,
+    .oneBannerIncluded .item-box.box-number-10.oneBannerOnly,
+    .oneBannerIncluded .item-box.box-number-14.oneBannerOnly,
+    .oneBannerIncluded .item-box.box-number-18.oneBannerOnly,
+    .oneBannerIncluded .item-box.box-number-22.oneBannerOnly {
+        margin-right: 0;
+    }
+
+    .oneBannerIncluded .item-box.oneBannerOnly {
+        margin: 0 0 1% 1% !important;
+    }
+    .oneBannerIncluded .item-box.box-number-3.oneBannerOnly,
+    .oneBannerIncluded .item-box.box-number-7.oneBannerOnly,
+    .oneBannerIncluded .item-box.box-number-11.oneBannerOnly,
+    .oneBannerIncluded .item-box.box-number-15.oneBannerOnly,
+    .oneBannerIncluded .item-box.box-number-19.oneBannerOnly {
+        margin: 0 0 1% !important;
+    }
+    .oneBannerIncluded .item-box.box-number-5.oneBannerOnly,
+    .oneBannerIncluded .item-box.box-number-9.oneBannerOnly,
+    .oneBannerIncluded .item-box.box-number-15.oneBannerOnly {
+        clear: none;
+    }
+
+/* end */
+
+}
+
+@media all and (min-width: 1025px) and (max-width:1170px) {
+
+/*main slider only*/
+
+    .anywhere-slider .slick-prev {
+        background-image: url("images/main-slider-arrow-left.png");
+        left: 1%;
+        width: 80px;
+        height: 80px;
+        border: none;
+    }
+    .anywhere-slider .slick-next {
+        background-image: url("images/main-slider-arrow-right.png");
+        right: 1%;
+        width: 80px;
+        height: 80px;
+        border: none;
+    }
+    .anywhere-slider .slick-arrow:hover {
+        border: none;
+    }
+
+}
+
+
+@media all and (min-width: 1025px) {
+
+.clearingWrapper {
+    clear: both;
+}
+
+/* categories two banners */
+
+    .home-page-category-grid.banner-included .item-box {
+        width:49.5%;
+        margin: 0 1% 1% 0 !important;
+    }
+
+    .home-page-category-grid.banner-included .box-number-3,
+    .home-page-category-grid.banner-included .box-number-4 {
+        margin: 0 0 1% 1% !important;
+    }
+    
+    .home-page-category-grid.banner-included .box-number-6,
+    .home-page-category-grid.banner-included .box-number-8,
+    .home-page-category-grid.banner-included .box-number-10,
+    .home-page-category-grid.banner-included .box-number-12,
+    .home-page-category-grid.banner-included .box-number-14,
+    .home-page-category-grid.banner-included .box-number-16 {
+        margin: 0 0 1% 0 !important;
+        clear: none;
+    }
+
+/* categories withe 2 banners - second banner position */
+
+    .home-page-category-grid.banner-included .slider-wrapper.no-captions:nth-child(5) {
+        clear: both;
+        float: left !important;
+    }
+
+/* end */
+
+    .home-page-category-grid.banner-included .box-number-6 .title,
+    .home-page-category-grid.banner-included .box-number-10 .title,
+    .home-page-category-grid.banner-included .box-number-14 .title {
+        right: 0;
+        left: auto;
+    }
+    .home-page-category-grid.banner-included .box-number-6 .title:after,
+    .home-page-category-grid.banner-included .box-number-10 .title:after,
+    .home-page-category-grid.banner-included .box-number-14 .title:after {
+        border-color: rgba(0, 0, 0, 0) #282828 rgba(0, 0, 0, 0);
+        border-style: solid solid solid none;
+        border-width: 14px 14px 14px medium;
+        left: -14px;
+        margin: -10px 0 0;
+        top: 50%;
+    }
+    .home-page-category-grid.banner-included .box-number-6 .picture,
+    .home-page-category-grid.banner-included .box-number-10 .picture,
+    .home-page-category-grid.banner-included .box-number-14 .picture {
+        float: left;
+    }
+
+    .home-page-category-grid.banner-included .box-number-7 .title,
+    .home-page-category-grid.banner-included .box-number-11 .title,
+    .home-page-category-grid.banner-included .box-number-15 .title {
+        left: 0;
+        right: auto;
+    }
+    .home-page-category-grid.banner-included .box-number-7 .title:after,
+    .home-page-category-grid.banner-included .box-number-11 .title:after,
+    .home-page-category-grid.banner-included .box-number-15 .title:after {
+        border-bottom: 14px solid rgba(0, 0, 0, 0);
+        border-left: 14px solid #282828;
+        border-top: 14px solid rgba(0, 0, 0, 0);
+        left: auto;
+        margin: -10px 0 0;
+        right: -14px;
+        top: 50%;
+        border-width: 14px 0 14px 14px;
+    }
+    .home-page-category-grid.banner-included .box-number-7 .picture,
+    .home-page-category-grid.banner-included .box-number-11 .picture,
+    .home-page-category-grid.banner-included .box-number-15 .picture {
+        float: right;
+    } 
+
+/* categories around the banners - flipped */
+
+    .home-page-category-grid.banner-included .item-box.box-number-2 .title {
+        right: auto;
+    }
+    .home-page-category-grid.banner-included .item-box.box-number-2 .picture {
+        float: right;
+    }
+    .home-page-category-grid.banner-included .item-box.box-number-1 .title,
+    .home-page-category-grid.banner-included .item-box.box-number-3 .title {
+        right: 0;
+        left: auto;
+    }
+    .home-page-category-grid.banner-included .item-box.box-number-2 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-4 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-7 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-8 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-11 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-12 .title:after {
+        border-color: transparent transparent transparent #282828;
+        border-style: solid;
+        border-width: 14px;
+        left: auto;
+        margin: -10px 0 0;
+        right: -28px;
+        top: 50%;
+    }
+    .home-page-category-grid.banner-included .item-box.box-number-1 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-3 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-5 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-6 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-9 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-10 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-13 .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-14 .title:after {
+        top: 50%;
+        right: auto;
+        left: -14px;
+        margin: -10px 0 0 0;
+        border-color: transparent #282828;
+        border-style: solid solid solid none;
+        border-width: 14px 14px 14px medium;
+    }
+    .home-page-category-grid.banner-included .item-box.box-number-1 .picture,
+    .home-page-category-grid.banner-included .item-box.box-number-3 .picture {
+        float: left;
+    }
+
+/* end */
+
+/*categories one banner only*/
+
+
+    .home-page-category-grid .oneBannerIncluded .item-box.box-number-2 {
+        clear: none;
+    }
+    .home-page-category-grid .oneBannerIncluded .box-number-3,
+    .home-page-category-grid .oneBannerIncluded .box-number-5,
+    .home-page-category-grid .oneBannerIncluded .box-number-7,
+    .home-page-category-grid .oneBannerIncluded .box-number-9,
+    .home-page-category-grid .oneBannerIncluded .box-number-11,
+    .home-page-category-grid .oneBannerIncluded .box-number-13,
+    .home-page-category-grid .oneBannerIncluded .box-number-15 {
+        margin: 0 0 1% 0 !important;
+    }
+    .home-page-category-grid .oneBannerIncluded .box-number-6,
+    .home-page-category-grid .oneBannerIncluded .box-number-8,
+    .home-page-category-grid .oneBannerIncluded .box-number-10,
+    .home-page-category-grid .oneBannerIncluded .box-number-12,
+    .home-page-category-grid .oneBannerIncluded .box-number-14,
+    .home-page-category-grid .oneBannerIncluded .box-number-16,
+    .home-page-category-grid .oneBannerIncluded .box-number-18,
+    .home-page-category-grid .oneBannerIncluded .box-number-20 {
+        margin: 0 0 1% 1% !important;
+    }
+
+    .home-page-category-grid.banner-included .item-box.box-number-2.oneBannerOnly .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-4.oneBannerOnly .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-7.oneBannerOnly .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-8.oneBannerOnly .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-11.oneBannerOnly .title:after,
+    .home-page-category-grid.banner-included .item-box.box-number-12.oneBannerOnly .title:after {
+        border-color: transparent #282828 transparent transparent;
+        border-style: solid;
+        border-width: 14px;
+        left: -28px;
+        margin: -10px 0 0;
+        right: auto;
+        top: 50%;
+    }
+
+    .home-page-category-grid.banner-included .item-box.box-number-5.oneBannerOnly .title::after, 
+    .home-page-category-grid.banner-included .item-box.box-number-6.oneBannerOnly .title::after, 
+    .home-page-category-grid.banner-included .item-box.box-number-9.oneBannerOnly .title::after, 
+    .home-page-category-grid.banner-included .item-box.box-number-10.oneBannerOnly .title::after, 
+    .home-page-category-grid.banner-included .item-box.box-number-13.oneBannerOnly .title::after, 
+    .home-page-category-grid.banner-included .item-box.box-number-14.oneBannerOnly .title::after {
+        right: -28px;
+        left: auto;  
+        border-width: 14px;
+        border-color: transparent transparent transparent #282828;
+        border-style: solid;      
+    }
+
+
+/* categories with 1 banner flipped */
+    .oneBannerIncluded .item-box.box-number-4.oneBannerOnly .title {
+        left: auto;
+        right: 0;
+    }
+    .oneBannerIncluded .item-box.box-number-4.oneBannerOnly .picture {
+        float: none;
+    }
+    .oneBannerIncluded .item-box.box-number-5.oneBannerOnly .title,
+    .oneBannerIncluded .item-box.box-number-6.oneBannerOnly .title,
+    .oneBannerIncluded .item-box.box-number-9.oneBannerOnly .title,
+    .oneBannerIncluded .item-box.box-number-10.oneBannerOnly .title,
+    .oneBannerIncluded .item-box.box-number-13.oneBannerOnly .title,
+    .oneBannerIncluded .item-box.box-number-14.oneBannerOnly .title {
+        left: 0;
+        right: auto;
+    }
+    .oneBannerIncluded .item-box.box-number-5.oneBannerOnly .picture,
+    .oneBannerIncluded .item-box.box-number-6.oneBannerOnly .picture,
+    .oneBannerIncluded .item-box.box-number-9.oneBannerOnly .picture,
+    .oneBannerIncluded .item-box.box-number-10.oneBannerOnly .picture,
+    .oneBannerIncluded .item-box.box-number-13.oneBannerOnly .picture,
+    .oneBannerIncluded .item-box.box-number-14.oneBannerOnly .picture {
+        float: right;
+    }
+
+    .oneBannerIncluded .item-box.box-number-7.oneBannerOnly .title,
+    .oneBannerIncluded .item-box.box-number-8.oneBannerOnly .title,
+    .oneBannerIncluded .item-box.box-number-11.oneBannerOnly .title,
+    .oneBannerIncluded .item-box.box-number-12.oneBannerOnly .title,
+    .oneBannerIncluded .item-box.box-number-15.oneBannerOnly .title,
+    .oneBannerIncluded .item-box.box-number-16.oneBannerOnly .title {
+        left: auto;
+        right: 0;
+    }
+    .oneBannerIncluded .item-box.box-number-7.oneBannerOnly .picture,
+    .oneBannerIncluded .item-box.box-number-8.oneBannerOnly .picture,
+    .oneBannerIncluded .item-box.box-number-11.oneBannerOnly .picture,
+    .oneBannerIncluded .item-box.box-number-12.oneBannerOnly .picture,
+    .oneBannerIncluded .item-box.box-number-15.oneBannerOnly .picture,
+    .oneBannerIncluded .item-box.box-number-16.oneBannerOnly .picture {
+        float: left;
+    }
+
+/*end*/
+
+
+/*HOMEPAGE BANNERS AND CATEGORIES FINAL*/
+
+    .home-page-category-grid .item-box .picture a::before {
+        padding-top: 100%;
+    }
+}

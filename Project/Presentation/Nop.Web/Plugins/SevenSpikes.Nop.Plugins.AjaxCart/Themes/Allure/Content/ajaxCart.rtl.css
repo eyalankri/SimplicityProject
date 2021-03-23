@@ -1,0 +1,94 @@
+﻿/*
+* Copyright 2019 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*RTL*/
+
+.productQuantityTextBox {
+    float: right;
+}
+
+
+/*** QUANTITY BOX & BUY BUTTON ***/
+
+.ajax-cart-button-wrapper input[type="text"],
+.ajax-cart-button-wrapper select {
+    margin-left: -2px;
+    margin-right: 0;
+}
+.product-list .item-box .add-info .ajax-cart-button-wrapper {
+    float: right;
+    margin: 0 0 0 1px;
+}
+
+/****** MAIN WINDOW *****/
+
+.productAddedToCartWindowTitle {
+    left: inherit;
+    right: 0;
+}
+
+.miniProductDetailsView .product-name {
+    left: inherit;
+    right: 13px;
+    text-align: right;
+}
+.ajaxCart .k-window-titlebar.k-header .k-window-actions {
+    right: inherit;
+    left: 10px;
+}
+.ajaxCart .k-window-titlebar.k-header .k-window-actions {
+    left: 15px;
+    right: auto;
+}
+
+
+
+/*** SINGLE PRODUCT WINDOW ***/
+
+.productAddedToCartWindowSummary a {
+    text-align: right;
+}
+    .productAddedToCartWindowSummary a:before {
+        left: auto;
+        right: 3px;
+    }
+
+/*** GROPED PRODUCTS WINDOW ***/
+
+.miniProductDetailsView .product-details-page .overview {
+    margin: 0 150px 0 0;
+}
+.productAddedToCartWindowImage,
+.productAddedToCartWindowDescription {
+    float: right;
+}
+.productAddedToCartWindowDescription {
+    text-align: right;
+}
+.productAddedToCartWindowImage {
+    margin: 0 0 15px 15px;
+}
+.miniProductDetailsView .product-essential .gallery {
+    float: right;
+    margin: 0 0 0 20px;
+}
+.miniProductDetailsView .add-to-cart > *,
+.miniProductDetailsView .add-button-wrap {
+    float: right;
+}
+.miniProductDetailsView .add-to-cart > * {
+    margin: 0 -2px 0 0;
+}
+.miniProductDetailsView .add-to-cart > *:first-child {
+	margin: 0;
+}
+.miniProductDetailsView .product-essential .overview .prices,
+.miniProductDetailsView .attributes dl,
+.miniProductDetailsView h1 {
+    text-align: right;
+}
+.ajaxCart .tax-shipping-info {
+    text-align: right;
+}

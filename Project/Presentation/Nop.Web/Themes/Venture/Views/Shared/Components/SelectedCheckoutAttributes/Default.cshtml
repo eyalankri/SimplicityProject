@@ -1,0 +1,8 @@
+﻿@model string
+
+@if (!string.IsNullOrEmpty(Model))
+{
+    <div class="selected-checkout-attributes">
+        @Html.Raw(Model)
+    </div>
+}

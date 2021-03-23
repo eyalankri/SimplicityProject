@@ -1,0 +1,12 @@
+
+.cloudzoom-zoom {
+    right: calc(100% + 30px) !important;
+	left: auto !important;
+}
+
+@media all and (min-width: 1347px) {
+
+    .gallery .picture-wrapper {
+        float: left;
+    }
+}

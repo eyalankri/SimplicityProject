@@ -1,0 +1,113 @@
+/*
+Skin Name: Nivo Slider Default Theme - modified for navigation inside
+Skin URI: http://nivo.dev7studios.com
+Description: The default skin for the Nivo Slider.
+Version: 1.3
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+Supports Thumbs: true
+*/
+
+.nivoSlider {
+    position: relative;
+    background: #fff url(loading.gif) no-repeat 50% 50%;
+    border-radius: 5px !important;
+    overflow: hidden !important;
+}
+
+.nivoSlider img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	border-radius: 5px !important;
+	overflow: hidden !important;
+}
+
+.nivoSlider a {
+	border: 0;
+	display: block;
+}
+
+.nivo-controlNav {
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    margin-top: -40px;
+    z-index: 7;
+}
+
+.nivo-controlNav a {
+	display: inline-block;
+	width: 21px;
+	height: 20px;
+	background: url('bullets.png') no-repeat;
+	text-indent: -9999px;
+	border: 0;
+	margin: 0;
+}
+
+.nivo-controlNav a.active {
+	background-position: 0 -20px;
+}
+
+.nivo-directionNav a {
+    display: block;
+	top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-indent: -9999px;
+    border: 0;
+    opacity: 0;
+    transition: all .2s ease;
+}
+a.nivo-nextNav {
+    width: 30px;
+    height: 30px;
+    right: 15px;
+	background: url('arrows.png') right top no-repeat;
+}
+
+a.nivo-prevNav {
+    width: 30px;
+    height: 30px;
+    left: 15px;
+	background: url('arrows.png') left top no-repeat;
+}
+
+.nivoSlider:hover .nivo-directionNav a {
+    opacity: 1;
+}
+
+.nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.nivo-caption a {
+	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+
+.nivo-caption a:hover {
+	color: #fff;
+}
+
+.nivo-controlNav.nivo-thumbs-enabled {
+    width: 100%;
+    position: static;
+    margin-top: 0;
+}
+
+.nivo-controlNav.nivo-thumbs-enabled a {
+	width: auto;
+	height: auto;
+	background: none;
+	margin-bottom: 5px;
+}
+
+.nivo-controlNav.nivo-thumbs-enabled img {
+	display: block;
+	width: 120px;
+	height: auto;
+}

@@ -1,0 +1,4 @@
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+    display: none !important;
+}

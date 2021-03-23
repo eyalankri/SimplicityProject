@@ -1,0 +1,44 @@
+.nivo-directionNav a:before {
+	right: 0;
+	left: 0;
+}
+.nivo-directionNav a.nivo-prevNav {
+	right: -50px;
+	left: auto;
+}
+.slider-wrapper:hover .nivo-directionNav a.nivo-prevNav {
+	right: 0;
+	left: auto;
+}
+.nivo-directionNav a.nivo-nextNav {
+	left: -50px;
+	right: auto;
+}
+.slider-wrapper:hover .nivo-directionNav a.nivo-nextNav {
+	left: 0;
+	right: auto;
+}
+.nivo-controlNav {
+	left: 0;
+	right: auto;
+}
+.nivo-controlNav:before {
+	right: -7px;
+	left: -7px;
+}
+.nivo-thumbs-enabled {
+	right: 0;
+	left: auto;
+}
+.nivo-caption {
+	right: 50%;
+	left: auto;
+}
+.nivo-directionNav a.nivo-prevNav:before {
+    content: "q";
+}
+.nivo-directionNav a.nivo-nextNav:before {
+    content: "r";
+}
+@media all and (min-width: 1201px) {
+}

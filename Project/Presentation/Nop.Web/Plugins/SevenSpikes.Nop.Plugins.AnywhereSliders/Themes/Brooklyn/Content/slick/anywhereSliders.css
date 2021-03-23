@@ -1,0 +1,125 @@
+
+.slider-wrapper {
+    position: relative;
+    z-index: 1;
+}
+.picture-slide a {
+    display: block;
+}
+.picture-slide img {
+    width: 100%;
+	display: none;
+}
+.first-slide img {
+    display: block;
+}
+
+/* DIRECTIONAL NAVIGATION */
+
+.anywhere-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    width: 60px;
+    height: 120px;
+    margin-top: -60px;
+    border: none;
+    background-color: rgba(255,255,255,0.4);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    font-size: 0;
+}
+.anywhere-slider .slick-prev {
+    left: 0;
+    background-image: url(images/slider-arrow-left.png);
+}
+.anywhere-slider .slick-next {
+    right: 0;
+    background-image: url(images/slider-arrow-right.png);
+}
+.anywhere-slider .slick-arrow:hover {
+    opacity: 0.4;
+}
+
+/* BULLET NAVIGATION */
+
+.anywhere-slider .slick-dots {
+    padding: 10px 0;
+    margin-bottom: -30px;
+    font-size: 0;
+    text-align: center;
+}
+.anywhere-slider .slick-dots li {
+    display: inline-block;
+    margin: 0 4px;
+}
+.anywhere-slider .slick-dots button {
+    width: 80px;
+    height: 3px;
+    font-size: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.12);
+}
+.anywhere-slider .slick-active button {
+    background: rgba(0,0,0,0.3);
+}
+.banner-wrapper .slick-dots {
+    display: none !important;
+}
+
+
+@media all and (max-width: 768px) {
+
+    .banner-wrapper img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .banner-wrapper .hide-banner {
+        display: none !important;
+    }
+}
+
+@media all and (min-width: 769px) {
+    
+    .banner-wrapper {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+    .main-banner-1 {
+        display: table-cell;
+        vertical-align: top;
+        width: 60%;
+    }
+    .main-banner-2 {
+        display: table-cell;
+        vertical-align: top;
+        width: 40%;
+        position: relative;
+        overflow: hidden;
+        border-left: 10px solid #fff;
+    }
+    .main-banner-2 .slider-wrapper {
+        position: absolute;
+        top: 0; right: 0;
+        bottom: 0; left: 0;
+    }
+    .main-banner-2 .slider-wrapper img {
+        position: absolute;
+        top: 0; left: 0;
+        width: auto !important;
+        max-width: none !important;
+        height: 100%;
+    }
+    .main-banner-2 .slider-wrapper div:not(.slick-arrows) {
+        height: 100% !important;
+    }
+}
+
+@media all and (min-width: 1025px) {
+
+    .banner-wrapper {
+         margin: 0 0 80px;
+    }
+}

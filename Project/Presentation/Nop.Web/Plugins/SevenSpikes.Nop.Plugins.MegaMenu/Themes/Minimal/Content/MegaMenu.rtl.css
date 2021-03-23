@@ -1,0 +1,17 @@
+
+.header.mobile ~ .header-menu-parent .dropdown .box a {
+    text-align: right;
+}
+
+.header.normal .mega-menu .box {
+    text-align: right;
+}
+
+.header.normal .mega-menu .box .subcategories li {
+    text-align: right;
+}
+
+.header.normal .mega-menu .box .subcategories a {
+    background: url('images/rtl-menu-arrow.png') right center no-repeat;
+    padding: 8px 14px 8px 0;
+}

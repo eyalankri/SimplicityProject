@@ -1,0 +1,35 @@
+﻿span.search-box-text,
+    .search-box select,
+.instant-search-item .img-block {
+	float: right;
+}
+*{
+	direction: rtl;
+}
+input.instant-search-busy{
+	background: #fff url('../../../images/ajax-loader-small.gif') no-repeat left center !important;
+}
+.search-box .custom-select-text {
+    background: url("../../../../../Themes/Urban/Content/img/select.png") no-repeat scroll 8% center rgba(0, 0, 0, 0);
+}
+.search-box select{
+	margin-right: -1px;
+	margin-left: 0;
+}
+.instant-search-item .img-block img{
+	left: 0;
+	right: 0;
+}
+.instant-search-item .detail{
+	margin-right: 90px;
+	margin-left: 0;
+}
+/*custom search*/
+    .search-box .custom-select{
+	float: right;
+	text-align: right;
+}
+.search-box .custom-select-text{
+	right: 0;
+	left: auto;
+}

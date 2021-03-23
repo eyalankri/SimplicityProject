@@ -1,0 +1,73 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*=====================================================
+    
+    DESKTOP
+
+=====================================================*/
+
+@media all and (min-width: 1025px) {
+
+/* MAIN PANEL & DROPDOWN*/
+
+    .mega-menu .dropdown.fullWidth {
+        right: 50%;
+        left: auto;
+        margin-right: -500px;
+        margin-left: 0;
+    }
+
+/* ROWS AND BOXES */
+
+    .dropdown .box {
+        float: right;
+    }
+    .categories.fullWidth .box {
+        border-right: 1px dashed #e6e6e6;
+        border-left: 0;
+    }
+        .categories.fullWidth .row .box:first-child {
+            border-right: 0;
+        }
+    .mega-menu .title {
+        text-align: right;
+    }
+    .mega-menu .categories .picture {
+        float: right;
+    }
+    .mega-menu .subcategories {
+	    margin-left: 0;
+        margin-right: 110px;
+    }
+
+    .mega-menu .box li {
+        text-align: right;
+    }
+        .mega-menu .box .subcategories li a:before,
+        .categories li a:before,
+        .manufacturers li a:before,
+        .vendors li a:before {
+            left: auto;
+            right: 3px;
+        }
+
+}
+
+@media all and (min-width: 1150px) {
+
+    .mega-menu .dropdown.fullWidth {
+        margin-left: 0;
+        margin-right: -453px;
+    }
+
+}
+
+@media all and (min-width:1281px) {
+    .mega-menu .dropdown.fullWidth {
+        margin-right: -569px;
+        margin-left: auto;
+    }
+}

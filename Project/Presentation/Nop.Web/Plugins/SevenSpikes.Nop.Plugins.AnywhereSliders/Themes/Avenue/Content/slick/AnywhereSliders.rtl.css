@@ -1,0 +1,15 @@
+
+.anywhere-slider .slick-prev {
+    right: 5%;
+    left: auto;
+}
+.anywhere-slider .slick-next {
+    left: 5%;
+    right: auto;
+}
+.anywhere-slider .slick-prev:after {
+    content: "\e908";
+}
+.anywhere-slider .slick-next:after {
+    content: "\e907";
+}

@@ -1,0 +1,63 @@
+
+.hover-effect-1 .quick-view-button a {
+	background-position: right center;
+    padding: 0 35px 0 0;
+}
+.product-list .quick-view-button a {
+    background-position: right 25px center;
+    padding-right: 60px;
+	padding-left: 0;
+}
+
+.quickView .k-window-actions {
+	right: auto;
+    left: 5px;
+}
+
+.quickView h1.product-name {
+    text-align: right;
+}
+
+.quickView .gallery {
+    float: right;
+}
+.quickView .thumbnails a {
+    float: right;
+    margin: 3px 3px 0 0;
+}
+.quickView .thumbnails a:nth-child(3n+1) {
+    margin-right: 0;
+}
+
+.quickView .overview {
+    float: left;
+}
+.quickView .ui-accordion-header {
+    padding: 13px 0 13px 24px;
+    text-align: right;
+}
+.quickView .ui-accordion-header span {
+	right: auto;
+    left: 3px;
+}
+.quickView .overview .left {
+    float: right;
+    text-align: right;
+}
+.quickView .overview .right {
+    float: left;
+    text-align: left;
+}
+.quickView .overview .rental-attributes dt {
+    float: right;
+}
+.quickView .overview .product-specs-box .data-table td {
+    text-align: right;
+}
+.quickView .overview .full-description {
+    text-align: right;
+}
+.quickView .variant-picture + div {
+    float: right;
+    padding: 0 15px 0 0;
+}

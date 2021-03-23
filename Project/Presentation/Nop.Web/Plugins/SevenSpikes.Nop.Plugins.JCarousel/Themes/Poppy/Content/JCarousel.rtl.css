@@ -1,0 +1,44 @@
+.nop-jcarousel .slick-carousel:before {
+	right: 50%;
+	left: auto;
+	margin-right: -48px;
+	margin-left: 0;
+}
+.jCarouselMainWrapper .slick-prev {
+	right: 50%;
+	left: auto;
+	margin-right: -48px;
+	margin-left: 0;
+}
+.jCarouselMainWrapper .slick-next {
+	left: 50%;
+	right: auto;
+	margin-left: -48px;
+	margin-right: 0;
+}
+.jCarouselMainWrapper .slick-next:before {
+    content: 'p';
+}
+.jCarouselMainWrapper .slick-prev:before {
+    content: 's';
+}
+.jCarouselMainWrapper .slick-dots li button:before {
+	right: 0;
+	left: 0;
+}
+@media all and (min-width: 1001px) {
+	.desktop .nop-jcarousel .slick-carousel:before {
+		margin-right: -38px;
+		margin-left: 0;
+	}
+	.desktop .jCarouselMainWrapper .slick-prev {
+		margin-right: -38px;
+		margin-left: 0;
+	}
+	.desktop .jCarouselMainWrapper .slick-next {
+		margin-left: -38px;
+		margin-right: 0;
+	}
+}
+@media all and (min-width: 1281px) {
+}

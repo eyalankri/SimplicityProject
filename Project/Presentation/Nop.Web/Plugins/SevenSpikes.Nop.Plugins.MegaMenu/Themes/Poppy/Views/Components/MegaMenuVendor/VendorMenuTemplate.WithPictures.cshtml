@@ -1,0 +1,44 @@
+﻿@using Nop.Web.Models.Catalog
+@using SevenSpikes.Nop.Framework.MVCExtensions
+@using SevenSpikes.Nop.Plugins.MegaMenu.Models
+
+@model MenuItemVendorModel
+
+@{
+    var hasVendors = Model.Vendors.Count > 0;
+    var hasSublistClass = hasVendors ? "has-sublist" : string.Empty;
+    var withSubcategoriesClass = hasVendors ? "with-subcategories" : string.Empty;
+    var withOrWithoutSublistClass = hasVendors ? "with-sublist-wrap" : "without-sublist-wrap";
+}
+
+<li class="@hasSublistClass @withOrWithoutSublistClass">
+
+    <a class="@withSubcategoriesClass" href="@Url.RouteUrl("VendorList")" title="@Model.Item.Title"><span>@Model.Item.Title</span></a>
+
+    @if (hasVendors)
+    {
+        <div class="dropdown vendors fullWidth">
+            <div class="row-wrapper">
+                <div class="row">
+                    @foreach (var vendor in Model.Vendors)
+                    {
+                        <div class="box">
+                            <div class="picture">
+                                <a class="vendor" href="@Url.RouteUrl("Vendor", new { vendor.SeName })" title="@vendor.Name">
+                                    <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                         data-original="@vendor.PictureModel.ImageUrl" alt="@vendor.PictureModel.AlternateText" title="@vendor.PictureModel.AlternateText" />
+                                </a>
+                            </div>
+                            <div class="title">
+                                <a class="vendor" href="@Url.RouteUrl("Vendor", new { vendor.SeName })" title="@vendor.Name">
+                                    <span>@vendor.Name</span>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+
+</li>

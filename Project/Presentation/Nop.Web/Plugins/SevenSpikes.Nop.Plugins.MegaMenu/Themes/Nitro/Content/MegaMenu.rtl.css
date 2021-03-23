@@ -1,0 +1,47 @@
+﻿
+@media all and (min-width: 1025px) {
+
+    .dropdown .box,
+    .mega-menu .categories .picture {
+	    float: right;
+    }
+    .mega-menu .box li {
+	    text-align: right;
+    }
+
+    .mega-menu .dropdown {
+	    background-position: top right;
+    }
+    .mega-menu .dropdown.fullWidth {
+	    right: 50%;
+	    left: auto;
+	    margin-right: -490px;
+	    margin-left: 0;
+    }
+    .mega-menu .title {
+	    padding: 3px 25px 10px 0;
+	    text-align: right;
+    }
+    .mega-menu .title:before {
+	    right: 0;
+	    left: auto;
+    }
+    .mega-menu .subcategories {
+	    margin-right: 100px;
+	    margin-left: 0;
+    }
+    .mega-menu .box li a {
+	    background: url(images/arrow-left-black.png) right center no-repeat;
+	    padding-right: 10px;
+	    padding-left: 0;
+    }
+
+}
+
+@media all and (min-width: 1280px) {
+	
+	.mega-menu .dropdown.fullWidth {
+		margin-right: -600px;
+		margin-left: 0;
+	}
+}

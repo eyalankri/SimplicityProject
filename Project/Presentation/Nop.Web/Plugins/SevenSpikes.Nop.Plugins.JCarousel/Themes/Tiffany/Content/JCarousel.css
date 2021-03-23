@@ -1,0 +1,188 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nop-jcarousel {
+    position:relative;
+    max-width:1200px;
+    margin:0 auto 60px;
+}
+.nop-jcarousel > h2 {
+    margin:auto;
+    background: rgba(255,255,255,.5);
+    color: #000;
+    text-transform: uppercase;
+    font: bold 22px/48px Arvo;
+    font-weight:normal;
+    letter-spacing:1px;
+    text-align:center;
+}
+.nop-jcarousel .carousel-item .item-box {
+    width: 100% !important;
+    margin: 0 auto !important;
+    float: none;
+}
+.nop-jcarousel.category-grid.categories-2 slick-carousel {
+    max-width: 750px;
+    margin: auto;
+}
+.nop-jcarousel.home-page-category-grid.categories-2 {
+    max-width: 750px;
+}
+
+.jCarouselMainWrapper .slick-next,
+.jCarouselMainWrapper .slick-prev {
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    width: 18px;
+    height: 22px;
+    cursor: pointer;
+    border: none;
+    font-size: 0;
+}
+
+.jCarouselMainWrapper .slick-prev {
+    left: 0;
+    background: url("images/arrow-left.png") no-repeat center;
+    position:absolute;
+    top:6px;
+    height:35px;
+    width:35px;
+}
+
+.jCarouselMainWrapper .slick-next {
+    right: 0;
+    background: url("images/arrow-right.png") no-repeat center;
+    position:absolute;
+    top:6px;
+    height:35px;
+    width:35px;
+}
+
+.jCarouselMainWrapper .slick-disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.nop-jcarousel .slick-dots {
+    text-align: center;
+    font-size: 0;
+    padding: 10px 0 0;
+}
+.nop-jcarousel .slick-dots li{
+    display: inline-block;
+    margin: 0 2px;
+    padding: 10px 0;
+    position: relative;
+}
+.nop-jcarousel .slick-dots button {
+    width: 10px;
+    height: 5px;
+	background: rgba(0,0,0,0.2);
+    font-size: 0;
+    border: none;
+}
+.nop-jcarousel .slick-dots button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.nop-jcarousel .slick-dots .slick-active button {
+    background: rgba(0,0,0,0.7);
+}
+
+.jCarouselMainWrapper .item-box .title{
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed title load on swipe*/
+}
+.carousel-item .ribbon-position {
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed ribbon load on swipe*/
+}
+
+.side-2 .nop-jcarousel.manufacturer-grid, 
+.side-2 .nop-jcarousel.product-grid, 
+.side-2 .nop-jcarousel.categoriy-grid{
+    margin:0 auto 30px !important;
+}
+.center-1 .nop-jcarousel.manufacturer-grid,
+.center-1 .nop-jcarousel.product-grid,
+.center-1 .nop-jcarousel.categoriy-grid {
+    margin:0 auto 20px;
+}
+
+.news-carousel .nop-jcarousel .carousel-item .item-box {
+    border: 1px solid #eee;
+}
+.news-carousel .nop-jcarousel .carousel-item .item-box .title {
+    display: none;
+}
+
+ 
+@media all and (min-width: 768px) {
+
+    .news-carousel .nop-jcarousel{
+        margin:20px auto;
+        clear: both;
+    }
+    .nop-jcarousel .slick-dots button {
+        width: 35px;
+    }
+
+    .side-2 .nop-jcarousel.manufacturer-grid, 
+    .side-2 .nop-jcarousel.product-grid, 
+    .side-2 .nop-jcarousel.categoriy-grid{
+        margin:0 0 30px 0;
+    }  
+       
+}
+@media all and (min-width: 1024px) {
+
+    .side-2 .nop-jcarousel .carousel-title {
+        font-size: 16px;
+        padding: 0 20px;
+        line-height: 38px;
+    }
+    .side-2 .nop-jcarousel .slick-carousel {
+        padding: 0 10px;
+    }
+    .side-2 .jCarouselMainWrapper .slick-next,
+    .side-2 .jCarouselMainWrapper .slick-prev {
+        background-size: 9px;
+        width: 20px;
+        height: 38px;
+        top: 0;
+    }
+    .side-2 .nop-jcarousel .slick-dots button {
+        width: 10px;
+    }
+    .news-carousel .nop-jcarousel{
+        margin:-40px auto 0;
+    }
+    .news-carousel .nop-jcarousel .carousel-item .item-box {
+        border-top: none;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+    }
+    .news-carousel .nop-jcarousel .carousel-item .item-box:hover {
+        background: #fff;
+        margin: -10px 0 0 !important;
+    }
+    .news-carousel .nop-jcarousel .carousel-item .item-box .picture img {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+    }
+   .news-carousel .nop-jcarousel .carousel-item .item-box:hover .picture img{
+        transform:scale(1.05);
+        -webkit-transform:scale(1.05);
+        -ms-transform:scale(1.05);
+        -moz-transform:scale(1.05);
+    }
+}

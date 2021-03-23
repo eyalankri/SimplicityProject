@@ -1,0 +1,34 @@
+﻿.search-box form > *,
+.instant-search-item .img-block {
+	float: right;
+}
+.instant-search-item .detail {
+    margin: 0 75px 0 0;
+}
+.instant-search-item .detail .title,
+.instant-search-item .detail .price {
+	text-align: right;
+}
+input.search-box-text{
+	padding: 1px 4px 1px 1px;
+	margin-left: 0;
+}
+.search-box-select{
+	left: 51px;
+	right: auto;
+}
+.search-box input.search-box-text {
+    padding-right: 5px;
+    padding-left:115px;
+}
+
+.search-box-select {
+    background: url("images/custom-dropdown.png") #FFFFFF;
+}
+
+
+@media all and (max-width: 481px){
+    .search-box-select {
+        left: 45px;
+    }
+}

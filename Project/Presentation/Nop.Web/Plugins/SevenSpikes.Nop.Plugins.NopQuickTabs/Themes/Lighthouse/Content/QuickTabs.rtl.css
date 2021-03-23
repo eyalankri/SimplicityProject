@@ -1,0 +1,5 @@
+﻿
+.product-specs-box .data-table td + td {
+	border-right-width: 1px;
+	border-left-width: 0;
+}

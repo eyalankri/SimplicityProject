@@ -1,0 +1,14 @@
+﻿.quick-tabs-1 .productTabs-header {
+	float: right;
+}
+.quick-tabs-1 .ui-tabs .ui-tabs-nav li {
+	text-align: right;
+}
+*{
+	direction: rtl;
+}
+.quick-tabs-1 .productTabs-body{
+	float: left;
+	border-right: 1px solid #e1e1e1;
+	border-left: 0;
+}

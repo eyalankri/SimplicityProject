@@ -1,0 +1,52 @@
+﻿/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+input.instant-search-busy{
+	background: #fff url('../../../images/ajax-loader-small.gif') no-repeat left center !important;
+}
+.instant-search-item .img-block img{
+	left: 0;
+	right: 0;
+}
+.instant-search-item .detail{
+	padding: 0 15px 0 0;
+}
+
+@media all and (min-width: 1025px) {
+
+.with-caregory-search-enabled span.search-box-text,
+.with-caregory-search-enabled .search-box-select,
+.with-caregory-search-enabled .custom-select {
+	float: right;
+}
+input.instant-search-busy{
+	background-position: right center !important;
+}
+.with-caregory-search-enabled .small-search-box-form{
+	padding-left: 40px;
+	padding-right: 0;
+}
+.with-caregory-search-enabled input.instant-search-busy{
+	background-position: left center !important;
+}
+.with-caregory-search-enabled input.search-box-text.narrow{
+	text-align: right;
+	padding: 0 3px 0 0;
+}
+.with-caregory-search-enabled .custom-select-text{
+	padding: 0 3px 0 15px;
+	text-align: right;
+}
+.with-caregory-search-enabled .custom-select-text:before{
+	left: 5px;
+	right: auto;
+}
+.with-caregory-search-enabled .search-box-button{
+	left: 0;
+	right: auto;
+}
+
+
+}

@@ -1,0 +1,19 @@
+
+.anywhere-slider .slick-prev {
+    left: auto;
+    right: 0;
+    background-image: url("images/slider-arrow-right.png");
+}
+.anywhere-slider .slick-next {
+    left: 0;
+    right: auto;
+    background-image: url("images/slider-arrow-left.png");
+} 
+
+@media all and (min-width: 769px) {
+    
+    .main-banner-2 .slider-wrapper img {
+        right: 0;
+        left: auto;
+    }
+}

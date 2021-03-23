@@ -1,0 +1,47 @@
+﻿@using Nop.Web.Models.Catalog
+@using System.Globalization
+
+@inject Nop.Services.Helpers.IUserAgentHelper userAgentHelper
+
+@model ProductDetailsModel
+
+@if (Model.IsRental)
+{
+    string startDateControlName = string.Format("rental_start_date_{0}", Model.Id);
+    string endDateControlName = string.Format("rental_end_date_{0}", Model.Id);
+    string startDateControlId = string.Format("quick_view_{0}", startDateControlName);
+    string endDateControlId = string.Format("quick_view_{0}", endDateControlName);
+    //currenly we support only this format
+    //java-script format
+    const string datePickerFormat = "mm/dd/yy";
+    //C# format for ToString method
+    const string datePickerFormat2 = "MM/dd/yyyy";
+
+    <div class="attributes rental-attributes">
+        <div class="attribute-item">
+            <div class="attribute-label">
+                <label class="text-prompt">
+                    @T("Products.RentalStartDate"):
+                </label>
+                <span class="required">*</span>
+            </div>
+            <div class="attribute-data">
+                <input id="@(startDateControlId)" name="@(startDateControlId)" type="text" class="datepicker" value="@(Model.RentalStartDate.HasValue ? Model.RentalStartDate.Value.ToString(datePickerFormat2, CultureInfo.InvariantCulture) : null)" @if (userAgentHelper.IsMobileDevice()) { <text> readonly</text>} />
+            </div>
+        </div>
+        <div class="attribute-item">
+            <div class="attribute-label">
+                <label class="text-prompt">
+                    @T("Products.RentalEndDate"):
+                </label>
+                <span class="required">*</span>
+            </div>
+            <div class="attribute-data">
+                <input id="@(endDateControlId)" name="@(endDateControlId)" type="text" class="datepicker" value="@(Model.RentalEndDate.HasValue ? Model.RentalEndDate.Value.ToString(datePickerFormat2, CultureInfo.InvariantCulture) : null)" @if (userAgentHelper.IsMobileDevice()) { <text> readonly</text>} />
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" class="quickViewRentalInfo" data-datepickerformat="@datePickerFormat"
+           data-startdatecontrolid="@startDateControlId" data-enddatecontrolid="@endDateControlId" />
+}

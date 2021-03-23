@@ -1,0 +1,210 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+li.back-button {
+    display: none;
+}
+
+/* MAIN PANEL */
+.mega-menu {
+    display: none;
+}
+
+/* DROPDOWN */
+
+.mega-menu .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #FFF;
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#00000000',GradientType=0 );
+    overflow: hidden;
+    margin-top: 0px;
+    padding: 15px;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff #ddd #ccc;
+    border-radius: 0 5px 5px;
+    box-shadow: 0 1px 0 #bbb;
+    z-index: 1001;
+}
+    .mega-menu .dropdown.fullWidth {
+        border-radius: 5px;
+        left: -1px;
+        right: -1px;
+    }
+    .mega-menu .dropdown.active {
+        display: block;
+    }
+
+/* ROWS AND BOXES */
+
+.mega-menu .row {
+	overflow: hidden;
+	width: 100%;
+}
+.mega-menu .row .box {
+	float: left;
+	padding: 5px 4px 10px;
+	vertical-align: top;
+}
+
+.mega-menu .boxes-1 .box {
+    width: 100%;
+}
+
+.mega-menu .boxes-2 .box {
+    width: 50%;
+}
+
+.mega-menu .boxes-3 .box {
+    width: 33.333%;
+}
+
+.mega-menu .boxes-4 .box {
+    width: 25%;
+}
+
+.mega-menu .boxes-5 .box {
+    width: 20%;
+}
+
+.mega-menu .boxes-6 .box {
+    width: 16.666%;
+}
+
+.mega-menu .boxes-7 .box {
+    width: 14.28%;
+}
+
+.mega-menu .boxes-8 .box {
+    width: 12.5%;
+}
+/*.mega-menu .categories .box {
+    width: 229px;
+}
+.mega-menu .categories.fullWidth .box {
+    width: 25%;
+}
+.mega-menu .manufacturers .box,
+.mega-menu .vendors .box {
+    width: 229px;
+}
+.mega-menu .manufacturers.fullWidth .box,
+.mega-menu .vendors.fullWidth .box {
+    width: 16.66666666666667%;
+}*/
+.mega-menu .title {
+    display: block;
+    margin-bottom: 8px;
+    padding: 0 0 5px;
+    font: normal bold 12px Arial, Helvetica, sans-serif;
+    color: #7a9b06;
+    text-shadow: 1px 1px 0 #fff;
+    text-transform: uppercase;
+    border-bottom: 1px dotted #789;
+}
+.mega-menu .title a {
+	font-weight: bold;
+	color: #333;
+}
+.mega-menu .title a:hover {
+	text-decoration: underline;
+}
+.mega-menu .categories .picture {
+    float: left;
+}
+.mega-menu .categories .picture a {
+	display: block;
+	width: 90px;
+	height: 90px;
+	overflow: hidden;
+}
+.mega-menu .subcategories {
+    margin-left: 100px;
+}
+.mega-menu .box li {
+    border: 0;
+}
+.mega-menu .box li a {
+    display: block;
+    background: url('images/arrow1.png') left center no-repeat;
+    font: normal normal 12px Arial, Helvetica, sans-serif;
+    color: #333;
+    padding: 5px 0 5px 10px;
+}
+.mega-menu .box li a:hover {
+    text-decoration: underline;
+}
+.mega-menu .box li a.view-all {
+    font-weight: bold !important;
+    background: none;
+}
+.mega-menu .manufacturer span,
+.mega-menu .vendor span {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.mega-menu li a.manufacturer,
+.mega-menu li a.vendor {
+    background: none !important;
+    text-align: center;
+    padding-left: 0 !important;
+}
+.mega-menu li a.manufacturer:hover,
+.mega-menu li a.vendor:hover {
+	background: none;
+}
+
+.mega-menu .topic-wrapper {
+    overflow: hidden;
+}
+.mega-menu .topic-wrapper p {
+	margin: 0 0 10px;
+	padding: 0;
+	font: normal normal 11px/18px Arial, Helvetica, sans-serif;
+	color: #333;
+}
+.mega-menu .topic-wrapper strong {
+	display: block;
+	padding: 5px 0 10px;
+	font: normal bold 12px Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px 0 #fff;
+	text-transform: uppercase;
+	border-bottom: 1px dotted #ccc;
+}
+
+.mega-menu .sublist a {
+    text-align: unset;
+}
+
+@media all and (min-width: 1025px) {
+    
+    ul.mega-menu {
+        display: inline-block;
+        width: 100%;
+    }
+    .header-menu > ul > li {
+        position: static;
+    }
+    .mega-menu li span {
+        padding: 0;
+        background: none;
+    }
+}
+
+
+@media all and (min-width: 1281px) {
+    .mega-menu .categories .picture a {
+        width: 120px;
+        height: 120px;
+    }
+    .mega-menu .subcategories {
+        margin-left: 130px;
+    }
+}

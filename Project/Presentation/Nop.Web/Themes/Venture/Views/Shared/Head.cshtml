@@ -1,0 +1,63 @@
+﻿@using Nop.Core
+@using Nop.Web.Framework.UI
+@inject IWorkContext workContext
+
+@{
+    var supportRtl = workContext.WorkingLanguage.Rtl;
+    var userAgent = Url.ActionContext.HttpContext.Request.Headers["User-Agent"];
+
+    var isIe9 = false;
+    if (!String.IsNullOrEmpty(userAgent) && userAgent.ToString().ToLower().IndexOf("MSIE 9.0", StringComparison.InvariantCultureIgnoreCase) > 0)
+    {
+        isIe9 = true;
+    }
+
+    if (isIe9)
+    {
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/ie9-fix.css");
+    }
+
+    var isIe10or11 = false;
+    if (!String.IsNullOrEmpty(userAgent) &&
+        (userAgent.ToString().IndexOf("MSIE 10", StringComparison.InvariantCultureIgnoreCase) > 0 || userAgent.ToString().IndexOf("MSIE 11", StringComparison.InvariantCultureIgnoreCase) > 0))
+    {
+        isIe10or11 = true;
+    }
+
+    if (isIe10or11)
+    {
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/ie10-11-fix.css");
+    }
+
+    if (!String.IsNullOrEmpty(userAgent) && userAgent.ToString().IndexOf("Safari", StringComparison.InvariantCultureIgnoreCase) > 0 && userAgent.ToString().IndexOf("Chrome", StringComparison.InvariantCultureIgnoreCase) == -1)
+    {
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/safari-fix.css");
+    }
+
+    Html.AppendCssFileParts("~/Plugins/SevenSpikes.Core/Styles/perfect-scrollbar.min.css");
+
+    if (supportRtl)
+    {
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/1200.rtl.css");
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/768.rtl.css");
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/480.rtl.css");
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/mobile.rtl.css");
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/styles.rtl.css");
+    }
+    else
+    {
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/1200.css");
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/768.css");
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/480.css");
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/mobile.css");
+        Html.AppendCssFileParts("~/Themes/Venture/Content/css/styles.css");
+    }
+
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Plugins/SevenSpikes.Core/Scripts/perfect-scrollbar.min.js");
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Plugins/SevenSpikes.Core/Scripts/sevenspikes.core.min.js");
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Plugins/SevenSpikes.Core/Scripts/sevenspikes.theme.min.js");
+
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Plugins/SevenSpikes.Core/Scripts/cookiehelper.min.js");
+
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Themes/Venture/Content/scripts/venture.js");
+}

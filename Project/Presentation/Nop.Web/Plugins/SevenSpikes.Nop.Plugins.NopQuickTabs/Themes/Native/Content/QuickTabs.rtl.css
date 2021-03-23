@@ -1,0 +1,12 @@
+﻿@media all and (min-width: 1025px) {
+
+    .tabs-two-columns .productTabs-header {
+        width: 190px;
+        float: right;
+    }
+
+    .tabs-two-columns .productTabs-body {
+        margin-right: 230px;
+        margin-left: 0;
+    }
+}

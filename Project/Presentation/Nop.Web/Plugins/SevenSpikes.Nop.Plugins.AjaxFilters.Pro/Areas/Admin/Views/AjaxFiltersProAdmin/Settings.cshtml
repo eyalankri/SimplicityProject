@@ -1,0 +1,224 @@
+﻿@model NopAjaxFiltersProSettingsModel
+
+@inject AdminAreaSettings _adminAreaSettings
+
+@{
+    Layout = AdminViewLocations.AdminLayoutViewPath;
+
+    Html.SetActiveMenuItemSystemName("SevenSpikes.NopAjaxFiltersPro.Admin.Submenus.Settings");
+
+    var defaultGridPageSize = _adminAreaSettings.DefaultGridPageSize;
+    var gridPageSizes = _adminAreaSettings.GridPageSizes;
+}
+
+<form method="post">
+    <nop-antiforgery-token />
+
+    <div class="content-header clearfix">
+        <h1 class="pull-left">
+            @T("SevenSpikes.NopAjaxFilters.Admin.Settings")
+        </h1>
+        <div class="pull-right">
+            <button type="submit" name="save" class="btn bg-blue">
+                <i class="fa fa-floppy-o"></i>
+                @T("Admin.Common.Save")
+            </button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="form-horizontal">
+            @Html.TrialMessage(Model.IsTrialVersion, Plugin.Name, Plugin.UrlInStore)
+
+            @await Component.InvokeAsync("StoreScopeConfiguration")
+
+            <div class="tab-content">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="form-group clearfix">
+                                <div class="col-md-3">
+                                    <nop-override-store-checkbox asp-for="EnableAjaxFiltersPro_OverrideForStore" asp-input="EnableAjaxFiltersPro" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                    <nop-label asp-for="EnableAjaxFiltersPro" />
+                                </div>
+                                <div class="col-md-9">
+                                    <nop-editor asp-for="EnableAjaxFiltersPro" />
+                                    <span asp-validation-for="EnableAjaxFiltersPro"></span>
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <div class="col-md-3">
+                                    <nop-override-store-checkbox asp-for="WidgetZone_OverrideForStore" asp-input="WidgetZone" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                    <nop-label asp-for="WidgetZone" />
+                                </div>
+                                <div class="col-md-9">
+                                    <nop-select asp-for="WidgetZone" asp-items="Model.SupportedWidgetZones" />
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <div class="col-md-3">
+                                    <nop-override-store-checkbox asp-for="UIMode_OverrideForStore" asp-input="UIMode" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                    <nop-label asp-for="UIMode" />
+                                </div>
+                                <div class="col-md-9">
+                                    <nop-select asp-for="UIMode" asp-items="Model.AvailableUiModes" />
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <div class="col-md-3">
+                                    <nop-override-store-checkbox asp-for="ShowTopLevelCategoriesOnly_OverrideForStore" asp-input="ShowTopLevelCategoriesOnly" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                    <nop-label asp-for="ShowTopLevelCategoriesOnly" />
+                                </div>
+                                <div class="col-md-9">
+                                    <nop-editor asp-for="ShowTopLevelCategoriesOnly" />
+                                    <span asp-validation-for="ShowTopLevelCategoriesOnly"></span>
+                                </div>
+                            </div>
+                            <div class="form-group" id="show-top-level-categories-grid">
+                                <div class="col-md-12">
+                                    <div>
+                                        <div id="specifications-grid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#specifications-grid").kendoGrid({
+        dataSource: {
+            type: "json",
+            transport: {
+                read: {
+                    url: "@Html.Raw(Url.Action("GridList", "AjaxFiltersProAdmin"))",
+                    type: "POST",
+                    dataType: "json",
+                    data: addAntiForgeryToken
+                },
+                update: {
+                    url: "@Html.Raw(Url.Action("Update", "AjaxFiltersProAdmin"))",
+                    type: "POST",
+                    dataType: "json",
+                    data: addAntiForgeryToken
+                },
+                destroy: {
+                    url: "@Html.Raw(Url.Action("Delete", "AjaxFiltersProAdmin"))",
+                    type: "POST",
+                    dataType: "json",
+                    data: addAntiForgeryToken
+                },
+                create: {
+                    url: "@Html.Raw(Url.Action("Create", "AjaxFiltersProAdmin"))",
+                    type: "POST",
+                    dataType: "json",
+                    data: addAntiForgeryToken,
+                    complete: function() {
+                        $("#specifications-grid").data("kendoGrid").dataSource.read();
+                    }
+                }
+            },
+            schema: {
+                data: "Data",
+                total: "Total",
+                errors: "Errors",
+                model: {
+                    id: "Id",
+                    fields: {
+                        Name: { editable: true, type: "string" },
+                        DisplayOrder: { editable: true, type: "number" }
+                    }
+                }
+            },
+            requestEnd: function(e) {
+                if (e.type == "update") {
+                    this.read();
+                }
+            },
+            error: function(e) {
+                display_kendoui_grid_error(e);
+                // Cancel the changes
+                this.cancelChanges();
+            },
+            pageSize: @(defaultGridPageSize)
+        },
+        pageable: {
+            refresh: true,
+            pageSizes: [@(gridPageSizes)]
+        },
+        editable: {
+            confirmation: true,
+            mode: "popup",
+            createAt: "bottom",
+            window: {
+                animation: false
+            }
+        },
+        scrollable: false,
+        toolbar: ["create"],
+        edit: function(e) {
+            if (!e.model.isNew()) {
+                //replacing the whole dropdown with the specification name
+                e.container.find('.k-widget.k-dropdown.k-header').replaceWith(e.model.Name);
+            }
+        },
+        columns: [
+            {
+                field: "Name",
+                title: "@T("Admin.Catalog.Attributes.SpecificationAttributes.Fields.Name")",
+                editor: specificationEditor
+            }, {
+                field: "DisplayOrder",
+                title: "@T("Admin.Catalog.Attributes.SpecificationAttributes.Fields.DisplayOrder")"
+            }, {
+                command: [
+                    {
+                        name: "edit",
+                        text: "@T("Admin.Common.Edit")"
+                    }, {
+                        name: "destroy",
+                        text: "@T("Admin.Common.Delete")"
+                    }
+                ],
+                width: 200
+            }
+        ]
+    });
+});
+
+function specificationEditor(container, options) {
+    $('<select style="width: 100%" required data-bind="value: ' + options.field + '" />')
+        .appendTo(container)
+        .kendoDropDownList({
+            dataTextField: "Text",
+            dataValueField: "Text",
+            optionLabel: "@T("SevenSpikes.NopAjaxFiltersPro.Admin.SelectSpecificationAttribute")",
+            autoBind: false,
+            select: function(e) {
+                if (e.item.text() == "@T("SevenSpikes.NopAjaxFiltersPro.Admin.NoResults")") {
+                    e.preventDefault();
+                }
+            },
+            dataSource: {
+                transport: {
+                    read:
+                        "@Html.Raw(Url.Action("GetSpecifications", "AjaxFiltersProAdmin"))"
+                },
+                requestEnd: function(e) {
+                    if (!e.response.length) {
+                        e.response.push({
+                            Text: "@T("SevenSpikes.NopAjaxFiltersPro.Admin.NoResults")",
+                            Value: 0
+                        });
+                    }
+                }
+            }
+        });
+
+}
+</script>

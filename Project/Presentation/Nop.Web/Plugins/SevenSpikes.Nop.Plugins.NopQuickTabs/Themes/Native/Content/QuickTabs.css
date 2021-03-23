@@ -1,0 +1,99 @@
+﻿/* GLOBAL STYLES */
+
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description  {
+    display: block;
+}
+
+/* THEME STYLES */
+
+.productTabs .ui-tabs-nav li a:after {
+    content: '/';
+}
+.product-essential {
+	margin-bottom: 20px;
+}
+.full-description {
+	margin-bottom: 0;
+}
+.product-specs-box,
+.product-specs-box .data-table {
+	margin-bottom: 0;
+}
+.ui-tabs .ui-tabs-nav{
+    margin: 0;
+}
+.productTabs .write-review .title{
+    display: none;
+}
+.productTabs .write-review .inputs:after{
+    display: none;
+}
+
+.custom-tab {
+    line-height: 20px;
+    font-size: 13px;
+    color: #666;
+    letter-spacing: 2px;
+}
+
+/* TABS TWO COLUMNS */
+
+
+@media all and (min-width: 1025px) {
+
+
+    .tabs-two-columns .ui-tabs{
+        margin: 0 0 40px;
+        overflow: hidden;
+    }
+    .tabs-two-columns .productTabs-header{
+        width: 190px;
+        float: left;
+    }
+    .tabs-two-columns .productTabs-body{
+        margin-left: 230px;
+    }
+    .tabs-two-columns .ui-tabs-nav {
+        margin: 0;
+    }
+    .tabs-two-columns .ui-tabs .ui-tabs-nav li{
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 24px;
+    }
+    .tabs-two-columns .ui-tabs .ui-tabs-nav li:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #ddd;
+        position: absolute;
+        bottom: 4px;
+        z-index: -1;
+    }
+    .tabs-two-columns .ui-tabs .ui-tabs-nav li a{
+        padding: 0;
+        box-shadow: 0 0 0 10px #fff;
+        background: #fff;
+        font-size: 17px;
+    }
+    .tabs-two-columns .ui-tabs .ui-tabs-nav li a:after{
+        display: none;
+    }
+    .tabs-two-columns .ui-tabs .ui-tabs-panel p{
+        margin: 0 0 15px;
+    }
+    .tabs-two-columns .write-review{
+        margin: 0 0 60px;
+    }
+    .tabs-two-columns  .ui-tabs .ui-tabs-panel{
+        padding: 0;
+    }
+    .tabs-two-columns .full-description{
+        clear: none;
+    }
+    
+}

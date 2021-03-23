@@ -1,0 +1,58 @@
+
+.ajax-cart-button-wrapper input[type="text"] {
+    margin: 0 23px 0 2px;
+}
+.ajax-cart-button-wrapper select {
+    margin-left: 2px;
+	margin-right: auto;
+}
+
+.ajaxCart .k-window-actions {
+	right: auto;
+    left: 0;
+}
+
+.productAddedToCartWindowImage {
+    float: right;
+}
+.productAddedToCartWindowOverview {
+    float: left;
+    padding: 20px 5px 25px 10px;
+}
+.productAddedToCartWindowTitle {
+    padding: 0 20px 0 0;
+    background-position: right center;
+}
+.productAddedToCartWindowSummary a {
+    margin: 0 0 0 15px;
+}
+.productAddedToCartWindowSummary .button-1 {
+    background-position: right 13px center;
+    padding: 10px 45px 10px 20px;
+}
+
+.miniProductDetailsView .gallery {
+    float: right;
+}
+.miniProductDetailsView .overview {
+    float: left;
+    padding: 40px 5px 30px 10px ;
+    text-align: right;
+}
+.miniProductDetailsView .rental-attributes dt {
+    float: right;
+}
+.miniProductDetailsView input.qty-input {
+    margin-left: 2px;
+	margin-right: 23px;
+}
+
+
+@media all and (min-width: 1025px){
+
+    .hover-effect-2 .product-grid .ajax-cart-button-wrapper select,
+	.hover-effect-2 .product-grid .ajax-cart-button-wrapper input[type="text"]{
+        margin-left: 0;
+		margin-right: 23px;
+    }
+}

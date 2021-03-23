@@ -1,0 +1,196 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+input.instant-search-busy {
+    background: #fff url('../../../images/ajax-loader-small.gif') no-repeat right center !important;
+}
+
+input.narrow.instant-search-busy {
+    background-position: 198px center !important;
+}
+
+/* WITH CATEGORY */
+
+input.search-box-text.narrow {
+    width: 150px !important;
+}
+span.search-box-text,
+.search-box select {
+    float: left;
+}
+.search-box select {
+    width: 80px;
+    height: 36px;
+    margin-left: -1px;
+    padding: 8px;
+    color: #898989;
+    border: 1px solid #ddd;
+}
+.search-box select:active,
+.search-box select:focus {
+    border-color: #333;
+}
+.search-box-wrapper .search-box form {
+    position: relative;
+    width: auto;
+    max-width: 430px;
+}
+
+/* AUTOCOMPLETE */
+
+.instantSearch {
+    width: 242px !important;
+    height: auto !important;
+    margin-top: -1px !important;
+}
+.instantSearch.resize {
+    width: 287px !important;
+}
+.instantSearch .k-list-container {
+    position: static !important;
+    width: 100% !important;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+.instantSearch .k-list-scroller {
+    height: 100% !important;
+    overflow-y: auto;
+}
+.instantSearch .k-item {
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+}
+.instantSearch .k-item.k-state-focused .instant-search-item {
+    background: #f6f6f6;
+}
+.instantSearch .k-item:first-child {
+    border-top: none;
+}
+.instant-search-item {
+    overflow: hidden;
+    padding: 7px;
+}
+.instant-search-item:hover {
+    background: #f6f6f6;
+}
+.instant-search-item .img-block {
+    position: relative;
+    float: left;
+    border: 1px solid #eee;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+}
+.instant-search-item .img-block img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+.instant-search-item .detail {
+    min-height: 42px;
+    margin-left: 90px;
+}
+.instant-search-item .detail .title {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    max-height: 55px;
+    overflow: hidden;
+}
+.instant-search-item .detail .price {
+    font-size: 18px;
+    color: #b7b7b7;
+}
+.instant-search-item .detail .sku {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.k-item.k-state-hover .instant-search-item .img-block {
+    border-color: #898989;
+}
+.search-box .k-widget input.search-box-text {
+    width: 100% !important;
+    min-width: 200px;
+}
+.with-caregory-search-enabled.search-box .k-widget input.search-box-text {
+    width: 165px !important;
+    min-width: 0;
+}
+
+
+@media all and (min-width: 481px) {
+
+    .instantSearch {
+	    width: 322px !important;
+    }
+    .instantSearch.resize {
+	    width: auto !important;
+        max-width:415px !important;
+    }
+    input.search-box-text.narrow {
+        width: 230px !important;
+    }
+    .search-box select {
+        width: 130px;
+    }
+    .search-box .k-widget input.search-box-text{
+        min-width:280px;
+    }
+    .search-box .k-widget.narrow input.search-box-text{
+        min-width:244px;
+    }
+
+}
+
+@media all and (min-width: 769px) {
+
+    .instantSearch {
+        width: 372px !important;
+    }
+    .search-box .k-widget input.search-box-text{
+        min-width:330px;
+    }
+
+}
+
+@media all and (min-width: 1025px) {
+
+    input.search-box-text.narrow {
+	    width: 240px !important;
+    }
+    .search-box select {
+	    width: 120px;
+        opacity:0;
+    }
+    .instantSearch.resize {
+	    width: 405px !important;
+    }
+
+    /*custom search*/
+    .search-box .custom-select{
+        float:left;
+        position:relative;
+        text-align:left;
+    }
+    .search-box .custom-select-text {
+        background: url("../../../../../Themes/Urban/Content/img/select.png") no-repeat scroll 92% center rgba(0, 0, 0, 0);
+        border: 1px solid #ddd;
+        border-top-color: transparent;
+        line-height: 34px;
+        padding: 0 6px;
+        position: absolute;
+        left: 0;
+        width: 120px;
+    }
+
+}

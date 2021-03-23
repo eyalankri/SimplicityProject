@@ -1,0 +1,66 @@
+﻿@media all and (min-width: 240px) {
+
+	input.instant-search-busy,
+    input.narrow.instant-search-busy {
+        background-position: 10px center !important;
+    }
+
+/* WITH CATEGORY */
+
+    input.search-box-text.narrow {
+        border-left: 1px solid #c9c9c9;
+    }
+
+    span.search-box-text,
+    .search-box select {
+        float: right;
+    }
+
+/* AUTOCOMPLETE */
+
+    .instant-search-item .img-block {
+	    float: right;
+    }
+    .instant-search-item .detail {
+        margin-left: auto;
+        margin-right: 90px;
+    }
+
+}
+
+
+@media all and (max-width: 1024px) {
+    
+    .instantSearch {
+        width: 291px !important;
+        margin-left: -34px !important;
+    }
+    .instantSearch.resize {
+        width: 292px !important;
+        margin-left: -68px !important;
+    }
+    
+}
+
+
+/*=====================================================
+    
+    DESKTOP
+
+=====================================================*/
+
+@media all and (min-width: 1025px) {
+
+    .instantSearch {
+        margin-left: -36px !important;
+    }
+    .instantSearch.resize {
+        margin-left: -141px !important;
+    }
+
+    .search-box select {
+        margin-left: auto;
+        margin-right: -1px;
+    }
+
+}

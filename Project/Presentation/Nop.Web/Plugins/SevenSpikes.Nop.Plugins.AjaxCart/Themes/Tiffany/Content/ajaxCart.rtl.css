@@ -1,0 +1,111 @@
+﻿/*
+* Copyright 2019 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/* RTL */
+
+.productQuantityTextBox {
+    float: right;
+}
+
+/* HEADING BAR */
+
+.ajaxCart .k-window-titlebar.k-header {
+    padding: 10px 10px 0 20px;
+}
+
+    .ajaxCart .k-window-titlebar.k-header .k-window-actions {
+        right: inherit;
+        left: 10px;
+    }
+
+.productAddedToCartWindowTitle {
+    left: inherit;
+    right: 0;
+}
+
+.miniProductDetailsView .product-essential .overview {
+    margin: 0;
+    text-align: right;
+}
+
+.productAddedToCartWindowImage,
+.productAddedToCartWindowDescription {
+    float: right;
+}
+
+.productAddedToCartWindowImage {
+    margin: 0 0 20px 20px;
+}
+
+.miniProductDetailsView .product-essential .gallery {
+    margin: 0 0 0 20px;
+    float: right;
+}
+
+.productAddedToCartWindowDescription {
+    margin: 5px 0 20px 0;
+    text-align: right;
+}
+
+.miniProductDetailsView .short-description {
+    padding-bottom: 10px;
+}
+
+.miniProductDetailsView .attributes {
+    margin-bottom: 15px;
+}
+
+    .miniProductDetailsView .attributes dt {
+        margin: 7px 0 7px 7px;
+    }
+
+    .miniProductDetailsView .attributes dd .option-list {
+        text-align: right;
+    }
+
+.miniProductDetailsView .prices {
+    margin-bottom: 10px;
+}
+
+.miniProductDetailsView .add-to-cart > * {
+    margin: 0;
+}
+
+    .miniProductDetailsView .add-to-cart > *:first-child {
+        margin: 0;
+    }
+
+.miniProductDetailsView .product-collateral {
+    border-radius: 0 12px 12px 0;
+}
+
+.miniProductDetailsView .giftcard > div label {
+    float: right;
+    padding: 0 0 0 8px;
+    text-align: left;
+}
+
+.miniProductDetailsView .product-name {
+    top: 0;
+    right: 0;
+    text-align: right;
+    background: url("images/title-decoration.png") no-repeat scroll center bottom rgba(0, 0, 0, 0);
+}
+
+.product-grid .hover-effect-2 .ajax-cart-button-wrapper:before {
+    margin-left: 45px;
+    left: 0;
+}
+
+.product-grid .hover-effect-2 .ajax-cart-button-wrapper:hover .productQuantityTextBox,
+.product-grid .hover-effect-2 .ajax-cart-button-wrapper:hover .productQuantityDropdown {
+    right: -110px;
+}
+
+.miniProductDetailsView .product-essential .overview .prices,
+.miniProductDetailsView .attributes dl,
+.miniProductDetailsView h1 {
+    text-align: right;
+}

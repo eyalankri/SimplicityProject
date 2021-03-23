@@ -1,0 +1,102 @@
+﻿/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.spc .loading-overlay .loader-line-mask {
+    margin-left: 0;
+    -webkit-transform-origin: 0 60px;
+    -moz-transform-origin: 0 60px;
+    -o-transform-origin: 0 60px;
+    -ms-transform-origin: 0 60px;
+    transform-origin: 0 60px;
+}
+
+.spc-products .spc-header .tab {
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #e8e8e8;
+}
+.spc-products .spc-header .tab:first-child {
+    border-right: 0;
+}
+
+@media all and (min-width: 360px) and (max-width: 480px) {
+
+    .spc .item-box {
+        float: right;
+        margin-left: unset;
+        margin-right: 2%;
+    }
+    .spc .item-box:nth-child(2n+1) {
+        margin-right: 0;
+    }
+
+}
+
+@media all and (min-width: 769px) {
+
+    .spc-categories .navigation {
+        float: left;
+    }
+    .spc-categories .navigation .tab {
+        float: right;
+    }
+        .spc-categories .navigation .tab:after {
+            right: unset;
+            left: 0;
+        }
+    .spc-categories .spc-body .picture {
+        margin: 0 0 0 4%;
+    }
+    .spc-categories .spc-body .details {
+        text-align: right;
+    }
+
+}
+
+@media all and (min-width: 1001px) {
+
+    .desktop .spc-categories .item-box .additional-buttons {
+        text-align: right;
+    }
+
+}
+
+@media all and (min-width: 1366px) {
+
+    .spc-categories .spc-body {
+        padding-left: unset;
+        padding-right: 27%;
+    }
+    .spc-categories .spc-body .product-grid.active {
+        border-left: 1px solid #ececec;
+        border-right: 0;
+    }
+    .spc-categories .spc-body .category-picture {
+        left: unset;
+        right: 0;
+    }
+
+}
+
+@media all and (min-width: 1601px) {
+
+    .spc-categories .spc-body {
+        padding-left: unset;
+        padding-right: 42.5%;
+    }
+    .spc-categories .spc-body .category-info {
+        left: unset;
+        right: 0;
+    }
+    .spc-categories .spc-body .category-details {
+        right: unset;
+        left: 0;
+    }
+        .spc-categories .spc-body .category-details:after {
+            content: url(images/rtl-shadow-category-nav.png);
+            left: unset;
+            right: 100%;
+        }
+
+}

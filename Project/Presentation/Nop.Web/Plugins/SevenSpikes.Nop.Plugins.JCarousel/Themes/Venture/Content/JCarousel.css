@@ -1,0 +1,271 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nop-jcarousel {
+	position: relative;
+    margin: 0 auto 80px;
+    max-width: 90%;
+}
+.center-2 .nop-jcarousel {
+    max-width: 100%;
+}
+.side-2 .nop-jcarousel {
+    max-width: 100%;
+}
+.home-page-bottom-wrapper .nop-jcarousel {
+    margin: 0;
+    max-width: 100%;
+}
+.nop-jcarousel .carousel-title {
+    padding: 8px 0;
+    margin: 0 0 20px;
+    border-bottom: 1px solid #d4d4d4;
+    text-align: center;
+    position: relative;
+}
+.nop-jcarousel .carousel-title:before {
+    content: '';
+    width: 75px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -2px;
+    background: #f3cc2e;
+    -o-transform: skewX(-30deg);
+    -webkit-transform: skewX(-30deg);
+    -moz-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+}
+.nop-jcarousel .carousel-title strong {
+    font-size: 24px;
+}
+.home-page-bottom-wrapper .nop-jcarousel .carousel-title strong {
+    font-size: 19px;
+    line-height: 30px;
+}
+
+.slick-carousel {
+    margin: 0 -6px;
+}
+
+.carousel-item {
+    padding: 6px; /*defines the distance between the carousel item boxes*/
+}
+.carousel-item .item-box {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* navigation */
+
+.nop-jcarousel .slick-prev,
+.nop-jcarousel .slick-next {
+    display: none !important;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 37px;
+    height: 37px;
+    background-color: #e2e2e2;
+    font-size: 0;
+    border-width: 0;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.nop-jcarousel .slick-prev:before,
+.nop-jcarousel .slick-next:before {
+    content: "";
+    font-family: "venture-font";
+    text-transform: none;
+    font-size: 7px;
+    color: #2c2c2c;
+    opacity: .7;
+    width: 9px;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.nop-jcarousel .slick-prev {
+    left: 0;
+}
+.nop-jcarousel .slick-prev:before {
+    content: "r";
+}
+.nop-jcarousel .slick-next {
+    right: 0;
+}
+.nop-jcarousel .slick-next:before {
+    content: "q";
+}
+.nop-jcarousel .slick-prev:hover,
+.nop-jcarousel .slick-next:hover {
+	background-color: #f3cc2e;
+}
+.nop-jcarousel .slick-prev:hover:before,
+.nop-jcarousel .slick-next:hover:before {
+    opacity: 1;
+}
+.light-theme .nop-jcarousel .slick-prev:hover:before,
+.light-theme .nop-jcarousel .slick-next:hover:before {
+    color: #fff;
+}
+
+.nop-jcarousel .slick-disabled,
+.nop-jcarousel .slick-disabled:hover {
+    cursor: default;
+}
+
+.nop-jcarousel .slick-dots {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 0;
+}
+.nop-jcarousel .slick-dots li {
+    display: inline-block;
+    margin: 5px;
+}
+.nop-jcarousel .slick-dots button {
+    width: 9px;
+    height: 9px;
+    font-size: 0;
+    border-width: 0;
+    background: #939393;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.nop-jcarousel .slick-dots .slick-active button,
+.nop-jcarousel .slick-dots button:hover {
+    background-color: #f3cc2e;
+}
+
+/* Category Carousel */
+
+.nop-jcarousel.category-grid {
+    margin: 0 0 50px;
+    max-width: none;
+}
+.nop-jcarousel.category-grid .slick-carousel {
+    padding: 0;
+    margin: 0;
+}
+.nop-jcarousel.home-page-category-grid {
+    margin: 0 0 80px;
+}
+.nop-jcarousel.category-grid .carousel-title {
+    display: none !important;
+} 
+.nop-jcarousel.category-grid .carousel-item {
+    padding: 0;
+}
+
+.nop-jcarousel .manufacturer-item .title a, 
+.nop-jcarousel .vendor-item .title a {
+    font-size: 15px;
+}
+
+@media all and (max-width: 320px) {
+
+    .nop-jcarousel .manufacturer-item .title a,
+    .nop-jcarousel .vendor-item .title a {
+        height: 46px;
+        line-height: 21px;
+        font-size: 15px;
+    }
+    .nop-jcarousel .manufacturer-item .title a, 
+    .nop-jcarousel .vendor-item .title a {
+        display: block;
+        font-size: 17px;
+        text-align: center;
+        padding: 12.5px 33px 12.5px 10px;
+    }
+
+}
+
+@media all and (min-width: 481px) {
+
+    .carousel-item {
+        padding: 12px; /*defines the distance between the carousel item boxes*/
+    }
+    .slick-carousel {
+        margin: 0 -12px;
+    }
+    .nop-jcarousel .manufacturer-item .title a, 
+    .nop-jcarousel .vendor-item .title a {
+        font-size: 17px;
+    }
+
+}
+
+@media all and (max-width: 1200px) {
+    
+    .home-page-bottom-wrapper .nop-jcarousel .carousel-title {
+        padding: 8px 40px;
+    }
+    .home-page-bottom-wrapper .nop-jcarousel .slick-prev, 
+    .home-page-bottom-wrapper .nop-jcarousel .slick-next {
+        display: block !important;
+    }
+
+}
+
+@media all and (min-width: 1201px) {
+
+    .nop-jcarousel {
+        max-width: 1200px;
+    }
+    .side-2 .nop-jcarousel {
+        display: block;
+        margin: 0 auto 50px;
+    } 
+    .nop-jcarousel .slick-prev, 
+    .nop-jcarousel .slick-next {
+        display: block !important;
+    }
+    .nop-jcarousel.category-grid {
+        max-width: none;
+    }
+    .nop-jcarousel .carousel-title {
+        padding: 8px 40px;
+    }
+
+    .side-2 .nop-jcarousel .carousel-title {
+        text-align: left;
+        padding: 8px 70px 8px 0;
+    }
+    .side-2 .nop-jcarousel .carousel-title strong {
+        font-size: 18px;
+    }
+    .side-2 .nop-jcarousel .carousel-title:before {
+        right: auto;
+    }
+    .side-2 .nop-jcarousel .slick-prev, 
+    .side-2 .nop-jcarousel .slick-next {
+        width: 30px;
+        height: 30px;
+    }
+    .side-2 .nop-jcarousel .slick-prev {
+        left: auto;
+        right: 35px;
+    }
+    .side-2 .carousel-item {
+        padding: 8px; /*defines the distance between the carousel item boxes*/
+    }
+    .side-2 .slick-carousel {
+        margin: 0 -8px;
+    }
+
+}

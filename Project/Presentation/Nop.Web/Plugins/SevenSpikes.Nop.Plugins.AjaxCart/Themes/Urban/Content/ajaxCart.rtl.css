@@ -1,0 +1,116 @@
+﻿/*
+* Copyright 2019 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/* -----  RTL  ----- */
+
+
+.productQuantityTextBox {
+    float: right;
+}
+
+/* HEADING BAR */
+
+.ajaxCart .k-window-titlebar.k-header .k-window-actions {
+    right: inherit;
+    left: 10px;
+}
+.productAddedToCartWindowTitle {
+    left: inherit;
+    right: 0;
+}
+.miniProductDetailsView .product-name {
+    left: inherit;
+    right: 13px;
+    text-align: right;
+}
+
+/* CONTENT */
+
+.miniProductDetailsView .product-essential .overview {
+    margin: 0;
+}
+.productAddedToCartWindowImage,
+.productAddedToCartWindowDescription {
+    float: right;
+}
+.productAddedToCartWindowDescription {
+    text-align: right;
+}
+.productAddedToCartWindowImage {
+    margin: 0 0 15px 15px;
+}
+.miniProductDetailsView .product-essential .gallery {
+    margin: 0 0 0 20px;
+    float: right;
+}
+.miniProductDetailsView .add-to-cart > * {
+    float: right;
+    margin: 0 1px 0 0;
+}
+    .miniProductDetailsView .add-to-cart > *:first-child {
+        margin: 0;
+    }
+.miniProductDetailsView .product-essential .overview .prices,
+.miniProductDetailsView .attributes dl,
+.miniProductDetailsView h1 {
+    text-align: right;
+}
+
+/*** QUANTITY BOX & BUY BUTTON ***/
+
+.product-list .ajax-cart-button-wrapper,
+.hover-2 .buttons-inner-wrapper span,
+.hover-2 .buttons-inner-wrapper input,
+.product-list .item-box .hover-2 .quantityWrapper,
+.miniProductDetailsView .add-to-cart > *,
+.miniProductDetailsView .add-button-wrap,
+.miniProductDetailsView .message-error,
+.ajaxCart .k-window-title {
+	float: right;
+}
+.productAddedToCartWindowTitle,
+.ajaxCart .product-grid .title {
+	text-align: right;
+}
+.product-list .hover-2 .buttons-inner-wrapper .ajax-cart-button-wrapper > *,
+.product-list .hover-2 .buttons-inner-wrapper .ajax-cart-button-wrapper .quantityWrapper> *{
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+}
+.productAddedToCartWindowImage img{
+	left: 0;
+	right: 0;
+}
+.productAddedToCartWindowDescription{
+	padding: 10px 0 0 5px;
+}
+.ajaxCart .product-grid .title:before{
+	right: 0;
+	left: auto;
+}
+.ajaxCart .item-box{
+	margin: 0 2% 3% 0;
+}
+.miniProductDetailsView .product-name{
+	text-align: right;
+	right: 10px;
+	left: auto;
+}
+/*AJAX LOADER*/
+.nopAjaxCartPanelAjaxBusy, 
+.miniProductDetailsPanelAjaxBusy{
+	right: 0;
+	left: 0;
+}
+@media all and (min-width: 769px) {
+
+    .center-2 .product-list .hover-2 .buttons-inner-wrapper .ajax-cart-button-wrapper > input {
+        margin: 0 3px 0 0;
+    }
+    .product-list .item-box .hover-2 .ajax-cart-button-wrapper {
+        margin: 0 0 0 3px;
+    }
+
+}

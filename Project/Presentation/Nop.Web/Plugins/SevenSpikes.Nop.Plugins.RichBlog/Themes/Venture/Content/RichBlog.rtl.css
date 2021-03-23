@@ -1,0 +1,114 @@
+.rich-blog-homepage .title:before {
+	right: 0;
+	left: 0;
+}
+.rich-blog-homepage .post-picture img {
+	left: 0;
+	right: 0;
+}
+.rich-blog-homepage .read-more {
+	float: left;
+	padding: 21px 22px 21px 38px;
+}
+.rich-blog-homepage .read-more:before {
+	left: 18px;
+	right: auto;
+    content: "r";
+}
+.rich-blog-homepage .post-details {
+	text-align: right;
+}
+.blog-search-box form {
+	padding: 15px 15px 15px 65px;
+}
+.blog-search-box .instant-search-busy {
+	background: #fff  url('images/ajax-loader-small.gif') left center no-repeat !important;
+}
+.blog-search-box .search-box-button {
+	left: 15px;
+	right: auto;
+}
+.blog-search-box .search-box-button:before {
+	right: 0;
+	left: 0;
+}
+.blog-instant-search {
+	right: 15px !important;
+	left: auto;
+}
+.post-relations li.separator {
+	margin: 0 0 0 5px;
+}
+.share-post a:before {
+	right: 0;
+	left: 0;
+}
+.post-navigation a:before {
+	right: 0;
+	left: 0;
+}
+.post-navigation .prev:before {
+    content: "q";
+}
+.post-navigation .next:before {
+    content: "r";
+}
+@media all and (min-width: 768px) {
+	.blogpost-page .page-title {
+		padding-right: 90px;
+		padding-left: 90px;
+	}
+	.post-navigation .prev {
+		right: 50px;
+		left: auto;
+	}
+	.post-navigation .next {
+		left: 50px;
+		right: auto;
+	}
+	.blog-page .buttons {
+		float: left;
+	}
+	.post-relations {
+		float: right;
+	}
+	.post-actions {
+		float: left;
+	}
+	.blog-page .post-actions .read-more {
+		float: right;
+	}
+	.blog-page .post-actions .share-post {
+		float: left;
+		margin: 0 0 0 -17px;
+	}
+}
+@media all and (min-width: 1201px) {
+	.rich-blog-homepage .blog-post {
+		margin: 0 20px 23px 0;
+		float: right;
+	}
+	.rich-blog-homepage .blog-post:nth-child(2n+1) {
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.blog-search-box form {
+		padding: 20px 0 20px 50px;
+	}
+	.blog-instant-search {
+		right: 0 !important;
+		left: auto;
+	}
+	.post-navigation .prev {
+		right: 68px;
+		left: auto;
+	}
+	.blogpost-page .page-title {
+		padding-right: 118px;
+		padding-left: 118px;
+	}
+	.post-navigation .next {
+		left: 68px;
+		right: auto;
+	}
+}

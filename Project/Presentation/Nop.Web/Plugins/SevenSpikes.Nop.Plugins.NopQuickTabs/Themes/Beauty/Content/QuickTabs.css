@@ -1,0 +1,180 @@
+﻿/* GLOBAL STYLES */
+
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description  {
+    display: block;
+}
+
+.productTabs-body p {
+    margin: 8px 0;
+}
+.productTabs-body ol {
+	margin: 12px 0;
+	padding-left: 36px;
+	list-style: decimal;
+}
+
+.ui-tabs .write-review {
+    background: #f6f6f6;
+    padding: 20px 15px;
+}
+
+.ui-tabs .write-review .form-fields {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+
+/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+
+@media all and (min-width:1024px) {
+
+    .ui-tabs .write-review .title {
+        text-align: center;
+    }
+
+    .ui-tabs .write-review .form-fields {
+        margin: 0 auto 20px;
+        max-width: 456px;
+    }
+
+    .ui-tabs .write-review .form-fields .inputs > label,
+    .ui-tabs .write-review .form-fields .review-rating > label,
+    .ui-tabs .write-review .review-rating .name-description {
+        text-align: right;
+        margin-left: calc(-15% - 3px);
+    }
+
+    .ui-tabs .field-validation-error {
+        text-align: center;
+    }
+}
+
+
+@media all and (max-width: 980px) and (min-width: 769px) {
+
+    .ui-tabs .ui-tabs-nav {
+        float: none;
+        background: none;
+    }
+    .ui-tabs .ui-tabs-nav li {
+	     background: #1f1f1f;
+         overflow: hidden;
+    }
+    .ui-tabs .ui-tabs-nav li:first-child {
+        background: #1f1f1f;
+        border-radius: 5px 0 0 0;
+    }
+    .ui-tabs .ui-tabs-nav li:last-child {
+        border-radius: 0 5px 0 0;
+    }
+    .ui-tabs .ui-tabs-nav li a {
+	    text-align: center;
+        display: block;
+        height: auto;
+	    line-height: 18px;
+	    -webkit-transition: color .07s ease-in-out;
+	    -moz-transition: color .07s ease-in-out;
+	    -o-transition: color .07s ease-in-out;
+	    transition: color .07s ease-in-out;
+        border-radius: 0 !important;
+    }
+
+}
+
+
+
+/*=====================================================
+    
+    TABLETS PORTRAIT & SMARTPHONES LANDSCAPE
+
+=====================================================*/
+
+@media all and (max-width: 768px) and (min-width: 481px) {
+
+    .ui-tabs .ui-tabs-nav {
+        float: none;
+        background: none;
+    }
+    .ui-tabs .ui-tabs-nav li {
+	     float: none;
+	     border-top: 1px solid #2f2f2f;
+	     background: #1f1f1f;
+	     padding: 0;
+         border-radius: 0;
+         overflow: hidden;
+    }
+        .ui-tabs .ui-tabs-nav li:first-child {
+            background: #1f1f1f;
+            border-radius: 5px 5px 0 0;
+        }
+        .ui-tabs .ui-tabs-nav li:last-child {
+            border-radius: 0 0 5px 5px;
+        }
+    .ui-tabs .ui-tabs-nav li a {
+	    text-align: center;
+        display: block;
+        height: auto;
+	    line-height: 18px;
+	    -webkit-transition: color .07s ease-in-out;
+	    -moz-transition: color .07s ease-in-out;
+	    -o-transition: color .07s ease-in-out;
+	    transition: color .07s ease-in-out;
+        border-radius: 0 !important;
+    }
+    .ui-tabs .ui-tabs-panel {
+        border-top: 0;
+    }
+}
+
+
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (max-width: 480px) {
+
+    .ui-tabs .ui-tabs-nav {
+        float: none;
+        background: none;
+    }
+    .ui-tabs .ui-tabs-nav li {
+	     float: none !important;
+	     border-top: 1px solid #2f2f2f;
+	     background: #1f1f1f;
+	     padding: 0;
+         border-radius: 0;
+         overflow: hidden;
+    }
+        .ui-tabs .ui-tabs-nav li:first-child {
+            background: #1f1f1f;
+            border-radius: 5px 5px 0 0;
+        }
+        .ui-tabs .ui-tabs-nav li:last-child {
+            border-radius: 0 0 5px 5px;
+        }
+    .ui-tabs .ui-tabs-nav li a {
+	    text-align: center;
+        display: block;
+        height: auto;
+	    line-height: 18px;
+	    -webkit-transition: color .07s ease-in-out;
+	    -moz-transition: color .07s ease-in-out;
+	    -o-transition: color .07s ease-in-out;
+	    transition: color .07s ease-in-out;
+        border-radius: 0 !important;
+    }
+    .ui-tabs .ui-tabs-panel {
+        border-top: 0;
+    }
+}

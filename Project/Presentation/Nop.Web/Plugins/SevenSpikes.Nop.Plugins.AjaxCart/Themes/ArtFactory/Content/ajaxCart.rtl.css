@@ -1,0 +1,82 @@
+﻿/*
+* Copyright 2019 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*RTL*/
+
+.productQuantityTextBox {
+    float: right;
+}
+.miniProductDetailsView .add-to-cart > *,
+.miniProductDetailsView .add-button-wrap {
+	float: right;
+}
+.miniProductDetailsView .add-to-cart > *{
+    margin:0;
+}
+.miniProductDetailsView .add-to-cart > .qty-input{
+    margin:3px 0 0 0;
+}
+.productAddedToCartWindowTitle {
+    left: inherit;
+    right: 0;
+}
+.productAddedToCartWindowTitle{
+	left: 0;
+}
+.ajaxCart .k-window-titlebar.k-header .k-window-actions {
+    right: inherit;
+    left: 10px;
+}
+.ajaxCart .k-window-titlebar.k-header .k-window-actions{
+	left: 10px;
+	right: auto;
+}
+.ajax-cart-button-wrapper input[type="text"]{
+	margin-left: -1px;
+	margin-right: 0;
+}
+.productAddedToCartWindowImage img{
+	left: 0;
+	right: 0;
+}
+
+
+/*** GROPED PRODUCTS WINDOW ***/
+
+
+.miniProductDetailsView .product-details-page .overview{
+	margin: 0 180px 0 0;
+}
+.miniProductDetailsView .product-name{
+	right: 10px;
+	left: 10px;
+    text-align:center;
+}
+.productAddedToCartWindowImage,
+.productAddedToCartWindowDescription {
+    float: right;
+}
+.productAddedToCartWindowDescription {
+    text-align: right;
+}
+.productAddedToCartWindowImage {
+    margin: 0 0 15px 15px;
+}
+.miniProductDetailsView .product-essential .gallery {
+    margin: 0 0 0 20px;
+    float: right;
+}
+.miniProductDetailsView .add-to-cart > * {
+    float: right;
+    margin: 0 10px 0 0;
+}
+.miniProductDetailsView .add-to-cart > *:first-child {
+    margin: 0;
+}
+.miniProductDetailsView .product-essential .overview .prices,
+.miniProductDetailsView .attributes dl,
+.miniProductDetailsView h1 {
+    text-align: right;
+}

@@ -1,0 +1,332 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+/*** TITLE & CONTAINERS ***/
+
+
+.nop-jcarousel {
+	position: relative;
+    margin: 20px 0;
+}
+.carousel-title {
+    padding: 0 30px 30px;
+    text-align: center;
+    position: relative;
+}
+.carousel-title span {
+    display: inline-block;
+    position: relative;
+    color: #666;
+    font-size: 26px;
+    font-weight: normal;
+    font-family: "Kelly Slab", Calibri, sans-serif;
+}
+.carousel-title span:after,
+.carousel-title span:before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    background: #8bc8ca url(images/title-dots.png) no-repeat center;
+    width: 19px;
+    height: 4px;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /* fixes the bug of the 1px moving product images when hover on category */
+}
+.carousel-title span:after {
+    left: -30px;
+}
+.carousel-title span:before {
+    right: -30px;
+}
+
+.nop-jcarousel .slick-carousel {
+    z-index: 1;
+}
+.center-1 .product-grid .slick-carousel {
+    background-color: #ececec;
+}
+.nop-jcarousel.home-page-product-grid {
+    width: 100% !important;
+} 
+.nop-jcarousel .slick-carousel button + .slick-list {
+    padding-top: 70px;
+}
+.center-1 .nop-jcarousel.product-grid .slick-carousel button + .slick-list {
+    padding-top: 100px;
+}
+.nop-jcarousel .slick-list {
+    margin: 0 auto;
+}
+.slick-carousel {
+    max-width: 100%;
+}
+.slick-carousel .carousel-item {
+    padding: 0 1px;
+}
+.category-grid .slick-carousel .carousel-item {
+    padding: 0;
+}
+.nop-jcarousel .slick-carousel .item-box {
+    width: 100% !important;
+    padding: 0 0 20px!important;
+    margin: 0 !important;
+    background: #fff;
+    max-width: none !important;
+}
+
+.nop-jcarousel .slick-carousel .item-box .prices {
+    height: 24px;
+    overflow: hidden;
+}
+
+.nop-jcarousel .slick-carousel .item-box .category-item:hover img, 
+.nop-jcarousel .slick-carousel .item-box .sub-category-item:hover img {
+    -webkit-transform: translateY(-20px) scale(1.05);
+    -ms-transform: translateY(-20px) scale(1.05);
+    transform: translateY(-20px) scale(1.05);
+}
+
+.jCarouselMainWrapper .category-grid .item-box .title{
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed title load on swipe*/
+}
+.carousel-item .ribbon-position {
+    -webkit-transform: translateZ(0) scale(1.0, 1.0); /*Fix for delayed ribbon load on swipe*/
+}
+
+/*** NAVIGATION ***/
+
+.jCarouselMainWrapper .slick-prev, 
+.jCarouselMainWrapper .slick-next {
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-width: 0;
+    border-radius: 100%;
+    text-indent: -9999px;
+    overflow: hidden;
+    opacity: .8;
+    z-index: 2;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+.center-1 .jCarouselMainWrapper .product-grid .slick-prev, 
+.center-1 .jCarouselMainWrapper .product-grid .slick-next {
+    top: 20px;
+}
+.jCarouselMainWrapper .slick-prev {
+    left: 50%;
+    margin-left: -48px;
+    background-image: url(images/nav-button-left.png);
+}
+.jCarouselMainWrapper .slick-next {
+    right: 50%;
+    margin-right: -48px;
+    background-image: url(images/nav-button-right.png);
+}
+.jCarouselMainWrapper .slick-prev:hover,
+.jCarouselMainWrapper .slick-next:hover {
+    opacity: 1;
+}
+
+.jCarouselMainWrapper .slick-disabled {
+    opacity: 0.3 !important;
+	filter: alpha(opacity=30);
+    cursor: default;
+}
+
+.jCarouselMainWrapper .slick-dots {
+    text-align: center;
+    margin: 0 0 40px;
+}
+.jCarouselMainWrapper .slick-dots li {
+    display: inline-block;
+    font-size: 0;
+}
+.jCarouselMainWrapper .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    margin: 0px 2px;
+    background: #ccc;
+    border-radius: 50%;
+    font-size: 0;
+    border: 2px solid #fff;
+}
+.jCarouselMainWrapper .product-grid .slick-dots {
+    padding: 15px 0;
+    margin: 0;
+}
+.center-1 .jCarouselMainWrapper .product-grid .slick-dots li button {
+    border-color: #ececec;
+}
+
+.jCarouselMainWrapper .slick-dots .slick-active button  {
+    border-color: #8bc8ca !important;
+    background: #8bc8ca !important;
+}
+
+
+@media all and (max-width: 1024px) {
+
+    .nop-jcarousel .slick-list {
+        max-width: 95%;
+        margin: auto;
+    }
+    .jCarouselMainWrapper .category-item, 
+    .jCarouselMainWrapper .sub-category-item {
+            position: relative;
+        }
+    .jCarouselMainWrapper .category-item .title, 
+    .jCarouselMainWrapper .sub-category-item .title {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+    .jCarouselMainWrapper .category-item .title a, 
+    .jCarouselMainWrapper .sub-category-item .title a {
+        background-color: rgba(255,255,255,.8);
+    }
+    .jCarouselMainWrapper .home-page-category-grid .item-box .picture, 
+    .jCarouselMainWrapper .sub-category-item .picture {
+        display: block;
+    }
+    .slick-carousel .item-box .category-item:hover img, 
+    .slick-carousel .item-box .sub-category-item:hover img {
+        transform: none;
+    }
+
+
+}
+
+@media all and (min-width: 1025px) {
+
+    
+/*** TWO COLUMN DESIGN ***/
+
+    .center-2 .carousel-title {
+        padding: 0 45px 20px;
+        position: relative;
+    }
+    .side-2 .carousel-title {
+        padding: 0 30px;
+    }
+    .center-2 .jCarouselMainWrapper .slick-carousel,
+    .side-2 .jCarouselMainWrapper .slick-carousel {
+        background: none;
+    }
+    .side-2 .jCarouselMainWrapper .slick-carousel button + .slick-list {
+        padding-top: 70px !important;
+    }
+    .center-2 .jCarouselMainWrapper .slick-carousel:before,
+    .side-2 .jCarouselMainWrapper .slick-carousel:before {
+        display: none;
+    }
+    .center-2 .jCarouselMainWrapper .slick-list,
+    .side-2 .jCarouselMainWrapper .slick-list {
+        width: auto !important;
+    }
+
+    .center-2 .jCarouselMainWrapper .nop-jcarousel.sub-category-grid,
+    .side-2 .jCarouselMainWrapper .nop-jcarousel.sub-category-grid {
+        padding: 0;
+        background: none;
+    }
+
+    /* nav */
+
+    .center-2 .jCarouselMainWrapper .slick-prev,
+    .center-2 .jCarouselMainWrapper .slick-next {
+        top: -52px !important;
+        bottom: auto;
+        margin: 0;
+    }
+    .side-2 .jCarouselMainWrapper .slick-prev,
+    .side-2 .jCarouselMainWrapper .slick-next {
+        top: 10px !important;
+    }
+    .center-2 .jCarouselMainWrapper .slick-prev {
+        left: 0;
+    }
+    .side-2 .jCarouselMainWrapper .slick-prev {
+        margin-left: -48px !important;
+    }
+    .center-2 .jCarouselMainWrapper .slick-next {
+        right: 0;
+    }
+    .side-2 .jCarouselMainWrapper .slick-next {
+        margin-right: -48px !important;
+    }
+
+    /* products */
+
+    .center-1 .jCarouselMainWrapper .product-grid .slick-carousel {
+        background: url(images/bg-carousel-bottom.png) no-repeat center bottom #ececec;
+    }
+
+
+}
+
+@media all and (min-width: 1170px) {
+
+    .carousel-title {
+        padding: 0 30px 20px;
+    }
+
+    .nop-jcarousel .slick-list {
+        width: 1000px;
+        max-width: 100%;
+        padding: 0 1px !important;
+    }
+    .nop-jcarousel.category-grid .slick-list,
+    .nop-jcarousel.sub-category-grid .slick-list {
+        padding: 0 !important;
+    }
+
+    .nop-jcarousel .slick-carousel:before {
+        display: none;
+    }
+
+    .jCarouselMainWrapper .slick-prev, 
+    .jCarouselMainWrapper .slick-next {
+        top: auto !important;
+        bottom: 50%;
+        margin-bottom: -25px !important;
+    }
+    .jCarouselMainWrapper .slick-prev {
+        margin: 0 0 0 -565px;
+    }
+    .jCarouselMainWrapper .slick-next {
+        margin: 0 -565px 0 0;
+    }
+
+    /* products */
+
+    .center-1 .jCarouselMainWrapper .product-grid .slick-carousel {
+        background: url(images/bg-carousel-bottom.png) no-repeat center bottom, url(images/bg-jcarousel-top.png) no-repeat center top, #ececec;
+        padding: 25px 0 !important;
+    }
+
+}
+
+@media all and (min-width: 1350px) {
+    .nop-jcarousel .slick-list {
+        width: 1200px;
+    }
+
+    .jCarouselMainWrapper .slick-prev {
+        margin: 0 0 0 -660px;
+    }
+
+    .jCarouselMainWrapper .slick-next {
+        margin: 0 -660px 0 0;
+    }
+}

@@ -1,0 +1,11 @@
+
+a.nivo-prevNav {
+	right: 15px;
+	left: auto;
+	background: url('arrow-right.png') no-repeat;
+}
+a.nivo-nextNav {
+	left: 15px;
+	right: auto;
+	background: url('arrow-left.png') no-repeat;
+}

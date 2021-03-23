@@ -1,0 +1,203 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.mega-menu-responsive,
+.menu-title,
+.back-button {
+    display: none;
+}
+
+@media all and (min-width: 1025px) {
+    /* stops the opened mega-menu-responsive when resizing from narrow to wide */
+    .mega-menu-responsive {
+        display: none !important;
+    }
+}
+
+/* MAIN PANEL */
+
+.mega-menu {
+	position: relative;
+	z-index: 1001;
+}
+.mega-menu li a.manufacturer,
+.mega-menu li a.vendor {
+	background: none;
+	padding: 0;
+	text-align: center;
+}
+
+/* DROPDOWN */
+
+.mega-menu .dropdown {
+	position: absolute;
+	display: none;
+	border: 1px solid #ccc;
+	border-top: none;
+	box-shadow: 0 1px 2px #ccc;
+	overflow: hidden;
+    background: #f6f6f6;
+}
+.mega-menu .dropdown.fullWidth {
+	left: 0;
+	width: 100%;
+}
+.mega-menu .dropdown.active {
+    display: block;
+}
+
+/* ROWS AND BOXES */
+
+.mega-menu .row {
+	overflow: hidden;
+	width: 100%;
+	padding: 10px 5px;
+}
+.mega-menu .box {
+	float: left;
+	padding: 5px 4px 10px;
+	vertical-align: top;
+}
+
+.mega-menu .dropdown * {
+    box-sizing: border-box;
+}
+
+.mega-menu .boxes-1 .box {
+    width: 100%;
+}
+
+.mega-menu .boxes-2 .box {
+    width: 50%;
+}
+
+.mega-menu .boxes-3 .box {
+    width: 33.333%;
+}
+
+.mega-menu .boxes-4 .box {
+    width: 25%;
+}
+
+.mega-menu .boxes-5 .box {
+    width: 20%;
+}
+
+.mega-menu .boxes-6 .box {
+    width: 16.666%;
+}
+
+.mega-menu .boxes-7 .box {
+    width: 14.28%;
+}
+
+.mega-menu .boxes-8 .box {
+    width: 12.5%;
+}
+
+/*.mega-menu .manufacturers.fullWidth .box,
+.mega-menu .vendors.fullWidth .box {
+    width: 15.8%;
+}*/
+.mega-menu .title {
+	display: block;
+	margin-bottom: 8px;
+	font: normal 14px Sylfaen, sylfaen_ff, serif;
+	color: #000;
+	text-transform: uppercase;
+}
+.mega-menu .title a {
+	padding: 0;
+    font-size: 14px;
+    color: #000;
+}
+
+.mega-menu .categories .picture {
+    position: relative;
+	float: left;
+	width: 120px;
+	height: 120px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	text-align: center;
+    background: #fff;
+}
+
+.mega-menu .categories .picture img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    margin: auto;
+}
+
+.header-menu .mega-menu > li {
+    position: static;
+}
+
+.mega-menu > .has-sublist > .sublist-wrap {
+    left: auto;
+}
+
+.mega-menu .has-sublist > .sublist-wrap
+
+.mega-menu .picture a {
+	padding: 0;
+}
+.mega-menu .subcategories {
+	margin-left: 130px;
+}
+/*.mega-menu .box li {
+	margin-top: 10px;
+}*/
+.mega-menu .box .subcategories li:first-child {
+    margin-top: -2px;
+}
+.mega-menu .box li a {
+	display: block;
+	background: url('images/arrow.png') left center no-repeat;
+    padding: 7px 0 7px 12px;
+	font: italic 14px Sylfaen, sylfaen_ff, serif;
+	color: #333;
+    text-transform: none;
+}
+/*.mega-menu .box li a:hover {
+	color: #8b0;
+}*/
+.mega-menu img {
+    max-width: 100%;
+}
+.mega-menu li a.view-all {
+	font-weight: bold;
+    background: none;
+}
+.mega-menu .manufacturers.fullWidth *,
+.mega-menu .vendors.fullWidth * {
+	background: none;
+	text-align: left;
+}
+.mega-menu .topic-wrapper {
+	overflow: hidden;
+}
+.mega-menu .topic-wrapper p {
+	font-size: 11px;
+	line-height: 20px;
+}
+.mega-menu .topic-wrapper strong {
+	display: block;
+	margin-bottom: 8px;
+	border-bottom: 1px dotted #999;
+	padding: 5px 0 8px;
+	font: normal 14px Sylfaen, sylfaen_ff, serif;
+	color: #000;
+	text-transform: uppercase;
+}
+
+@media  all and (min-width: 1025px) {
+    .mega-menu .dropdown.fullWidth {
+        box-sizing: border-box;
+    }
+}

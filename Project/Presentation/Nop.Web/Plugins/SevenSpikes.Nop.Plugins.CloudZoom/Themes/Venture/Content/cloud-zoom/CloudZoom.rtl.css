@@ -1,0 +1,38 @@
+.gallery .picture-wrapper > img {
+	left: 0;
+	right: 0;
+}
+.cloudzoom-lens:before {
+	left: 0;
+	right: 0;
+}
+.cloudzoom-zoom {
+	right: calc(100% + 25px) !important;
+	left: auto;
+}
+.cloudzoom-zoom-inside {
+	left: 0;
+	right: 0 !important;
+}
+.cloudzoom-blank {
+	left: 0;
+	right: 0;
+}
+.cloudzoom-ajax-loader {
+	right: 50% !important;
+	left: auto;
+	margin: -50px -50px 0 0;
+}
+.cloudzoom-ajax-loader:before {
+	right: 5px;
+	left: 5px;
+}
+.cloudzoom-ajax-loader:after {
+	right: 15px;
+	left: 15px;
+}
+@media all and (min-width: 1201px) {
+	.sevenspikes-cloudzoom-gallery .picture-wrapper {
+		float: left;
+	}
+}

@@ -1,0 +1,73 @@
+
+.slider-wrapper {
+    position: relative;
+	margin: 0 0 30px;
+}
+.anywhere-slider {
+    position: relative;
+    background: #fff url('images/loading.gif') center no-repeat;
+}
+.anywhere-slider .slick-track {
+    background-color: #fff;
+}
+.anywhere-slider .picture-slide a {
+    display: block;
+}
+.anywhere-slider .picture-slide img {
+    width: 100%;
+	display: none;
+}
+.anywhere-slider .first-slide img {
+    display: block;
+}
+
+/* NAVIGATION */
+
+.anywhere-slider .slick-arrow {
+    position: absolute;
+	top: 50%;
+    z-index: 99;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	border: none;
+	font-size: 0;
+	opacity: 0.7;
+}
+.anywhere-slider .slick-prev {
+	left: 15px;
+	background: url('images/arrow-left.png') no-repeat;
+}
+.anywhere-slider .slick-next {
+	right: 15px;
+	background: url('images/arrow-right.png') no-repeat;
+}
+.anywhere-slider .slick-arrow:hover {
+	opacity: 1;
+}
+
+/* BULLET NAVIGATION */
+
+.anywhere-slider .slick-dots {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 0;
+    z-index: 99;
+	padding: 10px 0;
+    text-align: center;
+	font-size: 0;
+}
+.anywhere-slider .slick-dots li  {
+	display: inline-block;
+	margin: 0 3px;
+}
+.anywhere-slider .slick-dots button {
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: url('images/bullets.png') no-repeat bottom;
+    font-size: 0;
+}
+.anywhere-slider .slick-active button {
+	background-position: top;
+}

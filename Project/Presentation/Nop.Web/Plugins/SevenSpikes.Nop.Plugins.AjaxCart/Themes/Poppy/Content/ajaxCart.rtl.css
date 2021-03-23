@@ -1,0 +1,109 @@
+
+.item-box .quantityWrapper span,
+.item-box .quantityWrapper .productQuantityTextBox {
+    float: right;
+}
+.item-box .quantityWrapper .minus {
+    border-radius: 0 2px 2px 0;
+}
+.item-box .quantityWrapper .plus {
+    border-radius: 2px 0 0 2px;
+}
+@media all and (min-width: 600px) {
+
+    .desktop .product-list .ajax-cart-button-wrapper.qty-enabled {
+        float: right;
+    }
+    .desktop .product-list .ajax-cart-button-wrapper.qty-enabled .select-box {
+        float: right;
+    }
+    .desktop .product-list .item-box .additional-buttons {
+        float: right;
+    }
+
+    .product-list .item-box .ajax-cart-button-wrapper.qty-enabled .quantityWrapper {
+        float: right;
+    }
+    .product-list .item-box .ajax-cart-button-wrapper.qty-enabled input[type="button"] {
+        float: right !important;
+        margin-left: unset;
+	margin-right: 5px;
+    }
+
+}
+
+@media all and (min-width: 1451px) {
+
+    .desktop .product-list .item-box .ajax-cart-button-wrapper.qty-enabled + .additional-buttons {
+        text-align: right;
+    }
+        .desktop .product-list .item-box .ajax-cart-button-wrapper.qty-enabled + .additional-buttons > *:first-child {
+            margin-right: 0;
+        }
+
+}
+.ajaxCart .k-window-titlebar .k-window-actions {
+    right: unset;
+    left: 18px;
+}
+.productAddedToCartWindowTitle, 
+.miniProductDetailsView .product-name {
+    left: unset;
+    right: 0;
+}
+.productAddedToCartWindowImage {
+    float: right;
+}
+.productAddedToCartWindowDescription {
+    float: left;
+}
+.productAddedToCartWindowSummary *:nth-child(1) {
+    float: right;
+}
+.productAddedToCartWindowSummary *:nth-child(2) {
+    float: left;
+}
+.ajaxCart .item-box { /*item box behavior is determined by the theme*/
+	margin: 0 2% 0 0 !important;
+}
+.ajaxCart .item-box:first-child {
+    margin-left: unset !important;
+    margin-right: 0 !important;    
+}
+.miniProductDetailsView .gallery {
+	float: right;
+}
+.miniProductDetailsView .overview {
+    float: left;
+}
+.miniProductDetailsView .add-to-cart .select-box {
+    float: right;
+}
+.miniProductDetailsView .quantityWrapper,
+.miniProductDetailsView .quantityWrapper span,
+.miniProductDetailsView .quantityWrapper .qty-input {
+    float: right;
+}
+.miniProductDetailsView .quantityWrapper .minus {
+    border-radius: 0 2px 2px 0;
+}
+.miniProductDetailsView .quantityWrapper .plus {
+    border-radius: 2px 0 0 2px;
+}
+.miniProductDetailsView .add-to-cart-button {
+    float: left;
+}
+
+@media all and (min-width: 400px) and (max-width: 480px), 
+                (min-width: 740px) and (max-width: 900px), 
+                 (min-width: 1650px) {
+
+    .product-grid .item-box .ajax-cart-button-wrapper.qty-enabled .quantityWrapper,
+    .product-grid .item-box .ajax-cart-button-wrapper.qty-enabled .select-box {
+        float: right;
+    }
+    .product-grid .item-box .ajax-cart-button-wrapper.qty-enabled input[type="button"] {
+        float: left;
+    }
+
+}

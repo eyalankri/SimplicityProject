@@ -1,0 +1,94 @@
+﻿
+
+/* BUTTON */
+
+
+
+/* START PRODUCT OVERVIEW */
+
+.quickViewWindow .gallery {
+    float: right;
+}
+
+.quickViewWindow .overview .left {
+    float: right;
+    text-align: right;
+}
+
+.quickViewWindow #accordion > h3 {
+    text-align: right;
+}
+
+.quickViewWindow #accordion > h3 span {
+    right: auto;
+    left: 11px;
+}
+
+.quickViewWindow .overview .right {
+    float: left;
+    text-align: left;
+}
+
+.quickViewWindow .overview,
+.quickViewWindow .add-to-wishlist-button {
+    float: left;
+}
+
+.quickViewWindow #accordion .bottom .prices > * {
+    float: none !important;
+}
+
+.quickViewWindow  #accordion .purchase-area .add-to-cart .qty-label {
+    margin-right: -33px;
+    margin-left: 0;
+}
+
+.quickViewWindow .links-panel a {
+    padding-left: 0;
+    padding-right: 15px;
+    text-align: right;
+}
+
+.quickViewWindow .item-grid {
+    text-align: right;
+}
+
+.quickViewWindow .product-grid .item-box, .quickViewWindow .also-purchased-products-grid .item-box {
+    float: right;
+}
+
+.quickViewWindow  #accordion .purchase-area .add-to-cart .qty-input, .quickViewWindow  #accordion .purchase-area .add-to-cart .qty-dropdown {
+    margin: 0 5px 0 0;
+}
+
+.quickView .k-window-titlebar.k-header .k-window-actions {
+    right: auto;
+    left: 13px;
+}
+
+.quickView .k-window-titlebar.k-header {
+    right: auto;
+    left: 0;
+}
+
+.quickViewWindow .gallery .thumbnails a, .quickViewWindow .gallery .thumbnails > img {
+    float: right;
+}
+
+.quickViewWindow .links-panel a {
+    background: url(images/bullet-right.png) right center no-repeat;
+}
+
+.quickView .giftcard > div > * {
+	float: right;
+}
+
+.quickView .giftcard label {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+
+.quickViewWindow .overview .attributes dt {
+    text-align: right;
+}

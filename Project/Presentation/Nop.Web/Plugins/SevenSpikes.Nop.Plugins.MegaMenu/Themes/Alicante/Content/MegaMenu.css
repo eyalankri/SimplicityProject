@@ -1,0 +1,145 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.mega-menu {
+	position: relative;
+	z-index: 1001;
+}
+.mega-menu .dropdown {
+    display: none;
+    position: absolute;
+	z-index: 1;
+	margin-top: -1px;
+	border: 1px solid #ddd; 
+	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+	overflow: hidden;
+    background-color: #fff;
+    padding: 10px;
+}
+.mega-menu .dropdown.fullWidth {
+	left: 0;
+	width: 100%;
+}
+.mega-menu .dropdown.active {
+	display: block;
+}
+
+/* ROWS AND BOXES */
+
+.mega-menu .row {
+	overflow: hidden;
+}
+.mega-menu .box {
+    float: left;
+    padding: 0 10px 15px;
+}
+.mega-menu .boxes-1 .box {
+    width: 100%;
+}
+.mega-menu .boxes-2 .box {
+    width: 50%;
+}
+.mega-menu .boxes-3 .box {
+    width: 33.333%;
+}
+.mega-menu .boxes-4 .box {
+    width: 25%;
+}
+.mega-menu .boxes-5 .box {
+    width: 20%;
+}
+.mega-menu .boxes-6 .box {
+    width: 16.666%;
+}
+.mega-menu .boxes-7 .box {
+    width: 14.285%;
+}
+.mega-menu .boxes-8 .box {
+    width: 12.5%;
+}
+
+.mega-menu .title {
+    display: block;
+    margin: 0 0 15px;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 4px;
+    font-size: 13px;
+	font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+}
+.mega-menu .title a:hover {
+	color: #836;
+}
+.mega-menu .picture {
+	float: left;
+	overflow: hidden;
+	text-align: center;
+	font-size: 0;
+}
+.mega-menu .picture a {
+	display: block;
+}
+
+.mega-menu .categories .picture {
+	width: 40%;
+}
+.mega-menu .manufacturers .picture,
+.mega-menu .vendors .picture {
+	width: 100%;
+}
+.mega-menu .subcategories {
+	margin-left: 45%;
+}
+.mega-menu .subcategories li {
+	margin: 10px 0 0;
+	font-size: 13px;
+	font-family: Tahoma, Geneva, sans-serif;
+	text-transform: none;
+}
+.mega-menu .subcategories li:first-child {
+	margin-top: -2px;
+}
+.mega-menu .subcategories a {
+	display: inline-block;
+	background: url('images/arrow.png') left center no-repeat;
+	padding: 0 0 0 12px;
+	color: #333;
+}
+.mega-menu .subcategories a:hover {
+    color: #836;
+}
+.mega-menu a.view-all {
+	background: none !important;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+
+@media all and (max-width: 1024px) {
+
+.mega-menu {
+	display: none !important;
+}
+.mega-menu-responsive {
+	display: none; /*menu is closed by default*/
+}
+.back-button {
+    display: none !important; /*back button is not used*/
+}
+	
+}
+
+@media all and (min-width: 1025px) {
+
+ul.mega-menu-responsive {
+	display: none !important; /*prefixed to override theme css*/
+}
+.back-button {
+    display: none;
+}
+	
+}

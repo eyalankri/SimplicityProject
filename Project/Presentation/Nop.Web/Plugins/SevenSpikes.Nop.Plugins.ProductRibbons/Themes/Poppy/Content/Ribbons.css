@@ -1,0 +1,25 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.item-box .ribbon-position {
+    padding: 13px;
+}
+
+.product-list .item-box .ribbon-wrapper {
+    float: none;
+}
+
+.gallery .ribbon-position {
+    padding: 15px;
+}
+.gallery #wrap .ribbon-position {
+    -webkit-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+}
+.gallery #wrap:hover .ribbon-position {
+    opacity: 0;
+}
+
+/*IMPORTANT: breakpoints range depends on where "view products in list" is available and where is not */

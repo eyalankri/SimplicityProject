@@ -1,0 +1,15 @@
+
+.nivo-directionNav {
+	right: auto;
+    left: 0;
+}
+.nivo-directionNav a.nivo-prevNav {
+	right: 0;
+	left: auto;
+    background-image: url('slider-arrow-right.png');
+}
+.nivo-directionNav a.nivo-nextNav {
+	right: auto;
+	left: 0;
+    background-image: url('slider-arrow-left.png');
+}

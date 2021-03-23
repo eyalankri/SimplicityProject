@@ -1,0 +1,98 @@
+/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.picture-thumbs.in-carousel {
+    max-width: 600px;
+    margin: 10px auto 0;
+}
+.picture-thumbs .picture-thumbs-list {
+    margin: 0 -5px;
+}
+.picture-thumbs .picture-thumbs-item {
+    padding: 0 5px;
+}
+.picture-thumbs.in-carousel .picture-thumbs-list {
+    margin: 0;
+}
+.picture-thumbs button + .slick-list {
+    padding: 0 15px;
+}
+
+/* arrows nav */
+
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 0;
+    z-index: 1;
+    width: 15px;
+    border: none;
+    cursor: pointer;
+}
+.picture-thumbs .slick-prev {
+    left: 0;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAYAAAA7kX6CAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NUNFMTE5NjExNzFFMTFFNDlFNjNGRTU0NzQyNTUwQUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NUNFMTE5NjIxNzFFMTFFNDlFNjNGRTU0NzQyNTUwQUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1Q0UxMTk1RjE3MUUxMUU0OUU2M0ZFNTQ3NDI1NTBBRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1Q0UxMTk2MDE3MUUxMUU0OUU2M0ZFNTQ3NDI1NTBBRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pp8dNLEAAAB5SURBVHjanNRbCgAhCAXQbEvufwftqaFAiMbHvfUTRAfDVJlztpclqore3RHGGLL2zqAVyA76C0KgiyoYogymKIIl8iCEbgijE1LIII0MyhW1MU+l8ZkcCt/fAWOvACAclVyJsyJPcdVWIUYa2cXo6PhheZ1ynwADAHlFHiPLmxeqAAAAAElFTkSuQmCC')
+                    center no-repeat, #fff;
+}
+.picture-thumbs .slick-next {
+    right: 0;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAYAAAA7kX6CAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NEU1MzlDQzUxNzFFMTFFNDlBRjFGQkI2NjkwODNFQ0UiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NEU1MzlDQzYxNzFFMTFFNDlBRjFGQkI2NjkwODNFQ0UiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0RTUzOUNDMzE3MUUxMUU0OUFGMUZCQjY2OTA4M0VDRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0RTUzOUNDNDE3MUUxMUU0OUFGMUZCQjY2OTA4M0VDRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuQ1UIUAAACGSURBVHjanNRhDoAgCAXgeOtI3v8E3sm0pWsE+YBftvYBKSmttSMTMmEp5V7UWoWGHc1nGmu48HjXE7gQVjKVwIzT62TA57uFrUhVxm4PPAxm5y0M9rw1RmRY3hjRSZs4CtdwIIMirTbVKgU/iIEm2kEX/Q359r9EtJJXMXYDpO+cTFwCDACU1jmBY/n9lQAAAABJRU5ErkJggg==')
+                    center no-repeat, #fff;
+}
+.picture-thumbs .slick-prev.slick-disabled,
+.picture-thumbs .slick-next.slick-disabled {
+    opacity: .6;
+    cursor: default;
+}
+
+
+
+/* dots nav */
+
+.slick-dots {
+    margin-top: 15px;
+}
+.slick-dots button {
+    background: #c03;
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+}
+.slick-dots li {
+    display: inline-block;
+    margin: 0 3px;
+}
+.slick-dots .slick-active button {
+    border: 1px solid #333;
+}
+
+
+
+/* items */
+
+.picture-thumbs a.cloudzoom-gallery {
+    display: block !important;
+    margin: 0 !important;
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+}
+.picture-thumbs a.cloudzoom-gallery:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+@media all and (max-width: 768px) {
+
+    .picture-thumbs.in-carousel {
+        max-width: 440px;
+    }
+
+}

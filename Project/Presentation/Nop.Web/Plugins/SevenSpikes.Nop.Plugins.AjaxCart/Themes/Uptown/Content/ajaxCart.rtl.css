@@ -1,0 +1,63 @@
+.product-list .ajax-cart-button-wrapper,
+/* PRODUCT ADDED TO CART WINDOW */
+
+
+.productAddedToCartWindowImage,
+.miniProductDetailsView .gallery,
+.miniProductDetailsView .add-to-cart > *,
+.miniProductDetailsView .add-button-wrap {
+	float: right;
+}
+.productAddedToCartWindowDescription,
+.miniProductDetailsView .overview {
+	float: left;
+}
+
+/* LOADER & ERROR WINDOW */
+
+
+.k-overlay{
+	right: 0;
+	left: auto;
+}
+.nopAjaxCartPanelAjaxBusy:before, .miniProductDetailsPanelAjaxBusy:before {
+    margin-right: -7px;
+    margin-left: auto;
+}
+
+/* COMMON WINDOW STYLES */
+
+
+.ajaxCart{
+	right: 50% !important;
+	left: auto !important;
+	margin: 0 -395px 0 0;
+}
+.ajaxCart .k-window-titlebar .k-window-actions{
+	left: 10px;
+	right: auto;
+}
+.ajaxCart .k-window-titlebar .k-window-actions a{
+	left: -53px;
+	right: auto;
+}
+.productAddedToCartWindowTitle,
+.miniProductDetailsView .product-name{
+	right: 0;
+	left: 0;
+}
+.productAddedToCartWindowImage img{
+	left: 0;
+	right: 0;
+}
+.ajaxCart .product-grid .item-box:nth-child(3n+1){
+	margin-right: 2%;
+	margin-left: 0;
+}
+.ajaxCart .product-grid .item-box:nth-child(4n+1){
+	margin-right: 0;
+}
+.miniProductDetailsView .giftcard:before{
+	right: 0;
+	left: 0;
+}

@@ -1,0 +1,7 @@
+﻿@media all and (min-width: 481px) {
+
+    .ui-tabs .ui-tabs-nav li {
+        float: right;
+    }
+
+}

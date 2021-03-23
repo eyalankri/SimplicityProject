@@ -1,0 +1,73 @@
+.jCarouselMainWrapper .slick-prev {
+	right: 50%;
+	left: auto;
+	margin-right: -36px;
+	margin-left: 0;
+    background-image: url(images/next-horizontal.png);
+}
+.jCarouselMainWrapper .slick-next {
+	left: 50%;
+	right: auto;
+	margin-left: -36px;
+	margin-right: 0;
+    background-image: url(images/prev-horizontal.png);
+}
+.jCarouselMainWrapper .slick-prev:hover,
+.jCarouselMainWrapper .slick-next:hover {
+	background-position: top -32px center;
+}
+.jCarouselMainWrapper .slick-disabled:after {
+	right: 0;
+	left: 0;
+}
+.jCarouselMainWrapper .slick-dots li button {
+	background: url('images/bullets.png') no-repeat right bottom;
+}
+.jCarouselMainWrapper .slick-dots .slick-active button {
+	background-position: right top;
+}
+.html-home-page .nop-jcarousel.manufacturer-grid .slick-prev {
+	right: 27px;
+	left: auto !important;
+}
+.html-home-page .nop-jcarousel.manufacturer-grid .slick-next {
+	left: 27px;
+	right: auto !important;
+}
+.html-home-page .nop-jcarousel.manufacturer-grid .slick-dots {
+	right: 0;
+	left: 0;
+}
+@media all and (min-width: 769px) {
+	.nop-jcarousel .carousel-title {
+		text-align: right;
+	}
+	.jCarouselMainWrapper .slick-prev {
+		right: auto;
+		left: 37px;
+		margin-right: 0 !important;
+		margin-left: 0;
+	}
+	.jCarouselMainWrapper .slick-next {
+		left: 0;
+		right: auto;
+		margin-left: 0 !important;
+		margin-right: 0;
+	}
+}
+@media all and (min-width: 1025px) {
+	.side-2 .jCarouselMainWrapper .slick-prev {
+		right: 50%;
+		left: auto;
+		margin-right: -34.5px !important;
+		margin-left: 0;
+	}
+	.side-2 .jCarouselMainWrapper .slick-next {
+		right: 50%;
+		left: auto;
+		margin-right: 2.5px !important;
+		margin-left: 0;
+	}
+}
+@media all and (min-width: 1281px) {
+}

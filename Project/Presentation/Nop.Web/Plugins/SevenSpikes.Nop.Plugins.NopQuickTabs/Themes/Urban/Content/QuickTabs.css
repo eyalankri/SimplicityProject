@@ -1,0 +1,110 @@
+﻿/* GLOBAL STYLES */
+
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description  {
+    display: block;
+}
+.ui-tabs .ui-tabs-panel{
+    padding:20px 10px;
+}
+.product-reviews-page .submitReviewResult {
+    color: #82b85a;
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+/* THEME STYLES */
+
+.product-essential {
+	margin-bottom: 20px;
+}
+.full-description {
+	margin-bottom: 0;
+}
+.product-specs-box,
+.product-specs-box .data-table {
+	margin-bottom: 0;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, 
+.ui-tabs .ui-state-active.ui-tabs-active a,
+.ui-tabs .ui-tabs-nav li a{
+    background:transparent;
+    border:none;
+    color:#333;
+    border-bottom:3px solid transparent;
+    padding:10px 0 9px;
+    min-width:0;
+}
+.ui-tabs .ui-state-active.ui-tabs-active a{
+    border-bottom:3px solid #333;
+}
+.ui-tabs .ui-tabs-nav li{
+    width:100%;
+    margin:0 0 10px;
+}
+.ui-tabs .ui-tabs-nav li:last-child{
+    margin:0;
+}
+.ui-tabs{
+    border-bottom:1px solid #959595;
+}
+.productTabs .write-review .title{
+    display:none;
+}
+
+.productTabs .product-specs-box table tbody{
+    border:none;
+}
+.productTabs .product-specs-box table tr:last-child td{
+    border-bottom:none;
+}
+
+@media all and (min-width: 481px) {
+    .ui-tabs .ui-tabs-nav li,
+    .ui-tabs .ui-tabs-nav li:last-child{
+        width:auto;
+        margin:0 15px;
+    }
+
+    .ui-tabs .ui-tabs-nav li a,
+    .ui-tabs .ui-state-active.ui-tabs-active a{
+        padding:10px 6px 9px;
+    }
+}
+@media all and (min-width: 769px) {
+    /*two columns tabs*/
+    .quick-tabs-1 .ui-tabs{
+        overflow:hidden;
+        border-top: 1px solid #959595;
+    }
+    .quick-tabs-1 .productTabs-header{
+        float:left;
+        width:31%;
+    }
+    .quick-tabs-1 .productTabs-body{
+        float:right;
+        width:66%;
+        border-left:1px solid #e1e1e1;
+    }
+    .quick-tabs-1 .ui-tabs .ui-tabs-nav li{
+        display:block;
+        text-align:left;
+        border-bottom:1px solid #e1e1e1;
+        margin:0;
+        line-height:14px;
+    }
+    .quick-tabs-1 .ui-tabs .ui-tabs-nav li a,
+    .quick-tabs-1 .ui-tabs .ui-state-active.ui-tabs-active a {
+        padding: 20px 0 17px;
+    }
+    .quick-tabs-1 .ui-tabs .ui-tabs-panel{
+        border-top:none;
+        padding: 30px;
+    }
+    .quick-tabs-1 .write-review .title{
+        display:none;
+    }
+
+}

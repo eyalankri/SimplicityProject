@@ -1,0 +1,11 @@
+
+.anywhere-slider .slick-prev {
+    background-image: url(images/nav-button-right.png);
+    left: auto;
+    right: 20px;
+}
+.anywhere-slider .slick-next {
+    background-image: url(images/nav-button-left.png);
+    right: auto;
+    left: 20px;
+}

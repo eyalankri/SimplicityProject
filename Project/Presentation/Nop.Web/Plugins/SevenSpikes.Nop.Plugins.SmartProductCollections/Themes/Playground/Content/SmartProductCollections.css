@@ -1,0 +1,318 @@
+﻿/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+/* COMMON STYLES */
+
+
+.spc-header {
+	position: relative;
+    background: #bb9966;
+    border-radius: 10px;
+    padding: 0 20px;
+    margin: 0 0 10px;
+    min-height: 38px;
+    text-align: center;
+}
+.spc .navigation {
+    display: none;
+}
+.spc .mobile-navigation {
+	margin: 0 0 20px;
+}
+.spc-header .title {
+    font: normal 20px/38px "Segoe Print", 'segoe-print', sans-serif;
+    color: #fff;
+}
+.spc-header ul {
+	margin: 0 0 30px;
+	font-size: 0;
+}
+.spc-header li {
+	margin: -1px 0 0;
+	padding: 0 15px;
+    color: #fff;
+	font: bold 14px "Trebuchet MS", Geneva, sans-serif;
+    line-height: 38px;
+	cursor: pointer;
+    opacity: .5;
+}
+.spc-header li.active {
+    opacity: 1;
+}
+
+.spc-body {
+	position: relative;
+    min-height: 312px; /*pre-loading height, should not be taller than any of the grids in any resolution, currently matched to desktop category grid, could be fine tuned per variant*/
+}
+.spc-body .product-grid {
+	display: none;
+	margin: 0;
+}
+.spc-body .product-grid.active {
+	display: block;
+}
+.spc-body .no-data {
+	display: block;
+	padding: 20px 25px;
+}
+
+
+/* LOADING OVERLAY */
+
+
+.spc-body .loading-overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	background: rgba(255,255,255,0.9) url('images/loader.gif') center no-repeat;
+}
+.spc-products .spc-body .loading-overlay {
+	display: block;
+}
+.spc-body .loading-overlay span {
+	display: none;
+}
+
+
+/* PRODUCTS */
+
+
+.spc-products {
+	margin: 0 0 50px;
+    min-height: 599px;
+}
+.spc-products .spc-header {
+    padding: 10px;
+}
+.spc-products .spc-body .loading-overlay {
+	bottom: 50px; /*loader-overlay fix, depending on item-box bottom margin*/
+}
+
+
+/* CATEGORIES */
+
+
+.spc-categories {
+	margin: 0 0 100px;
+    min-height: 428px;
+}
+.spc-categories .spc-header {
+    display: none;
+}
+.spc-categories + .spc-categories {
+	margin-top: -50px;
+}
+.spc-categories > .loading-overlay {
+    background-color: #fff;
+    line-height: 340px;
+    text-align: center;
+}
+
+.spc-categories .category-info {
+	position: relative;
+    background: #bb9966;
+    border-radius: 10px;
+    text-align:center;
+    padding: 10px;
+}
+.spc-categories .category-title {
+    font: normal 20px/38px "Segoe Print", 'segoe-print', sans-serif;
+    color: #fff;
+}
+.spc-categories .category-sublist {
+	display: none;
+	padding: 0 0 10px;
+}
+.spc-categories .category-picture {
+	display: none;
+	font-size: 0;
+}
+
+.spc-categories .category-products {
+	position: relative;
+}
+.spc-categories .product-grid {
+	display: none;
+}
+.spc-categories .product-grid.active {
+	display: block;
+}
+
+.spc-categories .product-item {
+	padding: 0 !important;
+}
+.spc-categories .product-title {
+	height: auto;
+	margin: 0 0 10px;
+}
+
+
+
+@media all and (min-width: 481px) {
+
+.spc-categories .category-sublist li {
+	display: inline-block;
+}
+
+}
+
+
+@media all and (min-width: 769px) {
+
+.spc-header ul {
+	border: none;
+}
+.spc-header li {
+	display: inline-block;
+	margin: 3px;
+}
+
+}
+
+
+@media all and (min-width: 1025px) {
+
+.spc-header {
+    text-align: left;
+}
+.spc-header li {
+	margin: 0;
+}
+.spc-products .spc-header {
+    padding: 0 20px;
+}
+.spc-categories .spc-header,
+.spc .navigation {
+    display: block;
+}
+.spc .mobile-navigation {
+    display: none;
+}
+.spc-products .spc-header .title {
+    font-size: 24px;
+}
+.spc-products .spc-header ul {
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+	margin: 0;
+}
+
+.spc-categories + .spc-categories {
+	margin-top: 0;
+}
+.spc-categories .spc-header ul {
+	float: right;
+	margin: 0 0 -1px;
+}
+.spc-categories .spc-body:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.spc-categories .product-grid {
+	min-height: 350px; /*places loader in the middle when the grid contains less than 3 items, depending on item-box height + margins*/
+}
+.spc-categories .category-info {
+	position: relative;
+	z-index: 1;
+	float: left;
+	width: 32%;
+	min-height: 312px; /*match category picture height with grid height*/
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+}
+.spc-categories .category-info:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.spc-categories .category-details {
+    padding-top: 100%;
+}
+.spc-categories .category-title {
+	position: relative;
+	padding: 0;
+	font-size: 24px;
+    color: #c78e7a;
+}
+.spc-categories .category-title:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+.spc-categories .category-title a {
+	display: block;
+    padding: 5px;
+}
+.spc-categories .category-sublist .view-all {
+    text-decoration: underline;
+}
+.spc-categories .category-sublist {
+	display: block;
+	background-color: rgba(255,255,255,0.9);
+	transition: all 0.3s ease;
+}
+.spc-categories .category-sublist li {
+	display: block;
+    color: #c78e7a;
+    font-size: 16px;
+}
+.spc-categories .category-sublist a {
+	display: block;
+	position: relative;
+	padding: 5px;
+}
+
+.spc-categories .category-picture {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 314px;
+    overflow: hidden;
+}
+.spc-categories .category-picture a {
+    display: block;
+}
+
+.spc-categories .category-products {
+    float: right;
+    width: 66%;
+}
+.spc-categories .item-box .product-title a {
+    font-size: 18px;
+    line-height: 24px;
+    height: 24px;
+}
+.spc-categories .prices span {
+    font-size: 18px;
+    line-height: 24px;
+}
+.spc-categories .tax-shipping-info {
+    display: none;
+}
+
+.spc-categories .spc-body .loading-overlay {
+	bottom: 38px; /*depending on item-box margin*/
+}
+
+}

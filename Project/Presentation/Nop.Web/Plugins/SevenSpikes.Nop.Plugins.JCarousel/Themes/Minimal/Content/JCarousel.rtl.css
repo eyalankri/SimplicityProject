@@ -1,0 +1,19 @@
+
+.nop-jcarousel .slick-prev {
+	right: auto;
+    left: 50%;
+    background-image: url('images/next-horizontal.png');
+}
+.nop-jcarousel .slick-next {
+    right: 50%;
+	left: auto;
+    background-image: url('images/prev-horizontal.png');
+}
+
+@media all and (min-width: 1025px) {
+
+    .nop-jcarousel.product-grid .item-box .buttons {
+		right: 0;
+        left: 0;
+    }
+}

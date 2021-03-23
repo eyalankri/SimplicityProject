@@ -1,0 +1,57 @@
+.nop-jcarousel .slick-prev {
+	right: 50%;
+	left: auto;
+    background-image: url('images/next-horizontal.png');
+	margin-right: -35px;
+	margin-left: 0;
+	background-position: 13px center;
+}
+.nop-jcarousel .slick-next {
+	right: 50%;
+	left: auto;
+    background-image: url('images/prev-horizontal.png');
+	margin-right: 3px;
+	margin-left: 0;
+	background-position: 9px center;
+}
+.nop-jcarousel.category-grid .slick-dots,
+.nop-jcarousel.manufacturer-grid .slick-dots,
+.nop-jcarousel.vendor-grid .slick-dots {
+	right: 0;
+	left: 0;
+}
+@media all and (min-width: 769px) {
+	.nop-jcarousel .carousel-title {
+		text-align: right;
+	}
+	.nop-jcarousel .slick-prev {
+		left: 36px;
+		right: auto;
+	}
+	.nop-jcarousel .slick-next {
+		left: 0;
+		right: auto;
+	}
+}
+@media all and (min-width: 1025px) {
+	.side-2 .nop-jcarousel .slick-prev {
+		right: 35px;
+		left: auto;
+	}
+	.side-2 .nop-jcarousel .slick-next {
+		left: 0;
+		right: auto;
+	}
+}
+@media all and (min-width: 1060px) {
+	.center-1 .nop-jcarousel.manufacturer-grid .slick-prev,
+    .center-1 .nop-jcarousel.vendor-grid .slick-prev {
+		right: -32px;
+		left: auto;
+	}
+	.center-1 .nop-jcarousel.manufacturer-grid .slick-next,
+    .center-1 .nop-jcarousel.vendor-grid .slick-next {
+		left: -32px;
+		right: auto;
+	}
+}

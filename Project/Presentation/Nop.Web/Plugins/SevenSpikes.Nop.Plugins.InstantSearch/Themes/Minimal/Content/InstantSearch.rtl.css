@@ -1,0 +1,30 @@
+
+span.search-box-text {
+    float: right;
+}
+.with-caregory-search-enabled .select-wrap {
+    float: right;
+}
+
+.instant-search-item .img-block {
+    float: right;
+}
+.instant-search-item .detail {
+    margin-right: 90px;
+	margin-left: 0;
+    text-align: right;
+}
+
+@media all and (min-width: 481px) {
+
+	.with-caregory-search-enabled .select-wrap {
+		background-position: left center;
+	}
+}
+
+@media all and (min-width: 1501px) {
+
+	.header.normal .with-caregory-search-enabled .select-wrap {
+		background-position: left center;
+	}
+}

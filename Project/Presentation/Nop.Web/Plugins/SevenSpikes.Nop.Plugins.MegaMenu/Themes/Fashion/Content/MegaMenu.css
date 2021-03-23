@@ -1,0 +1,184 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.mega-menu {
+    position: relative;
+	z-index: 1001;
+}
+.mega-menu-responsive, 
+.mega-menu-title {
+    display: none;
+}
+.header-menu .sublist li.back-button {
+    display: none !important;
+}
+
+@media all and (min-width: 1025px) {
+    /* stops the opened mega-menu-responsive when resizing from narrow to wide */
+    .mega-menu-responsive {
+        display: none !important;
+    }
+}
+
+/* DROPDOWN */
+
+.mega-menu .dropdown {
+    display: none;
+	position:absolute;
+	background: #fff /*url('images/header.png') top repeat-x*/;
+	overflow:hidden;
+	margin-top: -1px;
+	padding:15px;
+	text-align: left;
+	border: 1px solid #666;
+}
+.mega-menu .dropdown.fullWidth {
+	left: 0;
+	width: 100%;
+	margin-left: 0px;
+}
+
+.mega-menu > li {
+    position: static;
+}
+
+.mega-menu .dropdown.active {
+    display: block;
+}
+
+/* ROWS AND BOXES */
+
+.mega-menu .row {
+    margin-top: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mega-menu .row:first-of-type {
+    margin-top: 0;
+}
+
+.mega-menu .box {
+	float: left;	
+	padding: 0 10px;
+}
+
+.mega-menu .boxes-1 .box {
+    width: 100%;
+}
+
+.mega-menu .boxes-2 .box {
+    width: 50%;
+}
+
+.mega-menu .boxes-3 .box {
+    width: 33.333%;
+}
+
+.mega-menu .boxes-4 .box {
+    width: 25%;
+}
+
+.mega-menu .boxes-5 .box {
+    width: 20%;
+}
+
+.mega-menu .boxes-6 .box {
+    width: 16.666%;
+}
+
+.mega-menu .boxes-7 .box {
+    width: 14.28%;
+}
+
+.mega-menu .boxes-8 .box {
+    width: 12.5%;
+}
+
+.mega-menu .title {
+    display: block;
+    margin-bottom: 10px;
+    padding: 0 0 5px;
+    font: normal bold 12px Arial, Helvetica, sans-serif;
+	color: #000;
+	text-transform: uppercase;
+    border-bottom: 1px dotted #789;
+}
+.mega-menu .title a {
+    padding: 0;
+	font-weight: bold;
+	color: #000;
+}
+.mega-menu .title a:hover {
+	text-decoration: underline;
+}
+.mega-menu .categories .picture {
+    float: left;
+}
+.mega-menu .categories .picture img {
+    border-width: 0px;
+}
+.mega-menu .categories .picture a {
+    display: block;
+    padding: 0;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.mega-menu .box .subcategories {
+    margin: 0 0 0 100px;
+    color: #000;
+}
+.mega-menu .box li a {
+    display: block;
+	background: url('images/arrow1.png') left center no-repeat;
+    padding: 5px 12px;
+    font: normal normal 12px Arial, Helvetica, sans-serif;
+}
+.mega-menu .box li a:hover {
+	text-decoration: underline;
+}
+.mega-menu a.view-all {
+    font-weight:bold !important;
+    background: none;
+    top: 0;
+}
+.mega-menu .row .box li a {
+    padding: 5px 0 5px 10px;
+    font-size: 12px;
+}
+.mega-menu .manufacturer span,
+.mega-menu .vendor span {
+    display: block;
+    margin-bottom: 5px;
+	text-align: center;
+}
+.mega-menu li a.manufacturer,
+.mega-menu li a.vendor {
+	background: none !important;
+	text-align: center;
+    padding-left: 0 !important;
+}
+.mega-menu li a.manufacturer:hover,
+.mega-menu li a.vendor:hover {
+	background: none;
+}
+.mega-menu .topic-wrapper {
+	overflow: hidden;
+}
+.mega-menu .topic-wrapper p {
+	margin: 0 0 10px;
+	font: normal normal 11px/18px Arial, Helvetica, sans-serif;
+	color: #333;
+}
+.mega-menu .topic-wrapper strong {
+	display: block;
+    padding: 5px 0;
+    font: normal bold 12px Arial, Helvetica, sans-serif;
+	color: #000;
+	text-shadow: 1px 1px 0 #fff;
+	text-transform: uppercase;
+    border-bottom: 1px dotted #ccc;
+}

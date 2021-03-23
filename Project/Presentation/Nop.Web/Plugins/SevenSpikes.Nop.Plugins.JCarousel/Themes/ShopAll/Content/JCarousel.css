@@ -1,0 +1,130 @@
+/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nop-jcarousel > .carousel-title {
+    background:#ddd;
+    padding: 10px 65px 10px 15px;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+    text-align:left;
+    font-weight:bold;
+    position: relative;
+}
+.nop-jcarousel > .carousel-title strong {
+    font-size: 14px;
+    text-shadow: none;
+}
+.nop-jcarousel .slick-list {
+    margin: 0 -3.5px;
+}
+.nop-jcarousel .carousel-item {
+    padding: 7px 3.5px;
+}
+.nop-jcarousel .category-item .picture, 
+.nop-jcarousel .sub-category-item .picture, 
+.nop-jcarousel .manufacturer-item .picture, 
+.nop-jcarousel .vendor-item .picture {
+    display: block !important;
+}
+.nop-jcarousel .carousel-item .item-box {
+    width: 100% !important;
+    margin: 0;
+}
+.nop-jcarousel .category-item .picture {
+    width: 100% !important;
+}
+.nop-jcarousel .item-box .product-item input[type='button'] {
+    border: none;
+    padding: 8px 17px;
+    color: #fff;
+    font-size: 16px;
+    background: url(images/js-button.png) #9E0B0F;
+    background-repeat: repeat-x;
+    transition: all .35s ease 0s;
+}
+.nop-jcarousel .jcarousel-item .button:hover {
+    opacity:0.85;
+}
+.jCarouselMainWrapper .slick-next, 
+.jCarouselMainWrapper .slick-prev {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: -15px 0 0;
+    border: none;
+    font-size: 0;
+}
+.jCarouselMainWrapper .slick-next {
+    right: 4px;
+    background: transparent url('images/next-horizontal.png') top no-repeat;
+}
+.jCarouselMainWrapper .slick-prev {
+    right: 36px;
+    background: transparent url('images/prev-horizontal.png') top no-repeat;
+}
+.jCarouselMainWrapper .slick-next:hover
+.jCarouselMainWrapper .slick-prev:hover {
+    background-position: bottom;
+}
+.jCarouselMainWrapper .slick-disabled{
+    cursor: default;
+    opacity: 0.5;
+}
+.jCarouselMainWrapper .slick-disabled:hover  {
+    background-position: top !important;
+}
+
+
+.nop-jcarousel .slick-dots {
+    text-align: center;
+    padding: 5px 0 0;
+}
+
+.nop-jcarousel .slick-dots li {
+    display: inline-block;
+}
+.nop-jcarousel .slick-dots li button {
+    width: 22px;
+    height: 22px;
+    background: url('images/bullets.png') no-repeat;
+    text-indent: -9999px;
+    border: 0;
+    cursor: pointer;
+}
+
+.nop-jcarousel .slick-dots .slick-active button {
+    background-position: 0 -22px;
+}
+
+@media all and (min-width: 1025px) {
+
+    .side-2 .nop-jcarousel .slick-carousel{
+        padding: 5px;
+    }
+
+}
+
+@media all and (max-width: 980px) and (min-width: 769px) {
+
+    .side-2 .nop-jcarousel > .carousel-title {
+        background: #ddd;
+        padding: 10px 15px;
+        color: #fff;
+        margin: 0;
+        background: url(../img/categories-repeat.png) #070707;
+        background-repeat: repeat-x;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: normal;
+    }
+    .side-2 .jCarouselMainWrapper .slick-next,
+    .side-2 .jCarouselMainWrapper .slick-prev {
+        display: none !important;
+    }
+
+}

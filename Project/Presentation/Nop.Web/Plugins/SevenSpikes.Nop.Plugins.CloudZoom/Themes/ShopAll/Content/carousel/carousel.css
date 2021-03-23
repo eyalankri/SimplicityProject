@@ -1,0 +1,92 @@
+/*
+* Copyright 2016 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.picture-thumbs.in-carousel {
+    max-width: 600px;
+    margin: 10px auto 0;
+}
+.picture-thumbs .picture-thumbs-list {
+    margin: 0 -5px;
+}
+.picture-thumbs .picture-thumbs-item {
+    padding: 0 5px;
+}
+.picture-thumbs.in-carousel .picture-thumbs-list {
+    margin: 0;
+}
+.picture-thumbs button + .slick-list {
+    padding: 0 22px;
+}
+
+/* arrows nav */
+
+.picture-thumbs .slick-prev,
+.picture-thumbs .slick-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 0;
+    z-index: 1;
+    width: 17px;
+    border: none;
+    cursor: pointer;
+}
+.picture-thumbs .slick-prev {
+    left: 0;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkEzQjI0M0U0OTQzMjExRTE4NzkwOTM4QTg0RDc3OTJDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkEzQjI0M0U1OTQzMjExRTE4NzkwOTM4QTg0RDc3OTJDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QTNCMjQzRTI5NDMyMTFFMTg3OTA5MzhBODRENzc5MkMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTNCMjQzRTM5NDMyMTFFMTg3OTA5MzhBODRENzc5MkMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4PGvlhAAAAsklEQVR42sTXQQ6AIAwEQGp8I4/kkzVejQS6u6VclIS4w0FazN1b5bhXC3rv6Lffndn7MsaYLrqSNuaf51GAL+apgL8wOwUIhysBULgKAIcrAFQ4C6DDGYAkHAXIwhGANDwKkIdHACnhu4DUer0DsGrADOEnAWmI6G8oRyAHkRSBHsUyBFOMJAi2HNMIRUNCIVQtGYxQNqUQQt2WhxEZFxOruhf8hS4LmVXfjq9WPB4BBgDFiCU7ds4WCAAAAABJRU5ErkJggg==')
+                    center no-repeat, #fff;
+}
+.picture-thumbs .slick-next {
+    right: 0;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkRDMTJCMzY3OTQzMjExRTE4RkZDQzZFODk3M0M1Qzc0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkRDMTJCMzY4OTQzMjExRTE4RkZDQzZFODk3M0M1Qzc0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REMxMkIzNjU5NDMyMTFFMThGRkNDNkU4OTczQzVDNzQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REMxMkIzNjY5NDMyMTFFMThGRkNDNkU4OTczQzVDNzQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4BhRU1AAAAtUlEQVR42sTXUQrCMBBF0eThGrPIbHJEoT8FMfPmpsmPhSa9B1HK9IhoJ9fr34YxxnX5kXYnMuf8eU+Lz4jbJ7aUiLcdiBVAX0BtBWxFKLF3C0LJ/ThCxhkUIfMchlDh20MQKv6GyggB/6QSggCUEBTARpCA1XfJ44D+FCCycRJgxSmAHScApXgVUI5XAEjcBWBxB4DGswA87swFaNydC7C4OxdgcWcuQOPfB56ejtUOr7cAAwDNlyU7TEznmgAAAABJRU5ErkJggg==')
+                    center no-repeat, #fff;
+}
+.picture-thumbs .slick-prev.slick-disabled,
+.picture-thumbs .slick-next.slick-disabled {
+    opacity: .6;
+    cursor: default;
+}
+
+
+
+/* dots nav */
+
+.slick-dots {
+    margin-top: 15px;
+}
+.slick-dots button {
+    background: #000;
+    font-size: 0;
+    width: 9px;
+    height: 9px;
+    border: none;
+}
+.slick-dots li {
+    display: inline-block;
+    margin: 0 3px;
+}
+.slick-dots .slick-active button {
+    background-color: #c00;
+}
+
+
+
+/* items */
+
+.picture-thumbs a.cloudzoom-gallery {
+    display: block !important;
+    margin: 0 !important;
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+@media all and (max-width: 768px) {
+
+    .picture-thumbs.in-carousel {
+        max-width: 392px;
+    }
+
+}

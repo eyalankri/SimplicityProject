@@ -1,0 +1,18 @@
+
+.nivo-directionNav a.nivo-prevNav {
+    left: auto;
+    right: 0;
+	background: rgba(0,0,0,.5) url(images/slider-arrow-right.png) no-repeat center;
+}
+.nivo-directionNav a.nivo-nextNav {
+    right: auto;
+    left: 0;
+	background: rgba(0,0,0,.5) url(images/slider-arrow-left.png) no-repeat center;
+}
+
+@media all and (min-width: 650px) {
+
+    .home-page-banners > slider-wrapper {
+        float: right;
+    }
+}

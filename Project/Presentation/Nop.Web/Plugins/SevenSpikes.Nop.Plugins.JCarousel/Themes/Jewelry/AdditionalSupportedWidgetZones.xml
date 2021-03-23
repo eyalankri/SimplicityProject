@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SupportedWidgetZones>
+  <WidgetZone>jcarousel_home_page_after_featured_products</WidgetZone>
+  <WidgetZone>productdetails_before_pictures</WidgetZone>
+</SupportedWidgetZones>

@@ -1,0 +1,78 @@
+﻿@using Nop.Core
+@using Nop.Core.Infrastructure
+@using Nop.Services.Configuration
+@using Microsoft.AspNetCore.WebUtilities
+
+@inject ISettingService settingService
+@inject IStoreContext storeContext
+
+    <style>
+        .page {
+            min-height: 0 !important
+        }
+        .home-page-body .master-wrapper-content {
+            margin: 0
+        }
+    </style>
+
+@{
+    Layout = "_ColumnsOne";
+
+    //page class
+    Html.AppendPageCssClassParts("html-home-page");
+
+    var storeId = storeContext.CurrentStore.Id;
+    var homePageProductBoxLayout = settingService.GetSettingByKey("venturethemesettings.homepageitemboxlayout", "layout-1", storeId, true);
+    var homePageProductBoxLayoutClass = "product-box-" + homePageProductBoxLayout;
+
+    var homePageFeaturedVideoLink = settingService.GetSettingByKey("venturethemesettings.homepagefeaturedvideolink", string.Empty, storeId, true);
+
+    var videoIframe = string.Empty;
+
+    if(!string.IsNullOrEmpty(homePageFeaturedVideoLink))
+    {
+        var uri = new Uri(homePageFeaturedVideoLink);
+        var query = QueryHelpers.ParseQuery(uri.Query);
+        var videoId = query["v"];
+
+        videoIframe = string.Format("<iframe src='https://www.youtube.com/embed/{0}?rel=0' frameborder='0' allowfullscreen></iframe>", videoId);
+    }
+}
+<div class="page home-page @homePageProductBoxLayoutClass">
+    <div class="page-body">
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageTop })
+        @await Component.InvokeAsync("Widget", new { widgetZone = "venture_home_page_info_boxes" })
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeCategories })
+        @await Component.InvokeAsync("HomepageCategories")
+        @await Component.InvokeAsync("TopicBlock", new { systemName = "HomepageText" })
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeProducts })
+        @await Component.InvokeAsync("HomepageProducts")
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeBestSellers })
+        @await Component.InvokeAsync("HomepageBestSellers")
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeNews })
+        @await Component.InvokeAsync("HomepageNews")
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforePoll })
+        @await Component.InvokeAsync("HomepagePolls")
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBottom })
+        <div class="home-page-bottom-wrapper">
+            @{
+                var carouselWidgetZone = await Component.InvokeAsync("Widget", new { widgetZone = "venture_home_page_bottom" });
+            }
+            @if (!String.IsNullOrEmpty(carouselWidgetZone.ToHtmlString()))
+            {
+                <div class="carousel-wrapper">
+                    @carouselWidgetZone
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(videoIframe))
+            {
+                <div class="home-page-featured-video-wrapper">
+                    <div class="home-page-video-title title">
+                        <strong>@T("SevenSpikes.Themes.Venture.Common.HomePageVideoTitle")</strong>
+                    </div>
+                    <div class="home-page-featured-video">@Html.Raw(videoIframe)</div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

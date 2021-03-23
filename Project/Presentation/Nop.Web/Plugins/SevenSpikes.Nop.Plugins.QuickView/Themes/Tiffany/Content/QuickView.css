@@ -1,0 +1,813 @@
+﻿
+
+/********* START BUTTON *********/
+
+
+.quick-view-button {
+    display: inline-block;
+    position: static;
+    overflow: hidden;
+    vertical-align: top;
+    z-index: 2;
+}
+.hover-effect-1 .quick-view-button {
+    margin: 0 2px 0 0;
+}
+.quick-view-button a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: #8e807a url('images/quick-view.png') center no-repeat;
+    padding: 0;
+    font-size: 0;
+    cursor: pointer;
+}
+.quickViewData {
+    display: none;
+}
+
+
+
+/********* SCREEN OVERLAY & DATA LOADER *********/
+
+
+
+.k-overlay {
+    position: fixed;
+    z-index: 1060;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.quickView .k-loading-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.quickView .k-loading-image {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: -15px;
+    background: url('images/loading-image.gif') center no-repeat;
+}
+
+
+/********** GLOBAL SETTINGS *********/
+
+
+.quickView {
+    position: absolute;
+    z-index: 1070;
+    padding-top: 0 !important;
+    box-shadow: 0 0 15px #444;
+    background: #fff;
+}
+
+.quickViewWindow {
+    z-index: 100; /*check if z-index is necessary*/
+    width: 700px;
+}
+
+    .quickViewWindow input[type=button],
+    .quickViewWindow a {
+        cursor: pointer;
+    }
+
+    .quickViewWindow .product-essential {
+    float: none;
+    width: auto;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    padding: 15px;
+}
+
+    .quickViewWindow .product-essential:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+        visibility: hidden;
+    }
+
+.quickViewWindow .popup-header {
+    padding: 0 40px;
+    margin:0 0 20px 0;
+    border:none;
+    background:transparent;
+}
+
+.quickViewWindow .product-name {
+    margin: 0;
+    padding:0 0 20px 0;
+    background:url(images/title-decoration.png) no-repeat center bottom;
+	font-family: Arvo;
+	text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: normal;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.quickViewWindow .overview{
+    padding: 0;
+}
+.quickViewWindow .overview .stock .value,
+.quickViewWindow .overview .manufacturers .value{
+    color:#8e807a;
+}
+.quickViewWindow a{
+    font-size:13px;
+}
+.quickViewWindow .product-specs-box td>a,
+.quickViewWindow #accordion .tax-shipping-info>a{
+    font-size:14px;
+    font-family:'Trebuchet MS';
+    color:#888;
+}
+.quickViewWindow .product-specs-box td>a:hover,
+.quickViewWindow #accordion .tax-shipping-info>a:hover{
+    color:#000;
+    text-decoration:underline;
+}
+.quickView .addProductVariantToCartErrors li{
+    margin:0 0 5px 0;
+    font-size:16px;
+    color:#ff5868;
+}
+.quickViewWindow #accordion .product-specs-box .data-table{
+    border:1px solid #ddd;
+}
+
+/********** KENDO SETTINGS *********/
+
+.quickView .k-window-titlebar.k-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0 !important;
+    background: none !important;
+}
+
+.quickView .k-window-titlebar.k-header .k-window-actions {
+    position: absolute;
+	top: 15px;
+	right: 15px;
+    width: 21px;
+    height: 21px;
+    overflow: hidden;
+    text-indent: 9999px;
+}
+.quickView .k-window-titlebar.k-header .k-window-actions a {
+    display: block;
+	width: 20px;
+	height: 20px;
+    background:url(images/remove-button.png) no-repeat center;
+    border:none;
+    -moz-transition:all 0.5s ease 0s;
+    -ms-transition:all 0.5s ease 0s;
+    -webkit-transition:all 0.5s ease 0s;
+    transition:all 0.5s ease 0s;
+}
+.quickView .k-window-titlebar.k-header .k-window-actions a:hover{
+    transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);   
+}
+
+/********** GALLERY & OVERVIEW *********/
+
+
+.quickViewWindow .product-essential {
+    padding: 20px;
+}
+
+    .quickViewWindow .product-essential form > div {
+        overflow: hidden;
+    }
+/*
+ Cloud Zoom CSS. (c)2012-2015 Star Plugins.
+*/
+
+.quickView .cloudzoom-blank {
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-image: url('images/blank.png');
+}
+
+.quickView .cloudzoom-zoom-inside {
+    z-index: 9;
+    border: none;
+    box-shadow: none;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
+}
+
+    .quickView .cloudzoom-zoom-inside img {
+        right: auto !important;
+        bottom: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+    }
+
+.quickView .cloudzoom-ajax-loader {
+    background-image: url('images/loader.gif');
+    width: 32px;
+    height: 32px;
+}
+
+.quickView .picture a + img {
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+/* transitional image (on thumbnail click) */
+
+.quickViewWindow .gallery {
+    float: left;
+    display: block; /*Cloud Zoom css override*/
+    width: 240px;
+    margin-bottom: 0;
+    overflow: visible;
+}
+.quickViewWindow .gallery .picture {
+    float: none;
+    margin: 0 auto;
+    width: 250px;
+    line-height: 0;
+}
+.quickViewWindow .gallery .picture:before {
+	display: none;
+}
+.quickViewWindow #wrap {
+    line-height: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.quickViewWindow .gallery .picture a {
+    height: auto;
+    width: 250px;
+    border: none;
+    overflow: hidden;
+}
+.quickViewWindow .gallery .picture img {
+	bottom: auto;
+	max-height: none;
+}
+.quickViewWindow .gallery .picture a img {
+	position: static;
+    width: 100%;
+}
+.quickViewWindow .gallery .picture img,
+.quickViewWindow .related-products-grid .picture img,
+.quickViewWindow .also-purchased-products-grid .picture img {
+    z-index: 0 !important;
+}
+
+.quickViewWindow .gallery .thumbnails{
+    overflow: hidden;
+    margin-top: 15px;
+    padding:0;
+    background:none;
+}
+
+.quickViewWindow .gallery .thumbnails a {
+    margin:0 0 7px 0;
+    box-shadow:none;
+    border:none;
+}
+.quickViewWindow .gallery .thumbnails a:nth-child(3n-1){
+    margin:0 7px 7px 7px;
+}
+.quickViewWindow .gallery .thumbnails a,
+.quickViewWindow .gallery .thumbnails > img {
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin: 0 4px 8px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+
+.quickViewWindow .gallery .thumbnails img {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.quickViewWindow .gallery .thumbnails a img:hover {
+    opacity: 0.7; /*cloud zoom only*/
+}
+.quickViewWindow .links-panel {
+    margin-top: 15px;
+    padding: 10px 0;
+}
+.quickViewWindow .links-panel a {
+    display: block;
+    padding: 0;
+    text-align: left;
+    font-size: 16px;
+    color: #8e807a;
+    text-transform: uppercase;
+    text-decoration: underline;
+    background: transparent;
+}
+.quickViewWindow .overview {
+    float: right;
+    width: 400px;
+    margin-bottom: 0;
+}
+.quickViewWindow #accordion > h3 {
+    position: relative;
+    margin: 0;
+    border-radius: 0;
+    padding: 5px 10px;
+    background: #eee;
+    border: none;
+    border-bottom: 1px solid #fff;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 16px;
+    color: #000;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+    .quickViewWindow #accordion > h3 span {
+        position: absolute;
+        top: 50%;
+        right: 11px;
+        left: inherit;
+        width: 16px;
+        height: 16px;
+        margin: -8px 0 0;
+        cursor: pointer;
+    }
+
+.quickViewWindow #accordion .ui-icon-circle-arrow-s {
+    background: url('images/close-accordeon.png') center no-repeat;
+}
+.quickViewWindow #accordion .ui-icon-circle-arrow-e {
+    background: url('images/custom-select.png') center no-repeat;
+}
+
+.quickViewWindow #accordion .product-details {
+    position: relative;
+    margin: 0;
+    padding: 10px 5px;
+    font-size: 16px;
+}
+
+.quickViewWindow #accordion .tax-shipping-info {
+    font-size: 13px;
+    text-align: left;
+}
+.quickViewWindow #accordion .product-details .spec-name{
+    color:#666;
+    width:30%;
+    text-align:right;
+    padding:0 8px 0 0;
+}
+.quickViewWindow .overview .left,
+.quickViewWindow .overview .right {
+    float:none;
+    font-size:16px;
+    max-width:none;
+}
+.quickViewWindow .overview .left {
+    float: left;
+    margin: 0 0 15px 0;
+    max-width: 60%;
+    text-align: left;
+}
+.quickViewWindow .overview .manufacturers{
+    border:none;
+}
+
+.quickViewWindow .overview .right {
+    float: right;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+    .quickViewWindow .overview .left > *,
+    .quickViewWindow .overview .right > * {
+        margin-bottom: 5px;
+        overflow: hidden;
+    }
+.quickViewWindow .overview .left input[type="button"] {
+	min-width: 0;
+	white-space: normal;
+}
+.quickViewWindow .overview .right input[type="button"] {
+	min-width: 0;
+	white-space: normal;
+}
+.quickViewWindow .free-shipping {
+	float: none;
+}
+
+.quickViewWindow .overview .tier-prices {
+    clear: both;
+}
+
+/********* GROUPED PRODUCTS ********/
+
+.quickViewWindow #accordion .variants-in-grid {
+    padding: 10px 6px;
+}
+.quickViewWindow .product-variant-list {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: left;
+}
+
+    .quickViewWindow .product-variant-list .item-row {
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+.quickViewWindow .variant-grid-info {
+    border-top: 1px dashed #999;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.quickViewWindow .product-variant {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 124px;
+    height: 124px;
+    margin: 0 0 0 5px;
+    overflow: hidden;
+    text-align: center;
+    line-height: normal;
+}
+
+    .quickViewWindow .product-variant:nth-child(3n+1) {
+        margin-left: 2px;
+    }
+.quickViewWindow .variant-picture {
+	border: none;
+    width: 100%;
+}
+.quickViewWindow .moreInfoHover {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 11px;
+    color: #a12;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.quickViewWindow .variant-info .product-price,
+.quickViewWindow .variant-info .tax-shipping-info a {
+	color: #fff;
+}
+.quickViewWindow .variant-info .tax-shipping-info {
+	display: none;
+}
+.quickViewWindow .variant-info {
+    position: absolute;
+    left: -126px;
+    bottom: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.6);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 11px;
+    color: #fff;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.quickViewWindow .product-variant:hover .moreInfoHover {
+    left: 136px;
+}
+
+.quickViewWindow .product-variant:hover .variant-info {
+    left: 0;
+}
+
+.quickViewWindow .variant-info .variant-name {
+    max-height: 28px;
+    overflow: hidden;
+}
+
+    .quickViewWindow .variant-info .variant-name a {
+        color: #fff;
+    }
+
+.quickViewWindow .variant-info .prices {
+    float: none;
+    margin: 0 !important;
+}
+
+    .quickViewWindow .variant-info .prices > * {
+        float: none;
+    }
+
+.quickViewWindow .product-variant .prices label {
+    display: none;
+}
+
+.quickViewWindow .variant-grid-info .manufacturers {
+    float: left;
+}
+
+.quickViewWindow .variant-grid-info .compare-products {
+    float: right;
+}
+
+.quickViewWindow .overview .purchase-area {
+    clear: both;
+    overflow: hidden;
+    padding: 10px 0 0;
+    margin: 0;
+    border: none;
+    text-align: left;
+}
+.quickViewWindow .overview .purchase-area .product-price{
+    font-size:18px;
+}
+.quickViewWindow .overview .title,
+.quickViewWindow .overview .add-info,
+.quickViewWindow .overview .description {
+    display: none;
+}
+
+.quickViewWindow .overview .attributes {
+    clear: both;
+    margin: 0 0 15px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+    .quickViewWindow .overview .attributes dl:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+        visibility: hidden;
+    }
+
+    .quickViewWindow .overview .attributes dl > * {
+        float: left;
+    }
+.quickViewWindow .overview .attributes dd{
+    margin:7px 0 10px;
+    overflow:hidden;
+}
+.quickViewWindow .overview .attributes dt{
+    clear: left;
+    margin:7px 7px 7px 0;
+    text-align:left;
+    color:#666;
+    overflow:hidden;
+    min-width:50px;
+    width:96px;
+}
+.quickViewWindow .attribute-squares li {
+    margin: 0 5px 0 0;
+}
+.quickViewWindow .purchase-area .add-to-cart-button{
+    padding: 0px 25px 0px 40px;
+}
+.quickViewWindow .add-to-cart .ajax-cart-button-wrapper{
+    border:none;
+}
+.quickViewWindow #accordion .prices-table{
+    border:1px solid #ddd;
+}
+
+/********** RELATED/ALSO-PURCHASED PRODUCTS *********/
+
+
+.quickViewWindow .product-grid {
+    margin: 20px 0 0;
+    overflow: hidden;
+}
+.quickViewWindow .product-grid .title {
+    display: block;
+	margin: 0 0 10px;
+	padding: 0 0 22px;
+    text-align: center;
+}
+.quickViewWindow .product-grid .title strong {
+	display:block;
+}
+.quickViewWindow .product-grid .item-box {
+    width: 25%;
+    margin: 0 !important;
+	border-bottom: none !important;
+}
+.quickViewWindow .product-grid .item-box .product-title {
+    height: 36px !important;
+	border-bottom: none;
+}
+.quickViewWindow .product-grid .item-box .product-title span {
+	padding: 0;
+}
+.quickViewWindow .product-grid .item-box .product-title a {
+    display: block;
+    line-height: 1.2;
+    max-height: 34px;
+	padding: 3px 0;
+    font-size: 12px;
+    overflow: hidden;
+}
+.quickViewWindow .product-grid .item-box .picture {
+	background: none;
+    height:auto;
+    margin:0;
+}
+.quickViewWindow .product-grid .item-box .picture a {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    line-height: 0;
+}
+.quickViewWindow .product-grid .item-box .picture img{
+    transition:all 0.3s ease;
+    -webkit-transition:all 0.3s ease;
+    -moz-transition:all 0.3s ease;
+    -ms-transition:all 0.3s ease;
+}
+.quickViewWindow .product-grid .item-box .product-title {
+    height: 28px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    font-size: 10px;
+}
+
+    .quickViewWindow .product-grid .item-box .product-title a {
+        display: inline;
+    }
+.quickViewWindow .item-box .details{
+	position: static;
+    height:35px;
+    -webkit-transition:all 0.3s ease;
+    -moz-transition:all 0.3s ease;
+    -ms-transition:all 0.3s ease;
+}
+.quickViewWindow .item-box .details .add-info{
+    display:none;
+}
+
+
+
+.quickViewWindow .item-box .product-rating-box,
+.quickViewWindow .item-box .add-info,
+.quickViewWindow .item-box .tax-shipping-info,
+.quickViewWindow .item-box .hover-content {
+    display: none !important;
+}
+.quickViewWindow .product-grid .item-grid{
+    width:100%;
+}
+
+
+/********* GIFTCARD *********/
+
+
+.quickView .giftcard {
+    clear: both;
+    border: 1px solid #ddd;
+}
+.quickView .giftcard input[type=text],
+.quickView .giftcard input[type=email],
+.quickView .giftcard input[type=tel],
+.quickView .giftcard textarea {
+    width: 248px;
+}
+.giftcard ~ .purchase-area {
+	text-align: right;
+}
+
+.quickView .product-details .giftcard{
+    padding:0;
+    border-bottom:none;
+}
+
+
+.quickView .giftcard > div {
+    overflow: hidden;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+}
+    .quickView .giftcard > div > * {
+        float: left;
+    }
+
+.quickView .giftcard > div label {
+    display: block;
+    margin: 0;
+    width: 40%;
+    text-align: right;
+    padding: 0 8px 0 0;
+    border-right: 1px solid #ddd;
+    color: #666;
+    line-height: 40px;
+}
+.quickView .giftcard > div:last-child label{
+    height:150px;
+}
+
+.quickView .giftcard > div input[type="text"],
+.quickView .giftcard > div input[type="email"],
+.quickView .giftcard > div input[type="tel"] {
+    border: none;
+    line-height: 40px;
+    height: 40px;
+    width: 60%;
+    font-size: 15px;
+    background: #f9f9f9;
+}
+.quickView .giftcard > div textarea{
+    border:none;
+    width:60%;
+    background:#f9f9f9;
+    resize: none;
+}
+
+/*QUICK VIEW BUTTON IN ITEM-BOX HOVER 2*/
+
+
+
+.product-grid .item-box .hover-effect-2 .buttons .quick-view-button{
+    margin:0 0 1px 0;
+}
+.product-grid .item-box .hover-effect-2 .quick-view-button a{
+    transform:none;
+    background:url("images/quick-view.png") no-repeat scroll center center rgba(0,0,0,.5);
+}
+
+/*hide add to wishlist button*/
+
+.add-info .buttons .add-to-wishlist-button{
+    display:none;
+}
+.hover-effect-2 .add-info .buttons .add-to-wishlist-button {
+    display:block;
+}
+
+@media all and (max-width: 1024px) {
+    .quickViewWindow .color-squares .color {
+        width: 30px;
+        height: 30px;
+    }
+
+    .quickViewWindow .links-panel a {
+        padding: 10px 0 10px 15px;
+    }
+
+    .quick-view-button {
+        display: none !important;
+    }
+    .hover-effect-2 .add-info .buttons .add-to-wishlist-button {
+        display: inline-block;
+        margin: 0 0 0 1px;  
+    }
+}

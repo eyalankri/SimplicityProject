@@ -1,0 +1,24 @@
+
+.nop-jcarousel .slick-prev {
+    right: 50%;
+    left: auto;
+    margin: 0 -140px 0 0;
+    background-image: url('images/next-horizontal.png');
+}
+
+.nop-jcarousel .slick-next {
+    left: 50%;
+    right: auto;
+    margin: 0 0 0 -140px;
+    background-image: url('images/prev-horizontal.png');
+}
+
+.side-2 .nop-jcarousel .slick-prev {
+    right: 0;
+    left: auto;
+}
+
+.side-2 .nop-jcarousel .slick-next {
+    left: 0;
+    right: auto;
+}

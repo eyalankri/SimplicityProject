@@ -1,0 +1,926 @@
+﻿
+
+
+
+/**************************** SHOPALL-RESPONSIVE ***************************/
+
+
+.quickViewWindow .ui-accordion-content {
+    
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+        
+}
+
+
+/********** START BUTTON *********/
+
+.quick-view-button {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -35px;
+    margin-left: -35px;
+    border-radius: 35px;
+    border: 1px solid #fff;
+    width: 70px;
+    height: 70px;
+    background: url(images/zoom_icon.png) no-repeat center rgba(0,0,0,.6);
+    color: #fff;
+    text-indent: -9999px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    z-index: 2;
+}
+.item-box:hover .quick-view-button {
+    opacity: 1;
+}
+.quick-view-button a {
+    display: block;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: inherit;
+    cursor: pointer;
+}
+
+.quickViewData {
+    display: none;
+}
+
+/********* SCREEN OVERLAY & DATA LOADER *********/
+
+
+
+.k-overlay {
+    position: fixed;
+    z-index: 1060;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.quickView .k-loading-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.quickView .k-loading-image {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: -15px;
+    background: url('images/loading-image.gif') center no-repeat;
+}
+
+
+/********** MAIN QUICKVIEW WINDOW *********/
+
+
+
+.quickView {
+    position: absolute;
+    z-index: 1070;
+    padding-top: 0 !important;
+    box-shadow: 0 0 15px #444;
+    background: #fff;
+}
+
+.quickViewWindow {
+    z-index: 100; /*check if z-index is necessary*/
+    width: 700px;
+}
+
+    .quickViewWindow input[type=button],
+    .quickViewWindow a {
+        cursor: pointer;
+    }
+
+/*close button start*/
+.quickView .k-window-titlebar.k-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0 !important;
+    background: none !important;
+}
+
+    .quickView .k-window-titlebar.k-header .k-window-actions {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        text-indent: 9999px;
+    }
+
+        .quickView .k-window-titlebar.k-header .k-window-actions a {
+            display: block;
+            width: 18px;
+            height: 18px;
+            background: url(images/remove.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+            .quickView .k-window-titlebar.k-header .k-window-actions a:hover {
+                border-color: #aaa;
+                background: url(images/remove-red.png) center no-repeat;
+            }
+.quickViewWindow .product-essential {
+    float: none;
+    width: auto;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    padding: 10px;
+}
+
+    .quickViewWindow .product-essential:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+        visibility: hidden;
+    }
+    
+    .product-essential > form > div {
+        overflow: hidden;
+    }
+
+.quickViewWindow .popup-header {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 40px 0 0;
+    background: #aaa;
+}
+
+.quickViewWindow .product-name {
+    margin: 0;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    text-shadow: 0px 1px 1px #454545;
+}
+
+
+/********** START GALLERY *********/
+
+/*
+ Cloud Zoom CSS. (c)2012-2015 Star Plugins.
+*/
+
+.quickView .cloudzoom-blank {
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-image: url('images/blank.png');
+}
+
+.quickView .cloudzoom-zoom-inside {
+    z-index: 9;
+    border: none;
+    box-shadow: none;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
+}
+
+    .quickView .cloudzoom-zoom-inside img {
+        right: auto !important;
+        bottom: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+    }
+
+.quickView .cloudzoom-ajax-loader {
+    background-image: url('images/loader.gif');
+    width: 32px;
+    height: 32px;
+}
+
+.quickView .picture a + img {
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+/* transitional image (on thumbnail click) */
+
+.quickViewWindow .gallery {
+    display: block; /*Cloud Zoom css override*/
+    float: left;
+    width: 252px;
+    margin-bottom: 0;
+    overflow: visible;
+}
+.quickViewWindow .product-essential .gallery {
+    margin-top: 0;
+}
+.quickViewWindow .gallery .picture {
+    float: none;
+    width: 250px;
+    border: 1px solid #fff;
+    box-shadow: 0 1px 3px 0 #ccc;
+    background: #fff;
+    line-height: 0;
+    text-align: center;
+}
+
+    .quickViewWindow .gallery .picture a {
+        width: 250px;
+        height: auto;
+        border: none;
+        overflow: hidden;
+    }
+
+
+.quickViewWindow .gallery .picture:before {
+    display: none;
+}
+
+.quickViewWindow .gallery .picture {
+    height: auto;
+}
+
+    .quickViewWindow .gallery .picture img {
+        bottom: auto;
+        max-height: none;
+    }
+
+    .quickViewWindow .gallery .picture a img {
+        position: static;
+        width: 100%;
+    }
+    .quickViewWindow .gallery .picture img,
+    .quickViewWindow .related-products-grid .picture img,
+    .quickViewWindow .also-purchased-products-grid .picture img {
+        z-index: 0 !important;
+    }
+
+.quickViewWindow .gallery .thumbnails {
+    overflow: hidden;
+    margin-top: 15px;
+    background: #eee;
+    padding: 10px 6px 2px;
+}
+
+    .quickViewWindow .gallery .thumbnails a,
+    .quickViewWindow .gallery .thumbnails > img {
+        float: left;
+        width: 70px;
+        height: 70px;
+        margin: 0 4px 8px;
+        border: 1px solid #fff;
+        box-shadow: 0 1px 3px 0 #ccc;
+        overflow: hidden;
+        background: #fff;
+        position: relative;
+    }
+
+    .quickViewWindow .gallery .thumbnails img {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .quickViewWindow .gallery .thumbnails a img:hover {
+        opacity: 0.7; /*cloud zoom only*/
+    }
+
+.quickViewWindow .links-panel {
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+    .quickViewWindow .links-panel a {
+        display: block;
+        background: url('images/bullet-right.png') left center no-repeat;
+        padding-left: 15px;
+        text-align: left;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #9f0000;
+    }
+
+        .quickViewWindow .links-panel a:hover {
+            text-decoration: underline;
+        }
+
+
+/********** START PRODUCT ESSENTIAL *********/
+
+.quickViewWindow .overview {
+    float: right;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+}
+.quickViewWindow #accordion > h3 {
+    position: relative;
+    margin: 0;
+    border: 1px solid #fff;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: 0 1px 3px #ccc;
+    background: #eee;
+    padding: 5px 10px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    text-shadow: 1px 1px 0 #fff;
+    cursor: pointer;
+}
+
+    .quickViewWindow #accordion > h3 span {
+        position: absolute;
+        top: 50%;
+        right: 11px;
+        left: inherit;
+        width: 16px;
+        height: 16px;
+        margin: -8px 0 0;
+        cursor: pointer;
+    }
+
+.quickViewWindow .overview #accordion > h3 span.ui-icon-circle-arrow-s {
+    background: url(images/minus.png) no-repeat center;
+}
+.quickViewWindow .overview #accordion > h3 span.ui-icon-circle-arrow-e {
+    background: url(images/plus.png) no-repeat center;
+}
+
+.quickViewWindow #accordion .product-details {
+    position: relative;
+    margin: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #999 transparent #eee;
+    border-radius: 0;
+    box-shadow: 0 1px 3px #ccc;
+    padding: 10px;
+}
+
+.quickViewWindow .overview .left {
+    float: left;
+    max-width: 60%;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.quickViewWindow .overview .right {
+    float: right;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+    .quickViewWindow .overview .left > *,
+    .quickViewWindow .overview .right > * {
+        margin-bottom: 5px;
+        overflow: hidden;
+    }
+
+.quickViewWindow .overview .tier-prices {
+    clear: both;
+}
+.quickViewWindow .overview .left .stock {
+    line-height: 20px;
+}
+.quickViewWindow .left .back-in-stock-subscription {
+        margin-bottom: 8px;
+}
+    .quickViewWindow .left .back-in-stock-subscription .subscribe-button {
+        margin: 0;
+        background: none;
+        border: none;
+        color: #222;
+        padding: 0;
+        cursor: pointer;
+    }
+    .quickViewWindow .left .back-in-stock-subscription .subscribe-button:hover {
+        text-decoration: underline;
+    }
+    .quickViewWindow .overview .email-a-friend input,
+    .quickViewWindow .overview .compare-products input {
+        margin: 0;
+    }
+.quickViewWindow .overview .download-sample {
+    margin-bottom: 9px;
+}
+.quickViewWindow .overview .download-sample-button {
+    color: #036;
+    font: normal 11px Tahoma, Geneva, sans-serif;
+    line-height: 0;
+    text-shadow: 1px 1px 0 #ccc;
+    cursor: pointer;
+}
+.quickViewWindow .overview .download-sample-button:hover {
+    text-decoration: underline;
+}
+    .quickViewWindow .overview .download-sample-button:hover a {
+        text-decoration: none;
+    }
+    .quickViewWindow .add-to-wishlist-button,
+    .quickViewWindow .add-to-compare-list-button {        
+        color: #333;
+        font-size: 12px;
+        line-height: 18px;
+        overflow: visible;
+        padding: 0 0 0 20px;
+        margin: 5px 0 0 0;
+        width: auto;
+        cursor: pointer;
+    }
+
+.quickViewWindow .overview .attributes {
+    clear: both;
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+    .quickViewWindow .overview .attributes dl:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+        visibility: hidden;
+    }
+
+    .quickViewWindow .overview .attributes dl > * {
+        float: left;
+    }
+
+    .quickViewWindow .overview .attributes dt {
+        clear: left;
+        width: 100px;
+        margin: 0 10px 5px 0;
+        text-align: left;
+    }
+
+    .quickViewWindow .overview .attributes dd {
+        margin-bottom: 10px;
+    }
+
+.quickViewWindow .overview .purchase-area {
+    border-top: 1px dashed #999;
+    overflow:hidden;
+    padding: 10px 0 0;
+    margin-top: 10px;
+    clear: right;
+}
+
+.quickViewWindow .overview .title,
+.quickViewWindow .overview .add-info,
+.quickViewWindow .overview .description {
+    display: none;
+}
+    .quickViewWindow .overview .purchase-area .prices{
+        float: left;
+        margin: 0;
+        text-align: left;
+        border: 0;
+        padding: 0;
+    }
+.quickViewWindow .overview .purchase-area .add-to-cart {
+    float: right;
+    width: inherit;
+    padding: 0;
+}
+.quickViewWindow .overview .purchase-area .add-to-cart .add-to-wishlist-button {
+    display: none;
+}
+.quickViewWindow .overview .purchase-area .add-to-cart .add-to-cart-button {
+    padding: 5px 12px !important;
+    margin: 0;
+    line-height: inherit;
+    font-size: 19px;
+}
+.quickViewWindow .overview .purchase-area .add-to-cart .qty-input {
+    width: 34px !important;
+    height: 34px;
+    line-height: 24px;
+    font-size: 18px;
+    padding: 5px;
+}
+.quickViewWindow .overview .full-description {
+    border: none;
+}
+.quickViewWindow .overview .product-specs-box .title {
+    display: none;
+}
+
+
+
+.quickViewWindow .product-grid {
+    overflow: hidden;
+    display:block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    max-height: 190px;
+    height:190px;
+    width: 100%;
+    background: #f6f6f4;
+    box-shadow: 0 2px 2px 0 #ccc;
+}
+    .quickViewWindow .product-grid .title {
+        display: block;
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+.quickViewWindow .also-purchased-products-grid {
+    width: 400px;
+}
+.quickViewWindow .product-grid .title {
+    margin: 0 0 15px;
+}
+.quickViewWindow .product-grid .item-box .picture {
+    width: 148px;
+    border: none;
+}
+    .quickViewWindow .product-grid .item-box .picture a {
+        overflow: hidden;
+        display: block;
+        width: 85px;
+        height: 85px;
+        margin: 0 auto;
+        transition:all 0.45s ease 0s;
+    }
+
+
+    .quickViewWindow .product-grid .product-item {
+        border: none;
+        background: none;
+        padding: 0;
+    }
+    .quickViewWindow .product-grid .product-item .picture {
+        box-shadow: none;
+        height:100%;
+        float: none;
+        overflow: hidden;
+    }
+    .quickViewWindow .product-grid .item-box .picture a {
+        display: block;
+        width: 85px;
+        height: 85px;
+        margin: 0 auto;
+        border: none;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .quickViewWindow .product-grid .product-item .product-title-and-description {
+        float: none;
+        width: inherit;
+        margin: 0;
+        text-align: center;
+    }
+    .quickViewWindow .product-item .details {
+        -webkit-transition:all 0.35s ease;
+        -ms-transition:all 0.35s ease;
+        transition:all 0.35s ease;
+    }
+    .quickViewWindow .product-item:hover .details {
+        color:#eee;
+        background:rgba(51,51,51,.5);
+    }
+    .quickViewWindow .product-item .details .description {
+        display: block;
+        height: 58px;
+    }
+    .quickViewWindow #accordion .ui-widget-content {
+        border: none !important;
+        box-shadow: none;
+    }
+    .quickViewWindow #accordion .ui-widget-content .data-table .spec-value>a{
+        text-decoration:underline;
+    }
+    .quickViewWindow #accordion .ui-widget-content .data-table .spec-value>a:hover{
+        color:#888;
+    }
+    .quickViewWindow .product-grid .item-box .product-title {
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+        height: 32px;
+        overflow: hidden;
+    }
+        .quickViewWindow .product-grid .item-box .product-title a {
+            display: inline;
+            line-height: inherit;
+            font-size:12px;
+        }
+
+/*.quickViewWindow .product-grid .item-box .detail .rating,
+.quickViewWindow .product-grid .product-item .description {
+    display: none;
+}*/
+.quickViewWindow .product-grid .product-item .add-info {
+    display: none;
+}
+
+.quickViewWindow .color-squares input {
+    z-index: -1;
+}
+.color-squares li:hover .tooltip-container {
+    margin-left: -74px;
+    margin-top: -5px;
+}
+.quickView .also-purchased-products-grid .item-box:nth-child(2n+1),
+.quickView .related-products-grid .item-box:nth-child(2n+1){
+    clear:none;
+}
+
+
+.button-2.add-to-compare-list-button:hover,
+.button-2.add-to-wishlist-button:hover{
+    text-decoration:underline;
+}
+
+
+
+
+
+
+/********** START RELATED/ALSO-PURCHASED PRODUCTS *********/
+
+
+.quickViewWindow .related-products-grid.product-grid .item-grid .item-box,
+.quickViewWindow .also-purchased-products-grid.product-grid .item-grid .item-box{
+    display:inline-block;
+    width:48.5%;
+    margin:0 5px 10px 5px!important;
+    transition:all .3s ease 0s;
+    border:1px solid transparent;
+}
+        .quickViewWindow .related-products-grid.product-grid .item-grid .item-box:hover,
+        .quickViewWindow .also-purchased-products-grid.product-grid .item-grid .item-box:hover {
+            border:1px solid #ddd;
+        }
+
+    .quickViewWindow .related-products-grid.product-grid .item-grid .item-box .product-item .picture,
+    .quickViewWindow .also-purchased-products-grid.product-grid .item-grid .item-box .product-item .picture{
+        float:left;
+        width: 30%;
+        overflow:visible;
+    }
+.quickViewWindow .related-products-grid.product-grid .title,
+.quickViewWindow .also-purchased-products-grid.product-grid .title{
+    padding:5px 10px;
+    text-align:left;
+}
+.quickViewWindow .related-products-grid.product-grid .item-grid .item-box .product-item .details,
+.quickViewWindow .also-purchased-products-grid.product-grid .item-grid .item-box .product-item .details{
+    width:70%;
+    height:100%;
+    left:0;
+    float:right;
+    text-align:left;
+}
+.quickViewWindow .product-rating-box .rating {
+    margin:0;
+}
+
+    .related-products-grid.product-grid .item-grid,
+    .also-purchased-products-grid.product-grid .item-grid{
+        text-align:center;
+        overflow:hidden;
+    }
+.quickViewWindow .product-grid .item-box,
+.quickViewWindow .also-purchased-products-grid .item-box {
+    width: 148px;
+    padding: 0;
+    height: 133px;
+    overflow: hidden;
+}
+.quickViewWindow .product-grid .item-box {
+    margin: 0 25px 25px !important;
+}
+
+
+
+
+
+/********* START VARIANTS IN GRID ********/
+
+.quickViewWindow #accordion .variants-in-grid {
+    padding: 10px 6px;
+}
+
+.quickViewWindow .product-variant-list {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: left;
+}
+
+    .quickViewWindow .product-variant-list .item-row {
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+.quickViewWindow .variant-grid-info {
+    border-top: 1px dashed #999;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.quickViewWindow .product-variant {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 124px;
+    height: 124px;
+    margin: 0 0 0 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+    .quickViewWindow .product-variant:nth-child(3n+1) {
+        margin-left: 2px;
+    }
+
+.quickViewWindow .variant-picture {
+    width: 124px;
+    height: 124px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 0 5px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    line-height: normal !important;
+}
+
+.quickViewWindow .moreInfoHover {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.6);
+    padding: 3px;
+    text-align: center;
+    font-size: 10px;
+    color: #fff;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+
+.quickViewWindow .product-variant:hover .moreInfoHover {
+    left: 136px;
+}
+
+.quickViewWindow .variant-info {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    height: 100%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.6);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 11px;
+    color: #fff;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.quickViewWindow .product-variant:hover .variant-info {
+    bottom: 0;
+}
+
+
+.quickViewWindow .variant-info .variant-name {
+    max-height: 28px;
+    overflow: hidden;
+}
+
+    .quickViewWindow .variant-info .variant-name a {
+        color: #fff;
+    }
+
+.quickViewWindow .variant-info .prices {
+    float: none;
+    margin: 0 !important;
+}
+
+    .quickViewWindow .variant-info .prices > * {
+        float: none;
+    }
+
+.quickViewWindow .product-variant .prices label {
+    display: none;
+}
+
+.quickViewWindow .variant-grid-info .manufacturers {
+    float: left;
+}
+
+.quickViewWindow .variant-grid-info .compare-products {
+    float: right;
+}
+
+.quickViewWindow .overview .prices .product-price {
+    font-size: 18px;
+    color: #CC0000;
+}
+.quickViewWindow .overview #accordion .prices .old-product-price {
+    font-size: 12px;
+    color: red;
+}
+.quickViewWindow .overview .variants-in-grid .variant-grid-info .compare-products {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.tax-shipping-info a{
+    text-decoration:underline;
+}
+.tax-shipping-info a:hover{
+    color:#888;
+}
+/********* GIFTCARD *********/
+
+
+
+.quickView .giftcard {
+    clear: both;
+}
+
+    .quickView .giftcard > div {
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+
+        .quickView .giftcard > div > * {
+            float: left;
+        }
+
+    .quickView .giftcard label {
+        display: block;
+        width: 120px;
+        margin-right: 10px;
+    }
+
+    .quickView .giftcard input[type=text],
+    .quickView .giftcard input[type=email],
+    .quickView .giftcard input[type=tel] {
+        width: 200px;
+    }
+
+    .quickView .giftcard textarea {
+        width: 200px;
+        resize: none;
+    }
+
+
+@media all and (max-width: 1024px) {
+
+    .quickViewWindow .color-squares .color {
+        width: 30px;
+        height: 30px;
+    }
+
+    .quickViewWindow .links-panel a {
+        padding: 10px 0 10px 15px;
+    }
+}

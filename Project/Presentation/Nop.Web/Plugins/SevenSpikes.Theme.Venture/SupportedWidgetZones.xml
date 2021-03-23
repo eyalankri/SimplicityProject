@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SupportedWidgetZones>
+  <WidgetZone>venture_theme_logo</WidgetZone>
+  <WidgetZone>head_html_tag_after_css_files_venture</WidgetZone>
+  <WidgetZone>venture_footer_map</WidgetZone>
+  <WidgetZone>category_details_main_picture</WidgetZone>
+  <WidgetZone>venture_home_page_info_boxes</WidgetZone>
+</SupportedWidgetZones>

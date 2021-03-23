@@ -1,0 +1,173 @@
+
+.slider-wrapper {
+    height:100%;
+    margin-bottom: 20px;
+}
+.anywhere-slider {
+    height: 100%;
+    background: #fff;
+}
+.anywhere-slider .picture-slide a {
+    display: block;
+}
+.anywhere-slider .picture-slide img {
+    width: 100%;
+	display: none;
+}
+.anywhere-slider .first-slide img {
+    display: block;
+}
+
+/* DIRECTIONAL NAVIGATION */
+
+.anywhere-slider .slick-arrow {
+    position: absolute;
+    z-index: 99;
+    top: 10%;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: #acadaa;
+    font-size: 0;
+    transition: all .3s ease 0s;
+}
+.anywhere-slider .slick-prev {
+    background-image: url(images/slider-left-arrow.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    opacity:.6;
+}
+.anywhere-slider .slick-prev:hover {
+    background-position:10px center;
+    opacity:1;
+}
+.anywhere-slider .slick-next {
+    background-image: url(images/slider-right-arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    left: auto;
+    right: 0;
+    opacity: .6;
+}
+.anywhere-slider .slick-next:hover {
+    background-position: 25px center;
+    opacity: 1;
+}
+
+/* BULLET NAVIGATION */
+
+.anywhere-slider .slick-dots {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    bottom: 0; /*additional, slick only*/
+    padding: 10px 0;
+    text-align: center;
+}
+.anywhere-slider .slick-dots li {
+    display:inline-block;
+    font-size: 0;
+    margin:0 2px;
+    vertical-align: middle;
+}
+.anywhere-slider .slick-dots button {
+    width: 70px;
+    height: 20px;
+    background: none;
+    border-width: 4px 0 0;
+    border-style: solid;
+    border-color: #ddd;
+    font-size: 0;
+}
+.anywhere-slider .slick-active button {
+    border-top-color: #a59b92;
+}
+
+/*CUSTOM RIGHT SLIDER(BANNERS)*/
+
+.home-page-top-banner-wrapper {
+    overflow:hidden;
+    margin-bottom:60px;
+}
+.home-page-top-banner-wrapper .slider-wrapper {
+    margin-bottom: 0;
+}
+.home-page-top-banner-wrapper .slider-left {
+    float:left;
+    width:62%;
+    padding-right:4px;
+    background:#fff;
+}
+.home-page-top-banner-wrapper .banners-right > div {
+    overflow:hidden;
+}
+.banners-right {
+    float:right;
+    width:38%;
+}
+.banners-right > div + div {
+    margin-top:1px;
+}
+.home-page-bottom-banner-wrapper {
+    max-width:1000px;
+    margin:0 auto 30px;
+    overflow:hidden;
+}
+.home-page-bottom-banner-wrapper .left-banner {
+    float:left;
+    width:33%;
+}
+.home-page-bottom-banner-wrapper .right-banner {
+     width:66%;
+     float:right;
+}
+.banners-right .slider-wrapper img {
+    max-width: 100%;
+}
+
+@media all and (max-width: 769px) {
+
+.nivo-directionNav {
+    display: none;
+}
+    
+.home-page-top-banner-wrapper {
+    margin-bottom:40px;
+}
+
+/*change banner position*/
+.home-page-top-banner-wrapper .slider-left {
+    width:100%;
+    padding-right:0;
+    margin-bottom:30px;
+}
+
+.banners-right {
+    width:100%;
+}
+
+.banners-right > div {
+    float:left;
+    width:49.5%;
+}
+.banners-right > div:first-child {
+    margin-right:1%;
+}
+
+}
+
+@media all and (max-width: 480px) {
+
+.banners-right > div {
+    float:none;
+    width:auto;
+}
+}
+
+@media all and (min-width:1281px) {
+    .home-page-bottom-banner-wrapper {
+        max-width: 1200px;
+    }
+}

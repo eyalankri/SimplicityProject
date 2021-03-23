@@ -1,0 +1,48 @@
+﻿.desktop .product-list .quick-view-button {
+    margin: 3px 5px 3px 0;
+}
+.desktop .product-list .item-box .ajax-cart-button-wrapper.qty-enabled + .additional-buttons .quick-view-button {
+    margin-right: unset;
+    margin-left: 0;    
+}
+.desktop .product-list .ajax-cart-button-wrapper.qty-enabled {
+    margin-left: 5px;
+    margin-right: unset;    
+}
+.quickView .k-window-titlebar .k-window-actions {
+	right: unset;
+    left: 18px;
+}
+.quickView .gallery {
+    float: right;
+}
+.quickView .ui-accordion-header {
+    text-align: right;
+}
+.quickView .ui-accordion-header span {
+    right: unset;
+    left: 17px;
+}
+.quickView .overview .left {
+    float: right;
+    text-align: right;
+}
+.quickView .overview .right {
+    float: left;
+    text-align: left;
+}
+.quickView .item-box {
+    margin: 0 0.66% 0 0;
+}
+.quickView .item-box:nth-child(5n+1) {
+	margin-left: unset;
+    margin-right: 0;
+}
+.quickView .product-variant {
+    float: right;
+	margin: 0 2% 2% 0;
+}
+.quickView .product-variant:first-child {
+	margin-left: unset;
+    margin-right: 0;
+}

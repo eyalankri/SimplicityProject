@@ -1,0 +1,138 @@
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Description: The default skin for the Nivo Slider.
+Version: 1.3
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+Supports Thumbs: true
+*/
+.main-banner-2 .slider-wrapper img {
+    width: auto !important;
+    height: 100%;
+}
+.slider-wrapper {
+    position: relative;
+    z-index: 1;
+}
+.slider-wrapper img {
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+}
+@media all and (max-width: 768px) {
+
+    .main-banner.main-banner-2 {
+        overflow: hidden;
+
+    }
+    .main-banner.main-banner-2 img,
+    .main-banner.main-banner-2 .slider-wrapper {
+        height: auto !important;
+        width: 100% !important;
+    }
+        .main-banner.main-banner-2 img {
+            max-width: 100% !important;
+        }
+}
+
+/* DIRECTIONAL NAVIGATION */
+
+
+.nivo-directionNav a {
+    background-color: rgba(255,255,255,0.4);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60px;
+    height: 120px;
+    top: 50%;
+    margin-top: -60px;
+    opacity: 1;
+    font-size: 0;
+}
+a.nivo-prevNav {
+    background-image: url(slider-arrow-left.png);
+}
+a.nivo-nextNav {
+    background-image: url(slider-arrow-right.png);
+}
+.nivo-directionNav a:hover {
+    opacity: 0.4;
+}
+
+
+
+/* BULLET NAVIGATION */ /*removed*/
+
+.nivo-controlNav {
+    padding: 10px 0;
+    margin-bottom: -30px;
+    font-size: 0;
+    /*position: absolute;
+    bottom: 10px;
+    left: 0;*/
+    width: 100%;
+    z-index: 6;
+}
+.nivo-control {
+    width: 80px;
+    height: auto;
+    font-size: 0;
+    background: rgba(255,255,255,0.7);
+    display: inline-block;
+    margin: 0 4px;
+    vertical-align: top;
+    box-shadow: 0 1px 8px 2px rgba(0, 0, 0, 0.12);
+}
+.nivo-control img {
+    height: auto;
+    width: 100%;
+}
+.nivo-control.active,
+.nivo-control:hover {
+    background: rgba(0,0,0,0.3);
+}
+.nivo-controlNav a.active {
+    box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+@media all and (max-width: 768px) {
+
+    .slider-wrapper img {
+        height: auto !important;
+    }
+    .banner-wrapper .main-banner-2.hide-banner {
+        display: none !important;
+    }
+
+}
+
+
+@media all and (min-width: 769px) {
+    
+    .banner-wrapper {
+        overflow: hidden;
+    }
+    .main-banner-1 {
+        width: 60%;
+        float: left;
+    }
+    .main-banner-2 {
+        width: 40%;
+        float: left;
+        overflow: hidden;
+        border-left: 10px solid #fff;
+    }
+
+}
+
+@media all and (min-width: 1025px) {
+
+    .banner-wrapper {
+         margin: 0 0 80px;
+    }
+
+}
+

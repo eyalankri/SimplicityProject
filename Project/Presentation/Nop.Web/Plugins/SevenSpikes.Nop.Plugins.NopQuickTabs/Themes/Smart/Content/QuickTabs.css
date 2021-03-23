@@ -1,0 +1,53 @@
+﻿/* GLOBAL STYLES */
+
+.ui-tabs .product-specs-box,
+.ui-tabs .product-reviews-page,
+.ui-tabs .full-description  {
+    display: block;
+}
+
+/* THEME STYLES */
+
+.product-essential {
+    border-bottom: 0;
+}
+.ui-tabs .ui-tabs-panel .full-description {
+	margin-bottom: 0;
+}
+.ui-tabs .ui-tabs-panel .product-specs-box {
+	margin: -10px -15px !important;
+    border: none;
+    background: #f6f6f6;
+}
+.ui-tabs .ui-tabs-panel .product-specs-box table {
+    border: none;
+}
+.ui-tabs .ui-tabs-panel .product-specs-box td {
+    border-width: 1px 0 0 1px;
+    padding: 15px;
+    background: #fff;
+}
+.ui-tabs .ui-tabs-panel .product-specs-box tr:first-child td {
+    border-top-width: 0;
+}
+.ui-tabs .ui-tabs-panel .product-specs-box td:first-child {
+    border-left-width: 0;
+}
+.ui-tabs .ui-tabs-panel .write-review {
+    margin: 0;
+}
+.ui-tabs .ui-tabs-panel .form-fields {
+    border: none;
+    border-radius: 0;
+    background: #f6f6f6;
+}
+.ui-tabs .ui-tabs-panel input[type="text"],
+.ui-tabs .ui-tabs-panel textarea {
+    background: #fff;
+}
+.ui-tabs .product-review-item:last-child {
+    margin-bottom: 15px;
+}
+.ui-tabs #contact-us-tab .buttons {
+    margin-bottom: 5px;
+}

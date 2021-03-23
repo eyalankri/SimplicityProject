@@ -1,0 +1,21 @@
+select {
+    border-radius: 0;
+}
+.page-loader {
+    height: 100vh;
+}
+.nopAjaxCartPanelAjaxBusy {
+    box-shadow: none !important;
+    background: none !important;
+}
+.spc-body .loading-overlay,
+.cloudzoom-ajax-loader,
+.panel-loader-effect .spinner {
+    display: none !important;
+}
+.sale-of-the-day-offer {
+    margin: 0 auto 65px;
+}
+.item-box .rating {
+    margin: -2px 0;
+}

@@ -1,0 +1,76 @@
+/*
+* Copyright 2012 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.nop-jcarousel .slick-prev {
+	right: 50%;
+	left: auto;
+	margin: 0 -75px 0 0;
+	background-image: url('images/next-horizontal.png');
+}
+.nop-jcarousel .slick-next {
+	left: 50%;
+	right: auto;
+	margin: 0 0 0 -75px;
+	background-image: url('images/prev-horizontal.png');
+}
+
+
+
+@media all and (min-width: 481px) {
+	
+.nop-jcarousel .slick-prev {
+	right: 5px;
+	left: auto;
+}
+.nop-jcarousel .slick-next {
+	left: 5px;
+	right: auto;
+}
+	
+}
+
+@media all and (min-width: 769px) {
+
+.nop-jcarousel .carousel-title {
+	padding: 0 5px 0 0;
+	text-align: right;
+}
+.center-1 .nop-jcarousel .carousel-title {
+	padding: 0 10px 0 0;
+}
+.nop-jcarousel .slick-prev {
+	left: 42px;
+	right: auto;
+}
+.nop-jcarousel .slick-next {
+	left: 5px;
+	right: auto;
+}
+.center-1 .nop-jcarousel .slick-prev {
+	left: 47px;
+	right: auto;
+}
+.center-1 .nop-jcarousel .slick-next {
+	left: 10px;
+	right: auto;
+}
+	
+}
+
+@media all and (min-width: 1281px) {
+	
+.center-2 .nop-jcarousel .carousel-title {
+	padding: 0 10px 0 0;
+}
+.center-2 .nop-jcarousel .slick-prev {
+	left: 47px;
+	right: auto;
+}
+.center-2 .nop-jcarousel .slick-next {
+	left: 10px;
+	right: auto;
+}
+	
+}
